@@ -39,14 +39,16 @@ git push
 
 ## 2. Conectar con Vercel
 
-1. Entra en [vercel.com](https://vercel.com) e inicia sesión (con GitHub si quieres).
+1. Entra en [vercel.com](https://vercel.com) e inicia sesión (con GitHub es lo más fácil).
 2. Clic en **Add New** → **Project**.
-3. **Import** el repositorio de GitHub (elige `estatica` o el nombre que le hayas puesto).
-4. Vercel detectará el proyecto. No cambies nada:
-   - **Build Command:** `npm run build:static` (lo toma de `vercel.json`)
+3. **Import** el repositorio de GitHub: busca **NoelVentura/Estatica** (o el nombre de tu repo) y conéctalo.
+4. Vercel leerá `vercel.json`. Comprueba que aparezca:
+   - **Build Command:** `npm run build:static`
    - **Output Directory:** `dist`
+   - **Root Directory:** (dejar vacío o `.`)
 5. Clic en **Deploy**.
-6. Cuando termine, tendrás una URL tipo: `https://estatica-xxxx.vercel.app`.
+6. En 1–2 minutos tendrás una URL como: `https://estatica-xxxx.vercel.app` (o el nombre que elijas).
+7. Cada **push a `main`** en GitHub desplegará automáticamente en Vercel.
 
 ### Comportamiento del sitio
 
