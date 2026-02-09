@@ -67,8 +67,34 @@ Así, después de registrarse, se redirigirá a tu sitio en línea en lugar de l
 
 ---
 
+---
+
+## 4. GitHub Pages (si usas GitHub para publicar el sitio)
+
+El proyecto **no usa Jekyll**; se construye con Node (`npm run build:static`). Para que GitHub Pages no intente usar Jekyll ni busque la carpeta `docs/`, debes usar el workflow de GitHub Actions.
+
+### Paso obligatorio: cambiar el origen de Pages
+
+1. En GitHub, abre tu repositorio.
+2. Ve a **Settings** → **Pages** (menú izquierdo, en "Code and automation").
+3. En **Build and deployment** → **Source**, selecciona **"GitHub Actions"** (no "Deploy from a branch").
+4. Guarda si hace falta.
+
+Si dejas "Deploy from a branch", GitHub seguirá ejecutando Jekyll y dará errores como:
+- `YAML Exception` en archivos `.astro`
+- `No such file or directory - /github/workspace/docs`
+
+### Después de cambiar a GitHub Actions
+
+- Cada vez que hagas **push a `main`** (o `master`), se ejecutará el workflow **"Deploy to GitHub Pages"**.
+- En la pestaña **Actions** verás el estado; cuando termine en verde, el sitio estará en `https://<usuario>.github.io/<repo>/`.
+- La primera vez puede que tengas que crear el environment **github-pages** (GitHub lo suele crear al elegir "GitHub Actions" como source).
+
+---
+
 ## Resumen de archivos añadidos para el despliegue
 
 - **vercel.json:** indica a Vercel que use `build:static` y que la raíz muestre la página de inicio.
 - **package.json:** script `build:static` que copia `public/` a `dist/`.
-- **scripts/copy-public.mjs:** script que hace la copia de `public` a `dist`.
+- **scripts/copy-public.mjs:** script que hace la copia de `public` a `dist` y añade `.nojekyll`.
+- **.github/workflows/deploy-pages.yml:** workflow que construye con Node y despliega la carpeta `dist` en GitHub Pages.
