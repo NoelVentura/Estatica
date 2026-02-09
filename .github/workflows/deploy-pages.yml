@@ -26,6 +26,7 @@ jobs:
           mkdir -p dist
           cp -r public/. dist/
           touch dist/.nojekyll
+          echo '<!DOCTYPE html><html lang="es"><head><meta charset="utf-8"><meta http-equiv="refresh" content="0;url=Pagina%20de%20inicio.html"><title>Estática - Redirigiendo</title></head><body>Redirigiendo a la página de inicio...</body></html>' > dist/index.html
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
