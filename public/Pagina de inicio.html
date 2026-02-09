@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    
+    <!-- SEO Básico -->
+    <title>Estática para Ingenieros | Aprende con el Mejor Curso</title>
+    <meta name="description" content="Domina la estática desde cero. Curso completo con teoría, ejemplos prácticos y aplicaciones reales en ingeniería estructural." />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Estática para Ingenieros | Aprende con el Mejor Curso" />
+    <meta property="og:description" content="Domina la estática desde cero. Curso completo con teoría, ejemplos prácticos y aplicaciones reales en ingeniería estructural." />
+    <meta property="og:image" content="/og-image.jpg" />
+    <meta property="og:site_name" content="Estática para Ingenieros" />
+    <meta property="og:locale" content="es_ES" />
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Estática para Ingenieros | Aprende con el Mejor Curso" />
+    <meta name="twitter:description" content="Domina la estática desde cero. Curso completo con teoría, ejemplos prácticos y aplicaciones reales en ingeniería estructural." />
+    <meta name="twitter:image" content="/og-image.jpg" />
+    
+    <!-- Tema y color de navegador -->
+    <meta name="theme-color" content="#6366f1" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#312e81" media="(prefers-color-scheme: dark)" />
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              primary: {
+                50: '#eef2ff',
+                100: '#e0e7ff',
+                200: '#c7d2fe',
+                300: '#a5b4fc',
+                400: '#818cf8',
+                500: '#6366f1',
+                600: '#4f46e5',
+                700: '#4338ca',
+                800: '#3730a3',
+                900: '#312e81',
+                950: '#1e1b4b',
+              },
+              accent: {
+                50: '#ecfdf5',
+                100: '#d1fae5',
+                200: '#a7f3d0',
+                300: '#6ee7b7',
+                400: '#34d399',
+                500: '#10b981',
+                600: '#059669',
+                700: '#047857',
+                800: '#065f46',
+                900: '#064e3b',
+                950: '#022c22',
+              },
+              cyber: {
+                50: '#f0fdfa',
+                100: '#ccfbf1',
+                200: '#99f6e4',
+                300: '#5eead4',
+                400: '#2dd4bf',
+                500: '#14b8a6',
+                600: '#0d9488',
+                700: '#0f766e',
+                800: '#115e59',
+                900: '#134e4a',
+                950: '#042f2e',
+              },
+            },
+            fontFamily: {
+              sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+              heading: ['Inter', 'system-ui', 'sans-serif'],
+            },
+          },
+        },
+      }
+    </script>
+    
+    <!-- Script para prevenir flash de tema incorrecto -->
+    <script>
+      (function() {
+        const theme = localStorage.getItem('theme') || 
+          (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        if (theme === 'dark') {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script>
+    
+    <style>
+      html { scroll-behavior: smooth; }
+      body {
+        font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      ::selection {
+        background-color: rgba(99, 102, 241, 0.3);
+      }
+      .dark ::selection {
+        background-color: rgba(129, 140, 248, 0.3);
+      }
+      @keyframes fade-in {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      .animate-fade-in {
+        animation: fade-in 0.6s ease-out forwards;
+      }
+      @keyframes ping {
+        75%, 100% { transform: scale(2); opacity: 0; }
+      }
+      .animate-ping {
+        animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+      }
+      @keyframes float {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-10px); }
+      }
+      .animate-float {
+        animation: float 3s ease-in-out infinite;
+      }
+      @keyframes pulse-glow {
+        0%, 100% { box-shadow: 0 0 30px rgba(99, 102, 241, 0.4), 0 0 60px rgba(99, 102, 241, 0.2); }
+        50% { box-shadow: 0 0 50px rgba(99, 102, 241, 0.5), 0 0 100px rgba(99, 102, 241, 0.3); }
+      }
+      .card-glow:hover {
+        animation: pulse-glow 2s ease-in-out infinite;
+      }
+      @keyframes gradient-shift {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+      }
+      .animate-gradient {
+        background-size: 200% 200%;
+        animation: gradient-shift 5s ease infinite;
+      }
+      @keyframes shimmer {
+        0% { transform: translateX(-100%); }
+        100% { transform: translateX(100%); }
+      }
+      .shimmer::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+        animation: shimmer 2s infinite;
+      }
+      /* Mejora del scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #f1f5f9;
+      }
+      .dark ::-webkit-scrollbar-track {
+        background: #0f172a;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: linear-gradient(to bottom, #6366f1, #4f46e5);
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: linear-gradient(to bottom, #4f46e5, #4338ca);
+      }
+      /* Glass effect */
+      .glass {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+      .dark .glass {
+        background: rgba(15, 23, 42, 0.6);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      /* Fondo de pantalla con imagen mecánica */
+      body {
+        background-image: url('images/mecanica.png');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+      }
+      body::before {
+        content: '';
+        position: fixed;
+        inset: 0;
+        background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.65), rgba(250, 252, 255, 0.6), rgba(255, 255, 255, 0.65));
+        pointer-events: none;
+        z-index: -1;
+      }
+      .dark body::before {
+        background: linear-gradient(to bottom right, rgba(15, 23, 42, 0.5), rgba(49, 46, 129, 0.45), rgba(15, 23, 42, 0.5));
+      }
+    </style>
+  </head>
+  
+  <body class="min-h-screen flex flex-col antialiased text-gray-900 dark:text-gray-100 transition-colors duration-300">
+    
+    <!-- Skip to content link para accesibilidad -->
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-primary-600 focus:text-white focus:rounded-lg focus:outline-none">
+      Saltar al contenido principal
+    </a>
+    
+    <!-- ==================== HEADER ==================== -->
+    <header class="sticky top-0 z-50 w-full border-b border-indigo-200/30 dark:border-indigo-800/30 bg-white/70 dark:bg-slate-900/70 backdrop-blur-xl transition-colors duration-300">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex h-16 items-center justify-between">
+          
+          <!-- Logo -->
+          <a href="Pagina de inicio.html" class="flex items-center gap-3 group" aria-label="Ir al inicio">
+            <img src="images/tecnologico.png" alt="Tecnológico" class="h-12 w-auto object-contain">
+            <div class="flex flex-col">
+              <span class="text-lg font-bold text-gray-900 dark:text-white leading-tight">Estática</span>
+              <span class="text-xs text-gray-500 dark:text-gray-400 leading-tight">para Ingenieros</span>
+            </div>
+          </a>
+
+          <!-- Navegación Desktop -->
+          <nav class="hidden md:flex items-center gap-1" aria-label="Navegación principal">
+            <a href="Pagina de inicio.html" class="px-4 py-2 rounded-lg text-sm font-medium bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300" aria-current="page">Inicio</a>
+            <a href="#el-curso" class="px-4 py-2 rounded-lg text-sm font-medium text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white transition-all duration-200">El Curso</a>
+            <a href="Libros.html" class="px-4 py-2 rounded-lg text-sm font-medium text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white transition-all duration-200">Libros de Apoyo</a>
+            <a href="Contacto.html" class="px-4 py-2 rounded-lg text-sm font-medium text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white transition-all duration-200">Contacto</a>
+          </nav>
+
+          <!-- Acciones (Theme Toggle + Menú móvil) -->
+          <div class="flex items-center gap-2">
+            <!-- Theme Toggle -->
+            <button id="theme-toggle" type="button" class="relative p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-gray-950" aria-label="Cambiar tema" title="Cambiar entre modo claro y oscuro">
+              <!-- Icono del Sol (visible en modo oscuro) -->
+              <svg id="sun-icon" class="w-5 h-5 text-amber-400 hidden dark:block transition-transform duration-300 hover:rotate-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
+              </svg>
+              <!-- Icono de la Luna (visible en modo claro) -->
+              <svg id="moon-icon" class="w-5 h-5 text-gray-700 block dark:hidden transition-transform duration-300 hover:-rotate-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+              </svg>
+            </button>
+            
+            <!-- Botón de menú móvil -->
+            <button id="mobile-menu-button" type="button" class="md:hidden p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="mobile-menu">
+              <svg id="menu-icon" class="w-5 h-5 text-gray-700 dark:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+              </svg>
+              <svg id="close-icon" class="w-5 h-5 text-gray-700 dark:text-gray-300 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Menú móvil -->
+      <div id="mobile-menu" class="md:hidden hidden border-t border-indigo-200/30 dark:border-indigo-800/30 bg-white dark:bg-gray-950" aria-label="Menú de navegación móvil">
+        <nav class="container mx-auto px-4 py-4 space-y-1">
+          <a href="Pagina de inicio.html" class="block px-4 py-3 rounded-lg text-base font-medium bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300" aria-current="page">Inicio</a>
+          <a href="#el-curso" class="block px-4 py-3 rounded-lg text-base font-medium text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-all duration-200">El Curso</a>
+          <a href="Libros.html" class="block px-4 py-3 rounded-lg text-base font-medium text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-all duration-200">Libros de Apoyo</a>
+          <a href="Contacto.html" class="block px-4 py-3 rounded-lg text-base font-medium text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-all duration-200">Contacto</a>
+        </nav>
+      </div>
+    </header>
+    
+    <!-- ==================== MAIN CONTENT ==================== -->
+    <main id="main-content" class="flex-1">
+      
+      <!-- Hero Section -->
+      <section class="relative overflow-hidden">
+        <!-- Fondo con gradiente animado -->
+        <div class="absolute inset-0 bg-gradient-to-br from-indigo-100/50 via-white to-emerald-100/30 dark:from-indigo-950/50 dark:via-slate-900 dark:to-emerald-950/20 animate-gradient"></div>
+        
+        <!-- Patrón de puntos decorativo -->
+        <div class="absolute inset-0 opacity-40 dark:opacity-20" aria-hidden="true">
+          <svg class="absolute w-full h-full" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <pattern id="dots" width="30" height="30" patternUnits="userSpaceOnUse">
+                <circle cx="2" cy="2" r="1" fill="currentColor" class="text-indigo-400 dark:text-indigo-600"/>
+              </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#dots)" />
+          </svg>
+        </div>
+        
+        <!-- Elementos decorativos con nuevos colores -->
+        <div class="absolute top-10 left-10 w-96 h-96 bg-indigo-500/20 rounded-full blur-3xl animate-pulse" aria-hidden="true"></div>
+        <div class="absolute bottom-10 right-10 w-80 h-80 bg-emerald-500/20 rounded-full blur-3xl" aria-hidden="true"></div>
+        <div class="absolute top-1/3 right-1/4 w-64 h-64 bg-cyan-500/15 rounded-full blur-3xl" aria-hidden="true"></div>
+        
+        <div class="relative container mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
+          <!-- Grid de dos columnas -->
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            
+            <!-- Columna izquierda: Contenido -->
+            <div class="text-center">
+              <!-- Badge -->
+              <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-100 dark:bg-primary-900/40 text-primary-700 dark:text-primary-300 text-sm font-medium mb-6 animate-fade-in">
+                <span class="relative flex h-2 w-2">
+                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-400 opacity-75"></span>
+                  <span class="relative inline-flex rounded-full h-2 w-2 bg-primary-500"></span>
+                </span>
+                Curso 2026 - Nueva edición disponible
+              </div>
+              
+              <!-- Título principal -->
+              <h1 class="text-4xl sm:text-5xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6 tracking-tight">
+                Domina la
+                <span class="bg-gradient-to-r from-indigo-600 via-purple-500 to-emerald-500 bg-clip-text text-transparent">
+                  Estática para Ingenieros
+                </span>
+              </h1>
+              
+              <!-- Descripción -->
+              <p class="text-lg sm:text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+                El curso más completo en español para entender los fundamentos del equilibrio de fuerzas. 
+                Desde vectores hasta análisis estructural con aplicaciones prácticas en ingeniería.
+              </p>
+              
+              <!-- CTAs -->
+              <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
+                <a href="Inscribir curso.html" class="group relative inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-indigo-600 via-purple-600 to-indigo-600 hover:from-indigo-700 hover:via-purple-700 hover:to-indigo-700 text-white font-semibold rounded-2xl shadow-lg shadow-indigo-500/30 hover:shadow-xl hover:shadow-indigo-500/50 transform hover:-translate-y-1 hover:scale-105 transition-all duration-300 overflow-hidden">
+                  <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                  </svg>
+                  Inscribirme al curso
+                  <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                  </svg>
+                </a>
+                
+                <a href="pdf/Estatica.pdf" target="_blank" class="group inline-flex items-center gap-2 px-8 py-4 bg-white/90 dark:bg-slate-800/90 text-slate-700 dark:text-slate-200 font-semibold rounded-2xl border-2 border-indigo-200 dark:border-indigo-700 hover:border-indigo-400 dark:hover:border-indigo-500 hover:bg-white dark:hover:bg-slate-800 shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 backdrop-blur-sm">
+                  <svg class="w-5 h-5 text-indigo-600 dark:text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                  </svg>
+                  Ver temario completo
+                </a>
+              </div>
+
+              <!-- Estadísticas -->
+              <div class="grid grid-cols-3 gap-3 max-w-lg mx-auto">
+                <div class="group text-center p-4 rounded-2xl bg-white/70 dark:bg-slate-800/70 backdrop-blur-md border border-indigo-200/50 dark:border-indigo-700/50 hover:border-indigo-400 dark:hover:border-indigo-500 transition-all duration-300 hover:-translate-y-2 hover:shadow-lg hover:shadow-indigo-500/20">
+                  <div class="w-10 h-10 mx-auto mb-2 rounded-xl bg-gradient-to-br from-indigo-500 to-purple-500 flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                  </div>
+                  <div class="text-2xl font-bold text-indigo-600 dark:text-indigo-400 mb-1">40+</div>
+                  <div class="text-xs text-slate-600 dark:text-slate-400 font-medium">Horas</div>
+                </div>
+                <div class="group text-center p-4 rounded-2xl bg-white/70 dark:bg-slate-800/70 backdrop-blur-md border border-emerald-200/50 dark:border-emerald-700/50 hover:border-emerald-400 dark:hover:border-emerald-500 transition-all duration-300 hover:-translate-y-2 hover:shadow-lg hover:shadow-emerald-500/20">
+                  <div class="w-10 h-10 mx-auto mb-2 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-500 flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
+                    </svg>
+                  </div>
+                  <div class="text-2xl font-bold text-emerald-600 dark:text-emerald-400 mb-1">8</div>
+                  <div class="text-xs text-slate-600 dark:text-slate-400 font-medium">Unidades</div>
+                </div>
+                <div class="group text-center p-4 rounded-2xl bg-white/70 dark:bg-slate-800/70 backdrop-blur-md border border-purple-200/50 dark:border-purple-700/50 hover:border-purple-400 dark:hover:border-purple-500 transition-all duration-300 hover:-translate-y-2 hover:shadow-lg hover:shadow-purple-500/20">
+                  <div class="w-10 h-10 mx-auto mb-2 rounded-xl bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
+                    </svg>
+                  </div>
+                  <div class="text-2xl font-bold text-purple-600 dark:text-purple-400 mb-1">∞</div>
+                  <div class="text-xs text-slate-600 dark:text-slate-400 font-medium">De por vida</div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Columna derecha: Video -->
+            <div class="flex justify-center lg:justify-center">
+              <div class="relative animate-float">
+                <!-- Decoraciones con formas geométricas -->
+                <div class="absolute -top-6 -left-6 w-24 h-24 bg-gradient-to-br from-indigo-500/30 to-purple-500/30 rounded-2xl blur-xl rotate-12"></div>
+                <div class="absolute -bottom-6 -right-6 w-28 h-28 bg-gradient-to-br from-emerald-500/30 to-teal-500/30 rounded-full blur-xl"></div>
+                <div class="absolute top-1/2 -right-10 w-16 h-16 bg-gradient-to-br from-pink-500/20 to-rose-500/20 rounded-lg blur-lg -rotate-12"></div>
+                
+                <!-- Marco decorativo -->
+                <div class="absolute inset-0 rounded-3xl border-2 border-dashed border-indigo-300/50 dark:border-indigo-600/50 -m-3 rotate-3"></div>
+                
+                <video 
+                  controls 
+                  autoplay
+                  muted
+                  playsinline
+                  loop
+                  class="relative w-full max-w-sm rounded-3xl border-4 border-white/50 dark:border-slate-700/50"
+                  style="box-shadow: 0 0 40px rgba(99, 102, 241, 0.4), 0 0 80px rgba(99, 102, 241, 0.2), 0 25px 50px -12px rgba(0, 0, 0, 0.25);"
+                  poster="images/estatica.png"
+                >
+                  <source src="videos/Estatica.mp4" type="video/mp4">
+                  Tu navegador no soporta el elemento de video.
+                </video>
+                
+                <!-- Badges flotantes -->
+                <div class="absolute -bottom-4 left-1/2 -translate-x-1/2 px-5 py-2.5 bg-gradient-to-r from-indigo-600 to-purple-600 text-white text-sm font-semibold rounded-full shadow-xl whitespace-nowrap flex items-center gap-2">
+                  <span class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></span>
+                  +500 estudiantes activos
+                </div>
+                
+                <div class="absolute -top-3 -right-3 px-3 py-1.5 bg-gradient-to-r from-emerald-500 to-teal-500 text-white text-xs font-bold rounded-full shadow-lg">
+                  NUEVO 2026
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </section>
+
+      <!-- Features Section -->
+      <section id="el-curso" class="py-20 lg:py-28 relative overflow-hidden" aria-labelledby="features-heading">
+        <!-- Fondo decorativo -->
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-indigo-50/50 to-transparent dark:via-indigo-950/20"></div>
+        <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-indigo-300 to-transparent dark:via-indigo-700"></div>
+        
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative">
+          
+          <!-- Encabezado de la sección -->
+          <div class="text-center max-w-3xl mx-auto mb-16">
+            <div class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-indigo-100 to-purple-100 dark:from-indigo-900/40 dark:to-purple-900/40 text-indigo-700 dark:text-indigo-300 text-sm font-semibold mb-6 shadow-sm">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+              </svg>
+              Contenido del curso
+            </div>
+            <h2 id="features-heading" class="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 dark:text-white mb-6">
+              Todo lo que 
+              <span class="bg-gradient-to-r from-indigo-600 via-purple-600 to-emerald-500 bg-clip-text text-transparent">aprenderás</span>
+            </h2>
+            <p class="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto leading-relaxed">
+              Un recorrido completo por los temas fundamentales de la estática, 
+              diseñado para que construyas una base sólida y duradera en ingeniería.
+            </p>
+          </div>
+          
+          <!-- Grid de características -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 w-full items-stretch" style="grid-auto-rows: 1fr;">
+            
+            <!-- Unidad 1 -->
+            <a href="Unidad 1.html" class="block h-full min-h-[180px]">
+              <article class="group relative flex flex-col p-5 rounded-2xl border border-gray-800 hover:border-primary-500 transition-all duration-300 overflow-hidden h-full min-h-[180px]" style="box-shadow: 0 0 30px rgba(99, 102, 241, 0.3), 0 0 60px rgba(99, 102, 241, 0.15); background: linear-gradient(to bottom, rgba(17, 24, 39, 0.85), rgba(17, 24, 39, 0.95)), url('images/unidad1.jpg'); background-size: cover; background-position: center;">
+                <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center mb-5 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg shadow-indigo-500/30">
+                  <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0 4.5L15 15"/>
+                  </svg>
+                </div>
+                <h3 class="text-xl font-semibold text-white mb-3">Unidad 1: Introducción</h3>
+                <ul class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm space-y-1 flex-1 min-h-0">
+                  <li>1.1 Vectores</li>
+                  <li>1.2 Sistemas de Fuerzas</li>
+                  <li>1.2.1 Conceptos de Fuerza</li>
+                  <li>1.2.2 Descomposición de fuerzas en dos y tres dimensiones.</li>
+                  <li>1.2.3 Sistemas de fuerzas Concurrentes</li>
+                  <li>1.3 Diagrama de cuerpo libre</li>
+                </ul>
+                <div class="mt-4 flex items-center text-indigo-400 font-medium text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  Explorar tema
+                  <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                  </svg>
+                </div>
+              </article>
+            </a>
+            
+            <!-- Unidad 2 -->
+            <article class="group relative flex flex-col p-5 rounded-2xl bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-700 hover:border-primary-500 transition-all duration-300 h-full min-h-[180px] card-glow" style="box-shadow: 0 0 30px rgba(99, 102, 241, 0.3), 0 0 60px rgba(99, 102, 241, 0.15);">
+              <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center mb-5 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg shadow-indigo-500/30">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"/>
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold text-white mb-3">Unidad 2: Equilibrio de la partícula</h3>
+              <ul class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm space-y-1 flex-1 min-h-0">
+                <li>2.1 Condiciones para el equilibrio de partículas</li>
+                <li>2.2 Ecuaciones de equilibrio.</li>
+                <li>2.3 Resultante de sistemas de fuerzas.</li>
+              </ul>
+              <div class="mt-4 flex items-center text-indigo-400 font-medium text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                Explorar tema
+                <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+              </div>
+            </article>
+            
+            <!-- Unidad 3 -->
+            <article class="group relative flex flex-col p-5 rounded-2xl bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-700 hover:border-primary-500 transition-all duration-300 h-full min-h-[180px] card-glow" style="box-shadow: 0 0 30px rgba(99, 102, 241, 0.3), 0 0 60px rgba(99, 102, 241, 0.15);">
+              <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center mb-5 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg shadow-indigo-500/30">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"/>
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold text-white mb-3">Unidad 3: Equilibrio de cuerpo rígido</h3>
+              <ul class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm space-y-1 flex-1 min-h-0">
+                <li>3.1 Condiciones de equilibrio de cuerpos rígidos</li>
+                <li>3.1.1 Fuerzas internas y externas</li>
+                <li>3.1.2 Principios de transmisibilidad</li>
+                <li>3.2 Ecuaciones de equilibrio</li>
+                <li>3.2.1 Ecuaciones de equilibrio para diferentes sistemas de fuerzas</li>
+                <li>3.2.2 Momento de una fuerza</li>
+                <li>3.2.3 Momento de una fuerza respecto a un eje</li>
+                <li>3.2.4 Sistemas equivalentes</li>
+                <li>3.3 Restricciones de un cuerpo rígido</li>
+              </ul>
+              <div class="mt-4 flex items-center text-indigo-400 font-medium text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                Explorar tema
+                <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+              </div>
+            </article>
+            
+            <!-- Unidad 4 -->
+            <article class="group relative flex flex-col p-5 rounded-2xl bg-gradient-to-br from-slate-900 via-slate-800 to-indigo-950/50 border border-slate-700/50 hover:border-indigo-500/70 card-glow transition-all duration-300 h-full min-h-[180px]" style="box-shadow: 0 0 30px rgba(99, 102, 241, 0.3), 0 0 60px rgba(99, 102, 241, 0.15);">
+              <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center mb-5 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg shadow-indigo-500/30">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5"/>
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold text-white mb-3">Unidad 4: Centroide y centro de gravedad</h3>
+              <ul class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm space-y-1 flex-1 min-h-0">
+                <li>4.1 Conceptos generales</li>
+                <li>4.2 Centroide de áreas y líneas</li>
+                <li>4.2.1 Primer momento de áreas y líneas</li>
+                <li>4.2.2 Por integración</li>
+                <li>4.2.3 De áreas compuestas</li>
+                <li>4.2.4 Aplicación a fuerzas distribuidas</li>
+                <li>4.3 Centro de gravedad de cuerpos compuestos</li>
+              </ul>
+              <div class="mt-4 flex items-center text-indigo-400 font-medium text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                Explorar tema
+                <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+              </div>
+            </article>
+            
+            <!-- Unidad 5 -->
+            <article class="group relative flex flex-col p-5 rounded-2xl bg-gradient-to-br from-slate-900 via-slate-800 to-indigo-950/50 border border-slate-700/50 hover:border-indigo-500/70 card-glow transition-all duration-300 h-full min-h-[180px]" style="box-shadow: 0 0 30px rgba(99, 102, 241, 0.3), 0 0 60px rgba(99, 102, 241, 0.15);">
+              <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center mb-5 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg shadow-indigo-500/30">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15.75 15.75V18m-7.5-6.75h.008v.008H8.25v-.008zm0 2.25h.008v.008H8.25V13.5zm0 2.25h.008v.008H8.25v-.008zm0 2.25h.008v.008H8.25V18zm2.498-6.75h.007v.008h-.007v-.008zm0 2.25h.007v.008h-.007V13.5zm0 2.25h.007v.008h-.007v-.008zm0 2.25h.007v.008h-.007V18zm2.504-6.75h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V13.5zm0 2.25h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V18zm2.498-6.75h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V13.5zM8.25 6h7.5v2.25h-7.5V6zM12 2.25c-1.892 0-3.758.11-5.593.322C5.307 2.7 4.5 3.65 4.5 4.757V19.5a2.25 2.25 0 002.25 2.25h10.5a2.25 2.25 0 002.25-2.25V4.757c0-1.108-.806-2.057-1.907-2.185A48.507 48.507 0 0012 2.25z"/>
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold text-white mb-3">Unidad 5: Momento de inercia</h3>
+              <ul class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm space-y-1 flex-1 min-h-0">
+                <li>5.1 Conceptos generales</li>
+                <li>5.2 Momento de inercia de un área por integración</li>
+                <li>5.3 Teorema de ejes paralelos</li>
+                <li>5.4 Radio de giro.</li>
+                <li>5.5 Momento de inercia de un área compuesta</li>
+                <li>5.6 Producto de inercia de un área</li>
+              </ul>
+              <div class="mt-4 flex items-center text-indigo-400 font-medium text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                Explorar tema
+                <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+              </div>
+            </article>
+            
+            <!-- Unidad 6 -->
+            <article class="group relative flex flex-col p-5 rounded-2xl bg-gradient-to-br from-slate-900 via-slate-800 to-indigo-950/50 border border-slate-700/50 hover:border-indigo-500/70 card-glow transition-all duration-300 h-full min-h-[180px]" style="box-shadow: 0 0 30px rgba(99, 102, 241, 0.3), 0 0 60px rgba(99, 102, 241, 0.15);">
+              <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center mb-5 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg shadow-indigo-500/30">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6.429 9.75L2.25 12l4.179 2.25m0-4.5l5.571 3 5.571-3m-11.142 0L2.25 7.5 12 2.25l9.75 5.25-4.179 2.25m0 0L21.75 12l-4.179 2.25m0 0l4.179 2.25L12 21.75 2.25 16.5l4.179-2.25m11.142 0l-5.571 3-5.571-3"/>
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold text-white mb-3">Unidad 6: Análisis de estructuras estáticamente determinadas</h3>
+              <ul class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm space-y-1 flex-1 min-h-0">
+                <li>6.1 Vigas</li>
+                <li>6.2 Armaduras</li>
+                <li>6.2.1 Método de nudos</li>
+                <li>6.2.2 Método de secciones</li>
+                <li>6.3 Mecanismos</li>
+                <li>6.4 Cables</li>
+              </ul>
+              <div class="mt-4 flex items-center text-indigo-400 font-medium text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                Explorar tema
+                <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+              </div>
+            </article>
+            
+            <!-- Unidad 7 -->
+            <article class="group relative flex flex-col p-5 rounded-2xl bg-gradient-to-br from-slate-900 via-slate-800 to-indigo-950/50 border border-slate-700/50 hover:border-indigo-500/70 card-glow transition-all duration-300 h-full min-h-[180px]" style="box-shadow: 0 0 30px rgba(99, 102, 241, 0.3), 0 0 60px rgba(99, 102, 241, 0.15);">
+              <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center mb-5 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg shadow-indigo-500/30">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0112 15a9.065 9.065 0 00-6.23.693L5 14.5m14.8.8l1.402 1.402c1.232 1.232.65 3.318-1.067 3.611A48.309 48.309 0 0112 21c-2.773 0-5.491-.235-8.135-.687-1.718-.293-2.3-2.379-1.067-3.611L5 14.5"/>
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold text-white mb-3">Unidad 7: Fricción</h3>
+              <ul class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm space-y-1 flex-1 min-h-0">
+                <li>7.1 Fenómenos de fricción</li>
+                <li>7.2 Fricción seca</li>
+                <li>7.3 Plano inclinado</li>
+              </ul>
+              <div class="mt-4 flex items-center text-indigo-400 font-medium text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                Explorar tema
+                <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+              </div>
+            </article>
+            
+            
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section class="py-24 relative overflow-hidden">
+        <!-- Fondo con gradiente moderno -->
+        <div class="absolute inset-0 bg-gradient-to-br from-indigo-600 via-purple-600 to-emerald-600 dark:from-indigo-900 dark:via-purple-900 dark:to-emerald-900"></div>
+        
+        <!-- Patrón de ondas -->
+        <div class="absolute inset-0 opacity-10">
+          <svg class="w-full h-full" viewBox="0 0 1440 320" preserveAspectRatio="none">
+            <path fill="white" d="M0,192L48,197.3C96,203,192,213,288,229.3C384,245,480,267,576,250.7C672,235,768,181,864,181.3C960,181,1056,235,1152,234.7C1248,235,1344,181,1392,154.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+          </svg>
+        </div>
+        
+        <!-- Elementos decorativos -->
+        <div class="absolute top-10 left-10 w-32 h-32 bg-white/10 rounded-full blur-2xl"></div>
+        <div class="absolute bottom-10 right-10 w-48 h-48 bg-emerald-400/20 rounded-full blur-3xl"></div>
+        
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative">
+          <div class="max-w-4xl mx-auto">
+            <div class="bg-white/10 backdrop-blur-xl rounded-3xl p-8 md:p-12 border border-white/20 shadow-2xl">
+              <div class="text-center">
+                <div class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/20 text-white text-sm font-semibold mb-8 backdrop-blur-sm">
+                  <span class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></span>
+                  Acceso inmediato al inscribirte
+                </div>
+                
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
+                  ¿Listo para dominar la 
+                  <span class="bg-gradient-to-r from-emerald-300 to-cyan-300 bg-clip-text text-transparent">Estática</span>?
+                </h2>
+                <p class="text-lg sm:text-xl text-indigo-100 mb-10 max-w-2xl mx-auto leading-relaxed">
+                  Únete a cientos de estudiantes e ingenieros que ya están transformando su comprensión del equilibrio de fuerzas y análisis estructural.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+                  <a href="Inscribir curso.html" class="group relative inline-flex items-center gap-2 px-10 py-5 bg-white text-indigo-700 font-bold rounded-2xl shadow-xl hover:shadow-2xl transform hover:-translate-y-1 hover:scale-105 transition-all duration-300 overflow-hidden">
+                    <div class="absolute inset-0 bg-gradient-to-r from-emerald-400/20 to-cyan-400/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                    </svg>
+                    Inscribirme ahora
+                    <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                    </svg>
+                  </a>
+                  <a href="#el-curso" class="group inline-flex items-center gap-2 px-10 py-5 bg-white/10 text-white font-semibold rounded-2xl border-2 border-white/30 hover:bg-white/20 hover:border-white/50 backdrop-blur-sm transition-all duration-300">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/>
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    Ver contenido
+                  </a>
+                </div>
+                
+                <div class="flex flex-wrap justify-center gap-6 text-sm text-indigo-200">
+                  <span class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    Sin tarjeta de crédito
+                  </span>
+                  <span class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    Acceso de por vida
+                  </span>
+                  <span class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    Soporte incluido
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+    </main>
+    
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="bg-slate-50/80 dark:bg-slate-900/80 border-t border-indigo-200/30 dark:border-indigo-800/30 backdrop-blur-sm transition-colors duration-300">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Sección principal del footer -->
+        <div class="py-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+          
+          <!-- Branding y descripción -->
+          <div class="lg:col-span-2">
+            <a href="Pagina de inicio.html" class="flex items-center gap-3 mb-4 group">
+              <img src="images/tecnologico.png" alt="Tecnológico" class="h-12 w-auto object-contain">
+              <div class="flex flex-col">
+                <span class="text-lg font-bold text-gray-900 dark:text-white leading-tight">Estática</span>
+                <span class="text-xs text-gray-500 dark:text-gray-400 leading-tight">para Ingenieros</span>
+              </div>
+            </a>
+            <p class="text-gray-600 dark:text-gray-400 text-sm max-w-sm mb-6">
+              Domina los fundamentos de la estática con un enfoque práctico y visual. 
+              Aprende equilibrio de fuerzas, análisis estructural y más.
+            </p>
+            
+            <!-- Redes sociales -->
+            <div class="flex items-center gap-3">
+              <a href="#" class="p-2 rounded-lg bg-gray-200 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-indigo-100 dark:hover:bg-indigo-900/30 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all duration-200" aria-label="Síguenos en YouTube" target="_blank" rel="noopener noreferrer">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/>
+                </svg>
+              </a>
+              <a href="#" class="p-2 rounded-lg bg-gray-200 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-indigo-100 dark:hover:bg-indigo-900/30 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all duration-200" aria-label="Síguenos en LinkedIn" target="_blank" rel="noopener noreferrer">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                </svg>
+              </a>
+              <a href="#" class="p-2 rounded-lg bg-gray-200 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-indigo-100 dark:hover:bg-indigo-900/30 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all duration-200" aria-label="Síguenos en Twitter" target="_blank" rel="noopener noreferrer">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                </svg>
+              </a>
+              <a href="#" class="p-2 rounded-lg bg-gray-200 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-indigo-100 dark:hover:bg-indigo-900/30 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all duration-200" aria-label="Síguenos en GitHub" target="_blank" rel="noopener noreferrer">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Enlaces: Curso -->
+          <div>
+            <h3 class="text-sm font-semibold text-gray-900 dark:text-white uppercase tracking-wider mb-4">Curso</h3>
+            <ul class="space-y-3">
+              <li><a href="Libros.html" class="text-sm text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-200">Libros de Apoyo</a></li>
+              <li><a href="/metodologia" class="text-sm text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-200">Metodología</a></li>
+              <li><a href="/certificacion" class="text-sm text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-200">Certificación</a></li>
+            </ul>
+          </div>
+
+          <!-- Enlaces: Soporte -->
+          <div>
+            <h3 class="text-sm font-semibold text-gray-900 dark:text-white uppercase tracking-wider mb-4">Soporte</h3>
+            <ul class="space-y-3">
+              <li><a href="/faq" class="text-sm text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-200">FAQ</a></li>
+              <li><a href="Contacto.html" class="text-sm text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-200">Contacto</a></li>
+              <li><a href="/comunidad" class="text-sm text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-200">Comunidad</a></li>
+            </ul>
+          </div>
+
+          <!-- Enlaces: Legal -->
+          <div>
+            <h3 class="text-sm font-semibold text-gray-900 dark:text-white uppercase tracking-wider mb-4">Legal</h3>
+            <ul class="space-y-3">
+              <li><a href="/terminos" class="text-sm text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-200">Términos de uso</a></li>
+              <li><a href="/privacidad" class="text-sm text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-200">Privacidad</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Línea divisoria y copyright -->
+        <div class="py-6 border-t border-indigo-200/30 dark:border-indigo-800/30">
+          <div class="flex flex-col sm:flex-row justify-between items-center gap-4">
+            <p class="text-sm text-gray-500 dark:text-gray-400 text-center sm:text-left">
+              © <span id="current-year">2026</span> Estática para Ingenieros. Todos los derechos reservados. Lo aprendí en Top Learning.
+            </p>
+            <p class="text-xs text-gray-400 dark:text-gray-500">
+              Hecho con <span class="text-indigo-500" aria-label="amor">💜</span> para estudiantes de ingeniería
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+    <!-- ==================== SCRIPTS ==================== -->
+    <script>
+      // Actualizar año dinámicamente
+      document.getElementById('current-year').textContent = new Date().getFullYear();
+      
+      // Theme Toggle
+      function getThemePreference() {
+        if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+          return localStorage.getItem('theme');
+        }
+        return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      }
+
+      function applyTheme(theme) {
+        if (theme === 'dark') {
+          document.documentElement.classList.add('dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+        }
+        localStorage.setItem('theme', theme);
+      }
+
+      function toggleTheme() {
+        const currentTheme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
+        applyTheme(currentTheme === 'dark' ? 'light' : 'dark');
+      }
+
+      document.addEventListener('DOMContentLoaded', () => {
+        // Theme toggle button
+        const themeToggle = document.getElementById('theme-toggle');
+        if (themeToggle) {
+          themeToggle.addEventListener('click', toggleTheme);
+        }
+
+        // Mobile menu
+        const menuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+        const closeIcon = document.getElementById('close-icon');
+
+        if (menuButton && mobileMenu && menuIcon && closeIcon) {
+          menuButton.addEventListener('click', () => {
+            const isExpanded = menuButton.getAttribute('aria-expanded') === 'true';
+            menuButton.setAttribute('aria-expanded', (!isExpanded).toString());
+            mobileMenu.classList.toggle('hidden');
+            menuIcon.classList.toggle('hidden');
+            closeIcon.classList.toggle('hidden');
+          });
+
+          // Close menu when clicking a link
+          mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+              mobileMenu.classList.add('hidden');
+              menuIcon.classList.remove('hidden');
+              closeIcon.classList.add('hidden');
+              menuButton.setAttribute('aria-expanded', 'false');
+            });
+          });
+        }
+      });
+
+      // Listen for system theme changes
+      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+        if (!localStorage.getItem('theme')) {
+          applyTheme(e.matches ? 'dark' : 'light');
+        }
+      });
+    </script>
+  </body>
+</html>

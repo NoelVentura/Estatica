@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    
+    <title>Contacto | Estática para Ingenieros</title>
+    <meta name="description" content="Ubicación y contacto del curso de Estática para Ingenieros en el Instituto Tecnológico de Tepic." />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              primary: {
+                50: '#eef2ff', 100: '#e0e7ff', 200: '#c7d2fe', 300: '#a5b4fc',
+                400: '#818cf8', 500: '#6366f1', 600: '#4f46e5', 700: '#4338ca',
+                800: '#3730a3', 900: '#312e81', 950: '#1e1b4b',
+              },
+              accent: {
+                50: '#ecfdf5', 100: '#d1fae5', 200: '#a7f3d0', 300: '#6ee7b7',
+                400: '#34d399', 500: '#10b981', 600: '#059669', 700: '#047857',
+                800: '#065f46', 900: '#064e3b', 950: '#022c22',
+              },
+            },
+            fontFamily: { sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'] },
+          },
+        },
+      }
+    </script>
+    <script>
+      (function() {
+        const theme = localStorage.getItem('theme') ||
+          (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        if (theme === 'dark') document.documentElement.classList.add('dark');
+      })();
+    </script>
+    <style>
+      html { scroll-behavior: smooth; }
+      body { font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; -webkit-font-smoothing: antialiased; }
+    </style>
+  </head>
+  
+  <body class="min-h-screen flex flex-col antialiased text-gray-900 dark:text-gray-100 transition-colors duration-300" style="background-image: url('images/mecanica.png'); background-size: cover; background-position: center; background-attachment: fixed; background-repeat: no-repeat;">
+    
+    <!-- HEADER -->
+    <header class="sticky top-0 z-50 w-full border-b border-indigo-200/30 dark:border-indigo-800/30 bg-white/40 dark:bg-slate-900/40 backdrop-blur-md transition-colors duration-300">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex h-16 items-center justify-between">
+          <a href="Pagina de inicio.html" class="flex items-center gap-3 group" aria-label="Ir al inicio">
+            <img src="images/tecnologico.png" alt="Tecnológico" class="h-12 w-auto object-contain">
+            <div class="flex flex-col">
+              <span class="text-lg font-bold text-gray-900 dark:text-white leading-tight">Estática</span>
+              <span class="text-xs text-gray-500 dark:text-gray-400 leading-tight">para Ingenieros</span>
+            </div>
+          </a>
+
+          <nav class="hidden md:flex items-center gap-1" aria-label="Navegación principal">
+            <a href="Pagina de inicio.html" class="px-4 py-2 rounded-lg text-sm font-medium text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white transition-all duration-200">Inicio</a>
+            <a href="Libros.html" class="px-4 py-2 rounded-lg text-sm font-medium text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white transition-all duration-200">Libros</a>
+            <a href="Inscribir curso.html" class="px-4 py-2 rounded-lg text-sm font-medium text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white transition-all duration-200">Inscribir Curso</a>
+            <a href="Contacto.html" class="px-4 py-2 rounded-lg text-sm font-medium bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300" aria-current="page">Contacto</a>
+          </nav>
+
+          <button id="theme-toggle" type="button" class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-all duration-300" aria-label="Cambiar tema">
+            <svg id="sun-icon" class="w-5 h-5 text-amber-400 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
+            </svg>
+            <svg id="moon-icon" class="w-5 h-5 text-gray-700 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+    
+    <!-- MAIN -->
+    <main class="flex-1">
+      <section class="py-16 lg:py-20">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-12">
+            <h1 class="text-4xl font-bold mb-4 text-gray-900 dark:text-white">
+              Contacto
+            </h1>
+            <p class="text-lg max-w-2xl mx-auto text-gray-600 dark:text-gray-400">
+              Encuéntranos en el Instituto Tecnológico de Tepic
+            </p>
+          </div>
+          
+          <div class="max-w-5xl mx-auto">
+            <div class="bg-white/90 dark:bg-slate-900/90 backdrop-blur-md rounded-2xl shadow-xl border border-indigo-200/50 dark:border-indigo-800/50 overflow-hidden" style="box-shadow: 0 0 40px rgba(99, 102, 241, 0.3), 0 0 80px rgba(99, 102, 241, 0.2);">
+              
+              <div class="p-8 border-b border-gray-200 dark:border-gray-700">
+                <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+                  <div class="flex items-start gap-4">
+                    <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-primary-500 to-primary-600 flex items-center justify-center shadow-lg flex-shrink-0">
+                      <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                      </svg>
+                    </div>
+                    <div>
+                      <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-1">Dirección</h3>
+                      <p class="text-gray-600 dark:text-gray-400">
+                        Av. Tecnológico #2595<br>
+                        Colonia Lagos del Country<br>
+                        C.P. 63175, Tepic, Nayarit, México
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div class="flex items-start gap-4">
+                    <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-accent-500 to-accent-600 flex items-center justify-center shadow-lg flex-shrink-0">
+                      <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                      </svg>
+                    </div>
+                    <div>
+                      <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-1">Institución</h3>
+                      <p class="text-gray-600 dark:text-gray-400">
+                        Instituto Tecnológico de Tepic<br>
+                        Tecnológico Nacional de México
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="w-full h-96 md:h-[500px]">
+                <iframe 
+                  src="https://maps.google.com/maps?q=Instituto+Tecnol%C3%B3gico+de+Tepic,+Av.+Tecnol%C3%B3gico+2595,+Lagos+del+Country,+Tepic,+Nayarit,+Mexico&t=&z=17&ie=UTF8&iwloc=&output=embed"
+                  width="100%" 
+                  height="100%" 
+                  style="border:0;" 
+                  allowfullscreen="" 
+                  loading="lazy" 
+                  referrerpolicy="no-referrer-when-downgrade"
+                  title="Ubicación del Instituto Tecnológico de Tepic">
+                </iframe>
+              </div>
+            </div>
+            
+            <div class="text-center mt-8">
+              <a 
+                href="https://www.google.com/maps/search/?api=1&query=Av.+Tecnol%C3%B3gico+2595+Lagos+del+Country+Tepic+Nayarit+Mexico" 
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center gap-2 px-6 py-3 bg-primary-600 hover:bg-primary-700 text-white font-medium rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl"
+              >
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                </svg>
+                Abrir en Google Maps
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    
+    <!-- FOOTER -->
+    <footer class="bg-white/40 dark:bg-slate-900/40 backdrop-blur-md border-t border-indigo-200/30 dark:border-indigo-800/30 transition-colors duration-300">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="space-y-4">
+            <a href="Pagina de inicio.html" class="flex items-center gap-3">
+              <img src="images/tecnologico.png" alt="Tecnológico" class="h-12 w-auto object-contain">
+              <div class="flex flex-col">
+                <span class="text-lg font-bold text-gray-900 dark:text-white leading-tight">Estática</span>
+                <span class="text-xs text-gray-500 dark:text-gray-400 leading-tight">para Ingenieros</span>
+              </div>
+            </a>
+            <p class="text-sm text-gray-600 dark:text-gray-400">
+              Curso de Estática para Ingenieros en el Instituto Tecnológico de Tepic.
+            </p>
+          </div>
+          <div>
+            <h4 class="text-sm font-semibold text-gray-900 dark:text-white mb-4 uppercase tracking-wider">Enlaces</h4>
+            <ul class="space-y-3">
+              <li><a href="Libros.html" class="text-sm text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-200">Libros</a></li>
+              <li><a href="Inscribir curso.html" class="text-sm text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-200">Inscribir Curso</a></li>
+              <li><a href="Contacto.html" class="text-sm text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-200">Contacto</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-sm font-semibold text-gray-900 dark:text-white mb-4 uppercase tracking-wider">Ubicación</h4>
+            <p class="text-sm text-gray-600 dark:text-gray-400">
+              Av. Tecnológico #2595<br>
+              Col. Lagos del Country<br>
+              C.P. 63175, Tepic, Nayarit
+            </p>
+          </div>
+        </div>
+        <div class="border-t border-gray-200 dark:border-gray-800 mt-8 pt-8 text-center">
+          <p class="text-sm text-gray-500 dark:text-gray-400">
+            © <span id="current-year">2026</span> Estática para Ingenieros. Todos los derechos reservados.
+          </p>
+        </div>
+      </div>
+    </footer>
+    
+    <script>
+      document.getElementById('current-year').textContent = new Date().getFullYear();
+      document.getElementById('theme-toggle').addEventListener('click', function() {
+        document.documentElement.classList.toggle('dark');
+        localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
+      });
+    </script>
+  </body>
+</html>

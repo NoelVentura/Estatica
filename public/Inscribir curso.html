@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    
+    <!-- SEO Básico -->
+    <title>Inscribir Curso | Estática para Ingenieros</title>
+    <meta name="description" content="Inscríbete al curso de Estática para Ingenieros. Completa el formulario para comenzar tu aprendizaje." />
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              primary: {
+                50: '#eef2ff',
+                100: '#e0e7ff',
+                200: '#c7d2fe',
+                300: '#a5b4fc',
+                400: '#818cf8',
+                500: '#6366f1',
+                600: '#4f46e5',
+                700: '#4338ca',
+                800: '#3730a3',
+                900: '#312e81',
+                950: '#1e1b4b',
+              },
+              accent: {
+                50: '#ecfdf5',
+                100: '#d1fae5',
+                200: '#a7f3d0',
+                300: '#6ee7b7',
+                400: '#34d399',
+                500: '#10b981',
+                600: '#059669',
+                700: '#047857',
+                800: '#065f46',
+                900: '#064e3b',
+                950: '#022c22',
+              },
+            },
+            fontFamily: {
+              sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+            },
+          },
+        },
+      }
+    </script>
+    
+    <!-- Script para tema oscuro -->
+    <script>
+      (function() {
+        const theme = localStorage.getItem('theme') || 
+          (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        if (theme === 'dark') {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script>
+    
+    <style>
+      html { scroll-behavior: smooth; }
+      body {
+        font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        -webkit-font-smoothing: antialiased;
+      }
+    </style>
+  </head>
+  
+  <body class="min-h-screen flex flex-col antialiased text-gray-900 dark:text-gray-100 transition-colors duration-300" style="background-image: url('images/mecanica.png'); background-size: cover; background-position: center; background-attachment: fixed; background-repeat: no-repeat;">
+    
+    <!-- ==================== HEADER ==================== -->
+    <header class="sticky top-0 z-50 w-full border-b border-indigo-200/30 dark:border-indigo-800/30 bg-white/40 dark:bg-slate-900/40 backdrop-blur-md transition-colors duration-300">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex h-16 items-center justify-between">
+          
+          <!-- Logo -->
+          <a href="Pagina de inicio.html" class="flex items-center gap-3 group" aria-label="Ir al inicio">
+            <img src="images/tecnologico.png" alt="Tecnológico" class="h-12 w-auto object-contain">
+            <div class="flex flex-col">
+              <span class="text-lg font-bold text-gray-900 dark:text-white leading-tight">Estática</span>
+              <span class="text-xs text-gray-500 dark:text-gray-400 leading-tight">para Ingenieros</span>
+            </div>
+          </a>
+
+          <!-- Navegación -->
+          <nav class="hidden md:flex items-center gap-1" aria-label="Navegación principal">
+            <a href="Pagina de inicio.html" class="px-4 py-2 rounded-lg text-sm font-medium text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white transition-all duration-200">Inicio</a>
+            <a href="Libros.html" class="px-4 py-2 rounded-lg text-sm font-medium text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white transition-all duration-200">Libros</a>
+            <a href="Inscribir curso.html" class="px-4 py-2 rounded-lg text-sm font-medium bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300" aria-current="page">Inscribir Curso</a>
+            <a href="Contacto.html" class="px-4 py-2 rounded-lg text-sm font-medium text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white transition-all duration-200">Contacto</a>
+          </nav>
+
+          <!-- Theme Toggle -->
+          <button id="theme-toggle" type="button" class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-all duration-300" aria-label="Cambiar tema">
+            <svg id="sun-icon" class="w-5 h-5 text-amber-400 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
+            </svg>
+            <svg id="moon-icon" class="w-5 h-5 text-gray-700 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+    
+    <!-- ==================== MAIN CONTENT ==================== -->
+    <main class="flex-1 py-12">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Formulario de inscripción -->
+        <div class="max-w-2xl mx-auto">
+          <div class="bg-white/80 dark:bg-slate-900/80 backdrop-blur-md rounded-2xl shadow-2xl border border-indigo-200/50 dark:border-indigo-800/50 p-8" style="box-shadow: 0 0 40px rgba(99, 102, 241, 0.4), 0 0 80px rgba(99, 102, 241, 0.2), 0 0 120px rgba(99, 102, 241, 0.1);">
+            
+            <!-- Título -->
+            <div class="text-center mb-8">
+              <h1 class="text-3xl font-bold text-gray-900 dark:text-white mb-2">
+                Inscribir Curso
+              </h1>
+              <p class="text-gray-600 dark:text-gray-400">
+                Completa el formulario para inscribirte al curso de Estática para Ingenieros
+              </p>
+            </div>
+            
+            <!-- Formulario: envío por JavaScript a Google Apps Script y redirección a página de inicio (funciona desde file://) -->
+            <form id="inscripcion-form" class="space-y-6" method="POST" action="https://script.google.com/macros/s/AKfycbzGSfAC9XA2dW3nwB5SH_Jj2N5UAQHx1QsYVW0WZyt5z8KfNDM3MoXv0dQWBc-oiF0t/exec">
+              <input type="hidden" name="fecha" id="fecha-envio" value="">
+              
+              <!-- Apellido Paterno -->
+              <div>
+                <label for="apellido-paterno" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                  Apellido Paterno <span class="text-red-500">*</span>
+                </label>
+                <input 
+                  type="text" 
+                  id="apellido-paterno" 
+                  name="apellidoPaterno" 
+                  required
+                  class="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-400 focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all duration-200"
+                  placeholder="Ingresa tu apellido paterno"
+                >
+              </div>
+              
+              <!-- Apellido Materno -->
+              <div>
+                <label for="apellido-materno" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                  Apellido Materno <span class="text-red-500">*</span>
+                </label>
+                <input 
+                  type="text" 
+                  id="apellido-materno" 
+                  name="apellidoMaterno" 
+                  required
+                  class="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-400 focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all duration-200"
+                  placeholder="Ingresa tu apellido materno"
+                >
+              </div>
+              
+              <!-- Nombre -->
+              <div>
+                <label for="nombre" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                  Nombre(s) <span class="text-red-500">*</span>
+                </label>
+                <input 
+                  type="text" 
+                  id="nombre" 
+                  name="nombre" 
+                  required
+                  class="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-400 focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all duration-200"
+                  placeholder="Ingresa tu nombre"
+                >
+              </div>
+              
+              <!-- Número de Control -->
+              <div>
+                <label for="numero-control" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                  Número de Control <span class="text-red-500">*</span>
+                </label>
+                <input 
+                  type="text" 
+                  id="numero-control" 
+                  name="numeroControl" 
+                  required
+                  class="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-400 focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all duration-200"
+                  placeholder="Ingresa tu número de control"
+                >
+              </div>
+              
+              <!-- Correo Electrónico -->
+              <div>
+                <label for="correo" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                  Correo Electrónico <span class="text-red-500">*</span>
+                </label>
+                <input 
+                  type="email" 
+                  id="correo" 
+                  name="correo" 
+                  required
+                  class="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-400 focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all duration-200"
+                  placeholder="ejemplo@correo.com"
+                >
+              </div>
+              
+              <!-- Botón de envío -->
+              <div class="pt-4">
+                <button 
+                  type="submit" 
+                  class="w-full px-8 py-4 bg-primary-600 hover:bg-primary-700 text-white font-semibold rounded-xl shadow-lg shadow-primary-500/25 hover:shadow-xl hover:shadow-primary-500/30 transform hover:-translate-y-0.5 transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2"
+                >
+                  Inscribirme al Curso
+                </button>
+              </div>
+              
+            </form>
+            
+            <!-- Mensaje de registro exitoso (se muestra al completar el envío) -->
+            <div id="mensaje-exito" class="hidden text-center py-8 px-6 rounded-2xl border-2 border-green-500 bg-green-900/30 dark:bg-green-950/50">
+              <div class="inline-flex items-center justify-center w-16 h-16 rounded-full border-2 border-green-400 bg-green-500/20 mb-4">
+                <svg class="w-8 h-8 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                </svg>
+              </div>
+              <h2 class="text-xl font-bold text-green-400 mb-2">¡Exitoso su registro!</h2>
+              <p class="text-green-300/90 text-sm">Serás redirigido a la página principal en unos segundos.</p>
+            </div>
+            
+          </div>
+          
+          <!-- Enlace para volver -->
+          <div class="text-center mt-6">
+            <a href="Pagina de inicio.html" class="text-primary-600 dark:text-primary-400 hover:underline font-medium">
+              ← Volver a la página principal
+            </a>
+          </div>
+          
+        </div>
+      </div>
+    </main>
+    
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="bg-slate-50/50 dark:bg-slate-900/50 border-t border-indigo-200/30 dark:border-indigo-800/30 backdrop-blur-sm py-6">
+      <div class="container mx-auto px-4 text-center">
+        <p class="text-sm text-gray-500 dark:text-gray-400">
+          © <span id="current-year">2026</span> Estática para Ingenieros. Todos los derechos reservados.
+        </p>
+      </div>
+    </footer>
+    
+    <!-- ==================== SCRIPTS ==================== -->
+    <script>
+      // Año actual
+      document.getElementById('current-year').textContent = new Date().getFullYear();
+      
+      // Theme Toggle
+      const themeToggle = document.getElementById('theme-toggle');
+      themeToggle.addEventListener('click', () => {
+        const isDark = document.documentElement.classList.contains('dark');
+        document.documentElement.classList.toggle('dark');
+        localStorage.setItem('theme', isDark ? 'light' : 'dark');
+      });
+      
+      // Envío del formulario por JavaScript: envía a Google y redirige a la página de inicio (funciona desde file://)
+      document.getElementById('inscripcion-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        var form = this;
+        document.getElementById('fecha-envio').value = new Date().toLocaleString('es-MX', { dateStyle: 'short', timeStyle: 'short' });
+        var url = form.action;
+        var formData = new FormData(form);
+        var body = new URLSearchParams(formData).toString();
+        var btn = form.querySelector('button[type="submit"]');
+        if (btn) { btn.disabled = true; btn.textContent = 'Enviando...'; }
+        fetch(url, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: body
+        }).then(function(r) {
+          if (r.ok) {
+            document.getElementById('inscripcion-form').classList.add('hidden');
+            document.getElementById('mensaje-exito').classList.remove('hidden');
+            setTimeout(function() {
+              window.location.href = 'Pagina de inicio.html';
+            }, 2500);
+          } else {
+            if (btn) { btn.disabled = false; btn.textContent = 'Inscribirme al Curso'; }
+            r.text().then(function(t) { alert('Error al registrar. Revisa los datos e intenta de nuevo.'); });
+          }
+        }).catch(function(err) {
+          if (btn) { btn.disabled = false; btn.textContent = 'Inscribirme al Curso'; }
+          alert('Error de conexión. Revisa tu internet e intenta de nuevo.');
+        });
+      });
+    </script>
+  </body>
+</html>

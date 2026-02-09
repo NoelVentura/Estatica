@@ -1,11 +1,265 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+// SEO personalizado para la página de inicio
+const pageTitle = 'Estática para Ingenieros | Domina el Equilibrio de Fuerzas';
+const pageDescription = 'Aprende estática desde cero con nuestro curso completo. Domina vectores, equilibrio, diagramas de cuerpo libre y análisis estructural de forma clara y práctica.';
+
+// Características del curso
+const features = [
+  {
+    title: 'Aprende desde Cero',
+    description: 'No necesitas conocimientos previos. Te guiamos paso a paso desde los conceptos básicos hasta problemas avanzados de ingeniería.',
+    icon: 'rocket',
+  },
+  {
+    title: 'Ejercicios Prácticos',
+    description: 'Más de 200 ejercicios resueltos con explicaciones detalladas. Practica con problemas reales de ingeniería civil y mecánica.',
+    icon: 'pencil',
+  },
+  {
+    title: 'Metodología Probada',
+    description: 'Nuestra metodología ha ayudado a miles de estudiantes a aprobar sus exámenes y comprender la estática de forma intuitiva.',
+    icon: 'chart',
+  },
+];
+
+// Estadísticas
+const stats = [
+  { value: '5,000+', label: 'Estudiantes' },
+  { value: '200+', label: 'Ejercicios' },
+  { value: '4.9/5', label: 'Valoración' },
+  { value: '95%', label: 'Aprobados' },
+];
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<BaseLayout title={pageTitle} description={pageDescription}>
+  <!-- Hero Section -->
+  <section class="relative overflow-hidden bg-gradient-to-br from-slate-50 via-white to-primary-50 dark:from-slate-900 dark:via-slate-900 dark:to-slate-800">
+    <!-- Decoración de fondo -->
+    <div class="absolute inset-0 overflow-hidden" aria-hidden="true">
+      <div class="absolute -top-40 -right-40 w-80 h-80 bg-primary-400/20 rounded-full blur-3xl"></div>
+      <div class="absolute -bottom-40 -left-40 w-80 h-80 bg-accent-400/20 rounded-full blur-3xl"></div>
+    </div>
+    
+    <div class="section-container relative">
+      <div class="py-20 lg:py-32">
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <!-- Contenido del Hero -->
+          <div class="text-center lg:text-left">
+            <span class="inline-block px-4 py-2 rounded-full bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 text-sm font-medium mb-6 animate-in">
+              Nuevo: Módulo de Armaduras disponible
+            </span>
+            
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 dark:text-white leading-tight mb-6 animate-in animation-delay-100">
+              Domina la 
+              <span class="gradient-text">Estática</span>
+              <br />de forma fácil
+            </h1>
+            
+            <p class="text-lg sm:text-xl text-slate-600 dark:text-slate-300 mb-8 max-w-xl mx-auto lg:mx-0 animate-in animation-delay-200">
+              El curso más completo para aprender equilibrio de fuerzas, diagramas de cuerpo libre y análisis estructural. Perfecto para estudiantes de ingeniería que buscan dominar los fundamentos.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-in animation-delay-300">
+              <a 
+                href="/curso" 
+                class="btn-primary text-lg"
+                role="button"
+              >
+                <span>Comenzar Ahora</span>
+                <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
+              </a>
+              
+              <a 
+                href="/temario" 
+                class="btn-secondary text-lg"
+                role="button"
+              >
+                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <span>Ver Temario</span>
+              </a>
+            </div>
+          </div>
+          
+          <!-- Ilustración del Hero -->
+          <div class="relative animate-in animation-delay-400">
+            <div class="relative bg-white dark:bg-slate-800 rounded-2xl shadow-2xl p-8 border border-slate-200 dark:border-slate-700">
+              <!-- Diagrama ilustrativo de estática -->
+              <svg 
+                class="w-full h-64 sm:h-80" 
+                viewBox="0 0 400 300" 
+                fill="none" 
+                xmlns="http://www.w3.org/2000/svg"
+                aria-label="Diagrama de equilibrio de fuerzas"
+                role="img"
+              >
+                <!-- Base/Suelo -->
+                <line x1="50" y1="250" x2="350" y2="250" stroke="currentColor" stroke-width="3" class="text-slate-300 dark:text-slate-600"/>
+                <line x1="50" y1="250" x2="50" y2="260" stroke="currentColor" stroke-width="2" class="text-slate-300 dark:text-slate-600"/>
+                <line x1="100" y1="250" x2="100" y2="260" stroke="currentColor" stroke-width="2" class="text-slate-300 dark:text-slate-600"/>
+                <line x1="150" y1="250" x2="150" y2="260" stroke="currentColor" stroke-width="2" class="text-slate-300 dark:text-slate-600"/>
+                <line x1="200" y1="250" x2="200" y2="260" stroke="currentColor" stroke-width="2" class="text-slate-300 dark:text-slate-600"/>
+                <line x1="250" y1="250" x2="250" y2="260" stroke="currentColor" stroke-width="2" class="text-slate-300 dark:text-slate-600"/>
+                <line x1="300" y1="250" x2="300" y2="260" stroke="currentColor" stroke-width="2" class="text-slate-300 dark:text-slate-600"/>
+                <line x1="350" y1="250" x2="350" y2="260" stroke="currentColor" stroke-width="2" class="text-slate-300 dark:text-slate-600"/>
+                
+                <!-- Viga -->
+                <rect x="80" y="200" width="240" height="20" rx="2" class="fill-primary-500"/>
+                
+                <!-- Apoyo Fijo (izquierda) -->
+                <polygon points="100,220 80,250 120,250" class="fill-slate-400 dark:fill-slate-500"/>
+                <circle cx="100" cy="220" r="8" class="fill-primary-600"/>
+                
+                <!-- Apoyo Móvil (derecha) -->
+                <circle cx="300" cy="235" r="15" class="fill-slate-400 dark:fill-slate-500"/>
+                <circle cx="300" cy="220" r="8" class="fill-primary-600"/>
+                
+                <!-- Fuerza hacia abajo (carga) -->
+                <line x1="200" y1="120" x2="200" y2="195" stroke="currentColor" stroke-width="4" class="text-red-500"/>
+                <polygon points="200,200 190,180 210,180" class="fill-red-500"/>
+                <text x="210" y="160" class="fill-red-500 text-sm font-bold">F = 500 N</text>
+                
+                <!-- Reacción en apoyo fijo -->
+                <line x1="100" y1="190" x2="100" y2="140" stroke="currentColor" stroke-width="3" class="text-green-500"/>
+                <polygon points="100,135 90,155 110,155" class="fill-green-500"/>
+                <text x="40" y="130" class="fill-green-500 text-xs font-medium">R₁</text>
+                
+                <!-- Reacción en apoyo móvil -->
+                <line x1="300" y1="190" x2="300" y2="155" stroke="currentColor" stroke-width="3" class="text-green-500"/>
+                <polygon points="300,150 290,170 310,170" class="fill-green-500"/>
+                <text x="310" y="145" class="fill-green-500 text-xs font-medium">R₂</text>
+                
+                <!-- Etiqueta de equilibrio -->
+                <text x="200" y="40" text-anchor="middle" class="fill-slate-700 dark:fill-slate-300 text-base font-semibold">ΣF = 0 | ΣM = 0</text>
+              </svg>
+              
+              <!-- Indicador de contenido interactivo -->
+              <div class="absolute -bottom-4 left-1/2 -translate-x-1/2 px-4 py-2 bg-primary-600 text-white rounded-full text-sm font-medium shadow-lg">
+                Diagramas Interactivos
+              </div>
+            </div>
+            
+            <!-- Decoraciones flotantes -->
+            <div class="absolute -top-6 -left-6 w-12 h-12 bg-accent-500 rounded-lg rotate-12 opacity-80 animate-bounce-gentle"></div>
+            <div class="absolute -bottom-6 -right-6 w-16 h-16 bg-primary-500 rounded-full opacity-60 animate-bounce-gentle animation-delay-500"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="bg-primary-600 dark:bg-primary-800">
+    <div class="section-container py-12">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+        {stats.map((stat) => (
+          <div class="text-center">
+            <div class="text-3xl sm:text-4xl font-bold text-white mb-2">{stat.value}</div>
+            <div class="text-primary-200 text-sm sm:text-base">{stat.label}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="py-20 lg:py-28 bg-white dark:bg-slate-900">
+    <div class="section-container">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="inline-block px-4 py-2 rounded-full bg-accent-100 dark:bg-accent-900/30 text-accent-700 dark:text-accent-300 text-sm font-medium mb-4">
+          Por qué elegirnos
+        </span>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 dark:text-white mb-6">
+          Todo lo que necesitas para
+          <span class="gradient-text">dominar la Estática</span>
+        </h2>
+        <p class="text-lg text-slate-600 dark:text-slate-400">
+          Nuestro curso está diseñado para que aprendas de manera efectiva, con materiales de calidad y un enfoque práctico que te preparará para cualquier desafío.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {features.map((feature, index) => (
+          <article class="card p-8 group">
+            <div class="w-14 h-14 rounded-xl bg-primary-100 dark:bg-primary-900/30 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+              {feature.icon === 'rocket' && (
+                <svg class="w-7 h-7 text-primary-600 dark:text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+              )}
+              {feature.icon === 'pencil' && (
+                <svg class="w-7 h-7 text-primary-600 dark:text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+                </svg>
+              )}
+              {feature.icon === 'chart' && (
+                <svg class="w-7 h-7 text-primary-600 dark:text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                </svg>
+              )}
+            </div>
+            
+            <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+              {feature.title}
+            </h3>
+            
+            <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+              {feature.description}
+            </p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-20 lg:py-28 bg-gradient-to-br from-primary-600 to-primary-800 dark:from-primary-700 dark:to-primary-900 relative overflow-hidden">
+    <!-- Decoración -->
+    <div class="absolute inset-0 overflow-hidden" aria-hidden="true">
+      <div class="absolute top-0 left-1/4 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-accent-500/20 rounded-full blur-3xl"></div>
+    </div>
+    
+    <div class="section-container relative">
+      <div class="text-center max-w-3xl mx-auto">
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
+          ¿Listo para dominar la Estática?
+        </h2>
+        <p class="text-lg sm:text-xl text-primary-100 mb-10">
+          Únete a miles de estudiantes que ya están aprendiendo con nosotros. Comienza hoy y transforma tu comprensión de la ingeniería.
+        </p>
+        
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a 
+            href="/registro" 
+            class="inline-flex items-center justify-center px-8 py-4 bg-white text-primary-700 font-semibold rounded-lg hover:bg-primary-50 transition-all transform hover:scale-105 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-primary-600"
+            role="button"
+          >
+            Inscríbete Gratis
+            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </a>
+          
+          <a 
+            href="/demo" 
+            class="inline-flex items-center justify-center px-8 py-4 border-2 border-white/30 text-white font-semibold rounded-lg hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-primary-600"
+            role="button"
+          >
+            Ver Demo Gratuita
+          </a>
+        </div>
+        
+        <p class="mt-6 text-sm text-primary-200">
+          Sin tarjeta de crédito requerida • Acceso inmediato
+        </p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
