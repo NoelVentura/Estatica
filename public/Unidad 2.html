@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    
+    <title>Unidad 2: Equilibrio de la partícula | Estática para Ingenieros</title>
+    <meta name="description" content="Unidad 2 del curso: Condiciones para el equilibrio, ecuaciones de equilibrio y resultante de sistemas de fuerzas." />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              primary: {
+                50: '#eef2ff', 100: '#e0e7ff', 200: '#c7d2fe', 300: '#a5b4fc',
+                400: '#818cf8', 500: '#6366f1', 600: '#4f46e5', 700: '#4338ca',
+                800: '#3730a3', 900: '#312e81', 950: '#1e1b4b',
+              },
+              accent: {
+                50: '#ecfdf5', 100: '#d1fae5', 200: '#a7f3d0', 300: '#6ee7b7',
+                400: '#34d399', 500: '#10b981', 600: '#059669', 700: '#047857',
+                800: '#065f46', 900: '#064e3b', 950: '#022c22',
+              },
+            },
+            fontFamily: { sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'] },
+          },
+        },
+      }
+    </script>
+    <script>
+      (function() {
+        const theme = localStorage.getItem('theme') || 
+          (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        if (theme === 'dark') document.documentElement.classList.add('dark');
+      })();
+    </script>
+    <style>
+      html { scroll-behavior: smooth; }
+      body { font-family: 'Inter', system-ui, -apple-system, sans-serif; -webkit-font-smoothing: antialiased; }
+    </style>
+  </head>
+  
+  <body class="min-h-screen flex flex-col antialiased text-gray-900 dark:text-gray-100 transition-colors duration-300" style="background-image: url('images/mecanica.png'); background-size: cover; background-position: center; background-attachment: fixed; background-repeat: no-repeat;">
+    
+    <!-- HEADER -->
+    <header class="sticky top-0 z-50 w-full border-b border-indigo-200/30 dark:border-indigo-800/30 bg-white/70 dark:bg-slate-900/70 backdrop-blur-xl transition-colors duration-300">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex h-16 items-center justify-between">
+          <a href="Pagina de inicio.html" class="flex items-center gap-3 group" aria-label="Ir al inicio">
+            <img src="images/tecnologico.png" alt="Tecnológico" class="h-12 w-auto object-contain">
+            <div class="flex flex-col">
+              <span class="text-lg font-bold text-gray-900 dark:text-white leading-tight">Estática</span>
+              <span class="text-xs text-gray-500 dark:text-gray-400 leading-tight">para Ingenieros</span>
+            </div>
+          </a>
+
+          <nav class="hidden md:flex items-center gap-1" aria-label="Navegación principal">
+            <a href="Pagina de inicio.html" class="px-4 py-2 rounded-lg text-sm font-medium text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white transition-all duration-200">Inicio</a>
+            <a href="Pagina de inicio.html#el-curso" class="px-4 py-2 rounded-lg text-sm font-medium bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300" aria-current="page">El Curso</a>
+            <a href="Libros.html" class="px-4 py-2 rounded-lg text-sm font-medium text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white transition-all duration-200">Libros de Apoyo</a>
+            <a href="Contacto.html" class="px-4 py-2 rounded-lg text-sm font-medium text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white transition-all duration-200">Contacto</a>
+          </nav>
+
+          <div class="flex items-center gap-2">
+            <button id="theme-toggle" type="button" class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-all duration-300" aria-label="Cambiar tema">
+              <svg id="sun-icon" class="w-5 h-5 text-amber-400 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
+              </svg>
+              <svg id="moon-icon" class="w-5 h-5 text-gray-700 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+              </svg>
+            </button>
+            <button id="mobile-menu-button" type="button" class="md:hidden p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
+              <svg id="menu-icon" class="w-5 h-5 text-gray-700 dark:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+              </svg>
+              <svg id="close-icon" class="w-5 h-5 text-gray-700 dark:text-gray-300 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div id="mobile-menu" class="md:hidden hidden border-t border-indigo-200/30 dark:border-indigo-800/30 bg-white dark:bg-gray-950">
+        <nav class="container mx-auto px-4 py-4 space-y-1">
+          <a href="Pagina de inicio.html" class="block px-4 py-3 rounded-lg text-base font-medium text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800">Inicio</a>
+          <a href="Pagina de inicio.html#el-curso" class="block px-4 py-3 rounded-lg text-base font-medium bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300">El Curso</a>
+          <a href="Libros.html" class="block px-4 py-3 rounded-lg text-base font-medium text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800">Libros de Apoyo</a>
+          <a href="Contacto.html" class="block px-4 py-3 rounded-lg text-base font-medium text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800">Contacto</a>
+        </nav>
+      </div>
+    </header>
+    
+    <!-- MAIN -->
+    <main class="flex-1 py-12">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto">
+          <div class="bg-white/80 dark:bg-slate-900/80 backdrop-blur-md rounded-2xl shadow-2xl border border-indigo-200/50 dark:border-indigo-800/50 p-8 md:p-10">
+            
+            <div class="text-center mb-10">
+              <h1 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-2">Unidad 2: Equilibrio de la partícula</h1>
+              <p class="text-gray-600 dark:text-gray-400">
+                Condiciones para el equilibrio, ecuaciones de equilibrio y resultante de sistemas de fuerzas
+              </p>
+            </div>
+
+            <!-- Índice interno -->
+            <div class="mb-10 p-4 rounded-xl bg-primary-50 dark:bg-primary-900/20 border border-primary-200/50 dark:border-primary-700/50">
+              <h2 class="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-3">Contenido de la unidad</h2>
+              <ul class="space-y-1 text-sm">
+                <li><a href="#2-1" class="text-primary-600 dark:text-primary-400 hover:underline">2.1 Condiciones para el equilibrio de partículas</a></li>
+                <li><a href="#2-2" class="text-primary-600 dark:text-primary-400 hover:underline">2.2 Ecuaciones de equilibrio</a></li>
+                <li><a href="#2-3" class="text-primary-600 dark:text-primary-400 hover:underline">2.3 Resultante de sistemas de fuerzas</a></li>
+              </ul>
+            </div>
+
+            <!-- Secciones de contenido -->
+            <div class="space-y-10">
+              <section id="2-1" class="scroll-mt-24">
+                <h2 class="text-xl font-bold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
+                  <span class="w-8 h-8 rounded-lg bg-primary-500 text-white flex items-center justify-center text-sm">2.1</span>
+                  Condiciones para el equilibrio de partículas
+                </h2>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
+                  Una partícula está en equilibrio cuando la resultante de todas las fuerzas que actúan sobre ella es nula. Esto implica que la partícula permanece en reposo o se mueve con velocidad constante (equilibrio estático o cinético). Las condiciones necesarias y suficientes se expresan en función de las componentes de las fuerzas en un sistema de referencia.
+                </p>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
+                  Para problemas en el plano (2D), la resultante debe ser cero en dos direcciones independientes; en el espacio (3D), en tres direcciones. Esto conduce directamente a las ecuaciones de equilibrio que se verán en la siguiente sección.
+                </p>
+                <div class="flex justify-center mt-6">
+                  <img src="images/2.1.png" alt="2.1 Condiciones para el equilibrio de partículas" class="max-w-full rounded-xl border border-indigo-200/50 dark:border-indigo-700/50 shadow-md object-cover">
+                </div>
+                <div class="flex justify-end mt-4">
+                  <a href="pdf/2.1 Condiciones para el equilibrio de la particula.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-primary-500 hover:bg-primary-600 text-white font-medium text-sm transition-all duration-200" style="box-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 40px rgba(99, 102, 241, 0.25);">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                    Diapositiva 1
+                  </a>
+                </div>
+              </section>
+
+              <section id="2-2" class="scroll-mt-24">
+                <h2 class="text-xl font-bold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
+                  <span class="w-8 h-8 rounded-lg bg-primary-500 text-white flex items-center justify-center text-sm">2.2</span>
+                  Ecuaciones de equilibrio
+                </h2>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
+                  Las ecuaciones de equilibrio se obtienen al imponer que la suma de las componentes de las fuerzas en cada eje sea cero. En dos dimensiones: ΣF<sub>x</sub> = 0 y ΣF<sub>y</sub> = 0. En tres dimensiones se añade ΣF<sub>z</sub> = 0.
+                </p>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
+                  Estas ecuaciones permiten determinar fuerzas desconocidas (reacciones, tensiones, etc.) cuando el número de incógnitas coincide con el número de ecuaciones independientes. Son la base para la resolución de problemas de estática de la partícula.
+                </p>
+                <div class="flex justify-end mt-4">
+                  <a href="pdf/2.1b.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-primary-500 hover:bg-primary-600 text-white font-medium text-sm transition-all duration-200" style="box-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 40px rgba(99, 102, 241, 0.25);">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                    Diapositiva 2
+                  </a>
+                </div>
+              </section>
+
+              <section id="2-3" class="scroll-mt-24">
+                <h2 class="text-xl font-bold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
+                  <span class="w-8 h-8 rounded-lg bg-primary-500 text-white flex items-center justify-center text-sm">2.3</span>
+                  Resultante de sistemas de fuerzas
+                </h2>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
+                  La resultante de un sistema de fuerzas es el vector único que produce el mismo efecto que todas las fuerzas actuando conjuntamente. Para fuerzas concurrentes, la resultante se obtiene sumando vectorialmente todas las fuerzas del sistema.
+                </p>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
+                  El cálculo puede hacerse por métodos gráficos (polígono de fuerzas) o analíticos (descomposición en componentes y suma de componentes). Conocer la resultante es esencial para aplicar las condiciones de equilibrio: la partícula está en equilibrio si y solo si la resultante es nula.
+                </p>
+                <div class="rounded-xl overflow-hidden border border-indigo-200/50 dark:border-indigo-700/50 shadow-lg bg-black/5 dark:bg-black/20 max-w-2xl mx-auto mt-6">
+                  <video
+                    class="w-full"
+                    controls
+                    preload="metadata"
+                    title="La Ciencia de Estar Quieto"
+                  >
+                    <source src="videos/La_Ciencia_de_Estar_Quieto.mp4" type="video/mp4">
+                    Tu navegador no soporta la reproducción de video.
+                  </video>
+                  <p class="text-xs text-gray-500 dark:text-gray-400 px-3 py-2 bg-gray-50 dark:bg-gray-800/50">La Ciencia de Estar Quieto</p>
+                </div>
+                <div class="flex justify-end mt-4">
+                  <a href="pdf/2.3.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-primary-500 hover:bg-primary-600 text-white font-medium text-sm transition-all duration-200" style="box-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 40px rgba(99, 102, 241, 0.25);">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                    Diapositiva 3
+                  </a>
+                </div>
+              </section>
+            </div>
+
+            <!-- Tarjeta Problemas a Resolver -->
+            <div class="mt-10 p-6 rounded-2xl bg-gradient-to-br from-accent-50 to-accent-100/50 dark:from-accent-900/20 dark:to-accent-950/30 border-2 border-accent-200 dark:border-accent-700/50 shadow-lg">
+              <h2 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Problemas a Resolver</h2>
+              <p class="text-gray-600 dark:text-gray-400 mb-4">
+                Ejercicios para practicar las condiciones de equilibrio, ecuaciones de equilibrio y resultante de sistemas de fuerzas.
+              </p>
+              <div class="flex flex-col items-center gap-6">
+                <img src="images/P2.2.jpg" alt="Problema P2.2" class="max-w-full rounded-xl border border-accent-200/50 dark:border-accent-600/50 shadow-md object-cover">
+                <img src="images/P2.3.jpg" alt="Problema P2.3" class="max-w-full rounded-xl border border-accent-200/50 dark:border-accent-600/50 shadow-md object-cover">
+                <img src="images/P2.5.jpg" alt="Problema P2.5" class="max-w-full rounded-xl border border-accent-200/50 dark:border-accent-600/50 shadow-md object-cover">
+                <img src="images/P2.6.jpg" alt="Problema P2.6" class="max-w-full rounded-xl border border-accent-200/50 dark:border-accent-600/50 shadow-md object-cover">
+              </div>
+              <div class="mt-6 flex justify-center">
+                <a href="images/P2.7.jpg" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-accent-500 hover:bg-accent-600 text-white font-medium text-sm transition-all duration-200 shadow-md hover:shadow-lg">
+                  Ejercicios para Realizar
+                </a>
+              </div>
+            </div>
+
+            <div class="border-t border-gray-200 dark:border-gray-700 pt-8 mt-10 flex flex-col sm:flex-row gap-4 justify-between items-center">
+              <a href="Pagina de inicio.html#el-curso" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 font-medium hover:bg-primary-200 dark:hover:bg-primary-800/50 transition-colors">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+                Ver todas las unidades
+              </a>
+              <a href="Pagina de inicio.html" class="text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 font-medium text-sm">
+                ← Volver a la página principal
+              </a>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </main>
+    
+    <!-- FOOTER -->
+    <footer class="bg-slate-50/80 dark:bg-slate-900/80 border-t border-indigo-200/30 dark:border-indigo-800/30 backdrop-blur-sm py-6">
+      <div class="container mx-auto px-4 text-center">
+        <p class="text-sm text-gray-500 dark:text-gray-400">
+          © <span id="current-year">2026</span> Estática para Ingenieros. Todos los derechos reservados.
+        </p>
+      </div>
+    </footer>
+    
+    <script>
+      document.getElementById('current-year').textContent = new Date().getFullYear();
+      document.getElementById('theme-toggle').addEventListener('click', function() {
+        const isDark = document.documentElement.classList.contains('dark');
+        document.documentElement.classList.toggle('dark');
+        localStorage.setItem('theme', isDark ? 'light' : 'dark');
+      });
+      var menuBtn = document.getElementById('mobile-menu-button');
+      var mobileMenu = document.getElementById('mobile-menu');
+      var menuIcon = document.getElementById('menu-icon');
+      var closeIcon = document.getElementById('close-icon');
+      if (menuBtn && mobileMenu && menuIcon && closeIcon) {
+        menuBtn.addEventListener('click', function() {
+          var open = menuBtn.getAttribute('aria-expanded') === 'true';
+          menuBtn.setAttribute('aria-expanded', (!open).toString());
+          mobileMenu.classList.toggle('hidden');
+          menuIcon.classList.toggle('hidden');
+          closeIcon.classList.toggle('hidden');
+        });
+        mobileMenu.querySelectorAll('a').forEach(function(a) {
+          a.addEventListener('click', function() {
+            mobileMenu.classList.add('hidden');
+            menuIcon.classList.remove('hidden');
+            closeIcon.classList.add('hidden');
+            menuBtn.setAttribute('aria-expanded', 'false');
+          });
+        });
+      }
+    </script>
+  </body>
+</html>
