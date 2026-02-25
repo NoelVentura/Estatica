@@ -205,6 +205,47 @@
               </section>
             </div>
 
+            <!-- Tarjeta Explicación: Tensión B y peso W (fuerzas concurrentes) -->
+            <div class="mt-10 p-6 rounded-2xl bg-gradient-to-br from-primary-50 to-primary-100/50 dark:from-primary-900/20 dark:to-primary-950/30 border-2 border-primary-200 dark:border-primary-700/50 shadow-lg">
+              <h2 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Cómo calcular tensión B y peso W en fuerzas concurrentes</h2>
+              <p class="text-sm text-primary-600 dark:text-primary-400 font-medium mb-4">Equilibrio paso a paso</p>
+              <p class="text-gray-600 dark:text-gray-400 mb-5">
+                Cuando varias fuerzas concurren en un punto (partícula), la condición de equilibrio es ΣF<sub>x</sub> = 0 y ΣF<sub>y</sub> = 0. Con eso puedes despejar incógnitas como la tensión en un cable (B) o el peso (W). Sigue estos pasos:
+              </p>
+              <ol class="space-y-3 text-gray-700 dark:text-gray-300 text-sm leading-relaxed list-decimal list-inside">
+                <li><strong>Dibuja el diagrama de cuerpo libre</strong> de la partícula: todas las fuerzas que actúan sobre ella (tensiones, peso, reacciones).</li>
+                <li><strong>Elige un sistema de ejes</strong> (x, y) y descompón cada fuerza en sus componentes F<sub>x</sub> y F<sub>y</sub> (usa ángulos y sen/cos).</li>
+                <li><strong>Plantea las ecuaciones de equilibrio:</strong> ΣF<sub>x</sub> = 0 y ΣF<sub>y</sub> = 0. Sustituye las componentes en función de las incógnitas (B, W, etc.).</li>
+                <li><strong>Resuelve el sistema</strong> de dos ecuaciones con dos incógnitas (por sustitución o igualación) para obtener la tensión B y el peso W.</li>
+                <li><strong>Comprueba</strong> que las unidades y el signo de los resultados sean coherentes con el diagrama.</li>
+              </ol>
+              <div class="mt-6 rounded-xl overflow-hidden border border-primary-200/50 dark:border-primary-700/50 shadow-lg bg-black/5 dark:bg-black/20 max-w-2xl mx-auto">
+                <video class="w-full" controls playsinline preload="metadata" title="2.4 Tensión B y peso W - Equilibrio paso a paso">
+                  <source src="videos/2.4.mp4" type="video/mp4">
+                  Tu navegador no soporta la reproducción de video.
+                </video>
+                <p class="text-xs text-gray-500 dark:text-gray-400 px-3 py-2 bg-gray-50 dark:bg-gray-800/50">Video 2.4 — Tensión B y peso W en fuerzas concurrentes</p>
+              </div>
+              <p class="mt-4 text-gray-600 dark:text-gray-400 text-sm">
+                En problemas típicos, el peso W suele ser vertical (componente solo en y) y las tensiones se descomponen según los ángulos de los cables. Con dos incógnitas y dos ecuaciones de equilibrio, el problema es estáticamente determinado.
+              </p>
+
+              <!-- Ejemplo numérico -->
+              <div class="mt-6 p-4 rounded-xl bg-white/60 dark:bg-slate-800/50 border border-primary-200/60 dark:border-primary-600/40">
+                <h3 class="text-base font-bold text-gray-900 dark:text-white mb-3">Ejemplo numérico</h3>
+                <p class="text-gray-700 dark:text-gray-300 text-sm mb-3">
+                  La partícula P está en equilibrio. El cable A forma 30° con la horizontal y tiene tensión T<sub>A</sub> = 50 N. El cable B forma 45° con la vertical. Calcular la tensión B y el peso W.
+                </p>
+                <p class="text-gray-600 dark:text-gray-400 text-sm mb-2"><strong>Datos:</strong> T<sub>A</sub> = 50 N, α = 30°, β = 45°. Incógnitas: T<sub>B</sub>, W.</p>
+                <p class="text-gray-600 dark:text-gray-400 text-sm mb-2"><strong>Componentes:</strong> T<sub>Ax</sub> = 50 cos 30° = 43.3 N, T<sub>Ay</sub> = 50 sen 30° = 25 N. T<sub>Bx</sub> = T<sub>B</sub> sen 45°, T<sub>By</sub> = T<sub>B</sub> cos 45°. W solo en −y.</p>
+                <p class="text-gray-600 dark:text-gray-400 text-sm mb-2"><strong>ΣF<sub>x</sub> = 0:</strong> 43.3 − T<sub>B</sub> sen 45° = 0 → T<sub>B</sub> = 43.3 / 0.707 ≈ <strong>61.2 N</strong>.</p>
+                <p class="text-gray-600 dark:text-gray-400 text-sm mb-2"><strong>ΣF<sub>y</sub> = 0:</strong> 25 + T<sub>B</sub> cos 45° − W = 0 → W = 25 + 61.2×0.707 ≈ <strong>68.3 N</strong>.</p>
+                <p class="text-gray-600 dark:text-gray-400 text-sm">
+                  <strong>Resultado:</strong> Tensión B ≈ 61.2 N, Peso W ≈ 68.3 N. Unidades en newtons; signos coherentes con el DCL.
+                </p>
+              </div>
+            </div>
+
             <!-- Tarjeta Problemas a Resolver -->
             <div class="mt-10 p-6 rounded-2xl bg-gradient-to-br from-accent-50 to-accent-100/50 dark:from-accent-900/20 dark:to-accent-950/30 border-2 border-accent-200 dark:border-accent-700/50 shadow-lg">
               <h2 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Problemas a Resolver</h2>
