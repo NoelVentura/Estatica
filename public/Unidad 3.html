@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    
+    <title>Unidad 3: Equilibrio de cuerpo rígido | Estática para Ingenieros</title>
+    <meta name="description" content="Unidad 3 del curso: Condiciones de equilibrio de cuerpos rígidos, ecuaciones de equilibrio, momento de una fuerza y restricciones." />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              primary: {
+                50: '#eef2ff', 100: '#e0e7ff', 200: '#c7d2fe', 300: '#a5b4fc',
+                400: '#818cf8', 500: '#6366f1', 600: '#4f46e5', 700: '#4338ca',
+                800: '#3730a3', 900: '#312e81', 950: '#1e1b4b',
+              },
+              accent: {
+                50: '#ecfdf5', 100: '#d1fae5', 200: '#a7f3d0', 300: '#6ee7b7',
+                400: '#34d399', 500: '#10b981', 600: '#059669', 700: '#047857',
+                800: '#065f46', 900: '#064e3b', 950: '#022c22',
+              },
+            },
+            fontFamily: { sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'] },
+          },
+        },
+      }
+    </script>
+    <script>
+      (function() {
+        const theme = localStorage.getItem('theme') || 
+          (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        if (theme === 'dark') document.documentElement.classList.add('dark');
+      })();
+    </script>
+    <style>
+      html { scroll-behavior: smooth; }
+      body { font-family: 'Inter', system-ui, -apple-system, sans-serif; -webkit-font-smoothing: antialiased; }
+    </style>
+  </head>
+  
+  <body class="min-h-screen flex flex-col antialiased text-gray-900 dark:text-gray-100 transition-colors duration-300" style="background-image: url('images/mecanica.png'); background-size: cover; background-position: center; background-attachment: fixed; background-repeat: no-repeat;">
+    
+    <!-- HEADER -->
+    <header class="sticky top-0 z-50 w-full border-b border-indigo-200/30 dark:border-indigo-800/30 bg-white/70 dark:bg-slate-900/70 backdrop-blur-xl transition-colors duration-300">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex h-16 items-center justify-between">
+          <a href="Pagina de inicio.html" class="flex items-center gap-3 group" aria-label="Ir al inicio">
+            <img src="images/tecnologico.png" alt="Tecnológico" class="h-12 w-auto object-contain">
+            <div class="flex flex-col">
+              <span class="text-lg font-bold text-gray-900 dark:text-white leading-tight">Estática</span>
+              <span class="text-xs text-gray-500 dark:text-gray-400 leading-tight">para Ingenieros</span>
+            </div>
+          </a>
+
+          <nav class="hidden md:flex items-center gap-1" aria-label="Navegación principal">
+            <a href="Pagina de inicio.html" class="px-4 py-2 rounded-lg text-sm font-medium text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white transition-all duration-200">Inicio</a>
+            <a href="Pagina de inicio.html#el-curso" class="px-4 py-2 rounded-lg text-sm font-medium bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300" aria-current="page">El Curso</a>
+            <a href="Libros.html" class="px-4 py-2 rounded-lg text-sm font-medium text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white transition-all duration-200">Libros de Apoyo</a>
+            <a href="Contacto.html" class="px-4 py-2 rounded-lg text-sm font-medium text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white transition-all duration-200">Contacto</a>
+          </nav>
+
+          <div class="flex items-center gap-2">
+            <button id="theme-toggle" type="button" class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-all duration-300" aria-label="Cambiar tema">
+              <svg id="sun-icon" class="w-5 h-5 text-amber-400 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
+              </svg>
+              <svg id="moon-icon" class="w-5 h-5 text-gray-700 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+              </svg>
+            </button>
+            <button id="mobile-menu-button" type="button" class="md:hidden p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
+              <svg id="menu-icon" class="w-5 h-5 text-gray-700 dark:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+              </svg>
+              <svg id="close-icon" class="w-5 h-5 text-gray-700 dark:text-gray-300 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div id="mobile-menu" class="md:hidden hidden border-t border-indigo-200/30 dark:border-indigo-800/30 bg-white dark:bg-gray-950">
+        <nav class="container mx-auto px-4 py-4 space-y-1">
+          <a href="Pagina de inicio.html" class="block px-4 py-3 rounded-lg text-base font-medium text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800">Inicio</a>
+          <a href="Pagina de inicio.html#el-curso" class="block px-4 py-3 rounded-lg text-base font-medium bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300">El Curso</a>
+          <a href="Libros.html" class="block px-4 py-3 rounded-lg text-base font-medium text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800">Libros de Apoyo</a>
+          <a href="Contacto.html" class="block px-4 py-3 rounded-lg text-base font-medium text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800">Contacto</a>
+        </nav>
+      </div>
+    </header>
+    
+    <!-- MAIN -->
+    <main class="flex-1 py-12">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto">
+          <div class="bg-white/80 dark:bg-slate-900/80 backdrop-blur-md rounded-2xl shadow-2xl border border-indigo-200/50 dark:border-indigo-800/50 p-8 md:p-10">
+            
+            <div class="text-center mb-10">
+              <h1 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-2">Unidad 3: Equilibrio de cuerpo rígido</h1>
+              <p class="text-gray-600 dark:text-gray-400">
+                Condiciones de equilibrio, ecuaciones de equilibrio, momento de una fuerza y restricciones
+              </p>
+            </div>
+
+            <!-- Índice interno -->
+            <div class="mb-10 p-4 rounded-xl bg-primary-50 dark:bg-primary-900/20 border border-primary-200/50 dark:border-primary-700/50">
+              <h2 class="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-3">Contenido de la unidad</h2>
+              <ul class="space-y-1 text-sm">
+                <li><a href="#3-1" class="text-primary-600 dark:text-primary-400 hover:underline">3.1 Condiciones de equilibrio de cuerpos rígidos</a></li>
+                <li class="pl-4"><a href="#3-1-1" class="text-primary-600 dark:text-primary-400 hover:underline">3.1.1 Fuerzas internas y externas</a></li>
+                <li class="pl-4"><a href="#3-1-2" class="text-primary-600 dark:text-primary-400 hover:underline">3.1.2 Principios de transmisibilidad</a></li>
+                <li><a href="#3-2" class="text-primary-600 dark:text-primary-400 hover:underline">3.2 Ecuaciones de equilibrio</a></li>
+                <li class="pl-4"><a href="#3-2-1" class="text-primary-600 dark:text-primary-400 hover:underline">3.2.1 Ecuaciones para diferentes sistemas de fuerzas</a></li>
+                <li class="pl-4"><a href="#3-2-2" class="text-primary-600 dark:text-primary-400 hover:underline">3.2.2 Momento de una fuerza</a></li>
+                <li class="pl-4"><a href="#3-2-3" class="text-primary-600 dark:text-primary-400 hover:underline">3.2.3 Momento de una fuerza respecto a un eje</a></li>
+                <li class="pl-4"><a href="#3-2-4" class="text-primary-600 dark:text-primary-400 hover:underline">3.2.4 Sistemas equivalentes</a></li>
+                <li><a href="#3-3" class="text-primary-600 dark:text-primary-400 hover:underline">3.3 Restricciones de un cuerpo rígido</a></li>
+              </ul>
+            </div>
+
+            <!-- Secciones de contenido -->
+            <div class="space-y-10">
+              <section id="3-1" class="scroll-mt-24">
+                <h2 class="text-xl font-bold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
+                  <span class="w-8 h-8 rounded-lg bg-primary-500 text-white flex items-center justify-center text-sm">3.1</span>
+                  Condiciones de equilibrio de cuerpos rígidos
+                </h2>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
+                  Un cuerpo rígido está en equilibrio cuando la resultante de todas las fuerzas externas y la resultante de los momentos (respecto a cualquier punto) son nulas. Así se garantiza que no haya traslación ni rotación. Estas condiciones se expresan mediante las ecuaciones de equilibrio que veremos en la sección 3.2.
+                </p>
+
+                <h3 id="3-1-1" class="text-lg font-semibold text-gray-900 dark:text-white mt-6 mb-2">3.1.1 Fuerzas internas y externas</h3>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
+                  Las <strong>fuerzas externas</strong> son las que ejercen otros cuerpos o el medio sobre el cuerpo en estudio (peso, reacciones, tensiones). Las <strong>fuerzas internas</strong> son las que mantienen unidas las partículas del cuerpo; en un cuerpo rígido ideal no provocan cambio en el movimiento. Para el equilibrio solo se consideran las fuerzas externas en el diagrama de cuerpo libre.
+                </p>
+                <div class="rounded-xl overflow-hidden border border-indigo-200/50 dark:border-indigo-700/50 shadow-lg bg-black/5 dark:bg-black/20 max-w-2xl my-6 mx-auto">
+                  <video class="w-full" controls playsinline preload="metadata" title="3.1.1 Fuerzas internas y externas">
+                    <source src="videos/3.1.1.mp4" type="video/mp4">
+                    Tu navegador no soporta la reproducción de video.
+                  </video>
+                  <p class="text-xs text-gray-500 dark:text-gray-400 px-3 py-2 bg-gray-50 dark:bg-gray-800/50">Video 3.1.1</p>
+                </div>
+
+                <h3 id="3-1-2" class="text-lg font-semibold text-gray-900 dark:text-white mt-6 mb-2">3.1.2 Principios de transmisibilidad</h3>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
+                  El principio de transmisibilidad establece que el efecto de una fuerza sobre un cuerpo rígido no cambia si la fuerza se desplaza a lo largo de su línea de acción. Esto permite simplificar el diagrama de cuerpo libre y la aplicación de las condiciones de equilibrio sin alterar el resultado.
+                </p>
+                <div class="flex justify-end mt-4">
+                  <a href="pdf/3.1.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-primary-500 hover:bg-primary-600 text-white font-medium text-sm transition-all duration-200" style="box-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 40px rgba(99, 102, 241, 0.25);">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                    Diapositivas 3.1
+                  </a>
+                </div>
+              </section>
+
+              <section id="3-2" class="scroll-mt-24">
+                <h2 class="text-xl font-bold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
+                  <span class="w-8 h-8 rounded-lg bg-primary-500 text-white flex items-center justify-center text-sm">3.2</span>
+                  Ecuaciones de equilibrio
+                </h2>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
+                  Para un cuerpo rígido en el plano, las condiciones de equilibrio se reducen a tres ecuaciones escalares independientes: suma de fuerzas en x igual a cero, suma de fuerzas en y igual a cero, y suma de momentos respecto a un punto igual a cero. En el espacio (3D) se tienen seis ecuaciones (tres de fuerzas y tres de momentos).
+                </p>
+
+                <h3 id="3-2-1" class="text-lg font-semibold text-gray-900 dark:text-white mt-6 mb-2">3.2.1 Ecuaciones de equilibrio para diferentes sistemas de fuerzas</h3>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
+                  Según el tipo de sistema de fuerzas (concurrentes, paralelas, general coplanares, etc.), algunas ecuaciones pueden satisfacerse automáticamente o reducir el número de incógnitas que se pueden determinar. Es importante identificar el sistema para plantear solo las ecuaciones necesarias.
+                </p>
+                <div class="rounded-xl overflow-hidden border border-indigo-200/50 dark:border-indigo-700/50 shadow-lg bg-black/5 dark:bg-black/20 max-w-2xl my-6 mx-auto">
+                  <video class="w-full" controls playsinline preload="metadata" title="3.1 Ecuaciones de equilibrio para diferentes sistemas de fuerzas">
+                    <source src="videos/3.1.mp4" type="video/mp4">
+                    Tu navegador no soporta la reproducción de video.
+                  </video>
+                  <p class="text-xs text-gray-500 dark:text-gray-400 px-3 py-2 bg-gray-50 dark:bg-gray-800/50">Video 3.1</p>
+                </div>
+
+                <h3 id="3-2-2" class="text-lg font-semibold text-gray-900 dark:text-white mt-6 mb-2">3.2.2 Momento de una fuerza</h3>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
+                  El momento de una fuerza respecto a un punto O es una magnitud vectorial que mide la tendencia de la fuerza a producir rotación alrededor de O. Su módulo es M = F·d, donde d es la distancia perpendicular desde O hasta la línea de acción de la fuerza. La dirección del momento es perpendicular al plano que contiene a O y a la fuerza (regla de la mano derecha).
+                </p>
+
+                <h3 id="3-2-3" class="text-lg font-semibold text-gray-900 dark:text-white mt-6 mb-2">3.2.3 Momento de una fuerza respecto a un eje</h3>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
+                  El momento de una fuerza respecto a un eje (por ejemplo, el eje z) es la componente del momento (respecto a un punto del eje) en la dirección de ese eje. Solo la componente de la fuerza que tiende a girar el cuerpo alrededor del eje contribuye al momento respecto al eje.
+                </p>
+
+                <h3 id="3-2-4" class="text-lg font-semibold text-gray-900 dark:text-white mt-6 mb-2">3.2.4 Sistemas equivalentes</h3>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
+                  Dos sistemas de fuerzas son equivalentes si tienen la misma resultante y el mismo momento resultante respecto a un punto. Esto permite reemplazar un sistema complejo por uno más simple (por ejemplo, una fuerza única y un par) para facilitar el análisis del equilibrio.
+                </p>
+                <div class="flex justify-end mt-4">
+                  <a href="pdf/3.2.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-primary-500 hover:bg-primary-600 text-white font-medium text-sm transition-all duration-200" style="box-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 40px rgba(99, 102, 241, 0.25);">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                    Diapositivas 3.2
+                  </a>
+                </div>
+              </section>
+
+              <section id="3-3" class="scroll-mt-24">
+                <h2 class="text-xl font-bold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
+                  <span class="w-8 h-8 rounded-lg bg-primary-500 text-white flex items-center justify-center text-sm">3.3</span>
+                  Restricciones de un cuerpo rígido
+                </h2>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
+                  Las restricciones (apoyos, conexiones, empotramientos) limitan los grados de libertad del cuerpo y generan reacciones que aparecen en las ecuaciones de equilibrio. Según el tipo de apoyo (rótula, rodillo, empotramiento, etc.) se conocen las direcciones o valores de las reacciones, lo que permite plantear un sistema de ecuaciones con igual número de incógnitas para resolver el problema.
+                </p>
+                <div class="flex justify-end mt-4">
+                  <a href="pdf/3.3.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-primary-500 hover:bg-primary-600 text-white font-medium text-sm transition-all duration-200" style="box-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 40px rgba(99, 102, 241, 0.25);">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                    Diapositivas 3.3
+                  </a>
+                </div>
+              </section>
+            </div>
+
+            <!-- Tarjeta Problemas a Resolver -->
+            <div class="mt-10 p-6 rounded-2xl bg-gradient-to-br from-accent-50 to-accent-100/50 dark:from-accent-900/20 dark:to-accent-950/30 border-2 border-accent-200 dark:border-accent-700/50 shadow-lg">
+              <h2 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Problemas a Resolver</h2>
+              <p class="text-gray-600 dark:text-gray-400 mb-4">
+                Ejercicios para practicar condiciones de equilibrio de cuerpos rígidos, momentos y restricciones. (Añade aquí imágenes o enlaces a ejercicios cuando los tengas.)
+              </p>
+              <div class="flex justify-center">
+                <p class="text-sm text-gray-500 dark:text-gray-400">Próximamente: ejercicios de la Unidad 3</p>
+              </div>
+            </div>
+
+            <div class="border-t border-gray-200 dark:border-gray-700 pt-8 mt-10">
+              <a href="Pagina de inicio.html" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 font-medium hover:bg-primary-200 dark:hover:bg-primary-800/50 transition-colors">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+                Ir a Página Principal
+              </a>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </main>
+    
+    <!-- FOOTER -->
+    <footer class="bg-slate-50/80 dark:bg-slate-900/80 border-t border-indigo-200/30 dark:border-indigo-800/30 backdrop-blur-sm py-6">
+      <div class="container mx-auto px-4 text-center">
+        <p class="text-sm text-gray-500 dark:text-gray-400">
+          © <span id="current-year">2026</span> Estática para Ingenieros. Todos los derechos reservados.
+        </p>
+      </div>
+    </footer>
+    
+    <script>
+      document.getElementById('current-year').textContent = new Date().getFullYear();
+      document.getElementById('theme-toggle').addEventListener('click', function() {
+        const isDark = document.documentElement.classList.contains('dark');
+        document.documentElement.classList.toggle('dark');
+        localStorage.setItem('theme', isDark ? 'light' : 'dark');
+      });
+      var menuBtn = document.getElementById('mobile-menu-button');
+      var mobileMenu = document.getElementById('mobile-menu');
+      var menuIcon = document.getElementById('menu-icon');
+      var closeIcon = document.getElementById('close-icon');
+      if (menuBtn && mobileMenu && menuIcon && closeIcon) {
+        menuBtn.addEventListener('click', function() {
+          var open = menuBtn.getAttribute('aria-expanded') === 'true';
+          menuBtn.setAttribute('aria-expanded', (!open).toString());
+          mobileMenu.classList.toggle('hidden');
+          menuIcon.classList.toggle('hidden');
+          closeIcon.classList.toggle('hidden');
+        });
+        mobileMenu.querySelectorAll('a').forEach(function(a) {
+          a.addEventListener('click', function() {
+            mobileMenu.classList.add('hidden');
+            menuIcon.classList.remove('hidden');
+            closeIcon.classList.add('hidden');
+            menuBtn.setAttribute('aria-expanded', 'false');
+          });
+        });
+      }
+    </script>
+  </body>
+</html>
