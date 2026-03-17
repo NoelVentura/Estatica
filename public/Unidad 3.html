@@ -230,6 +230,23 @@
                     Diapositivas 3.1.2
                   </a>
                 </div>
+                <div class="mt-8 p-6 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700">
+                  <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+                    El <strong>principio de transmisibilidad</strong> es un concepto fundamental en la estática que establece que las condiciones de equilibrio o de movimiento de un <strong>cuerpo rígido</strong> permanecerán inalteradas si una fuerza <var>F</var> que actúa en un punto dado es reemplazada por otra fuerza de igual magnitud, dirección y sentido, siempre que esta última actúe en un punto diferente situado sobre la <strong>misma línea de acción</strong>.
+                  </p>
+                  <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+                    Para comprender este principio desde una perspectiva académica profunda, debemos considerar los siguientes puntos clave:
+                  </p>
+                  <ul class="list-disc list-inside space-y-3 text-gray-700 dark:text-gray-300 text-sm leading-relaxed mb-4">
+                    <li><strong>Clasificación de la fuerza como vector deslizante:</strong> En el análisis de cuerpos rígidos, este principio nos permite tratar a la fuerza como un <strong>vector deslizante</strong>. A diferencia de una partícula, donde el punto de aplicación es único, en un sólido podemos deslizar la fuerza a lo largo de su trayectoria lineal sin modificar los efectos externos sobre el cuerpo.</li>
+                    <li><strong>Justificación mediante el momento de una fuerza:</strong> Matemáticamente, el principio se sostiene porque el momento de una fuerza respecto a un punto específico <var>O</var> es el mismo, independientemente de dónde se aplique la fuerza a lo largo de su línea de acción. Al realizar la operación de producto cruz <var>M<sub>O</sub> = r × F</var>, se puede utilizar cualquier vector de posición <var>r</var> que se dirija desde <var>O</var> hacia <strong>cualquier punto</strong> sobre la línea de acción de <var>F</var>, obteniendo siempre el mismo vector momento.</li>
+                    <li><strong>Efectos externos vs. internos:</strong> Es imperativo distinguir que este principio es válido exclusivamente para el estudio de los <strong>efectos externos</strong>, tales como las fuerzas de reacción en los soportes o el movimiento de traslación y rotación del cuerpo. Por el contrario, si el interés del análisis son los esfuerzos internos o las deformaciones del material, el punto exacto de aplicación de la carga es determinante y el principio de transmisibilidad no debe emplearse.</li>
+                    <li><strong>Aplicación práctica en el equilibrio:</strong> Esta propiedad simplifica enormemente la resolución de problemas estructurales, permitiendo, por ejemplo, trasladar una fuerza resultante a puntos donde su línea de acción interseca elementos específicos de una estructura para facilitar el cálculo de equilibrio.</li>
+                  </ul>
+                  <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+                    Un ejemplo ilustrativo presentado en la literatura técnica es el de una varilla sujeta a una fuerza en un punto <var>A</var>. Si añadimos un par de fuerzas iguales y opuestas en un punto <var>B</var> sobre la misma línea de acción, observaremos que el efecto neto (la reacción en el agarre de la varilla) es idéntico al de haber aplicado la fuerza original directamente en <var>B</var>, demostrando que la ubicación exacta en la línea de acción no altera la estabilidad global del sistema.
+                  </p>
+                </div>
               </section>
 
               <section id="3-2" class="scroll-mt-24">
@@ -246,14 +263,32 @@
                     Diapositivas 3.2
                   </a>
                 </div>
+                <div class="mt-4 flex justify-center">
+                  <img src="images/P3.2.c.png" alt="Figura P3.2.c - Guía maestra del equilibrio estático: fundamentos por tipo de sistema y procedimiento de análisis" class="max-w-full rounded-xl border border-indigo-200/50 dark:border-indigo-700/50 shadow-md object-cover">
+                </div>
 
                 <h3 id="3-2-1" class="text-lg font-semibold text-gray-900 dark:text-white mt-6 mb-2">3.2.1 Ecuaciones de equilibrio para diferentes sistemas de fuerzas</h3>
                 <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
                   Según el tipo de sistema de fuerzas (concurrentes, paralelas, general coplanares, etc.), algunas ecuaciones pueden satisfacerse automáticamente o reducir el número de incógnitas que se pueden determinar. Es importante identificar el sistema para plantear solo las ecuaciones necesarias.
                 </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                  <div class="p-4 rounded-xl bg-slate-100 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-600">
+                    <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
+                      Determine la longitud requerida para el cable de corriente alterna de la figura 3-8a, de manera que la lámpara de 8 kg esté suspendida en la posición que se muestra. La longitud no deformada del resorte AB es <var>l'<sub>AB</sub></var> = 0.4 m, y el resorte tiene una rigidez de <var>k<sub>AB</sub></var> = 300 N/m.
+                    </p>
+                  </div>
+                  <div class="p-4 rounded-xl bg-slate-100 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-600">
+                    <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
+                      La caja de 200 kg que se muestra en la figura 3-7a está suspendida por las cuerdas AB y AC. Cada cuerda puede soportar una fuerza máxima de 10 kN antes de que se rompa. Si AB siempre permanece horizontal, determine el ángulo mínimo <var>θ</var> al que se puede suspender la caja antes de que una de las cuerdas se rompa.
+                    </p>
+                  </div>
+                </div>
                 <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-[660px] mx-auto">
                   <img src="images/P3.1.2.jpg" alt="Figura P3.1.2 - Ecuaciones de equilibrio para diferentes sistemas de fuerzas" class="max-w-[320px] w-full mx-auto rounded-xl border border-indigo-200/50 dark:border-indigo-700/50 shadow-md object-cover">
                   <img src="images/P3.1.2a.jpg" alt="Figura P3.1.2a - Ecuaciones de equilibrio para diferentes sistemas de fuerzas" class="max-w-[320px] w-full mx-auto rounded-xl border border-indigo-200/50 dark:border-indigo-700/50 shadow-md object-cover">
+                </div>
+                <div class="mt-4 flex justify-center">
+                  <img src="images/P3.2b.jpg" alt="Figura P3.2b - Equilibrio de un cuerpo rígido" class="max-w-md w-full rounded-xl border border-indigo-200/50 dark:border-indigo-700/50 shadow-md object-cover">
                 </div>
                 <div class="rounded-xl overflow-hidden border border-indigo-200/50 dark:border-indigo-700/50 shadow-lg bg-black/5 dark:bg-black/20 max-w-2xl my-6 mx-auto">
                   <video class="w-full" controls playsinline preload="metadata" title="3.1 Ecuaciones de equilibrio para diferentes sistemas de fuerzas">
@@ -262,11 +297,13 @@
                   </video>
                   <p class="text-xs text-gray-500 dark:text-gray-400 px-3 py-2 bg-gray-50 dark:bg-gray-800/50">Video 3.1</p>
                 </div>
-
                 <h3 id="3-2-2" class="text-lg font-semibold text-gray-900 dark:text-white mt-6 mb-2">3.2.2 Momento de una fuerza</h3>
                 <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
                   El momento de una fuerza respecto a un punto O es una magnitud vectorial que mide la tendencia de la fuerza a producir rotación alrededor de O. Su módulo es M = F·d, donde d es la distancia perpendicular desde O hasta la línea de acción de la fuerza. La dirección del momento es perpendicular al plano que contiene a O y a la fuerza (regla de la mano derecha).
                 </p>
+                <div class="mt-4 flex justify-center">
+                  <img src="images/P3.2.2.png" alt="Figura P3.2.2 - Momento de una fuerza" class="max-w-3xl w-full rounded-xl border border-indigo-200/50 dark:border-indigo-700/50 shadow-md object-cover">
+                </div>
 
                 <h3 id="3-2-3" class="text-lg font-semibold text-gray-900 dark:text-white mt-6 mb-2">3.2.3 Momento de una fuerza respecto a un eje</h3>
                 <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
