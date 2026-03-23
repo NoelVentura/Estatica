@@ -179,15 +179,93 @@
               <section id="6-1" class="scroll-mt-24">
                 <h2 class="text-xl font-bold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
                   <span class="w-8 h-8 rounded-lg bg-primary-500 text-white flex items-center justify-center text-sm">6.1</span>
-                  Vigas
+                  Vigas (p330)
                 </h2>
                 <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-4 text-justify">
                   Las vigas son elementos estructurales que trabajan principalmente a flexión. En estática, el análisis parte del diagrama de cuerpo libre, el cálculo de reacciones y la aplicación de ecuaciones de equilibrio.
                 </p>
-                <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700">
-                  <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
-                    En problemas clásicos se determinan cortante y momento flector en función de la carga, usando condiciones de equilibrio y (cuando aplique) relaciones diferenciales o por tramos.
+                <div class="mt-6 p-6 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700">
+                  <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+                    A continuación se presenta un resumen técnico y profesional sobre el estudio de las <strong>vigas</strong> en la ingeniería mecánica, estructurado a partir de los principios de la estática y el análisis estructural.
                   </p>
+
+                  <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2">1. Definición y función estructural</h4>
+                  <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+                    Las <strong>vigas</strong> se definen como elementos estructurales diseñados para <strong>soportar cargas aplicadas de manera perpendicular a sus ejes</strong>. En el ámbito de la mecánica de cuerpos rígidos, el estudio de las vigas se centra en el estado de equilibrio, donde las fuerzas aplicadas no producen movimiento acelerado.
+                  </p>
+                  <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+                    Para un análisis técnico preciso, los ingenieros suelen emplear <strong>modelos idealizados</strong>. En estos modelos, se asume que materiales como el acero son rígidos, despreciando deflexiones mínimas para simplificar el cálculo de las fuerzas actuantes.
+                  </p>
+
+                  <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2">2. Clasificación según apoyos y cargas</h4>
+                  <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed mb-2">
+                    La respuesta de una viga depende fundamentalmente de su configuración de soporte. Las clasificaciones comunes incluyen:
+                  </p>
+                  <ul class="list-disc list-inside space-y-2 text-sm text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+                    <li><strong>Simplemente apoyadas:</strong> articuladas en un extremo y sobre un rodillo en el otro.</li>
+                    <li><strong>En voladizo (cantilever):</strong> fijadas o empotradas en un solo extremo.</li>
+                    <li><strong>Con voladizo:</strong> aquellas cuyos extremos se extienden más allá de los soportes.</li>
+                    <li><strong>Vigas compuestas y vigas Gerber:</strong> estructuras formadas por varios segmentos conectados internamente.</li>
+                  </ul>
+
+                  <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2">3. Cargas internas y convención de signos</h4>
+                  <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed mb-2">
+                    Al someterse a cargas externas, se desarrollan tres tipos de <strong>cargas resultantes internas</strong> en la sección transversal del elemento:
+                  </p>
+                  <ol class="list-decimal list-inside space-y-2 text-sm text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+                    <li><strong>Fuerza normal (N):</strong> actúa perpendicular a la sección transversal. Se considera positiva si genera tensión.</li>
+                    <li><strong>Fuerza cortante (V):</strong> actúa de forma tangencial a la sección. Es positiva si tiende a hacer girar el segmento en el sentido de las manecillas del reloj.</li>
+                    <li><strong>Momento flexionante (M):</strong> tiende a doblar el elemento. Se define como positivo cuando dobla el segmento de forma cóncava hacia arriba (compresión en la parte superior y tensión en la inferior).</li>
+                  </ol>
+
+                  <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2">4. Análisis mediante diagramas de control</h4>
+                  <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+                    Para el diseño seguro de una viga, es imperativo conocer la variación de <strong>V</strong> y <strong>M</strong> a lo largo de toda su longitud. Esto se logra mediante el <strong>método de secciones</strong>, seccionando la viga a una distancia arbitraria <strong>x</strong> para formular ecuaciones de equilibrio.
+                  </p>
+
+                  <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2">5. Propiedades geométricas relevantes</h4>
+                  <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed mb-2">
+                    El comportamiento de una viga bajo carga también depende de la geometría de su sección transversal:
+                  </p>
+                  <ul class="list-disc list-inside space-y-2 text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
+                    <li><strong>Centroide:</strong> es el centro geométrico del área donde se considera que actúan las fuerzas resultantes.</li>
+                    <li><strong>Momento de inercia (I):</strong> propiedad necesaria para predecir la <strong>resistencia y la deflexión</strong> de la viga ante la flexión.</li>
+                    <li><strong>Módulo de sección:</strong> concepto abstracto derivado de la geometría de la sección plana con aplicación directa en el cálculo de esfuerzos.</li>
+                  </ul>
+                </div>
+                <div class="mt-4 flex justify-center">
+                  <img src="images/p6.1a.jpg" alt="Figura p6.1a - Vigas" class="max-w-lg w-full rounded-xl border border-indigo-200/50 dark:border-indigo-700/50 shadow-md object-cover">
+                </div>
+                <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-[760px] mx-auto">
+                  <img src="images/6.1c.jpg" alt="Figura 6.1c - Vigas" class="w-[360px] h-[360px] mx-auto rounded-xl border border-indigo-200/50 dark:border-indigo-700/50 shadow-md object-contain bg-white">
+                  <img src="images/6.1d.jpg" alt="Figura 6.1d - Vigas" class="w-[360px] h-[360px] mx-auto rounded-xl border border-indigo-200/50 dark:border-indigo-700/50 shadow-md object-contain bg-white">
+                </div>
+                <div class="mt-6 p-4 rounded-xl bg-primary-50 dark:bg-primary-900/20 border border-primary-200 dark:border-primary-700/50">
+                  <p class="text-sm font-semibold text-primary-800 dark:text-primary-200 mb-2">Ejercicio 6.1</p>
+                  <p class="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">
+                    Determine la fuerza normal, la fuerza cortante y el momento flexionante que actúan justo a la izquierda, punto B, y justo a la derecha, punto C, de la fuerza de 6 kN aplicada sobre la viga de la figura.
+                  </p>
+                </div>
+                <div class="mt-4 flex justify-center">
+                  <img src="images/6.1e.jpg" alt="Figura 6.1e - Ejercicio 6.1" class="max-w-[240px] w-full rounded-xl border border-indigo-200/50 dark:border-indigo-700/50 shadow-md object-cover">
+                </div>
+                <div class="mt-4 p-4 rounded-xl bg-primary-50 dark:bg-primary-900/20 border border-primary-200 dark:border-primary-700/50">
+                  <p class="text-sm font-semibold text-primary-800 dark:text-primary-200 mb-2">Ejercicio 6.1.2</p>
+                  <p class="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">
+                    Determine la fuerza normal, la fuerza cortante y el momento flexionante en el punto C de la viga que se muestra en la figura.
+                  </p>
+                </div>
+                <div class="mt-4 flex justify-center">
+                  <img src="images/6.1f.jpg" alt="Figura 6.1f - Ejercicio 6.1.2" class="max-w-[180px] w-full rounded-xl border border-indigo-200/50 dark:border-indigo-700/50 shadow-md object-cover">
+                </div>
+                <div class="mt-4 p-4 rounded-xl bg-primary-50 dark:bg-primary-900/20 border border-primary-200 dark:border-primary-700/50">
+                  <p class="text-sm font-semibold text-primary-800 dark:text-primary-200 mb-2">Ejercicio 6.1.3</p>
+                  <p class="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">
+                    Determine la fuerza normal, la fuerza cortante y el momento flexionante que actúan en el punto B de la estructura de dos elementos que se muestra en la figura.
+                  </p>
+                </div>
+                <div class="mt-4 flex justify-center">
+                  <img src="images/6.1g.jpg" alt="Figura 6.1g - Ejercicio 6.1.3" class="max-w-[180px] w-full rounded-xl border border-indigo-200/50 dark:border-indigo-700/50 shadow-md object-cover">
                 </div>
               </section>
 
