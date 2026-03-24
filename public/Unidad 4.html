@@ -172,10 +172,7 @@
                   <a href="#4-2" class="text-primary-600 dark:text-primary-400 hover:underline">4.2 Centroide de áreas y líneas</a>
                 </li>
                 <li class="pl-4">
-                  <a href="#4-2-1" class="text-primary-600 dark:text-primary-400 hover:underline">4.2.1 Primer momento de áreas y líneas</a>
-                </li>
-                <li class="pl-4">
-                  <a href="#4-2-2" class="text-primary-600 dark:text-primary-400 hover:underline">4.2.2 Por integración</a>
+                  <a href="#4-2-2" class="text-primary-600 dark:text-primary-400 hover:underline">4.2.2 Primer momento de área y centroide</a>
                 </li>
                 <li class="pl-4">
                   <a href="#4-2-3" class="text-primary-600 dark:text-primary-400 hover:underline">4.2.3 De áreas compuestas</a>
@@ -201,12 +198,47 @@
                 <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-4 text-justify">
                   El centro de gravedad, por su parte, incorpora el efecto de la distribución de masa (o peso). Conceptualmente, ambos conceptos se conectan a través de momentos.
                 </p>
-                <div class="flex justify-center mt-6">
-                  <div class="p-4 rounded-xl border border-dashed border-indigo-200/70 dark:border-indigo-700/40 bg-indigo-50/30 dark:bg-indigo-950/20">
-                    <p class="text-sm text-gray-600 dark:text-gray-300">
-                      Próximamente: imágenes y ejercicios P4.x.
-                    </p>
-                  </div>
+                <div class="mt-6 p-6 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700">
+                  <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed mb-4 text-justify">
+                    El <strong>centroide</strong> (C) se define fundamentalmente como el <strong>centro geométrico</strong> de un cuerpo. A diferencia del centro de gravedad, que depende del peso y la atracción gravitatoria, el centroide es una propiedad puramente geométrica de la forma o el objeto.
+                  </p>
+                  <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+                    A continuación se detallan los conceptos generales del centroide:
+                  </p>
+
+                  <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2">Relación con otros centros</h4>
+                  <ul class="list-disc list-inside space-y-2 text-sm text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+                    <li><strong>Coincidencia con el centro de gravedad:</strong> el centroide coincide con el centro de masa y el centro de gravedad únicamente si el material que compone el cuerpo es <strong>uniforme u homogéneo</strong> (densidad constante).</li>
+                    <li><strong>Fundamento físico:</strong> las fórmulas para localizar el centroide representan un balance entre la suma de los momentos de todos los elementos geométricos (líneas, áreas o volúmenes) y el momento de la resultante de la forma total.</li>
+                  </ul>
+
+                  <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2">Propiedades geométricas</h4>
+                  <ul class="list-disc list-inside space-y-2 text-sm text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+                    <li><strong>Simetría:</strong> si un volumen o área posee un eje o plano de simetría, el centroide debe descansar necesariamente sobre dicha línea o plano de intersección.</li>
+                    <li><strong>Ubicación externa:</strong> en ciertos casos, el centroide puede localizarse en un punto <strong>fuera del objeto físico</strong>, como ocurre en un anillo, donde el centroide se sitúa en su centro vacío.</li>
+                  </ul>
+
+                  <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2">Métodos de cálculo</h4>
+                  <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed mb-2">
+                    Dependiendo de la complejidad de la forma, se utilizan dos enfoques principales:
+                  </p>
+                  <ol class="list-decimal list-inside space-y-2 text-sm text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+                    <li><strong>Integración simple:</strong> se emplea para cuerpos de forma continua e irregular que pueden describirse mediante funciones matemáticas. Se seleccionan elementos diferenciales (dL, dA, dV) y se evalúan sus momentos respecto a los ejes coordenados.</li>
+                    <li><strong>Cuerpos compuestos:</strong> si el objeto está formado por una serie de formas geométricas simples (rectángulos, triángulos, círculos), el centroide se determina mediante una suma discreta de los momentos de sus partes componentes.</li>
+                  </ol>
+                  <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+                    Si el cuerpo tiene un <strong>agujero</strong> o una región vacía, este se trata como una parte componente con área, volumen o peso <strong>negativos</strong> en los cálculos.
+                  </p>
+
+                  <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2">Importancia en la ingeniería</h4>
+                  <ul class="list-disc list-inside space-y-2 text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
+                    <li><strong>Cargas distribuidas:</strong> la fuerza resultante de una carga distribuida coplanar actúa a través del centroide del área bajo el diagrama de carga.</li>
+                    <li><strong>Presión de fluidos:</strong> para una placa plana sumergida, la magnitud de la fuerza resultante es el producto del área por la presión a la profundidad del centroide de dicha área.</li>
+                    <li><strong>Momento de inercia:</strong> el centroide es la referencia base para calcular los momentos de inercia y aplicar el teorema de los ejes paralelos (I = I&#772; + Ad<sup>2</sup>), esencial para predecir la resistencia y deflexión en vigas y columnas.</li>
+                  </ul>
+                </div>
+                <div class="mt-4 flex justify-center">
+                  <img src="images/4.1.png" alt="Figura 4.1 - Conceptos generales del centroide" class="max-w-lg w-full rounded-xl border border-indigo-200/50 dark:border-indigo-700/50 shadow-md object-cover">
                 </div>
               </section>
 
@@ -216,39 +248,182 @@
                   Centroide de áreas y líneas
                 </h2>
                 <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-4 text-justify">
-                  Para una figura bidimensional, el centroide se define a partir de los momentos de primer orden. En forma general, para ejes <span class="font-medium">x</span> e <span class="font-medium">y</span>, se emplea que:
+                  Para una figura bidimensional, el centroide se define a partir de los momentos de primer orden respecto a los ejes coordenados.
                 </p>
-                <div class="mt-4 p-4 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700">
-                  <p class="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">
-                    <strong>x̄</strong> = (1/A) ∫ x dA, &nbsp; <strong>ȳ</strong> = (1/A) ∫ y dA
-                    <br />
-                    <span class="text-gray-500">(para áreas)</span>
-                    <br />
-                    <strong>x̄</strong> = (1/L) ∫ x dL, &nbsp; <strong>ȳ</strong> = (1/L) ∫ y dL
-                    <br />
-                    <span class="text-gray-500">(para líneas)</span>
+                <div class="mt-6 p-6 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700">
+                  <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed mb-4 text-justify">
+                    El <strong>centroide</strong> (C) es un concepto fundamental en la estática que representa el <strong>centro geométrico</strong> de un cuerpo. Su ubicación depende exclusivamente de la forma del objeto; solo coincide con el centro de masa o el centro de gravedad si el material es uniforme u homogéneo.
+                  </p>
+                  <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+                    A continuación, se detalla la información específica sobre los centroides de áreas y líneas:
+                  </p>
+
+                  <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2">1. Centroide de áreas</h4>
+                  <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed mb-4 text-justify">
+                    Para un área delimitada por una curva <var>y</var> = <var>f</var>(<var>x</var>), el centroide se localiza mediante la evaluación de los momentos del área con respecto a los ejes coordenados.
+                  </p>
+                  <p class="text-sm font-medium text-gray-800 dark:text-gray-200 mb-2">Fórmulas de integración</p>
+                  <p class="text-sm text-gray-700 dark:text-gray-300 mb-2">
+                    Las coordenadas (<span class="font-medium">x̄</span>, <span class="font-medium">ȳ</span>) se determinan como:
+                  </p>
+                  <div class="my-3 p-4 rounded-xl bg-white/70 dark:bg-slate-900/50 border border-slate-200/80 dark:border-slate-600/80 text-center text-sm text-gray-800 dark:text-gray-200 leading-relaxed">
+                    <p class="mb-2">
+                      <span class="font-medium">x̄</span> =
+                      <span class="inline-block align-middle px-1">∫ <var>x̃</var> d<var>A</var></span>
+                      <span class="mx-1">/</span>
+                      <span class="inline-block align-middle px-1">∫ d<var>A</var></span>
+                      &nbsp;&nbsp;y&nbsp;&nbsp;
+                      <span class="font-medium">ȳ</span> =
+                      <span class="inline-block align-middle px-1">∫ <var>ỹ</var> d<var>A</var></span>
+                      <span class="mx-1">/</span>
+                      <span class="inline-block align-middle px-1">∫ d<var>A</var></span>
+                    </p>
+                  </div>
+                  <p class="text-sm font-medium text-gray-800 dark:text-gray-200 mb-2">Elementos diferenciales (d<var>A</var>)</p>
+                  <ul class="list-disc list-inside space-y-2 text-sm text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+                    <li>Se puede usar una <strong>franja vertical</strong> de ancho d<var>x</var>, donde d<var>A</var> = <var>y</var> d<var>x</var>. En este caso, el centroide del elemento está en <var>x̃</var> = <var>x</var> y <var>ỹ</var> = <var>y</var>/2.</li>
+                    <li>Se puede usar una <strong>franja horizontal</strong> de espesor d<var>y</var>, donde d<var>A</var> = <var>x</var> d<var>y</var>. Aquí, el centroide del elemento se ubica en <var>x̃</var> = <var>x</var>/2 y <var>ỹ</var> = <var>y</var>.</li>
+                  </ul>
+                  <ul class="list-disc list-inside space-y-2 text-sm text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+                    <li><strong>Áreas compuestas:</strong> si el área está formada por figuras simples (rectángulos, triángulos, círculos), la ubicación se calcula sumando los momentos de cada parte: <span class="font-medium">x̄</span> = (Σ <var>x̃</var> <var>A</var>) / (Σ <var>A</var>).</li>
+                    <li><strong>Simetría:</strong> si un área posee un eje de simetría, el centroide debe descansar obligatoriamente sobre dicho eje.</li>
+                  </ul>
+
+                  <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2 mt-6">2. Centroide de líneas</h4>
+                  <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed mb-4 text-justify">
+                    Este concepto se aplica a segmentos de línea, como varillas delgadas o cables, cuya forma puede describirse matemáticamente.
+                  </p>
+                  <p class="text-sm font-medium text-gray-800 dark:text-gray-200 mb-2">Fórmulas de integración</p>
+                  <p class="text-sm text-gray-700 dark:text-gray-300 mb-2">
+                    Similar a las áreas, se utilizan las sumas de los momentos de los elementos diferenciales de longitud (d<var>L</var>):
+                  </p>
+                  <div class="my-3 p-4 rounded-xl bg-white/70 dark:bg-slate-900/50 border border-slate-200/80 dark:border-slate-600/80 text-center text-sm text-gray-800 dark:text-gray-200 leading-relaxed">
+                    <p>
+                      <span class="font-medium">x̄</span> =
+                      <span class="inline-block align-middle px-1">∫ <var>x̃</var> d<var>L</var></span>
+                      <span class="mx-1">/</span>
+                      <span class="inline-block align-middle px-1">∫ d<var>L</var></span>
+                      &nbsp;&nbsp;y&nbsp;&nbsp;
+                      <span class="font-medium">ȳ</span> =
+                      <span class="inline-block align-middle px-1">∫ <var>ỹ</var> d<var>L</var></span>
+                      <span class="mx-1">/</span>
+                      <span class="inline-block align-middle px-1">∫ d<var>L</var></span>
+                    </p>
+                  </div>
+                  <p class="text-sm font-medium text-gray-800 dark:text-gray-200 mb-2">Cálculo del elemento diferencial (d<var>L</var>)</p>
+                  <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed mb-2">
+                    La longitud del elemento se obtiene mediante el teorema de Pitágoras: d<var>L</var> = √(d<var>x</var><sup>2</sup> + d<var>y</var><sup>2</sup>). Según la facilidad de integración, puede expresarse como:
+                  </p>
+                  <ul class="list-disc list-inside space-y-2 text-sm text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+                    <li>d<var>L</var> = √(1 + (d<var>y</var>/d<var>x</var>)<sup>2</sup>) d<var>x</var></li>
+                    <li>d<var>L</var> = √((d<var>x</var>/d<var>y</var>)<sup>2</sup> + 1) d<var>y</var></li>
+                  </ul>
+                  <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+                    <strong>Líneas compuestas:</strong> para una varilla doblada en varios segmentos rectos o curvos conocidos, se aplica <span class="font-medium">x̄</span> = (Σ <var>x̃</var> <var>L</var>) / (Σ <var>L</var>).
+                  </p>
+
+                  <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2 mt-6">Procedimiento general de análisis</h4>
+                  <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed mb-2">
+                    Para determinar el centroide por integración, las fuentes recomiendan los siguientes pasos:
+                  </p>
+                  <ol class="list-decimal list-inside space-y-2 text-sm text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+                    <li><strong>Seleccionar el sistema de coordenadas</strong> y elegir un elemento diferencial (d<var>A</var> para áreas, d<var>L</var> para líneas) que toque un punto arbitrario (<var>x</var>, <var>y</var>) de la curva.</li>
+                    <li><strong>Expresar el tamaño y los brazos de momento</strong> (<var>x̃</var>, <var>ỹ</var>) del elemento en términos de las coordenadas de la curva.</li>
+                    <li><strong>Sustituir y realizar la integración</strong> bajo los límites definidos por la geometría de la forma.</li>
+                  </ol>
+                  <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
+                    En casos de formas comunes (como el cuadrante de un círculo o un triángulo), la ubicación del centroide se puede obtener directamente de <strong>tablas de propiedades geométricas</strong>.
                   </p>
                 </div>
-              </section>
-
-              <section id="4-2-1" class="scroll-mt-24">
-                <h2 class="text-xl font-bold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
-                  <span class="w-8 h-8 rounded-lg bg-primary-500 text-white flex items-center justify-center text-sm">4.2.1</span>
-                  Primer momento de áreas y líneas
-                </h2>
-                <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-4 text-justify">
-                  El primer momento respecto a un eje se relaciona con la ubicación del centroide. Matemáticamente, el momento mide cómo se “reparte” la cantidad (área o longitud) alrededor del eje.
-                </p>
+                <div class="mt-4 flex justify-center">
+                  <img src="images/4.1a.jpg" alt="Figura 4.1a - Centroide de áreas y líneas" class="max-w-lg w-full rounded-xl border border-indigo-200/50 dark:border-indigo-700/50 shadow-md object-cover">
+                </div>
+                <div id="ejercicio-4-1" class="scroll-mt-24 mt-6 p-4 rounded-xl bg-primary-50 dark:bg-primary-900/20 border border-primary-200 dark:border-primary-700/50">
+                  <p class="text-sm font-semibold text-primary-800 dark:text-primary-200 mb-2">Ejercicio 4.1 (p473)</p>
+                  <p class="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">
+                    Localice el centroide del área de la placa que se muestra en la figura.
+                  </p>
+                </div>
+                <div class="mt-4 flex justify-center">
+                  <img src="images/4.1b.jpg" alt="Figura 4.1b - Placa del Ejercicio 4.1 (p473)" class="max-w-sm w-full rounded-xl border border-indigo-200/50 dark:border-indigo-700/50 shadow-md object-cover">
+                </div>
+                <div id="primer-momento-areas-lineas" class="scroll-mt-24 mt-4 flex justify-center">
+                  <img src="images/4.1c.jpg" alt="Figura 4.1c - Primer momento de áreas y líneas" class="max-w-lg w-full rounded-xl border border-indigo-200/50 dark:border-indigo-700/50 shadow-md object-cover">
+                </div>
+                <div class="mt-4 flex justify-center">
+                  <img src="images/4.1d.png" alt="Figura 4.1d - Primer momento de áreas y líneas" class="max-w-lg w-full rounded-xl border border-indigo-200/50 dark:border-indigo-700/50 shadow-md object-cover">
+                </div>
               </section>
 
               <section id="4-2-2" class="scroll-mt-24">
                 <h2 class="text-xl font-bold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
                   <span class="w-8 h-8 rounded-lg bg-primary-500 text-white flex items-center justify-center text-sm">4.2.2</span>
-                  Por integración
+                  Primer momento de área y centroide
                 </h2>
-                <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-4 text-justify">
-                  Cuando la geometría permite describir la figura mediante expresiones continuas, el centroide se obtiene integrando la coordenada ponderada por el elemento diferencial (<span class="font-medium">dA</span> o <span class="font-medium">dL</span>).
-                </p>
+                <div class="mt-2 p-6 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700">
+                  <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed mb-4 text-justify">
+                    El <strong>primer momento de área</strong> y la localización del <strong>centroide</strong> son conceptos fundamentales en la mecánica para describir el centro geométrico de una figura o cuerpo. A continuación, se detalla la información extraída de las fuentes sobre estos temas:
+                  </p>
+
+                  <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2">1. Definición y concepto de centroide</h4>
+                  <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed mb-4 text-justify">
+                    El <strong>centroide</strong> representa el <strong>centro geométrico</strong> de un cuerpo. Este punto coincide con el centro de masa o el centro de gravedad únicamente si el material que compone el cuerpo es uniforme u homogéneo (densidad constante).
+                  </p>
+                  <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed mb-4 text-justify">
+                    Matemáticamente, las fórmulas para localizar el centroide se basan en un balance de momentos de elementos geométricos (líneas, áreas o volúmenes). El primer momento de un área respecto a un eje es esencialmente la integral que aparece en el numerador de las fórmulas del centroide.
+                  </p>
+
+                  <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2 mt-6">2. Centroide de áreas</h4>
+                  <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed mb-3 text-justify">
+                    Si un área se encuentra en el plano <var>x</var>-<var>y</var> y está delimitada por una curva <var>y</var> = <var>f</var>(<var>x</var>), su centroide <var>C</var>(<span class="font-medium">x̄</span>, <span class="font-medium">ȳ</span>) se determina mediante las siguientes integrales:
+                  </p>
+                  <ul class="list-disc list-inside space-y-2 text-sm text-gray-700 dark:text-gray-300 leading-relaxed mb-3">
+                    <li><strong>Coordenada <span class="font-medium">x̄</span>:</strong> <span class="font-medium">x̄</span> = (∫ <var>x̃</var> d<var>A</var>) / (∫ d<var>A</var>)</li>
+                    <li><strong>Coordenada <span class="font-medium">ȳ</span>:</strong> <span class="font-medium">ȳ</span> = (∫ <var>ỹ</var> d<var>A</var>) / (∫ d<var>A</var>)</li>
+                  </ul>
+                  <p class="text-sm font-medium text-gray-800 dark:text-gray-200 mb-1">Donde:</p>
+                  <ul class="list-disc list-inside space-y-1 text-sm text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+                    <li><strong>d<var>A</var></strong> es un elemento diferencial de área.</li>
+                    <li><strong><var>x̃</var>, <var>ỹ</var></strong> son los brazos de momento (coordenadas del centroide del elemento d<var>A</var>).</li>
+                    <li>El denominador ∫ d<var>A</var> representa el área total.</li>
+                  </ul>
+
+                  <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2 mt-6">3. Centroide de líneas</h4>
+                  <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed mb-3 text-justify">
+                    Para un segmento de línea o una barra delgada en el plano <var>x</var>-<var>y</var> descrita por una curva, el centroide se localiza con fórmulas análogas utilizando la longitud diferencial d<var>L</var>:
+                  </p>
+                  <ul class="list-disc list-inside space-y-2 text-sm text-gray-700 dark:text-gray-300 leading-relaxed mb-3">
+                    <li><strong>Coordenada <span class="font-medium">x̄</span>:</strong> <span class="font-medium">x̄</span> = (∫ <var>x̃</var> d<var>L</var>) / (∫ d<var>L</var>)</li>
+                    <li><strong>Coordenada <span class="font-medium">ȳ</span>:</strong> <span class="font-medium">ȳ</span> = (∫ <var>ỹ</var> d<var>L</var>) / (∫ d<var>L</var>)</li>
+                  </ul>
+                  <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed mb-4 text-justify">
+                    Para estos cálculos, la longitud del elemento diferencial d<var>L</var> se obtiene mediante el teorema de Pitágoras como d<var>L</var> = √(d<var>x</var><sup>2</sup> + d<var>y</var><sup>2</sup>).
+                  </p>
+
+                  <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2 mt-6">4. Propiedades y simetría</h4>
+                  <ul class="list-disc list-inside space-y-2 text-sm text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+                    <li><strong>Ejes de simetría:</strong> si un área o volumen posee un eje de simetría, el centroide debe encontrarse sobre dicho eje. Si tiene dos planos de simetría, el centroide está en la línea de intersección de ambos.</li>
+                    <li><strong>Ubicación externa:</strong> el centroide puede localizarse fuera del objeto físico, como en el caso de un anillo, donde el centroide está en el centro del hueco.</li>
+                  </ul>
+
+                  <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2 mt-6">5. Cuerpos y áreas compuestos</h4>
+                  <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed mb-3 text-justify">
+                    Cuando un objeto consiste en una serie de formas más simples conectadas (rectángulos, triángulos, círculos, etc.), no es necesario realizar integraciones complejas. Se utilizan sumatorias de los momentos de las partes componentes:
+                  </p>
+                  <ul class="list-disc list-inside space-y-2 text-sm text-gray-700 dark:text-gray-300 leading-relaxed mb-3">
+                    <li><strong><span class="font-medium">x̄</span> = (Σ <var>x̃</var> <var>A</var>) / (Σ <var>A</var>)</strong></li>
+                    <li><strong><span class="font-medium">ȳ</span> = (Σ <var>ỹ</var> <var>A</var>) / (Σ <var>A</var>)</strong></li>
+                  </ul>
+                  <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed mb-4 text-justify">
+                    <strong>Punto importante para áreas compuestas:</strong> si una parte componente tiene un agujero, su área y su momento de área se consideran como cantidades negativas en la sumatoria.
+                  </p>
+
+                  <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2 mt-6">6. Aplicaciones prácticas</h4>
+                  <ul class="list-disc list-inside space-y-2 text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
+                    <li><strong>Cargas distribuidas:</strong> la fuerza resultante de una carga distribuida sobre una viga actúa a través del centroide del área bajo el diagrama de carga.</li>
+                    <li><strong>Presión de fluidos:</strong> en placas sumergidas, la magnitud de la fuerza resultante es el producto del área y la presión en el centroide del área de la placa. Sin embargo, el punto donde realmente actúa la fuerza (centro de presión) no coincide con el centroide de la placa.</li>
+                  </ul>
+                </div>
               </section>
 
               <section id="4-2-3" class="scroll-mt-24">
@@ -260,6 +435,48 @@
                   Para figuras compuestas, el centroide puede calcularse como un promedio ponderado por el área de cada componente:
                   se suman las áreas positivas y se restan las negativas (huecos o recortes).
                 </p>
+                <div class="mt-6 p-6 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700">
+                  <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed mb-4 text-justify">
+                    La información sobre el cálculo del <strong>centroide de áreas compuestas</strong> se centra en simplificar el proceso cuando un objeto está formado por una serie de formas geométricas más simples, como rectángulos, triángulos o círculos.
+                  </p>
+                  <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+                    A continuación, se detallan los puntos clave según las fuentes:
+                  </p>
+
+                  <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2">1. Método de sumatorias</h4>
+                  <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed mb-3 text-justify">
+                    Cuando se trabaja con áreas compuestas, no es necesario realizar integraciones complejas. En su lugar, se utilizan <strong>sumatorias de los momentos</strong> de cada una de las partes que componen la figura total. Las fórmulas para localizar las coordenadas del centroide (<span class="font-medium">x̄</span>, <span class="font-medium">ȳ</span>) son:
+                  </p>
+                  <ul class="list-disc list-inside space-y-2 text-sm text-gray-700 dark:text-gray-300 leading-relaxed mb-3">
+                    <li><strong>Coordenada <span class="font-medium">x̄</span>:</strong> <span class="font-medium">x̄</span> = (Σ <var>x̃</var> <var>A</var>) / (Σ <var>A</var>)</li>
+                    <li><strong>Coordenada <span class="font-medium">ȳ</span>:</strong> <span class="font-medium">ȳ</span> = (Σ <var>ỹ</var> <var>A</var>) / (Σ <var>A</var>)</li>
+                  </ul>
+                  <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed mb-4 text-justify">
+                    Donde <strong><var>A</var></strong> es el área de cada forma simple y <strong><var>x̃</var>, <var>ỹ</var></strong> son las coordenadas del centroide de esa parte específica.
+                  </p>
+
+                  <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2 mt-6">2. Tratamiento de huecos o agujeros</h4>
+                  <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed mb-4 text-justify">
+                    Un aspecto fundamental al calcular áreas compuestas es que, si la figura tiene un <strong>agujero o espacio vacío</strong>, su área y su momento de área deben considerarse como <strong>cantidades negativas</strong> dentro de la sumatoria total.
+                  </p>
+
+                  <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2 mt-6">3. Consideraciones de simetría</h4>
+                  <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed mb-2">
+                    El cálculo puede simplificarse aún más mediante la observación de la geometría:
+                  </p>
+                  <ul class="list-disc list-inside space-y-2 text-sm text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+                    <li>Si el área compuesta posee un <strong>eje de simetría</strong>, el centroide debe estar ubicado obligatoriamente sobre ese eje.</li>
+                    <li>Si presenta dos planos de simetría, el centroide se encuentra justo en la intersección de ambos.</li>
+                  </ul>
+
+                  <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2 mt-6">4. Ubicación del centroide</h4>
+                  <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed text-justify">
+                    Es importante notar que el centroide representa el <strong>centro geométrico</strong> del cuerpo. En el caso de áreas compuestas con formas particulares (como un anillo), el centroide puede estar localizado <strong>fuera del material físico</strong> del objeto, situándose, por ejemplo, en el centro de un hueco.
+                  </p>
+                </div>
+                <div class="mt-6 flex justify-center">
+                  <img src="images/4.1e.png" alt="Figura 4.1e - Centroide de áreas compuestas" class="max-w-lg w-full rounded-xl border border-indigo-200/50 dark:border-indigo-700/50 shadow-md object-contain bg-white dark:bg-slate-900/50 p-2" decoding="async">
+                </div>
               </section>
 
               <section id="4-2-4" class="scroll-mt-24">
