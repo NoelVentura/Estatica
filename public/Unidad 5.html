@@ -155,7 +155,7 @@
                   <a href="#5-1" class="text-primary-600 dark:text-primary-400 hover:underline">5.1 Conceptos generales</a>
                 </li>
                 <li class="pl-4">
-                  <a href="#5-2" class="text-primary-600 dark:text-primary-400 hover:underline">5.2 Momento de inercia de un área por integración</a>
+                  <a href="#5-2" class="text-primary-600 dark:text-primary-400 hover:underline">5.2 Momento de inercia de un área por integración (p511)</a>
                 </li>
                 <li class="pl-4">
                   <a href="#5-3" class="text-primary-600 dark:text-primary-400 hover:underline">5.3 Teorema de ejes paralelos</a>
@@ -182,79 +182,24 @@
                 <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-4 text-justify">
                   El momento de inercia de un área es una medida de cómo se “distribuye” la geometría respecto a un eje. Se usa para analizar deformaciones y tensiones en flexión, así como para describir la resistencia relativa de una sección.
                 </p>
-                <div class="mt-6 p-6 rounded-2xl bg-white/70 dark:bg-slate-900/50 border border-indigo-200/50 dark:border-indigo-700/40">
-                  <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-6 text-justify">
-                    El <strong>momento de inercia</strong> es una propiedad geométrica y física fundamental en la ingeniería que se utiliza para analizar la resistencia de un cuerpo o área a la rotación o deformación bajo cargas específicas.
-                  </p>
-
-                  <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">
-                    A continuación se presentan los conceptos generales divididos en áreas y masa:
-                  </p>
-
-                  <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">1. Momento de Inercia para Áreas</h3>
-                  <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-4 text-justify">
-                    Este concepto surge frecuentemente cuando se analizan cargas distribuidas que actúan perpendicularmente a una superficie, como la presión de un fluido sobre una placa, donde la intensidad de la carga varía linealmente.
-                  </p>
-
-                  <ul class="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-                    <li>
-                      <strong>Definiciones Rectangulares:</strong> Se definen mediante integrales sobre toda el área (<var>A</var>). Para los ejes <var>x</var> y <var>y</var>, las fórmulas son:
-                      <div class="mt-3 grid grid-cols-1 sm:grid-cols-2 gap-3">
-                        <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 text-sm">
-                          <strong>I<sub>x</sub></strong> = ∫ y² dA
-                        </div>
-                        <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 text-sm">
-                          <strong>I<sub>y</sub></strong> = ∫ x² dA
-                        </div>
-                      </div>
-                      <p class="mt-3 text-sm text-gray-600 dark:text-gray-400">
-                        Dado que involucran una distancia al cuadrado por un área, estos valores <strong>siempre son positivos</strong> y sus unidades son de longitud a la cuarta potencia (m⁴, mm⁴, pie⁴).
-                      </p>
-                    </li>
-                    <li>
-                      <strong>Momento de Inercia Polar (<var>J</var><sub>O</sub>):</strong> Representa el momento de inercia con respecto al origen o un eje perpendicular al plano. Se calcula como la suma de los momentos rectangulares (<strong>J<sub>O</sub> = I<sub>x</sub> + I<sub>y</sub></strong>).
-                    </li>
-                    <li>
-                      <strong>Radio de Giro (<var>k</var>):</strong> Es una medida de la distribución del área con respecto a un eje. Se utiliza comúnmente en el diseño estructural de columnas y se calcula como <strong>k = √(I/A)</strong>.
-                    </li>
-                  </ul>
-
-                  <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3 mt-6">2. Teoremas y Herramientas de Cálculo</h3>
-                  <ul class="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-                    <li>
-                      <strong>Teorema de los Ejes Paralelos (Teorema de Steiner):</strong> Permite calcular el momento de inercia respecto a cualquier eje paralelo a un eje que pase por el centroide (<var>C</var>) del área. La fórmula es <strong>I = Ī + A d²</strong>, donde <var>d</var> es la distancia perpendicular entre los ejes.
-                    </li>
-                    <li>
-                      <strong>Áreas Compuestas:</strong> Si un área está formada por formas simples (rectángulos, círculos, triángulos), su momento de inercia total es la suma de los momentos de cada parte con respecto al mismo eje.
-                    </li>
-                    <li>
-                      <strong>Producto de Inercia (<strong>I</strong><sub>xy</sub>):</strong> Se define como <strong>I<sub>xy</sub> = ∫ x y dA</strong>. A diferencia del momento de inercia, puede ser <strong>positivo, negativo o cero</strong>. Si el área posee un eje de simetría, su producto de inercia con respecto a ese eje es cero.
-                    </li>
-                    <li>
-                      <strong>Momentos Principales y Círculo de Mohr:</strong> Para cualquier área existen <strong>ejes principales</strong> donde el momento de inercia es máximo o mínimo y el producto de inercia es cero. El <strong>Círculo de Mohr</strong> es una solución gráfica utilizada para encontrar estos valores.
-                    </li>
-                  </ul>
-
-                  <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3 mt-6">3. Momento de Inercia de Masa</h3>
-                  <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-4 text-justify">
-                    En dinámica, el momento de inercia de masa es una medida de la <strong>resistencia de un cuerpo a la aceleración angular</strong>.
-                  </p>
-                  <ul class="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300 leading-relaxed">
-                    <li>
-                      <strong>Definición:</strong> Se calcula mediante la integral <strong>I = ∫ r² dm</strong>, donde <var>r</var> es la distancia perpendicular desde el eje hasta el elemento de masa <var>dm</var>.
-                    </li>
-                    <li>
-                      <strong>Unidades:</strong> Se expresa comúnmente en kg·m² o slug·pie².
-                    </li>
-                    <li>
-                      <strong>Teorema de los Ejes Paralelos para Masa:</strong> Similar al de áreas, se expresa como <strong>I = I<sub>G</sub> + m d²</strong>, donde <strong>I<sub>G</sub></strong> es el momento de inercia respecto al eje que pasa por el centro de masa.
-                    </li>
-                  </ul>
-
-                  <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mt-6">
-                    Este conjunto de propiedades es esencial para calcular esfuerzos y deformaciones en vigas, columnas y diversos elementos estructurales.
-                  </p>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-4 text-justify">
+                  <strong>Masa.</strong> La masa es una medición de una cantidad de materia que se usa para comparar la acción de un cuerpo con la de otro. Esta propiedad se manifiesta como una atracción gravitacional entre dos cuerpos y proporciona una medida de la resistencia de la materia a un cambio en su velocidad.
+                </p>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-4 text-justify">
+                  <strong>Centro de gravedad.</strong> Un cuerpo está compuesto de un número infinito de partículas de tamaño diferencial, y por tal razón si el cuerpo se ubica dentro de un campo gravitatorio, entonces cada una de estas partículas tendrá un peso <var>dW</var>, figura 9-1a. Estos pesos formarán un sistema de fuerzas aproximadamente paralelas, y la fuerza resultante de este sistema es el peso total del cuerpo, la cual pasa a través de un solo punto llamado el centro de gravedad.
+                </p>
+                <div class="mt-4 mb-4 flex justify-center w-full">
+                  <img src="images/5.1c.jpg" alt="Figura 5.1c - Centro de gravedad (fig. 9-1a)" class="w-full max-w-md rounded-xl border border-indigo-200/50 dark:border-indigo-700/50 shadow-md object-contain" decoding="async">
                 </div>
+                <p class="text-gray-700 dark:text-gray-200 font-semibold leading-relaxed mb-2 text-justify">
+                  Momento de inercia de masa (p452)
+                </p>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-3 text-justify">
+                  El momento de inercia de masa de un cuerpo es una medida de la resistencia del cuerpo a la aceleración angular. Como este momento se usa en dinámica para estudiar el movimiento rotatorio, a continuación se analizarán los métodos para realizar su cálculo.
+                </p>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-4 text-justify">
+                  Considere el cuerpo rígido que se muestra en la figura 10-21. Definimos el momento de inercia de masa del cuerpo con respecto al eje <var>z</var> como
+                </p>
                 <div class="mt-6 flex justify-center">
                   <img src="images/5.1.png" alt="Figura 5.1 - Conceptos generales del momento de inercia" class="max-w-lg w-full rounded-xl border border-indigo-200/50 dark:border-indigo-700/50 shadow-md object-cover" decoding="async">
                 </div>
@@ -263,12 +208,88 @@
               <section id="5-2" class="scroll-mt-24">
                 <h2 class="text-xl font-bold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
                   <span class="w-8 h-8 rounded-lg bg-primary-500 text-white flex items-center justify-center text-sm">5.2</span>
-                  Momento de inercia de un área por integración
+                  Momento de inercia de un área por integración (p511)
                 </h2>
                 <div class="mt-6 space-y-6 text-gray-700 dark:text-gray-300 leading-relaxed text-justify">
                   <p>
                     El <strong>momento de inercia</strong>, técnicamente referido como el <strong>segundo momento de área</strong>, constituye una propiedad geométrica crítica en la ingeniería estructural para el análisis de la resistencia y estabilidad de elementos como vigas y columnas. Esta propiedad cuantifica la distribución de un área respecto a un eje específico, determinando la capacidad de una sección transversal para resistir cargas de flexión.
                   </p>
+                  <div class="mt-2 p-6 rounded-2xl bg-white/70 dark:bg-slate-900/50 border border-indigo-200/50 dark:border-indigo-700/40">
+                    <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-6 text-justify">
+                      El <strong>momento de inercia</strong> es una propiedad geométrica y física fundamental en la ingeniería que se utiliza para analizar la resistencia de un cuerpo o área a la rotación o deformación bajo cargas específicas.
+                    </p>
+
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">
+                      A continuación se presentan los conceptos generales divididos en áreas y masa:
+                    </p>
+
+                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">1. Momento de Inercia para Áreas</h3>
+                    <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-4 text-justify">
+                      Este concepto surge frecuentemente cuando se analizan cargas distribuidas que actúan perpendicularmente a una superficie, como la presión de un fluido sobre una placa, donde la intensidad de la carga varía linealmente.
+                    </p>
+
+                    <ul class="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+                      <li>
+                        <strong>Definiciones Rectangulares:</strong> Se definen mediante integrales sobre toda el área (<var>A</var>). Para los ejes <var>x</var> y <var>y</var>, las fórmulas son:
+                        <div class="mt-3 grid grid-cols-1 sm:grid-cols-2 gap-3">
+                          <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 text-sm">
+                            <strong>I<sub>x</sub></strong> = ∫ y² dA
+                          </div>
+                          <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 text-sm">
+                            <strong>I<sub>y</sub></strong> = ∫ x² dA
+                          </div>
+                        </div>
+                        <p class="mt-3 text-sm text-gray-600 dark:text-gray-400">
+                          Dado que involucran una distancia al cuadrado por un área, estos valores <strong>siempre son positivos</strong> y sus unidades son de longitud a la cuarta potencia (m⁴, mm⁴, pie⁴).
+                        </p>
+                      </li>
+                      <li>
+                        <strong>Momento de Inercia Polar (<var>J</var><sub>O</sub>):</strong> Representa el momento de inercia con respecto al origen o un eje perpendicular al plano. Se calcula como la suma de los momentos rectangulares (<strong>J<sub>O</sub> = I<sub>x</sub> + I<sub>y</sub></strong>).
+                      </li>
+                      <li>
+                        <strong>Radio de Giro (<var>k</var>):</strong> Es una medida de la distribución del área con respecto a un eje. Se utiliza comúnmente en el diseño estructural de columnas y se calcula como <strong>k = √(I/A)</strong>.
+                      </li>
+                    </ul>
+
+                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3 mt-6">2. Teoremas y Herramientas de Cálculo</h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+                      <li>
+                        <strong>Teorema de los Ejes Paralelos (Teorema de Steiner):</strong> Permite calcular el momento de inercia respecto a cualquier eje paralelo a un eje que pase por el centroide (<var>C</var>) del área. La fórmula es <strong>I = Ī + A d²</strong>, donde <var>d</var> es la distancia perpendicular entre los ejes.
+                      </li>
+                      <li>
+                        <strong>Áreas Compuestas:</strong> Si un área está formada por formas simples (rectángulos, círculos, triángulos), su momento de inercia total es la suma de los momentos de cada parte con respecto al mismo eje.
+                      </li>
+                      <li>
+                        <strong>Producto de Inercia (<strong>I</strong><sub>xy</sub>):</strong> Se define como <strong>I<sub>xy</sub> = ∫ x y dA</strong>. A diferencia del momento de inercia, puede ser <strong>positivo, negativo o cero</strong>. Si el área posee un eje de simetría, su producto de inercia con respecto a ese eje es cero.
+                      </li>
+                      <li>
+                        <strong>Momentos Principales y Círculo de Mohr:</strong> Para cualquier área existen <strong>ejes principales</strong> donde el momento de inercia es máximo o mínimo y el producto de inercia es cero. El <strong>Círculo de Mohr</strong> es una solución gráfica utilizada para encontrar estos valores.
+                      </li>
+                    </ul>
+
+                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3 mt-6">3. Momento de Inercia de Masa</h3>
+                    <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-4 text-justify">
+                      En dinámica, el momento de inercia de masa es una medida de la <strong>resistencia de un cuerpo a la aceleración angular</strong>.
+                    </p>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300 leading-relaxed">
+                      <li>
+                        <strong>Definición:</strong> Se calcula mediante la integral <strong>I = ∫ r² dm</strong>, donde <var>r</var> es la distancia perpendicular desde el eje hasta el elemento de masa <var>dm</var>.
+                      </li>
+                      <li>
+                        <strong>Unidades:</strong> Se expresa comúnmente en kg·m² o slug·pie².
+                      </li>
+                      <li>
+                        <strong>Teorema de los Ejes Paralelos para Masa:</strong> Similar al de áreas, se expresa como <strong>I = I<sub>G</sub> + m d²</strong>, donde <strong>I<sub>G</sub></strong> es el momento de inercia respecto al eje que pasa por el centro de masa.
+                      </li>
+                    </ul>
+
+                    <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mt-6">
+                      Este conjunto de propiedades es esencial para calcular esfuerzos y deformaciones en vigas, columnas y diversos elementos estructurales.
+                    </p>
+                  </div>
+                  <div class="mt-6 flex justify-center">
+                    <img src="images/5.2a.jpg" alt="Figura 5.2a" class="max-w-2xl w-full rounded-2xl border border-indigo-200/50 dark:border-indigo-700/50 shadow-lg object-contain" decoding="async">
+                  </div>
                   <p class="text-sm text-gray-600 dark:text-gray-400">
                     A continuación, se describen sus fundamentos técnicos bajo un estándar profesional:
                   </p>
