@@ -251,8 +251,136 @@
                       </li>
                     </ul>
 
+                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3 mt-6">Definición de momentos de inercia para áreas</h3>
+                    <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-4 text-justify">
+                      Siempre que una carga distribuida actúa en forma perpendicular a un área y que su intensidad varía linealmente, el cálculo del momento de la distribución de carga con respecto a un eje implicará una cantidad llamada el momento de inercia del área.
+                    </p>
+                    <section class="scroll-mt-24 mt-8 pt-8 border-t border-indigo-200/30 dark:border-indigo-700/30">
+                      <div class="mt-2 space-y-6 text-gray-700 dark:text-gray-300 leading-relaxed text-justify">
+                        <div>
+                          <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">2. Teoremas de transformación y radio de giro</h3>
+                          <ul class="list-disc list-inside space-y-2 pl-1">
+                            <li>
+                              <strong>Teorema de los ejes paralelos (teorema de Steiner):</strong> Es indispensable para determinar el momento de inercia respecto a cualquier eje que sea paralelo a un eje que pase por el centroide (<var>C</var>) del área. La relación matemática es <strong>I = Ī + A·d²</strong>, donde <strong>Ī</strong> es el momento centroidal y <var>d</var> es la distancia perpendicular entre los ejes <span class="text-gray-500 dark:text-gray-400 text-sm">[2.451]</span>.
+                            </li>
+                            <li>
+                              <strong>Análisis de áreas compuestas:</strong> En la práctica profesional, las secciones estructurales (como vigas en I o canales) se dividen en formas geométricas simples. El momento total es la <strong>suma algebraica</strong> de los momentos de cada componente referidos al mismo eje de referencia <span class="text-gray-500 dark:text-gray-400 text-sm">[2.451]</span>.
+                            </li>
+                            <li>
+                              <strong>Radio de giro (<var>k</var>):</strong> Es una medida de la dispersión del área respecto al eje, esencial en el diseño de columnas para prevenir el pandeo. Se define como <strong>k = √(I/A)</strong> <span class="text-gray-500 dark:text-gray-400 text-sm">[2.445]</span>.
+                            </li>
+                          </ul>
+                        </div>
+
+                        <ul class="list-disc list-inside space-y-2 pl-1">
+                          <li>
+                            <strong>Momento de inercia polar (J<sub>O</sub>):</strong> Representa la resistencia de una sección a la torsión o rotación sobre un eje perpendicular al plano. Se define como la suma de los momentos rectangulares: <strong>J<sub>O</sub> = I<sub>x</sub> + I<sub>y</sub> = ∫ r² dA</strong> <span class="text-gray-500 dark:text-gray-400 text-sm">[2.446]</span>.
+                          </li>
+                        </ul>
+
+                        <p>
+                          El <strong>momento de inercia</strong>, técnicamente definido como el <strong>segundo momento de área</strong>, constituye una propiedad geométrica y física fundamental en la ingeniería para el análisis de la resistencia, rigidez y estabilidad de elementos estructurales y mecánicos <span class="text-gray-500 dark:text-gray-400 text-sm whitespace-nowrap">[2.444, 2.445]</span>. A continuación, se detallan sus fundamentos técnicos desde una perspectiva profesional:
+                        </p>
+
+                        <div>
+                          <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">1. Fundamentos matemáticos y naturaleza del área</h3>
+                          <p class="mb-3">
+                            El momento de inercia cuantifica la distribución del área de una sección transversal con respecto a un eje específico <span class="text-gray-500 dark:text-gray-400 text-sm">[2.445]</span>.
+                          </p>
+                          <ul class="list-disc list-inside space-y-2 pl-1">
+                            <li>
+                              <strong>Definiciones rectangulares:</strong> Se calculan mediante la integración de la distancia al cuadrado de elementos diferenciales de área (<var>dA</var>) respecto a los ejes coordenados:
+                              <ul class="list-disc list-inside mt-2 ml-4 space-y-1 text-sm">
+                                <li><strong>I<sub>x</sub></strong> = ∫ y² dA <span class="text-gray-500 dark:text-gray-400">[2.446]</span>.</li>
+                                <li><strong>I<sub>y</sub></strong> = ∫ x² dA <span class="text-gray-500 dark:text-gray-400">[2.446]</span>.</li>
+                              </ul>
+                            </li>
+                            <li>
+                              <strong>Propiedades escalares:</strong> Dado que el brazo de momento se eleva al cuadrado, estos valores son <strong>estrictamente positivos</strong> y se expresan en unidades de longitud a la cuarta potencia (m<sup>4</sup>, mm<sup>4</sup>, pie<sup>4</sup>, pulg<sup>4</sup>) <span class="text-gray-500 dark:text-gray-400 text-sm">[2.446, 2.448]</span>.
+                            </li>
+                          </ul>
+                        </div>
+
+                        <div>
+                          <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">3. Producto de inercia y estados principales</h3>
+                          <ul class="list-disc list-inside space-y-2 pl-1">
+                            <li>
+                              <strong>Producto de inercia (I<sub>xy</sub>):</strong> Se define como <strong>I<sub>xy</sub> = ∫ x·y dA</strong> y es necesario para localizar los ejes donde la inercia es máxima o mínima <span class="text-gray-500 dark:text-gray-400 text-sm">[2.458]</span>. A diferencia de los momentos rectangulares, puede ser <strong>positivo, negativo o cero</strong>; si el área posee un eje de simetría, su producto de inercia respecto a ese eje es nulo <span class="text-gray-500 dark:text-gray-400 text-sm">[2.459]</span>.
+                            </li>
+                            <li>
+                              <strong>Momentos principales y círculo de Mohr:</strong> Para cualquier sección, existen <strong>ejes principales</strong> donde el momento de inercia alcanza sus valores extremos y el producto de inercia es cero. El <strong>círculo de Mohr</strong> se utiliza como una metodología gráfica para identificar estos valores y la orientación de sus ejes correspondientes <span class="text-gray-500 dark:text-gray-400 text-sm">[2.460, 2.478]</span>.
+                            </li>
+                          </ul>
+                          <div class="mt-5">
+                            <a href="pdf/5.1%20INERCIA.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-primary-500 hover:bg-primary-600 text-white font-medium text-sm transition-all duration-200" style="box-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 40px rgba(99, 102, 241, 0.25);">
+                              Abrir PDF: 5.1 Inercia
+                            </a>
+                          </div>
+                        </div>
+
+                      <h2 id="5-3" class="scroll-mt-24 text-xl font-bold text-gray-900 dark:text-white mb-0 mt-10 pt-8 border-t border-indigo-200/30 dark:border-indigo-700/30 flex items-center gap-2">
+                        <span class="w-8 h-8 rounded-lg bg-primary-500 text-white flex items-center justify-center text-sm">5.3</span>
+                        Teorema de ejes paralelos
+                      </h2>
+                      </div>
+                    </section>
+
+
+                    <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-4 text-justify">
+                      Por ejemplo, considere la placa de la figura 10-1, la cual está sometida a una presión <var>p</var> del fluido. Esta presión <var>p</var> varía en forma lineal con la profundidad, de tal manera que <var>p</var> = <var>γ</var><var>y</var>, donde <var>γ</var> es el peso específico del fluido. Así, la fuerza que actúa sobre el área diferencial <var>dA</var> de la placa es <var>dF</var> = <var>p</var><var>dA</var> = (<var>γ</var><var>y</var>)<var>dA</var>. Por tanto, el momento de esta fuerza con respecto al eje <var>x</var> es <var>dM</var> = <var>y</var><var>dF</var> = <var>γ</var><var>y</var><sup>2</sup><var>dA</var>, y al integrar <var>dM</var> sobre toda el área de la placa resulta <var>M</var> = <var>γ</var> ∫ <var>y</var><sup>2</sup> <var>dA</var>. La integral ∫ <var>y</var><sup>2</sup> <var>dA</var> se denomina el momento de inercia <var>I</var><sub>x</sub> del área con respecto al eje <var>x</var>. Las integrales de esta forma aparecen con frecuencia en las fórmulas que se utilizan en mecánica de fluidos, mecánica de materiales, mecánica estructural y diseño mecánico, por lo que los ingenieros necesitan conocer los métodos empleados para su cálculo.
+                    </p>
+                    <div class="mt-6 flex justify-center">
+                      <img src="images/5.2b.jpg" alt="Figura 5.2b" class="w-full max-w-xs md:max-w-sm rounded-2xl border border-indigo-200/50 dark:border-indigo-700/50 shadow-lg object-contain" decoding="async">
+                    </div>
+                    <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-4 text-justify mt-6">
+                      <strong>Momento de inercia.</strong> Por definición, los momentos de inercia de un área diferencial <var>dA</var> con respecto a los ejes <var>x</var> y <var>y</var> son <var>dI</var><sub>x</sub> = <var>y</var><sup>2</sup> <var>dA</var> y <var>dI</var><sub>y</sub> = <var>x</var><sup>2</sup> <var>dA</var>, respectivamente, figura 10-2. Los momentos de inercia se determinan por integración para toda el área; es decir,
+                    </p>
+                    <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6 justify-items-center items-start">
+                      <img src="images/5.2c.jpg" alt="Figura 5.2c (izquierda)" class="w-full max-w-[220px] md:max-w-[260px] rounded-2xl border border-indigo-200/50 dark:border-indigo-700/50 shadow-lg object-contain" decoding="async">
+                      <img src="images/5.2d.jpg" alt="Figura 5.2d (derecha)" class="w-full max-w-[220px] md:max-w-[260px] rounded-2xl border border-indigo-200/50 dark:border-indigo-700/50 shadow-lg object-contain" decoding="async">
+                    </div>
+                    <div class="mt-6 flex justify-center">
+                      <img src="images/5.2e.jpg" alt="Figura 5.2e" class="w-full max-w-[203px] md:max-w-[245px] rounded-2xl border border-indigo-200/50 dark:border-indigo-700/50 shadow-lg object-contain" decoding="async">
+                    </div>
+                    <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-4 text-justify mt-6">
+                      También podemos formular esta cantidad para <var>dA</var> con respecto al “polo” <var>O</var> o eje <var>z</var>, figura 10-2. A éste se le llama momento de inercia polar. Se define como <var>dJ</var><sub>O</sub> = <var>r</var><sup>2</sup> <var>dA</var>, donde <var>r</var> es la distancia perpendicular desde el polo (eje <var>z</var>) hasta el elemento <var>dA</var>. Para toda el área, el momento de inercia polar es
+                    </p>
+
                     <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3 mt-6">2. Teoremas y Herramientas de Cálculo</h3>
-                    <ul class="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+                    <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-4 text-justify">
+                      El teorema de los ejes paralelos puede usarse para determinar el momento de inercia de un área con respecto a cualquier eje que sea paralelo a un eje que pasa a través de su centroide y del cual se conozca el momento de inercia. Para desarrollar este teorema, consideraremos determinar el momento de inercia del área sombreada que se muestra en la figura 10-3 con respecto al eje <var>x</var>. Para iniciar, elegimos un elemento diferencial <var>dA</var> que está ubicado a una distancia arbitraria <var>y</var>′ del eje centroidal <var>x</var>′. Si la distancia entre los ejes paralelos <var>x</var> y <var>x</var>′ se define como <var>d</var><sub>y</sub>, entonces el momento de inercia de <var>dA</var> con respecto al eje <var>x</var> es <var>dI</var><sub>x</sub> = (<var>y</var>′ + <var>d</var><sub>y</sub>)<sup>2</sup> <var>dA</var>. Para toda el área,
+                    </p>
+                    <div class="mt-6 flex justify-center">
+                      <img src="images/5.2f.jpg" alt="Figura 5.2f" class="w-full max-w-[192px] md:max-w-[224px] rounded-2xl border border-indigo-200/50 dark:border-indigo-700/50 shadow-lg object-contain" decoding="async">
+                    </div>
+                    <div class="mt-6 flex justify-center">
+                      <img src="images/5.2g.jpg" alt="Figura 5.2g" class="w-full max-w-[192px] md:max-w-[224px] rounded-2xl border border-indigo-200/50 dark:border-indigo-700/50 shadow-lg object-contain" decoding="async">
+                    </div>
+                    <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-4 text-justify mt-6">
+                      La primera integral representa el momento de inercia del área con respecto al eje centroidal <var>x</var>′. La segunda integral es cero ya que el eje <var>x</var>′ pasa a través del centroide <var>C</var> del área; es decir, ∫ <var>y</var>′ <var>dA</var> = 0, puesto que <span class="whitespace-nowrap"><var>ȳ</var>′ = 0</span>. Observamos que como la tercera integral representa el área total <var>A</var>, el resultado final es, por tanto,
+                    </p>
+                    <div class="mt-6 flex justify-center">
+                      <img src="images/5.2h.jpg" alt="Figura 5.2h" class="w-full max-w-[192px] md:max-w-[224px] rounded-2xl border border-indigo-200/50 dark:border-indigo-700/50 shadow-lg object-contain" decoding="async">
+                    </div>
+                    <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-4 text-justify mt-6">
+                      Para <var>I</var><sub>y</sub>, se puede escribir una expresión similar; es decir,
+                    </p>
+                    <div class="mt-6 flex justify-center">
+                      <img src="images/5.2i.jpg" alt="Figura 5.2i" class="w-full max-w-[192px] md:max-w-[224px] rounded-2xl border border-indigo-200/50 dark:border-indigo-700/50 shadow-lg object-contain" decoding="async">
+                    </div>
+                    <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-4 text-justify mt-6">
+                      Y por último, para el momento de inercia polar, como <var>J</var><sub>O</sub> = <var>I</var><sub>x</sub> + <var>I</var><sub>y</sub> y <var>r</var><sup>2</sup> = <var>x</var><sup>2</sup> + <var>y</var><sup>2</sup>, tenemos
+                    </p>
+                    <div class="mt-6 flex justify-center">
+                      <img src="images/5.2j.jpg" alt="Figura 5.2j" class="w-full max-w-[192px] md:max-w-[224px] rounded-2xl border border-indigo-200/50 dark:border-indigo-700/50 shadow-lg object-contain" decoding="async">
+                    </div>
+                    <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-4 text-justify mt-6">
+                      La forma de cada una de estas tres ecuaciones establece que el momento de inercia de un área con respecto a un eje es igual al momento de inercia del área con respecto a un eje paralelo que pase a través del centroide del área, más el producto del área y el cuadrado de la distancia perpendicular entre los ejes.
+                    </p>
+                    <div class="mt-6 flex justify-center">
+                      <img src="images/5.2k.jpg" alt="Figura 5.2k — teorema de ejes paralelos" class="w-full max-w-[192px] md:max-w-[224px] rounded-2xl border border-indigo-200/50 dark:border-indigo-700/50 shadow-lg object-contain" decoding="async">
+                    </div>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300 leading-relaxed mb-4 mt-6">
                       <li>
                         <strong>Teorema de los Ejes Paralelos (Teorema de Steiner):</strong> Permite calcular el momento de inercia respecto a cualquier eje paralelo a un eje que pase por el centroide (<var>C</var>) del área. La fórmula es <strong>I = Ī + A d²</strong>, donde <var>d</var> es la distancia perpendicular entre los ejes.
                       </li>
@@ -287,130 +415,6 @@
                       Este conjunto de propiedades es esencial para calcular esfuerzos y deformaciones en vigas, columnas y diversos elementos estructurales.
                     </p>
                   </div>
-                  <div class="mt-6 flex justify-center">
-                    <img src="images/5.2a.jpg" alt="Figura 5.2a" class="max-w-2xl w-full rounded-2xl border border-indigo-200/50 dark:border-indigo-700/50 shadow-lg object-contain" decoding="async">
-                  </div>
-                  <p class="text-sm text-gray-600 dark:text-gray-400">
-                    A continuación, se describen sus fundamentos técnicos bajo un estándar profesional:
-                  </p>
-
-                  <div>
-                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">1. Definición matemática y naturaleza escalar</h3>
-                    <p class="mb-3">
-                      El cálculo del momento de inercia se realiza mediante la integración de la distancia al cuadrado desde un eje de referencia hasta un elemento diferencial de área (<var>dA</var>).
-                    </p>
-                    <ul class="list-disc list-inside space-y-2 pl-1">
-                      <li>
-                        <strong>Momentos rectangulares:</strong> Para los ejes coordenados en el plano, las expresiones son <strong>I<sub>x</sub> = ∫ y² dA</strong> e <strong>I<sub>y</sub> = ∫ x² dA</strong>.
-                      </li>
-                      <li>
-                        <strong>Signo y unidades:</strong> Debido a que el brazo de momento se eleva al cuadrado, el resultado es <strong>estrictamente positivo</strong> y se expresa en unidades de longitud a la cuarta potencia, como m<sup>4</sup> o mm<sup>4</sup>.
-                      </li>
-                      <li>
-                        <strong>Radio de giro (<var>k</var>):</strong> Es un parámetro derivado que se define como <strong>k = √(I/A)</strong>, proporcionando una medida de la dispersión del área respecto al eje de referencia.
-                      </li>
-                    </ul>
-                  </div>
-
-                  <div>
-                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">2. Teoremas de transformación y secciones compuestas</h3>
-                    <ul class="list-disc list-inside space-y-2 pl-1">
-                      <li>
-                        <strong>Teorema de los ejes paralelos (teorema de Steiner):</strong> Este principio permite determinar el momento de inercia respecto a cualquier eje paralelo a un eje centroidal conocido mediante la relación <strong>I = Ī + A·d²</strong>, donde <var>d</var> es la distancia perpendicular entre ambos ejes.
-                      </li>
-                      <li>
-                        <strong>Análisis de áreas compuestas:</strong> En la práctica profesional, las secciones transversales complejas se dividen en formas geométricas simples; el momento de inercia total es la <strong>suma algebraica</strong> de los momentos de sus partes componentes, restando el valor de áreas vacías o agujeros si los hubiera.
-                      </li>
-                    </ul>
-                  </div>
-
-                  <div>
-                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">3. Producto de inercia y estados principales</h3>
-                    <ul class="list-disc list-inside space-y-2 pl-1">
-                      <li>
-                        <strong>Producto de inercia (I<sub>xy</sub>):</strong> Se define como <strong>I<sub>xy</sub> = ∫ x·y dA</strong> y, a diferencia de los momentos rectangulares, puede ser positivo, negativo o nulo. Si un área posee un <strong>eje de simetría</strong>, el producto de inercia respecto a ese eje es <strong>cero</strong>.
-                      </li>
-                      <li>
-                        <strong>Ejes principales y círculo de Mohr:</strong> Para cualquier sección, existen ejes específicos donde los momentos de inercia alcanzan sus valores máximo y mínimo (momentos principales). El <strong>círculo de Mohr</strong> se emplea como una metodología gráfica eficaz para identificar estos valores y la orientación de sus ejes correspondientes.
-                      </li>
-                    </ul>
-                  </div>
-
-                  <div>
-                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">4. Importancia en el diseño estructural</h3>
-                    <p>
-                      Esta propiedad es la base para entender y resolver problemas de <strong>resistencia de materiales</strong>. El momento de inercia influye directamente en la rigidez de los elementos; cuanto mayor sea su valor respecto al eje de carga, menor será la deflexión experimentada por la estructura.
-                    </p>
-                    <div class="mt-6 flex justify-center">
-                      <img src="images/5.2.jpg" alt="Figura 5.2 - Segundo momento de área y rigidez estructural" class="max-w-2xl w-full rounded-2xl border border-indigo-200/50 dark:border-indigo-700/50 shadow-lg object-cover" decoding="async">
-                    </div>
-                  </div>
-                </div>
-              </section>
-
-              <section id="5-3" class="scroll-mt-24">
-                <h2 class="text-xl font-bold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
-                  <span class="w-8 h-8 rounded-lg bg-primary-500 text-white flex items-center justify-center text-sm">5.3</span>
-                  Teorema de ejes paralelos
-                </h2>
-                <div class="mt-2 space-y-6 text-gray-700 dark:text-gray-300 leading-relaxed text-justify">
-                  <p>
-                    El <strong>momento de inercia</strong>, técnicamente definido como el <strong>segundo momento de área</strong>, constituye una propiedad geométrica y física fundamental en la ingeniería para el análisis de la resistencia, rigidez y estabilidad de elementos estructurales y mecánicos <span class="text-gray-500 dark:text-gray-400 text-sm whitespace-nowrap">[2.444, 2.445]</span>. A continuación, se detallan sus fundamentos técnicos desde una perspectiva profesional:
-                  </p>
-
-                  <div>
-                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">1. Fundamentos matemáticos y naturaleza del área</h3>
-                    <p class="mb-3">
-                      El momento de inercia cuantifica la distribución del área de una sección transversal con respecto a un eje específico <span class="text-gray-500 dark:text-gray-400 text-sm">[2.445]</span>.
-                    </p>
-                    <ul class="list-disc list-inside space-y-2 pl-1">
-                      <li>
-                        <strong>Definiciones rectangulares:</strong> Se calculan mediante la integración de la distancia al cuadrado de elementos diferenciales de área (<var>dA</var>) respecto a los ejes coordenados:
-                        <ul class="list-disc list-inside mt-2 ml-4 space-y-1 text-sm">
-                          <li><strong>I<sub>x</sub></strong> = ∫ y² dA <span class="text-gray-500 dark:text-gray-400">[2.446]</span>.</li>
-                          <li><strong>I<sub>y</sub></strong> = ∫ x² dA <span class="text-gray-500 dark:text-gray-400">[2.446]</span>.</li>
-                        </ul>
-                      </li>
-                      <li>
-                        <strong>Propiedades escalares:</strong> Dado que el brazo de momento se eleva al cuadrado, estos valores son <strong>estrictamente positivos</strong> y se expresan en unidades de longitud a la cuarta potencia (m<sup>4</sup>, mm<sup>4</sup>, pie<sup>4</sup>, pulg<sup>4</sup>) <span class="text-gray-500 dark:text-gray-400 text-sm">[2.446, 2.448]</span>.
-                      </li>
-                      <li>
-                        <strong>Momento de inercia polar (J<sub>O</sub>):</strong> Representa la resistencia de una sección a la torsión o rotación sobre un eje perpendicular al plano. Se define como la suma de los momentos rectangulares: <strong>J<sub>O</sub> = I<sub>x</sub> + I<sub>y</sub> = ∫ r² dA</strong> <span class="text-gray-500 dark:text-gray-400 text-sm">[2.446]</span>.
-                      </li>
-                    </ul>
-                  </div>
-
-                  <div>
-                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">2. Teoremas de transformación y radio de giro</h3>
-                    <ul class="list-disc list-inside space-y-2 pl-1">
-                      <li>
-                        <strong>Teorema de los ejes paralelos (teorema de Steiner):</strong> Es indispensable para determinar el momento de inercia respecto a cualquier eje que sea paralelo a un eje que pase por el centroide (<var>C</var>) del área. La relación matemática es <strong>I = Ī + A·d²</strong>, donde <strong>Ī</strong> es el momento centroidal y <var>d</var> es la distancia perpendicular entre los ejes <span class="text-gray-500 dark:text-gray-400 text-sm">[2.451]</span>.
-                      </li>
-                      <li>
-                        <strong>Análisis de áreas compuestas:</strong> En la práctica profesional, las secciones estructurales (como vigas en I o canales) se dividen en formas geométricas simples. El momento total es la <strong>suma algebraica</strong> de los momentos de cada componente referidos al mismo eje de referencia <span class="text-gray-500 dark:text-gray-400 text-sm">[2.451]</span>.
-                      </li>
-                      <li>
-                        <strong>Radio de giro (<var>k</var>):</strong> Es una medida de la dispersión del área respecto al eje, esencial en el diseño de columnas para prevenir el pandeo. Se define como <strong>k = √(I/A)</strong> <span class="text-gray-500 dark:text-gray-400 text-sm">[2.445]</span>.
-                      </li>
-                    </ul>
-                  </div>
-
-                  <div>
-                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">3. Producto de inercia y estados principales</h3>
-                    <ul class="list-disc list-inside space-y-2 pl-1">
-                      <li>
-                        <strong>Producto de inercia (I<sub>xy</sub>):</strong> Se define como <strong>I<sub>xy</sub> = ∫ x·y dA</strong> y es necesario para localizar los ejes donde la inercia es máxima o mínima <span class="text-gray-500 dark:text-gray-400 text-sm">[2.458]</span>. A diferencia de los momentos rectangulares, puede ser <strong>positivo, negativo o cero</strong>; si el área posee un eje de simetría, su producto de inercia respecto a ese eje es nulo <span class="text-gray-500 dark:text-gray-400 text-sm">[2.459]</span>.
-                      </li>
-                      <li>
-                        <strong>Momentos principales y círculo de Mohr:</strong> Para cualquier sección, existen <strong>ejes principales</strong> donde el momento de inercia alcanza sus valores extremos y el producto de inercia es cero. El <strong>círculo de Mohr</strong> se utiliza como una metodología gráfica para identificar estos valores y la orientación de sus ejes correspondientes <span class="text-gray-500 dark:text-gray-400 text-sm">[2.460, 2.478]</span>.
-                      </li>
-                    </ul>
-                    <div class="mt-5">
-                      <a href="pdf/5.1%20INERCIA.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-primary-500 hover:bg-primary-600 text-white font-medium text-sm transition-all duration-200" style="box-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 40px rgba(99, 102, 241, 0.25);">
-                        Abrir PDF: 5.1 Inercia
-                      </a>
-                    </div>
-                  </div>
                 </div>
               </section>
 
@@ -420,6 +424,18 @@
                   Radio de giro
                 </h2>
                 <div class="mt-2 space-y-6 text-gray-700 dark:text-gray-300 leading-relaxed text-justify">
+                  <p>
+                    El radio de giro de un área con respecto a un eje tiene unidades de longitud y es una cantidad que se usa a menudo en mecánica estructural para el diseño de columnas. Si se conocen las áreas y los momentos de inercia, los radios de giro se determinan a partir de las fórmulas.
+                  </p>
+                  <div class="mt-4 flex justify-center">
+                    <img src="images/5.4.jpg" alt="Figura 5.4 — fórmulas del radio de giro" class="w-[20%] max-w-sm rounded-2xl border border-indigo-200/50 dark:border-indigo-700/50 shadow-lg object-contain" decoding="async">
+                  </div>
+                  <p class="text-gray-700 dark:text-gray-300 leading-relaxed text-justify mt-4">
+                    La forma de estas ecuaciones es fácil de recordar, ya que es semejante a la que se usa para encontrar el momento de inercia para un área diferencial con respecto a un eje. Por ejemplo, <var>I</var> = <var>m</var><var>k</var><sup>2</sup>; mientras que para un área diferencial <var>dI</var><sub>x</sub> = <var>y</var><sup>2</sup> <var>dA</var>.
+                  </p>
+                  <div class="mt-4 flex justify-center">
+                    <img src="images/5.4a.jpg" alt="Figura 5.4a — elementos de área diferencial dA" class="w-[55%] max-w-2xl rounded-2xl border border-indigo-200/50 dark:border-indigo-700/50 shadow-lg object-contain" decoding="async">
+                  </div>
                   <p>
                     El <strong>radio de giro</strong> es una propiedad geométrica y mecánica fundamental en el análisis de estructuras y cuerpos rígidos, que describe la distribución de los elementos de un área o de una masa con respecto a un eje específico.
                   </p>
