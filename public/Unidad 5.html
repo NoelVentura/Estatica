@@ -622,10 +622,63 @@
                   <span class="w-8 h-8 rounded-lg bg-primary-500 text-white flex items-center justify-center text-sm">5.6</span>
                   Producto de inercia de un área
                 </h2>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-4 text-justify">
+                  En la siguiente sección se mostrará que la propiedad de un área, llamada el producto de inercia, es necesaria a fin de determinar los momentos de inercia máximo y mínimo para el área. Estos valores máximo y mínimo son propiedades importantes necesarias para diseñar elementos estructurales y mecánicos como vigas, columnas y flechas.
+                </p>
+                <div class="mb-4 flex justify-center w-full">
+                  <img src="images/5.6a.jpg" alt="Figura 5.6a" class="w-full max-w-[15rem] rounded-xl border border-indigo-200/50 dark:border-indigo-700/50 shadow-md object-contain" decoding="async" />
+                </div>
+                <div class="mb-4 flex justify-center w-full">
+                  <img src="images/5.6b.jpg" alt="Figura 5.6b - Área A y elemento dA (figura 10-10)" class="w-full max-w-[15rem] rounded-xl border border-indigo-200/50 dark:border-indigo-700/50 shadow-md object-contain" decoding="async" />
+                </div>
+                <div class="space-y-4 mb-6 text-gray-600 dark:text-gray-400 leading-relaxed text-justify">
+                  <p>
+                    Si el elemento de área elegido tiene un tamaño diferencial en dos direcciones, para evaluar <var>I</var><sub>xy</sub> debe realizarse una integración doble. Sin embargo, con frecuencia es más fácil elegir un elemento que tenga un tamaño diferencial o espesor en sólo una dirección, en cuyo caso la evaluación requiere sólo una integración simple.
+                  </p>
+                  <p>
+                    Igual que el momento de inercia, el producto de inercia tiene unidades de longitud a la cuarta potencia, por ejemplo, m<sup>4</sup>, mm<sup>4</sup> o pies<sup>4</sup>, pulg<sup>4</sup>. Sin embargo, como <var>x</var> o <var>y</var> pueden ser cantidades negativas, el producto de inercia puede ser positivo, negativo o cero, dependiendo de la ubicación y orientación de los ejes coordenados. Por ejemplo, el producto de inercia <var>I</var><sub>xy</sub> para el área será cero si el eje <var>x</var>, o el eje <var>y</var>, es un eje de simetría para el área. Aquí, cada elemento <var>dA</var> localizado en el punto (<var>x</var>, <var>y</var>) tiene un elemento <var>dA</var> correspondiente en (<var>x</var>, −<var>y</var>). Como los productos de inercia para esos elementos son, respectivamente, <var>x</var><var>y</var> <var>dA</var> y −<var>x</var><var>y</var> <var>dA</var>, la suma algebraica o integración de todos los elementos que se elijan de esta manera se cancelarán uno a uno. En consecuencia, el producto de inercia para el área total se convierte en cero. De la definición también se infiere que el «signo» de esta cantidad depende del cuadrante donde se ubique el área. Si el área se gira de un cuadrante a otro, el signo de <var>I</var><sub>xy</sub> cambiará.
+                  </p>
+                  <div class="flex justify-center w-full">
+                    <img src="images/5.6c.jpg" alt="Figura 5.6c - Simetría y signo de Ixy" class="w-full max-w-[15rem] rounded-xl border border-indigo-200/50 dark:border-indigo-700/50 shadow-md object-contain" decoding="async" />
+                  </div>
+                  <div class="flex justify-center w-full">
+                    <img src="images/5.6d.jpg" alt="Figura 5.6d - Área simétrica respecto al eje x y elementos dA en (x, y) y (x, −y)" class="w-full max-w-[15rem] rounded-xl border border-indigo-200/50 dark:border-indigo-700/50 shadow-md object-contain" decoding="async" />
+                  </div>
+                  <p>
+                    Considere el área sombreada que se muestra en la figura 10-13, donde <var>x</var>′ y <var>y</var>′ representan un conjunto de ejes que pasan a través del centroide del área, y <var>x</var> y <var>y</var> representan un conjunto correspondiente de ejes paralelos. Como el producto de inercia de <var>dA</var> con respecto a los ejes <var>x</var> y <var>y</var> es <var>dI</var><sub>xy</sub> = <var>x</var><var>y</var> <var>dA</var> = (<var>x</var>′ + <var>x̄</var>)(<var>y</var>′ + <var>ȳ</var>) <var>dA</var>, entonces, para el área completa,
+                  </p>
+                </div>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-6 text-justify">
+                  El producto de inercia del área de la figura 10-10 con respecto a los ejes <var>x</var> y <var>y</var> se define como
+                </p>
                 <div class="mt-2 space-y-6 text-gray-700 dark:text-gray-300 leading-relaxed text-justify">
                   <p>
                     A continuación se presenta una síntesis técnico-profesional sobre las propiedades mecánicas de las secciones transversales, específicamente el <strong>momento de inercia de áreas compuestas</strong> y el <strong>producto de inercia</strong>, conforme a los principios de la estática y la mecánica estructural.
                   </p>
+                  <div class="flex justify-center w-full">
+                    <img src="images/5.6e.jpg" alt="Figura 5.6e" class="w-full max-w-[18rem] rounded-xl border border-indigo-200/50 dark:border-indigo-700/50 shadow-md object-contain" decoding="async" />
+                  </div>
+                  <div class="flex justify-center w-full">
+                    <img src="images/5.6f.jpg" alt="Figura 5.6f - Desarrollo de Ixy con ejes paralelos (x′ + d_x)(y′ + d_y)" class="w-full max-w-[18rem] rounded-xl border border-indigo-200/50 dark:border-indigo-700/50 shadow-md object-contain" decoding="async" />
+                  </div>
+                  <p>
+                    El primer término del lado derecho representa el producto de inercia del área con respecto al eje centroidal, <strong>Ī<sub>x′y′</sub></strong>. Las integrales en los términos segundo y tercero son cero, ya que los momentos del área se toman con respecto al eje centroidal. Al observar que la cuarta integral representa el área total <var>A</var>, el teorema de los ejes paralelos para el producto de inercia se convierte en
+                  </p>
+                  <div class="flex justify-center w-full">
+                    <img src="images/5.6g.jpg" alt="Figura 5.6g - Teorema de ejes paralelos para el producto de inercia" class="w-full max-w-[18rem] rounded-xl border border-indigo-200/50 dark:border-indigo-700/50 shadow-md object-contain" decoding="async" />
+                  </div>
+                  <p>
+                    Es importante que los signos algebraicos para <var>d</var><sub>x</sub> y <var>d</var><sub>y</sub> se mantengan al aplicar esta ecuación.
+                  </p>
+                  <p>
+                    <strong>Ejercicio</strong> (pág. 532) Determine el producto de inercia <var>I</var><sub>xy</sub> del triángulo que se muestra.
+                  </p>
+                  <div class="flex justify-center w-full">
+                    <img src="images/5.6h.jpg" alt="Figura 5.6h - Triángulo del ejercicio (pág. 532), producto de inercia Ixy" class="w-full max-w-[18rem] rounded-xl border border-indigo-200/50 dark:border-indigo-700/50 shadow-md object-contain" decoding="async" />
+                  </div>
+                  <div class="flex justify-center w-full">
+                    <img src="images/5.6i.jpg" alt="Figura 5.6i" class="w-full max-w-[18rem] rounded-xl border border-indigo-200/50 dark:border-indigo-700/50 shadow-md object-contain" decoding="async" />
+                  </div>
 
                   <div>
                     <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">1. Momento de inercia de áreas compuestas</h3>
