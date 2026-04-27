@@ -191,18 +191,6 @@
                 <div class="mt-4 mb-4 flex justify-center w-full">
                   <img src="images/5.1c.jpg" alt="Figura 5.1c - Centro de gravedad (fig. 9-1a)" class="w-full max-w-md rounded-xl border border-indigo-200/50 dark:border-indigo-700/50 shadow-md object-contain" decoding="async">
                 </div>
-                <p class="text-gray-700 dark:text-gray-200 font-semibold leading-relaxed mb-2 text-justify">
-                  Momento de inercia de masa (p452)
-                </p>
-                <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-3 text-justify">
-                  El momento de inercia de masa de un cuerpo es una medida de la resistencia del cuerpo a la aceleración angular. Como este momento se usa en dinámica para estudiar el movimiento rotatorio, a continuación se analizarán los métodos para realizar su cálculo.
-                </p>
-                <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-4 text-justify">
-                  Considere el cuerpo rígido que se muestra en la figura 10-21. Definimos el momento de inercia de masa del cuerpo con respecto al eje <var>z</var> como
-                </p>
-                <div class="mt-6 flex justify-center">
-                  <img src="images/5.1.png" alt="Figura 5.1 - Conceptos generales del momento de inercia" class="max-w-lg w-full rounded-xl border border-indigo-200/50 dark:border-indigo-700/50 shadow-md object-cover" decoding="async">
-                </div>
               </section>
 
               <section id="5-2" class="scroll-mt-24">
@@ -679,51 +667,17 @@
                   <div class="flex justify-center w-full">
                     <img src="images/5.6i.jpg" alt="Figura 5.6i" class="w-full max-w-[18rem] rounded-xl border border-indigo-200/50 dark:border-indigo-700/50 shadow-md object-contain" decoding="async" />
                   </div>
-
-                  <div>
-                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">1. Momento de inercia de áreas compuestas</h3>
-                    <p class="mb-3">
-                      El cálculo del momento de inercia para secciones complejas (como vigas en I, T o canales) es fundamental para predecir la resistencia y deflexión de elementos estructurales.
-                    </p>
-                    <ul class="list-disc list-inside space-y-2 pl-1">
-                      <li>
-                        <strong>Principio de aditividad:</strong> El momento de inercia de un área compuesta con respecto a un eje de referencia común es igual a la <strong>suma algebraica</strong> de los momentos de inercia de cada una de sus partes integrantes.
-                      </li>
-                      <li>
-                        <strong>Tratamiento de agujeros:</strong> En caso de que la sección presente vacíos o «agujeros», el momento de inercia de dicha cavidad debe <strong>restarse</strong> del valor total de la figura base.
-                      </li>
-                      <li>
-                        <strong>Teorema de los ejes paralelos (teorema de Steiner):</strong> Es la herramienta esencial para este análisis y establece que el momento de inercia respecto a un eje paralelo al centroidal es <strong>I = Ī + A·d²</strong>, donde <strong>Ī</strong> es el momento respecto al eje centroidal de la parte, <var>A</var> su área y <var>d</var> la distancia perpendicular entre los ejes.
-                      </li>
-                    </ul>
-                  </div>
-
-                  <div>
-                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">2. Producto de inercia de un área</h3>
-                    <p class="mb-3">
-                      El producto de inercia es una propiedad geométrica necesaria para identificar la orientación de los <strong>ejes principales</strong> de una sección, donde los momentos de inercia alcanzan sus valores máximo y mínimo.
-                    </p>
-                    <ul class="list-disc list-inside space-y-2 pl-1">
-                      <li>
-                        <strong>Definición matemática:</strong> Se define para un área <var>A</var> con respecto a los ejes <var>x</var> e <var>y</var> mediante la integral <strong>I<sub>xy</sub> = ∫ x·y dA</strong>.
-                      </li>
-                      <li>
-                        <strong>Propiedades de signo y simetría:</strong> A diferencia del momento de inercia (que siempre es positivo), el producto de inercia puede ser <strong>positivo, negativo o cero</strong>. Si uno de los ejes coordenados es un <strong>eje de simetría</strong> para el área, el producto de inercia es automáticamente <strong>nulo</strong>.
-                      </li>
-                      <li>
-                        <strong>Teorema de los ejes paralelos para el producto de inercia:</strong> Se expresa como <strong>I<sub>xy</sub> = Ī<sub>x′y′</sub> + A·d<sub>x</sub>·d<sub>y</sub></strong>. En esta formulación, es imperativo respetar los <strong>signos algebraicos</strong> de las coordenadas centroidales (d<sub>x</sub>, d<sub>y</sub>) de cada parte.
-                      </li>
-                    </ul>
-                  </div>
-
-                  <div>
-                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">3. Aplicación en ingeniería y ejes principales</h3>
-                    <p>
-                      El análisis conjunto del momento y el producto de inercia permite determinar los <strong>momentos principales de inercia</strong>, los cuales son vitales para el diseño seguro de columnas y vigas sometidas a flexión asimétrica. Mediante métodos como el <strong>círculo de Mohr</strong>, los ingenieros pueden visualizar la variación del momento de inercia conforme los ejes rotan, asegurando que la estructura se oriente de manera que maximice su rigidez ante las cargas aplicadas.
+                  <div class="mt-6 p-4 rounded-xl bg-primary-50 dark:bg-primary-900/20 border border-primary-200 dark:border-primary-700/50">
+                    <p class="text-sm font-semibold text-primary-800 dark:text-primary-200 mb-2">Ejercicio (533p)</p>
+                    <p class="text-gray-700 dark:text-gray-300 text-sm leading-relaxed text-justify">
+                      Determine el producto de inercia para el área de la sección transversal del elemento que se muestra en la figura 10-15a, con respecto a los ejes centroidales <var>x</var> y <var>y</var>.
                     </p>
                   </div>
-                  <div class="mt-6 flex justify-center">
-                    <img src="images/5.64.png" alt="Figura 5.64 - Aplicación en ingeniería y ejes principales" class="max-w-2xl w-full rounded-2xl border border-indigo-200/50 dark:border-indigo-700/50 shadow-lg object-cover" decoding="async">
+                  <div class="mt-4 flex justify-center w-full">
+                    <img src="images/5.6j.jpg" alt="Figura 5.6j - Ejercicio (533p), figura 10-15a" class="w-full max-w-[22rem] rounded-xl border border-indigo-200/50 dark:border-indigo-700/50 shadow-md object-contain bg-white" decoding="async" />
+                  </div>
+                  <div class="mt-4 flex justify-center w-full">
+                    <img src="images/5.6k.jpg" alt="Figura 5.6k - Ejercicio (533p)" class="w-full max-w-[22rem] rounded-xl border border-indigo-200/50 dark:border-indigo-700/50 shadow-md object-contain bg-white" decoding="async" />
                   </div>
                 </div>
               </section>

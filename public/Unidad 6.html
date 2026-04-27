@@ -181,9 +181,6 @@
                   <span class="w-8 h-8 rounded-lg bg-primary-500 text-white flex items-center justify-center text-sm">6.1</span>
                   Vigas (p330)
                 </h2>
-                <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-4 text-justify">
-                  Las vigas son elementos estructurales que trabajan principalmente a flexión. En estática, el análisis parte del diagrama de cuerpo libre, el cálculo de reacciones y la aplicación de ecuaciones de equilibrio.
-                </p>
                 <div class="mt-6 p-6 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700">
                   <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
                     A continuación se presenta un resumen técnico y profesional sobre el estudio de las <strong>vigas</strong> en la ingeniería mecánica, estructurado a partir de los principios de la estática y el análisis estructural.
@@ -232,9 +229,48 @@
                     <li><strong>Momento de inercia (I):</strong> propiedad necesaria para predecir la <strong>resistencia y la deflexión</strong> de la viga ante la flexión.</li>
                     <li><strong>Módulo de sección:</strong> concepto abstracto derivado de la geometría de la sección plana con aplicación directa en el cálculo de esfuerzos.</li>
                   </ul>
-                </div>
-                <div class="mt-4 flex justify-center">
-                  <img src="images/p6.1a.jpg" alt="Figura p6.1a - Vigas" class="max-w-lg w-full rounded-xl border border-indigo-200/50 dark:border-indigo-700/50 shadow-md object-cover">
+                  <div class="mt-4 flex justify-center">
+                    <img src="images/6.1a.jpg" alt="Figura 6.1a - Propiedades geométricas de una sección" class="w-1/4 max-w-md rounded-xl border border-indigo-200/50 dark:border-indigo-700/50 shadow-md object-contain bg-white" decoding="async">
+                  </div>
+                  <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed mt-4 text-justify">
+                    <strong>Cargas internas</strong><br>
+                    Si un sistema coplanar de fuerzas actúa sobre un elemento, entonces en general actuarán una fuerza normal interna <strong>N</strong>, una fuerza cortante <strong>V</strong> y un momento flexionante <strong>M</strong> que resultan en cualquier sección transversal a lo largo del elemento. En la figura se muestran las direcciones positivas de estas cargas.
+                  </p>
+                  <div class="mt-4 flex justify-center">
+                    <img src="images/6.1h.jpg" alt="Figura 6.1h - Cargas internas" class="w-1/2 max-w-md rounded-xl border border-indigo-200/50 dark:border-indigo-700/50 shadow-md object-contain bg-white" decoding="async">
+                  </div>
+                  <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed mt-4 text-justify">
+                    La fuerza normal interna, la fuerza cortante y el momento flexionante que resultan se determinan por el método de secciones. Para encontrarlas, el elemento se secciona en el punto <strong>C</strong> donde se debe determinar la carga interna. Luego se traza un diagrama de cuerpo libre de una de las partes seccionadas y las cargas internas se muestran en sus direcciones positivas.
+                  </p>
+                  <div class="mt-4 flex justify-center">
+                    <img src="images/6.1i.jpg" alt="Figura 6.1i - Método de secciones" class="w-1/2 max-w-md rounded-xl border border-indigo-200/50 dark:border-indigo-700/50 shadow-md object-contain bg-white" decoding="async">
+                  </div>
+                  <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed mt-4 text-justify">
+                    La fuerza normal se determina al sumar las fuerzas normales a la sección transversal. La fuerza cortante que resulta se encuentra al sumar las fuerzas tangentes a la sección transversal, y el momento flexionante se encuentra por la suma de momentos con respecto al centro geométrico o centroide del área de la sección transversal.
+                  </p>
+                  <div class="mt-4 flex justify-center">
+                    <img src="images/6.1j.jpg" alt="Figura 6.1j - Resultantes internas en una sección" class="w-1/4 max-w-md rounded-xl border border-indigo-200/50 dark:border-indigo-700/50 shadow-md object-contain bg-white" decoding="async">
+                  </div>
+                  <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed mt-4 text-justify">
+                    Si el elemento está sometido a una carga tridimensional, entonces, en general, un momento de torsión también actuará sobre la sección transversal. Esta carga se puede determinar por la suma de momentos con respecto a un eje perpendicular a la sección transversal que pasa por su centroide.
+                  </p>
+                  <div class="mt-4 flex justify-center">
+                    <img src="images/6.1k.jpg" alt="Figura 6.1k - Carga tridimensional y momento de torsión" class="w-1/2 max-w-md rounded-xl border border-indigo-200/50 dark:border-indigo-700/50 shadow-md object-contain bg-white" decoding="async">
+                  </div>
+                  <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed mt-4 text-justify">
+                    <strong>Diagramas de fuerza cortante y de momento flexionante</strong><br>
+                    Para construir los diagramas de fuerza cortante y de momento flexionante para un elemento, es necesario seccionar el elemento en un punto arbitrario, localizado a una distancia <var>x</var> del extremo izquierdo.
+                  </p>
+                  <div class="mt-4 flex justify-center">
+                    <img src="images/6.1m.jpg" alt="Figura 6.1m - Diagramas de fuerza cortante y momento flexionante" class="w-1/2 max-w-md rounded-xl border border-indigo-200/50 dark:border-indigo-700/50 shadow-md object-contain bg-white" decoding="async">
+                  </div>
+                  <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed mt-4 text-justify">
+                    Si la carga externa consta de cambios en la carga distribuida, o sobre el elemento actúa una serie de cargas concentradas y momentos de par, entonces deben determinarse diferentes expresiones para <strong>V</strong> y <strong>M</strong> dentro de las regiones entre cualesquier discontinuidades de carga.
+                  </p>
+                  <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed mt-4 text-justify">
+                    La fuerza cortante y el momento de par desconocidos se indican sobre la sección transversal en la dirección positiva de acuerdo con la convención de signos establecida, y después se determinan la fuerza cortante interna y el momento flexionante como funciones de <var>x</var>.<br><br>
+                    Entonces se grafica cada una de las funciones de la fuerza cortante y del momento flexionante para crear los diagramas de fuerza cortante y de momento flexionante.
+                  </p>
                 </div>
                 <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-[760px] mx-auto">
                   <img src="images/6.1c.jpg" alt="Figura 6.1c - Vigas" class="w-[360px] h-[360px] mx-auto rounded-xl border border-indigo-200/50 dark:border-indigo-700/50 shadow-md object-contain bg-white">
