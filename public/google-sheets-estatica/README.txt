@@ -24,7 +24,7 @@ y pégalo en script.google.com reemplazando el código por defecto.
 const ID_HOJA_ESTATICA = '1OmAylV7BLC7JZJdRVxPF_7BxhG-hAGvnpmnoR7vd0j4';
 const NOMBRE_HOJA = 'Inscripciones';
 const ZONA_HORARIA = 'America/Mexico_City';
-const URL_PAGINA_INICIO = 'http://localhost:4321/';
+const URL_PAGINA_INICIO = 'https://noelventura.github.io/Estatica/Pagina%20de%20inicio.html';
 
 const ENCABEZADOS = [
   'Apellido Paterno',

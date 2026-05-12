@@ -30,7 +30,7 @@ const ZONA_HORARIA = 'America/Mexico_City';
 // - Con Astro en local: 'http://localhost:4321/' (ejecuta npm run dev y abre el formulario desde esa URL).
 // - Con sitio en internet: 'https://tudominio.com/'
 // Nota: desde script.google.com los enlaces a file:// suelen estar bloqueados; usa un servidor (npm run dev) o tu URL publicada.
-const URL_PAGINA_INICIO = 'http://localhost:4321/';
+const URL_PAGINA_INICIO = 'https://noelventura.github.io/Estatica/Pagina%20de%20inicio.html';
 
 // Estructura de columnas (fila 1 = encabezados, fila 2+ = datos):
 // A = Apellido Paterno | B = Apellido Materno | C = Nombre

@@ -90,6 +90,7 @@ Si dejas "Deploy from a branch", GitHub seguirá ejecutando Jekyll y dará error
 
 - Cada vez que hagas **push a `main`** (o `master`), se ejecutará el workflow **"Deploy to GitHub Pages"**.
 - En la pestaña **Actions** verás el estado; cuando termine en verde, el sitio estará en `https://<usuario>.github.io/<repo>/`.
+- Sitio publicado (GitHub Pages): [https://noelventura.github.io/Estatica/](https://noelventura.github.io/Estatica/)
 - La primera vez puede que tengas que crear el environment **github-pages** (GitHub lo suele crear al elegir "GitHub Actions" como source).
 
 ---
