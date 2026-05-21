@@ -544,14 +544,94 @@
                 <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-4 text-justify">
                   Suponga siempre que las fuerzas desconocidas en los elementos que actúan en el diagrama de cuerpo libre del nodo están en tensión; es decir, las fuerzas &ldquo;jalan&rdquo; el pasador. Si se hace así, entonces la solución numérica de las ecuaciones de equilibrio darán escalares positivos para elementos en tensión y escalares negativos para elementos en compresión. Una vez que se encuentre la fuerza desconocida de un elemento, aplique su magnitud y su sentido correctos (T o C) en los subsecuentes diagramas de cuerpo libre de los nodos.
                 </p>
-                <div class="flex justify-center pt-2 mb-4">
-                  <img
-                    src="images/6.2.1b.jpg"
-                    alt="Figura 6.2.1b — Método de nodos"
-                    class="w-full max-w-2xl h-72 sm:h-80 mx-auto rounded-xl border border-indigo-200/50 dark:border-indigo-700/50 shadow-md object-contain bg-white dark:bg-slate-900"
-                    decoding="async"
-                  />
+                <div class="mt-4 flex justify-center px-2">
+                  <div class="flex w-full max-w-2xl h-96 sm:h-[32rem] items-center justify-center rounded-xl border border-indigo-200/50 dark:border-indigo-700/50 bg-white dark:bg-slate-900 shadow-md p-3 sm:p-4">
+                    <img
+                      src="images/6.2.1b.jpg"
+                      alt="Figura 6.2.1b — Método de nodos"
+                      class="max-h-full max-w-full object-contain"
+                      decoding="async"
+                    />
+                  </div>
                 </div>
+                <div class="mt-6 py-6 px-5 min-h-[7rem] rounded-xl bg-primary-50 dark:bg-primary-900/20 border border-primary-200 dark:border-primary-700/50">
+                  <p class="text-sm font-semibold text-primary-800 dark:text-primary-200 mb-2">Ejercicio 6.2.a</p>
+                  <p class="text-gray-700 dark:text-gray-300 text-sm leading-relaxed text-justify">
+                    Determine la fuerza que actúa en cada uno de los elementos de la armadura que se muestra en la figura; además, indique si los elementos están en tensión o en compresión.
+                  </p>
+                </div>
+                <div class="mt-4 flex justify-center px-2">
+                  <div class="flex w-full max-w-xl h-64 sm:h-72 items-center justify-center rounded-xl border border-indigo-200/50 dark:border-indigo-700/50 bg-white dark:bg-slate-900 shadow-md p-3 sm:p-4">
+                    <img
+                      src="images/6.3.jpg"
+                      alt="Figura 6.3 — Armadura (Ejercicio 6.2.a)"
+                      class="max-h-full max-w-full object-contain"
+                      decoding="async"
+                    />
+                  </div>
+                </div>
+                <div class="mt-6 p-5 rounded-xl bg-accent-50 dark:bg-accent-900/20 border border-accent-200/60 dark:border-accent-700/50">
+                  <p class="text-sm font-semibold text-accent-800 dark:text-accent-300 mb-3">SOLUCIÓN</p>
+                  <p class="text-gray-700 dark:text-gray-300 text-sm leading-relaxed text-justify">
+                    Como el nodo C tiene una fuerza conocida y sólo dos fuerzas desconocidas que actúan sobre él, es posible comenzar en este punto, después analizar el nodo D y por último el nodo A. De esta forma las reacciones de soporte no tendrán que determinarse antes de comenzar el análisis.
+                  </p>
+                </div>
+                <div class="mt-4 flex flex-row flex-wrap gap-4 justify-center items-stretch px-2">
+                  <div class="flex w-44 h-44 sm:w-52 sm:h-52 shrink-0 items-center justify-center overflow-hidden rounded-xl border border-indigo-200/50 dark:border-indigo-700/50 bg-white dark:bg-slate-900 shadow-md p-1.5">
+                    <img src="images/6.3a.jpg" alt="Figura 6.3a — Nodo C (Ejercicio 6.2.a)" class="w-full h-full object-contain object-center" decoding="async" />
+                  </div>
+                  <div class="flex w-44 h-44 sm:w-52 sm:h-52 shrink-0 items-center justify-center overflow-hidden rounded-xl border border-indigo-200/50 dark:border-indigo-700/50 bg-white dark:bg-slate-900 shadow-md p-1.5">
+                    <img src="images/6.3b.jpg" alt="Figura 6.3b — Nodo C (Ejercicio 6.2.a)" class="w-full h-full object-contain object-center" decoding="async" />
+                  </div>
+                  <div class="flex w-44 h-44 sm:w-52 sm:h-52 shrink-0 items-center justify-center overflow-hidden rounded-xl border border-indigo-200/50 dark:border-indigo-700/50 bg-white dark:bg-slate-900 shadow-md p-1.5">
+                    <img src="images/6.3c.jpg" alt="Figura 6.3c — Nodo C (Ejercicio 6.2.a)" class="w-full h-full object-contain object-center" decoding="async" />
+                  </div>
+                </div>
+                <p class="mt-4 px-2 text-gray-700 dark:text-gray-300 text-sm leading-relaxed text-justify">
+                  <strong>Nodo C.</strong> Por inspección del equilibrio de fuerzas, figura 6-9b, se puede observar que ambos elementos BC y CD deben estar en compresión.
+                </p>
+                <p class="mt-4 px-2 text-gray-700 dark:text-gray-300 text-sm leading-relaxed text-justify">
+                  <strong>Nodo D.</strong> Con el resultado F<sub>CD</sub> = 400 N (C), la fuerza en los elementos BD y AD puede encontrarse al analizar el equilibrio del nodo D. Supondremos que tanto F<sub>AD</sub> como F<sub>BD</sub> son fuerzas de tensión, figura 6-9c. El sistema coordenado <var>x</var>′, <var>y</var>′ se establecerá de modo que el eje <var>x</var>′ esté dirigido a lo largo de F<sub>BD</sub>. De esta manera, eliminaremos la necesidad de resolver dos ecuaciones simultáneamente. Ahora F<sub>AD</sub> se puede obtener directamente al aplicar ∑F<sub>y</sub>′ = 0.
+                </p>
+                <div class="mt-6 py-6 px-5 min-h-[7rem] rounded-xl bg-primary-50 dark:bg-primary-900/20 border border-primary-200 dark:border-primary-700/50">
+                  <p class="text-sm font-semibold text-primary-800 dark:text-primary-200 mb-2">Ejercicio 6.2.b</p>
+                  <p class="text-gray-700 dark:text-gray-300 text-sm leading-relaxed text-justify">
+                    Determine la fuerza en cada elemento de la armadura mostrada en la figura. Indique si los elementos están en tensión o en compresión.
+                  </p>
+                </div>
+                <div class="mt-4 flex flex-row flex-wrap gap-4 justify-center items-stretch px-2">
+                  <div class="flex w-44 h-44 sm:w-52 sm:h-52 shrink-0 items-center justify-center overflow-hidden rounded-xl border border-indigo-200/50 dark:border-indigo-700/50 bg-white dark:bg-slate-900 shadow-md p-1.5">
+                    <img src="images/6.3d.jpg" alt="Figura 6.3d — Armadura (Ejercicio 6.2.b)" class="w-full h-full object-contain object-center" decoding="async" />
+                  </div>
+                  <div class="flex w-44 h-44 sm:w-52 sm:h-52 shrink-0 items-center justify-center overflow-hidden rounded-xl border border-indigo-200/50 dark:border-indigo-700/50 bg-white dark:bg-slate-900 shadow-md p-1.5">
+                    <img src="images/6.3e.jpg" alt="Figura 6.3e — Armadura (Ejercicio 6.2.b)" class="w-full h-full object-contain object-center" decoding="async" />
+                  </div>
+                </div>
+                <p class="mt-4 px-2 text-gray-700 dark:text-gray-300 text-sm leading-relaxed text-justify">
+                  <strong>Reacciones en los soportes.</strong> No se puede analizar ningún nodo hasta que se hayan determinado las reacciones en los soportes, porque cada nodo tiene más de tres fuerzas desconocidas que actúan sobre él. En la figura 6-10b se presenta un diagrama de cuerpo libre de toda la armadura.
+                </p>
+                <p class="mt-4 px-2 text-gray-700 dark:text-gray-300 text-sm leading-relaxed text-justify">
+                  El análisis puede empezar ahora en cualquiera de los nodos A o C. La elección es arbitraria ya que hay una fuerza conocida y dos fuerzas de elemento desconocidas que actúan sobre el pasador en cada uno de esos nodos.
+                </p>
+                <div class="mt-4 flex flex-row flex-wrap gap-4 justify-center items-stretch px-2">
+                  <div class="flex w-44 h-44 sm:w-52 sm:h-52 shrink-0 items-center justify-center overflow-hidden rounded-xl border border-indigo-200/50 dark:border-indigo-700/50 bg-white dark:bg-slate-900 shadow-md p-1.5">
+                    <img src="images/6.3f.jpg" alt="Figura 6.3f — Armadura (Ejercicio 6.2.b)" class="w-full h-full object-contain object-center" decoding="async" />
+                  </div>
+                  <div class="flex w-44 h-44 sm:w-52 sm:h-52 shrink-0 items-center justify-center overflow-hidden rounded-xl border border-indigo-200/50 dark:border-indigo-700/50 bg-white dark:bg-slate-900 shadow-md p-1.5">
+                    <img src="images/6.3g.jpg" alt="Figura 6.3g — Armadura (Ejercicio 6.2.b)" class="w-full h-full object-contain object-center" decoding="async" />
+                  </div>
+                  <div class="flex w-44 h-44 sm:w-52 sm:h-52 shrink-0 items-center justify-center overflow-hidden rounded-xl border border-indigo-200/50 dark:border-indigo-700/50 bg-white dark:bg-slate-900 shadow-md p-1.5">
+                    <img src="images/6.3h.jpg" alt="Figura 6.3h — Armadura (Ejercicio 6.2.b)" class="w-full h-full object-contain object-center" decoding="async" />
+                  </div>
+                </div>
+                <div class="mt-4 flex justify-center px-2">
+                  <div class="flex w-64 h-64 sm:w-72 sm:h-72 shrink-0 items-center justify-center overflow-hidden rounded-xl border border-indigo-200/50 dark:border-indigo-700/50 bg-white dark:bg-slate-900 shadow-md p-1.5">
+                    <img src="images/6.3i.jpg" alt="Figura 6.3i — Resultados en la armadura (Ejercicio 6.2.b)" class="w-full h-full object-contain object-center" decoding="async" />
+                  </div>
+                </div>
+                <p class="mt-4 px-2 text-gray-700 dark:text-gray-300 text-sm leading-relaxed text-justify">
+                  <strong>Nodo A.</strong> Como se muestra en el diagrama de cuerpo libre, se supone que F<sub>AB</sub> es una fuerza de compresión y F<sub>AD</sub> es de tensión. Al aplicar las ecuaciones de equilibrio, tenemos
+                </p>
               </section>
 
               <section id="6-2-2" class="scroll-mt-24">
@@ -560,12 +640,40 @@
                   Método de secciones
                 </h2>
                 <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-4 text-justify">
-                  Secciona la armadura mediante un corte que atraviesa varias barras. Al considerar una sola “mitad” del sistema, se aplican momentos para eliminar incógnitas no deseadas y resolver las barras cortadas.
+                  Cuando necesitamos encontrar la fuerza en sólo unos cuantos elementos de una armadura, ésta puede analizarse mediante el método de secciones. Este método se basa en el principio de que si la armadura está en equilibrio, entonces cualquier segmento de la armadura está también en equilibrio. Por ejemplo, considere los dos elementos de armadura mostrados a la izquierda en la figura 6-14. Si se deben determinar las fuerzas dentro de los elementos, entonces puede utilizarse una sección imaginaria, indicada por la línea azul, para cortar cada elemento en dos partes y en consecuencia &ldquo;exponer&rdquo; cada fuerza interna como &ldquo;externa&rdquo; como se indica en los diagramas de cuerpo libre de la derecha. Se puede observar con claridad que para que haya equilibrio el elemento que está en tensión (T) está sujeto a un &ldquo;jalón&rdquo;, mientras que el elemento en compresión (C) está sometido a un &ldquo;empujón&rdquo;.
                 </p>
-                <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700">
-                  <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
-                    Regla práctica: usa un punto de giro en el momento para anular fuerzas de barras que no quieres calcular.
-                  </p>
+                <div class="mt-4 flex flex-row flex-wrap gap-4 justify-center items-stretch px-2">
+                  <div class="flex w-44 h-44 sm:w-52 sm:h-52 shrink-0 items-center justify-center overflow-hidden rounded-xl border border-indigo-200/50 dark:border-indigo-700/50 bg-white dark:bg-slate-900 shadow-md p-1.5">
+                    <img src="images/6.3j.jpg" alt="Figura 6-14 — Método de secciones" class="w-full h-full object-contain object-center" decoding="async" />
+                  </div>
+                  <div class="flex w-44 h-44 sm:w-52 sm:h-52 shrink-0 items-center justify-center overflow-hidden rounded-xl border border-indigo-200/50 dark:border-indigo-700/50 bg-white dark:bg-slate-900 shadow-md p-1.5">
+                    <img src="images/6.3k.jpg" alt="Figura 6-14 — Método de secciones (diagramas de cuerpo libre)" class="w-full h-full object-contain object-center" decoding="async" />
+                  </div>
+                </div>
+                <p class="mt-4 px-2 text-gray-600 dark:text-gray-400 leading-relaxed text-justify">
+                  El método de secciones puede usarse también para &ldquo;cortar&rdquo; o seccionar los elementos de toda una armadura. Si la sección pasa por la armadura y se traza el diagrama de cuerpo libre de cualquiera de sus dos partes, entonces podemos aplicar las ecuaciones de equilibrio a esa parte para determinar las fuerzas del elemento en la &ldquo;sección cortada&rdquo;. Como sólo se pueden aplicar tres ecuaciones independientes de equilibrio (∑F<sub>x</sub> = 0, ∑F<sub>y</sub> = 0, ∑M<sub>O</sub> = 0) al diagrama de cuerpo libre de cualquier segmento, debemos tratar de seleccionar una sección que, en general, pase por no más de tres elementos en que las fuerzas sean desconocidas. Por ejemplo, considere la armadura que se muestra en la figura 6-15a. Si se deben determinar las fuerzas en los elementos BC, GC y GF, la sección <var>a</var>–<var>a</var> podría ser apropiada. Los diagramas de cuerpo libre de las dos partes se muestran en las figuras 6-15b y 6-15c. Observe que la línea de acción de cada fuerza del elemento se especifica a partir de la geometría de la armadura, ya que la fuerza en un elemento pasa a lo largo de su eje. Además, las fuerzas del elemento que actúan sobre una parte de la armadura son iguales pero opuestas a las que actúan sobre la otra parte —tercera ley de Newton—. Se supone que los elementos BC y GC están en tensión puesto que se encuentran sometidos a un &ldquo;jalón&rdquo;, mientras que GF está en compresión porque se encuentra sometido a un &ldquo;empujón&rdquo;. Las tres fuerzas de elemento desconocidas F<sub>BC</sub>, F<sub>GC</sub> y F<sub>GF</sub> pueden obtenerse al aplicar las tres ecuaciones de equilibrio al diagrama de cuerpo libre de la figura 6-15b. Sin embargo, si se considera el diagrama de cuerpo libre de la figura 6-15c, se tendrán que conocer las tres reacciones de soporte D<sub>x</sub>, D<sub>y</sub> y E<sub>x</sub>, porque sólo hay tres ecuaciones de equilibrio disponibles. (Por supuesto, esto se hace de la manera usual si se considera un diagrama de cuerpo libre de toda la armadura.)
+                </p>
+                <div class="mt-4 flex justify-center px-2">
+                  <div class="flex w-72 h-72 sm:w-96 sm:h-96 shrink-0 items-center justify-center overflow-hidden rounded-xl border border-indigo-200/50 dark:border-indigo-700/50 bg-white dark:bg-slate-900 shadow-md p-1.5">
+                    <img src="images/6.3l.jpg" alt="Figura 6-15a — Armadura y sección a–a" class="w-full h-full object-contain object-center" decoding="async" />
+                  </div>
+                </div>
+                <p class="mt-4 px-2 text-gray-600 dark:text-gray-400 leading-relaxed text-justify">
+                  Al aplicar las ecuaciones de equilibrio debemos considerar con gran cuidado las maneras de escribir las ecuaciones de modo que den una solución directa para cada una de las incógnitas, en vez de tener que resolver ecuaciones simultáneas. Por ejemplo, con el segmento de armadura de la figura 6-15b y la suma de momentos con respecto a C, se obtendría una solución directa para F<sub>GF</sub> ya que F<sub>BC</sub> y F<sub>GC</sub> no producen ningún momento con respecto a C. De la misma manera, F<sub>BC</sub> puede obtenerse directamente a partir de una suma de momentos con respecto a G. Por último, F<sub>GC</sub> puede encontrarse directamente a partir de una suma de fuerzas en la dirección vertical ya que F<sub>GF</sub> y F<sub>BC</sub> no tienen componentes verticales.                   Esta capacidad de determinar directamente la fuerza en un elemento particular de una armadura es una de las ventajas principales del método de secciones.
+                </p>
+                <p class="mt-4 px-2 text-gray-600 dark:text-gray-400 leading-relaxed text-justify">
+                  Al igual que en el método de nodos, hay dos maneras en que se puede determinar el sentido correcto de una fuerza de elemento desconocida:
+                </p>
+                <p class="mt-4 px-2 text-gray-600 dark:text-gray-400 leading-relaxed text-justify">
+                  En muchos casos, el sentido correcto de una fuerza de elemento desconocida puede determinarse &ldquo;por inspección&rdquo;. Por ejemplo, F<sub>BC</sub> es una fuerza de tensión tal como se representa en la figura 6-15b, ya que el equilibrio por momentos con respecto a G requiere que F<sub>BC</sub> genere un momento opuesto al de la fuerza de 1000 N. Además, F<sub>GC</sub> es una fuerza de tensión puesto que su componente vertical debe equilibrar la fuerza de 1000 N que actúa hacia abajo. En casos más complicados, el sentido de una fuerza de elemento desconocida puede suponerse. Si la solución resulta un escalar negativo, esto indica que el sentido de la fuerza es opuesto al del diagrama de cuerpo libre.
+                </p>
+                <p class="mt-4 px-2 text-gray-600 dark:text-gray-400 leading-relaxed text-justify">
+                  Siempre suponga que las fuerzas desconocidas en elementos de la sección cortada están en tensión, es decir, &ldquo;jalando&rdquo; al elemento. Al hacer esto, la solución numérica de las ecuaciones de equilibrio dará escalares positivos para elementos en tensión y escalares negativos para elementos en compresión.
+                </p>
+                <div class="mt-4 flex justify-center px-2 w-full">
+                  <div class="flex w-full max-w-3xl min-h-[18rem] sm:min-h-[22rem] items-center justify-center overflow-hidden rounded-xl border border-indigo-200/50 dark:border-indigo-700/50 bg-white dark:bg-slate-900 shadow-md p-2 sm:p-3">
+                    <img src="images/6.3m.jpg" alt="Figura 6-15b — Método de secciones" class="w-full h-full min-h-[16rem] sm:min-h-[20rem] object-contain object-center" decoding="async" />
+                  </div>
                 </div>
               </section>
 
