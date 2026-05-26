@@ -141,29 +141,57 @@
     <!-- MAIN -->
     <main class="flex-1 py-12">
       <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="max-w-4xl mx-auto">
+        <div class="max-w-6xl mx-auto">
           <div class="bg-white/80 dark:bg-slate-900/80 backdrop-blur-md rounded-2xl shadow-2xl border border-indigo-200/50 dark:border-indigo-800/50 p-8 md:p-10">
-            <div class="text-center mb-10">
-              <h1 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-2">Unidad 7: Fricción</h1>
-              <p class="text-gray-600 dark:text-gray-400">
-                Fenómenos de fricción, fricción seca y aplicaciones en plano inclinado.
-              </p>
-            </div>
+            <div class="grid gap-8 lg:grid-cols-[1fr_auto] lg:gap-10 items-start mb-10">
+              <div class="min-w-0">
+                <div class="text-center lg:text-left mb-8">
+                  <h1 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-2">Unidad 7: Fricción</h1>
+                  <p class="text-gray-600 dark:text-gray-400">
+                    Fenómenos de fricción, fricción seca y aplicaciones en plano inclinado.
+                  </p>
+                </div>
 
-            <!-- Índice interno -->
-            <div class="mb-10 p-4 rounded-xl bg-primary-50 dark:bg-primary-900/20 border border-primary-200/50 dark:border-primary-700/50">
-              <h2 class="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-3">Contenido de la unidad</h2>
-              <ul class="space-y-1 text-sm">
-                <li>
-                  <a href="#7-1" class="text-primary-600 dark:text-primary-400 hover:underline">7.1 Fenómenos de fricción</a>
-                </li>
-                <li class="pl-4">
-                  <a href="#7-2" class="text-primary-600 dark:text-primary-400 hover:underline">7.2 Fricción seca</a>
-                </li>
-                <li class="pl-4">
-                  <a href="#7-3" class="text-primary-600 dark:text-primary-400 hover:underline">7.3 Plano inclinado</a>
-                </li>
-              </ul>
+                <!-- Índice interno -->
+                <div class="p-4 rounded-xl bg-primary-50 dark:bg-primary-900/20 border border-primary-200/50 dark:border-primary-700/50">
+                  <h2 class="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-3">Contenido de la unidad</h2>
+                  <ul class="space-y-1 text-sm">
+                    <li>
+                      <a href="#7-1" class="text-primary-600 dark:text-primary-400 hover:underline">7.1 Fenómenos de fricción</a>
+                    </li>
+                    <li class="pl-4">
+                      <a href="#7-2" class="text-primary-600 dark:text-primary-400 hover:underline">7.2 Fricción seca</a>
+                    </li>
+                    <li class="pl-4">
+                      <a href="#7-3" class="text-primary-600 dark:text-primary-400 hover:underline">7.3 Plano inclinado</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="w-full max-w-[13.5rem] sm:max-w-[15.5rem] md:max-w-[17rem] shrink-0 justify-self-center lg:justify-self-end lg:sticky lg:top-24">
+                <div class="rounded-xl overflow-hidden border border-indigo-200/50 dark:border-indigo-700/50 shadow-lg bg-black/5 dark:bg-black/20">
+                  <div class="relative mx-auto w-full aspect-[9/16] max-h-[min(62vh,24rem)] sm:max-h-[min(68vh,28rem)] overflow-hidden bg-black">
+                    <video
+                      class="absolute inset-0 h-full w-full object-contain"
+                      controls
+                      autoplay
+                      muted
+                      playsinline
+                      loop
+                      preload="auto"
+                      title="Unidad 7 — Fricción"
+                    >
+                      <source src="videos/v7.mp4" type="video/mp4" />
+                      Tu navegador no soporta la reproducción de video.
+                    </video>
+                  </div>
+                  <p class="text-xs text-gray-500 dark:text-gray-400 px-2.5 py-1.5 bg-gray-50 dark:bg-gray-800/50 leading-snug">
+                    Video Unidad 7 — Si no carga,
+                    <a href="videos/v7.mp4" target="_blank" rel="noopener noreferrer" class="underline font-medium text-primary-600 dark:text-primary-400">ábrelo aquí</a>.
+                  </p>
+                </div>
+              </div>
             </div>
 
             <div class="space-y-10">
@@ -217,6 +245,19 @@
                   <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
                     Para el caso crítico de inminencia de deslizamiento (equilibrio límite), se compara la componente paralela con μ<sub>s</sub>N.
                   </p>
+                </div>
+                <div class="mt-4 flex justify-center">
+                  <a
+                    href="pdf/Trabajo_Investigacion_Unidad7.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-indigo-500 to-purple-600 text-white font-semibold shadow-lg shadow-indigo-500/30 hover:from-indigo-600 hover:to-purple-700 hover:shadow-indigo-500/50 transition-all duration-300 hover:scale-105"
+                  >
+                    Trabajo de Investigación
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                  </a>
                 </div>
               </section>
 
