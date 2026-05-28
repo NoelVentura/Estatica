@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
@@ -81,6 +81,9 @@
         -webkit-font-smoothing: antialiased;
       }
     </style>
+    <script>
+      (function () { try { var l = localStorage.getItem('lang') || 'es'; document.documentElement.lang = l === 'en' ? 'en' : 'es-MX'; } catch (e) {} })();
+    </script>
   </head>
 
   <body
@@ -91,22 +94,30 @@
     <header class="sticky top-0 z-50 w-full border-b border-indigo-200/30 dark:border-indigo-800/30 bg-white/70 dark:bg-slate-900/70 backdrop-blur-xl transition-colors duration-300">
       <div class="container mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex h-16 items-center justify-between">
-          <a href="Pagina de inicio.html" class="flex items-center gap-3 group" aria-label="Ir al inicio">
+          <a href="Pagina de inicio.html" class="flex items-center gap-3 group" data-i18n-aria-label="aria.home" aria-label="Ir al inicio">
             <img src="images/tecnologico.png" alt="Tecnológico" class="h-12 w-auto object-contain" />
             <div class="flex flex-col">
               <span class="text-lg font-bold text-gray-900 dark:text-white leading-tight">Estática</span>
-              <span class="text-xs text-gray-500 dark:text-gray-400 leading-tight">para Ingenieros</span>
+              <span class="text-xs text-gray-500 dark:text-gray-400 leading-tight" data-i18n="brand.subtitle">para Ingenieros</span>
             </div>
           </a>
 
           <nav class="hidden md:flex items-center gap-1" aria-label="Navegación principal">
-            <a href="Pagina de inicio.html" class="px-4 py-2 rounded-lg text-sm font-medium text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white transition-all duration-200">Inicio</a>
-            <a href="Pagina de inicio.html#el-curso" class="px-4 py-2 rounded-lg text-sm font-medium bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300" aria-current="page">El Curso</a>
-            <a href="Libros.html" class="px-4 py-2 rounded-lg text-sm font-medium text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white transition-all duration-200">Libros de Apoyo</a>
-            <a href="Contacto.html" class="px-4 py-2 rounded-lg text-sm font-medium text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white transition-all duration-200">Contacto</a>
+            <a href="Pagina de inicio.html" class="px-4 py-2 rounded-lg text-sm font-medium text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white transition-all duration-200"><span data-i18n="nav.home">Inicio</span></a>
+            <a href="Pagina de inicio.html#el-curso" class="px-4 py-2 rounded-lg text-sm font-medium bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300" aria-current="page"><span data-i18n="nav.course">El Curso</span></a>
+            <a href="Libros.html" class="px-4 py-2 rounded-lg text-sm font-medium text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white transition-all duration-200"><span data-i18n="nav.books">Libros de Apoyo</span></a>
+            <a href="Contacto.html" class="px-4 py-2 rounded-lg text-sm font-medium text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white transition-all duration-200"><span data-i18n="nav.contact">Contacto</span></a>
           </nav>
 
           <div class="flex items-center gap-2">
+            <div class="flex items-center gap-1.5" role="group" data-i18n-aria-label="aria.langGroup" aria-label="Seleccionar idioma">
+              <button type="button" data-lang="es" class="lang-switch p-0.5 rounded hover:scale-105 transition-transform focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 ring-2 ring-primary-500 ring-offset-1 ring-offset-white dark:ring-offset-slate-900" data-i18n-aria-label="lang.esLabel" data-i18n-title="lang.esLabel" aria-label="Español" title="Español" aria-pressed="true">
+                <span class="inline-flex w-8 h-5 flex-shrink-0 rounded-sm overflow-hidden shadow-sm ring-1 ring-black/10 dark:ring-white/20" aria-hidden="true"><svg class="w-full h-full block" viewBox="0 0 30 20" xmlns="http://www.w3.org/2000/svg"><rect width="10" height="20" fill="#006847"/><rect x="10" width="10" height="20" fill="#fff"/><rect x="20" width="10" height="20" fill="#CE1126"/><circle cx="15" cy="10" r="2.5" fill="#8B4513"/><circle cx="15" cy="9.8" r="1.6" fill="#C4A035"/></svg></span>
+              </button>
+              <button type="button" data-lang="en" class="lang-switch p-0.5 rounded opacity-80 hover:scale-105 hover:opacity-100 transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500" data-i18n-aria-label="lang.enLabel" data-i18n-title="lang.enLabel" aria-label="English" title="English" aria-pressed="false">
+                <span class="inline-flex w-8 h-5 flex-shrink-0 rounded-sm overflow-hidden shadow-sm ring-1 ring-black/10 dark:ring-white/20" aria-hidden="true"><svg class="w-full h-full block" viewBox="0 0 60 30" xmlns="http://www.w3.org/2000/svg"><rect width="60" height="30" fill="#012169"/><path fill="none" stroke="#fff" stroke-width="6" d="M0,0 60,30 M60,0 0,30"/><path fill="none" stroke="#C8102E" stroke-width="4" d="M0,0 60,30 M60,0 0,30"/><path fill="none" stroke="#fff" stroke-width="10" d="M30,0 V30 M0,15 H60"/><path fill="none" stroke="#C8102E" stroke-width="6" d="M30,0 V30 M0,15 H60"/></svg></span>
+              </button>
+            </div>
             <button id="theme-toggle" type="button" class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-all duration-300" aria-label="Cambiar tema">
               <svg id="sun-icon" class="w-5 h-5 text-amber-400 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
@@ -130,10 +141,10 @@
 
       <div id="mobile-menu" class="md:hidden hidden border-t border-indigo-200/30 dark:border-indigo-800/30 bg-white dark:bg-gray-950">
         <nav class="container mx-auto px-4 py-4 space-y-1">
-          <a href="Pagina de inicio.html" class="block px-4 py-3 rounded-lg text-base font-medium text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800">Inicio</a>
-          <a href="Pagina de inicio.html#el-curso" class="block px-4 py-3 rounded-lg text-base font-medium bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300">El Curso</a>
-          <a href="Libros.html" class="block px-4 py-3 rounded-lg text-base font-medium text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800">Libros de Apoyo</a>
-          <a href="Contacto.html" class="block px-4 py-3 rounded-lg text-base font-medium text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800">Contacto</a>
+          <a href="Pagina de inicio.html" class="block px-4 py-3 rounded-lg text-base font-medium text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"><span data-i18n="nav.home">Inicio</span></a>
+          <a href="Pagina de inicio.html#el-curso" class="block px-4 py-3 rounded-lg text-base font-medium bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300"><span data-i18n="nav.course">El Curso</span></a>
+          <a href="Libros.html" class="block px-4 py-3 rounded-lg text-base font-medium text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"><span data-i18n="nav.books">Libros de Apoyo</span></a>
+          <a href="Contacto.html" class="block px-4 py-3 rounded-lg text-base font-medium text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"><span data-i18n="nav.contact">Contacto</span></a>
         </nav>
       </div>
     </header>
@@ -146,8 +157,8 @@
             <div class="grid gap-8 lg:grid-cols-[1fr_auto] lg:gap-10 items-start mb-10">
               <div class="min-w-0 order-2 lg:order-1">
                 <div class="text-left mb-8">
-                  <h1 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-2">Unidad 7: Fricción</h1>
-                  <p class="text-gray-600 dark:text-gray-400">
+                  <h1 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-2" data-i18n="unit7.pageTitle">Unidad 7: Fricción</h1>
+                  <p class="text-gray-600 dark:text-gray-400" data-i18n="unit7.pageSubtitle">
                     Fenómenos de fricción, fricción seca y aplicaciones en plano inclinado.
                   </p>
                 </div>
@@ -257,9 +268,100 @@
                     <li>Cuando está ocurriendo el deslizamiento en la superficie de contacto, la fuerza de fricción cinética es proporcional a la fuerza normal, de manera que <var>F<sub>k</sub></var> = &mu;<sub>k</sub><var>N</var>.</li>
                   </ul>
                 </section>
+
+                <div class="space-y-10 mt-10">
+                  <section id="7-2" class="scroll-mt-24">
+                    <h2 class="text-xl font-bold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
+                      <span class="w-8 h-8 rounded-lg bg-primary-500 text-white flex items-center justify-center text-sm">7.2</span>
+                      Fricción seca
+                    </h2>
+                    <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-4 text-justify">
+                      La fricción es una fuerza que resiste el movimiento de dos superficies en contacto que se deslizan relativamente entre sí. Esta fuerza actúa siempre tangencialmente a la superficie en los puntos de contacto y está dirigida en sentido opuesto al movimiento posible o existente entre las superficies.
+                    </p>
+                    <div class="mt-4 flex justify-center">
+                      <img src="images/7.9.jpg" alt="Figura 7.9 — Fricción seca" class="w-fit max-w-xl h-auto rounded-xl border border-indigo-200/50 dark:border-indigo-700/50 shadow-md" decoding="async" />
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-400 leading-relaxed mt-4 text-justify">
+                      <strong>Teoría de la fricción seca.</strong> La teoría de la fricción seca puede explicarse si se consideran los efectos que ocasiona jalar horizontalmente un bloque de peso uniforme <var>W</var> que descansa sobre una superficie horizontal rugosa que es no rígida o deformable, figura 8-1a. Sin embargo, la parte superior del bloque se puede considerar rígida. Como se muestra en el diagrama de cuerpo libre del bloque, figura 8-1b, el piso ejerce una distribución dispar de fuerza normal &Delta;N<sub>n</sub> y de fuerza de fricción &Delta;F<sub>n</sub> a lo largo de la superficie de contacto. Por equilibrio, las fuerzas normales deben actuar hacia arriba para equilibrar el peso <var>W</var> del bloque, y las fuerzas de fricción deben actuar hacia la izquierda para evitar que la fuerza aplicada <var>P</var> mueva el bloque hacia la derecha. Un examen preciso de las superficies en contacto entre el piso y el bloque revela cómo se desarrollan esas fuerzas de fricción y normales, figura 8-1c. Puede verse que existen muchas irregularidades microscópicas entre las dos superficies y, como resultado, se desarrollan fuerzas reactivas &Delta;R<sub>n</sub> en cada uno de los puntos de contacto. Como se muestra, cada fuerza reactiva contribuye con una componente de fricción &Delta;F<sub>n</sub> y con una componente normal &Delta;N<sub>n</sub>.
+                    </p>
+                    <p class="text-gray-600 dark:text-gray-400 leading-relaxed mt-4 text-justify">
+                      <strong>Equilibrio.</strong> El efecto de las cargas distribuidas normal y de fricción está indicado por sus resultantes <var>N</var> y <var>F</var>, las cuales se muestran en el diagrama de cuerpo libre, figura 8-1d. Observe que <var>N</var> actúa a una distancia <var>x</var> a la derecha de la línea de acción de <var>W</var>, figura 8-1d. Esta ubicación, que coincide con el centroide o centro geométrico de la distribución de fuerza normal en la figura 8-1b, es necesaria para equilibrar el &ldquo;efecto de volteo&rdquo; causado por <var>P</var>. Por ejemplo, si <var>P</var> se aplica a una altura <var>h</var> sobre la superficie, figura 8-1d, entonces el equilibrio de momento con respecto al punto O se satisface si <var>Wx</var> = <var>Ph</var> o <var>x</var> = <var>Ph</var>/<var>W</var>.
+                    </p>
+                    <p class="text-gray-600 dark:text-gray-400 leading-relaxed mt-4 text-justify">
+                      <strong>Tipos de problemas de fricción.</strong> En general, hay tres tipos de problemas mecánicos que implican la fricción seca. Estos problemas pueden clasificarse fácilmente una vez que se trazan los diagramas de cuerpo libre y que se identifica el número total de incógnitas y se compara con el número total de ecuaciones de equilibrio disponibles.
+                    </p>
+                    <p class="text-gray-600 dark:text-gray-400 leading-relaxed mt-4 text-justify">
+                      <strong>Movimiento inminente no evidente.</strong> Los problemas de este tipo son estrictamente problemas de equilibrio que requieren que el número total de incógnitas sea igual al número total de ecuaciones de equilibrio disponibles. Sin embargo, una vez determinadas las fuerzas de fricción por la solución, sus valores numéricos deben revisarse para garantizar que satisfacen la desigualdad <var>F</var> ≤ &mu;<sub>s</sub><var>N</var>; de otra manera, ocurrirá el deslizamiento y el cuerpo no permanecerá en equilibrio. En la figura 8-4a, se muestra un problema de este tipo. Aquí debemos determinar las fuerzas de fricción en A y C para verificar si se puede mantener la posición de equilibrio del bastidor de dos elementos. Si las barras son uniformes y tienen pesos conocidos de 100 N cada una, entonces los diagramas de cuerpo libre son como se muestra en la figura 8-4b. Se tienen seis componentes de fuerza que pueden determinarse estrictamente a partir de las seis ecuaciones de equilibrio (tres para cada elemento). Una vez que se determinan <var>F<sub>A</sub></var>, <var>N<sub>A</sub></var>, <var>F<sub>C</sub></var> y <var>N<sub>C</sub></var>, las barras permanecerán en equilibrio si se cumple que <var>F<sub>A</sub></var> ≤ 0.3<var>N<sub>A</sub></var> y <var>F<sub>C</sub></var> ≤ 0.5<var>N<sub>C</sub></var>.
+                    </p>
+                    <div class="mt-4 flex justify-center">
+                      <img src="images/7.11.jpg" alt="Figura 7.11 — Movimiento inminente no evidente" class="w-fit max-w-xl h-auto rounded-xl border border-indigo-200/50 dark:border-indigo-700/50 shadow-md" decoding="async" />
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-400 leading-relaxed mt-4 text-justify">
+                      <strong>Movimiento inminente en todos los puntos de contacto.</strong> En este caso, el número total de incógnitas será igual al número total de ecuaciones disponibles más el número total de ecuaciones de fricción, <var>F</var> = &mu;<sub>s</sub><var>N</var>. Cuando el movimiento es inminente en los puntos de contacto, entonces <var>F<sub>s</sub></var> = &mu;<sub>s</sub><var>N</var>; mientras que si el cuerpo se desliza, entonces <var>F<sub>k</sub></var> = &mu;<sub>k</sub><var>N</var>. Por ejemplo, considere el problema de encontrar el ángulo más pequeño bajo el cual la barra de 100 N que se muestra en la figura 8-5a puede recargarse contra la pared sin que se deslice. El diagrama de cuerpo libre se muestra en la figura 8-5b. Aquí las cinco incógnitas se determinan a partir de las tres ecuaciones de equilibrio y de las dos ecuaciones de fricción que se aplican en ambos puntos de contacto, de manera que <var>F<sub>A</sub></var> = 0.3<var>N<sub>A</sub></var> y <var>F<sub>B</sub></var> = 0.4<var>N<sub>B</sub></var>.
+                    </p>
+                    <div class="mt-4 flex justify-center">
+                      <img src="images/7.12.jpg" alt="Figura 7.12 — Movimiento inminente en puntos de contacto" class="w-fit max-w-xl h-auto rounded-xl border border-indigo-200/50 dark:border-indigo-700/50 shadow-md" decoding="async" />
+                    </div>
+                    <div class="mt-4 flex justify-center">
+                      <img src="images/7.13.jpg" alt="Figura 7.13 — Movimiento inminente en algunos puntos" class="w-fit max-w-xl h-auto rounded-xl border border-indigo-200/50 dark:border-indigo-700/50 shadow-md" decoding="async" />
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-400 leading-relaxed mt-4 text-justify">
+                      <strong>Movimiento inminente en algunos puntos de contacto.</strong> Aquí el número de incógnitas será menor que el de ecuaciones de equilibrio disponibles, más el número total de ecuaciones de fricción o ecuaciones condicionales para el volteo. Como resultado, existirán varias posibilidades para que se produzca el movimiento o el movimiento inminente y el problema implicará determinar qué tipo de movimiento ocurrirá realmente. Por ejemplo, considere el bastidor de dos elementos que se muestra en la figura 8-6a. En este problema queremos determinar la fuerza horizontal <var>P</var> necesaria para ocasionar el movimiento. Si cada elemento tiene un peso de 100 N, entonces los diagramas de cuerpo libre son como se muestran en la figura 8-6b. Se tienen siete incógnitas. Para encontrar una solución única debemos satisfacer las seis ecuaciones de equilibrio (tres para cada elemento) y sólo una de dos posibles ecuaciones de fricción estática. Esto significa que conforme <var>P</var> aumente causará deslizamiento en A y ningún deslizamiento en C, de manera que <var>F<sub>A</sub></var> = 0.3<var>N<sub>A</sub></var> y <var>F<sub>C</sub></var> ≤ 0.5<var>N<sub>C</sub></var>; o bien ocurre deslizamiento en C y ningún deslizamiento en A, en cuyo caso <var>F<sub>C</sub></var> = 0.5<var>N<sub>C</sub></var> y <var>F<sub>A</sub></var> ≤ 0.3<var>N<sub>A</sub></var>. La situación real puede determinarse al calcular <var>P</var> en cada caso y al seleccionar después el caso para el cual <var>P</var> es más pequeña. Si en ambos casos se calcula el mismo valor para <var>P</var>, lo que en la práctica sería altamente improbable, entonces el deslizamiento ocurre simultáneamente en ambos puntos; es decir, las siete incógnitas satisfacen ocho ecuaciones.
+                    </p>
+                    <div class="mt-4 flex justify-center">
+                      <img src="images/7.14.jpg" alt="Figura 7.14 — Movimiento inminente en algunos puntos" class="w-fit max-w-xl h-auto rounded-xl border border-indigo-200/50 dark:border-indigo-700/50 shadow-md" decoding="async" />
+                    </div>
+                    <div class="mt-4 p-4 rounded-xl bg-primary-50 dark:bg-primary-900/20 border border-primary-200/50 dark:border-primary-700/50">
+                      <p class="text-gray-700 dark:text-gray-300 leading-relaxed text-justify">
+                        <strong>Ejemplo.</strong> El embalaje uniforme que se muestra en la figura 8-7a tiene una masa de <strong>20 kg</strong>. Si una fuerza <var>P</var> = <strong>80 N</strong> se aplica al embalaje, determine si éste permanece en equilibrio. El coeficiente de fricción estática es &mu;<sub>s</sub> = <strong>0.3</strong>.
+                      </p>
+                    </div>
+                    <div class="mt-4 flex justify-center">
+                      <img src="images/7.15.jpg" alt="Figura 7.15 — Ejemplo de fricción" class="w-fit max-w-xl h-auto rounded-xl border border-indigo-200/50 dark:border-indigo-700/50 shadow-md" decoding="async" />
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-400 leading-relaxed mt-4 text-justify">
+                      <strong>Diagrama de cuerpo libre.</strong> Como se muestra en la figura 8-7b, la fuerza normal resultante <var>N<sub>C</sub></var> debe actuar a una distancia <var>x</var> de la línea central del embalaje para contrarrestar el efecto de volteo causado por <var>P</var>. Hay tres incógnitas, <var>F</var>, <var>N<sub>C</sub></var> y <var>x</var>, que pueden determinarse estrictamente a partir de las tres ecuaciones de equilibrio.
+                    </p>
+                  </section>
+
+                  <section id="7-3" class="scroll-mt-24">
+                    <h2 class="text-xl font-bold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
+                      <span class="w-8 h-8 rounded-lg bg-primary-500 text-white flex items-center justify-center text-sm">7.3</span>
+                      Plano inclinado
+                    </h2>
+                    <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-4 text-justify">
+                      En un plano inclinado, las componentes del peso actúan en dirección perpendicular y paralela al plano. La fricción se opone al posible movimiento relativo.
+                    </p>
+                    <div class="mt-4 flex justify-center">
+                      <a
+                        href="pdf/Trabajo_Investigacion_Unidad7.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-indigo-500 to-purple-600 text-white font-semibold shadow-lg shadow-indigo-500/30 hover:from-indigo-600 hover:to-purple-700 hover:shadow-indigo-500/50 transition-all duration-300 hover:scale-105"
+                      >
+                        Trabajo de Investigación
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                      </a>
+                    </div>
+                  </section>
+
+                  <div class="border-t border-gray-200 dark:border-gray-700 pt-8 mt-10">
+                    <a
+                      href="Pagina de inicio.html"
+                      class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 font-medium hover:bg-primary-200 dark:hover:bg-primary-800/50 transition-colors"
+                    >
+                      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                      </svg>
+                      Ir a Página Principal
+                    </a>
+                  </div>
+                </div>
               </div>
 
-              <div class="w-full max-w-[13.5rem] sm:max-w-[15.5rem] md:max-w-[17rem] shrink-0 justify-self-center lg:justify-self-end lg:sticky lg:top-24 order-1 lg:order-2">
+              <div class="w-full max-w-[13.5rem] sm:max-w-[15.5rem] md:max-w-[17rem] shrink-0 justify-self-center lg:justify-self-end sticky top-24 order-1 lg:order-2">
                 <div class="rounded-xl overflow-hidden border border-indigo-200/50 dark:border-indigo-700/50 shadow-lg bg-black/5 dark:bg-black/20">
                   <div class="relative mx-auto w-full aspect-[9/16] max-h-[min(62vh,24rem)] sm:max-h-[min(68vh,28rem)] overflow-hidden bg-black">
                     <video
@@ -283,71 +385,6 @@
                 </div>
               </div>
             </div>
-
-            <div class="space-y-10">
-              <section id="7-2" class="scroll-mt-24">
-                <h2 class="text-xl font-bold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
-                  <span class="w-8 h-8 rounded-lg bg-primary-500 text-white flex items-center justify-center text-sm">7.2</span>
-                  Fricción seca
-                </h2>
-                <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-4 text-justify">
-                  Modelo típico: la fuerza de fricción es proporcional a la fuerza normal. Para fricción estática:
-                </p>
-                <div class="mt-4 p-4 rounded-xl bg-indigo-50/30 dark:bg-indigo-950/20 border border-indigo-200/70 dark:border-indigo-700/40">
-                  <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
-                    <strong>F<sub>s</sub> ≤ μ<sub>s</sub> N</strong>
-                  </p>
-                </div>
-                <p class="text-gray-600 dark:text-gray-400 leading-relaxed mt-4 mb-4 text-justify">
-                  Para fricción cinética (cuando ya hay deslizamiento):
-                </p>
-                <div class="p-4 rounded-xl bg-indigo-50/30 dark:bg-indigo-950/20 border border-indigo-200/70 dark:border-indigo-700/40">
-                  <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
-                    <strong>F<sub>k</sub> = μ<sub>k</sub> N</strong>
-                  </p>
-                </div>
-              </section>
-
-              <section id="7-3" class="scroll-mt-24">
-                <h2 class="text-xl font-bold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
-                  <span class="w-8 h-8 rounded-lg bg-primary-500 text-white flex items-center justify-center text-sm">7.3</span>
-                  Plano inclinado
-                </h2>
-                <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-4 text-justify">
-                  En un plano inclinado, las componentes del peso actúan en dirección perpendicular y paralela al plano. La fricción se opone al posible movimiento relativo.
-                </p>
-                <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700">
-                  <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
-                    Para el caso crítico de inminencia de deslizamiento (equilibrio límite), se compara la componente paralela con μ<sub>s</sub>N.
-                  </p>
-                </div>
-                <div class="mt-4 flex justify-center">
-                  <a
-                    href="pdf/Trabajo_Investigacion_Unidad7.pdf"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-indigo-500 to-purple-600 text-white font-semibold shadow-lg shadow-indigo-500/30 hover:from-indigo-600 hover:to-purple-700 hover:shadow-indigo-500/50 transition-all duration-300 hover:scale-105"
-                  >
-                    Trabajo de Investigación
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                    </svg>
-                  </a>
-                </div>
-              </section>
-
-              <div class="border-t border-gray-200 dark:border-gray-700 pt-8 mt-10">
-                <a
-                  href="Pagina de inicio.html"
-                  class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 font-medium hover:bg-primary-200 dark:hover:bg-primary-800/50 transition-colors"
-                >
-                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-                  </svg>
-                  Ir a Página Principal
-                </a>
-              </div>
-            </div>
           </div>
         </div>
       </div>
@@ -362,6 +399,8 @@
       </div>
     </footer>
 
+    <script src="js/i18n-data.js"></script>
+    <script src="js/lang-switch.js"></script>
     <script>
       document.getElementById('current-year').textContent = new Date().getFullYear();
       document.getElementById('theme-toggle').addEventListener('click', function () {
