@@ -152,43 +152,66 @@
     <!-- MAIN -->
     <main class="flex-1 py-12">
       <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="max-w-6xl mx-auto">
-          <div class="bg-white/80 dark:bg-slate-900/80 backdrop-blur-md rounded-2xl shadow-2xl border border-indigo-200/50 dark:border-indigo-800/50 p-8 md:p-10">
-            <!-- Contenido a la izquierda; video a la derecha en pantallas grandes -->
-            <div class="grid gap-8 lg:grid-cols-[1fr_auto] lg:gap-10 items-start">
-              <div class="min-w-0 lg:min-h-0 flex flex-col order-2 lg:order-1">
-                <div class="text-center lg:text-left mb-8">
-                  <h1 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-2" data-i18n="unit6.pageTitle">Unidad 6: Análisis de estructuras estáticamente determinadas</h1>
-                  <p class="text-gray-600 dark:text-gray-400" data-i18n="unit6.pageSubtitle">
-                    Vigas, armaduras, método de nudos y secciones, mecanismos y cables.
-                  </p>
+        <div class="max-w-4xl mx-auto">
+          <div class="bg-white/80 dark:bg-slate-900/80 backdrop-blur-md rounded-2xl shadow-2xl border border-indigo-200/50 dark:border-indigo-800/50 p-6 md:p-8">
+                <!-- Breadcrumb -->
+                <nav class="text-sm text-gray-500 dark:text-gray-400 mb-6" aria-label="Navegación">
+                  <a href="Pagina de inicio.html" class="hover:text-primary-600 dark:hover:text-primary-400"><span data-i18n="nav.home">Inicio</span></a>
+                  <span class="mx-2">/</span>
+                  <a href="Pagina de inicio.html#el-curso" class="hover:text-primary-600 dark:hover:text-primary-400"><span data-i18n="nav.course">El Curso</span></a>
+                  <span class="mx-2">/</span>
+                  <span class="text-gray-700 dark:text-gray-300 font-medium">Unidad 6</span>
+                </nav>
+
+                <!-- Tarjeta unificada: intro + índice + video -->
+                <div class="rounded-2xl border border-gray-200/80 dark:border-slate-700/80 bg-white dark:bg-slate-800/90 shadow-lg overflow-hidden">
+                  <div class="grid grid-cols-1 md:grid-cols-[minmax(0,1fr)_auto] md:items-start gap-6 md:gap-8 p-5 md:p-6">
+                    <div class="min-w-0 text-center md:text-left">
+                      <h1 class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-2" data-i18n="unit6.pageTitle">Unidad 6: Análisis de estructuras estáticamente determinadas</h1>
+                      <p class="text-sm md:text-base text-gray-600 dark:text-gray-400 mb-5" data-i18n="unit6.pageSubtitle">
+                        Vigas, armaduras, método de nudos y secciones, mecanismos y cables.
+                      </p>
+
+                      <div class="p-3 sm:p-4 rounded-xl bg-primary-50/80 dark:bg-primary-900/25 border border-primary-200/40 dark:border-primary-700/40 text-left">
+                        <h2 class="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-3">Contenido de la unidad</h2>
+                        <ul class="space-y-1.5 text-sm">
+                          <li><a href="#6-1" class="text-primary-600 dark:text-primary-400 hover:underline">6.1 Vigas</a></li>
+                          <li class="pl-4"><a href="#6-2" class="text-primary-600 dark:text-primary-400 hover:underline">6.2 Armaduras (p263)</a></li>
+                          <li class="pl-8"><a href="#6-2-1" class="text-primary-600 dark:text-primary-400 hover:underline">6.2.1 Método de nudos</a></li>
+                          <li class="pl-8"><a href="#6-2-2" class="text-primary-600 dark:text-primary-400 hover:underline">6.2.2 Método de secciones</a></li>
+                          <li class="pl-4"><a href="#6-3" class="text-primary-600 dark:text-primary-400 hover:underline">6.3 Mecanismos</a></li>
+                          <li class="pl-4"><a href="#6-4" class="text-primary-600 dark:text-primary-400 hover:underline">6.4 Cables</a></li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <aside class="w-[11rem] sm:w-[12rem] md:w-[13rem] lg:w-[14rem] max-w-[42%] md:max-w-none justify-self-center md:justify-self-end self-start shrink-0">
+                      <div class="rounded-xl overflow-hidden border border-indigo-200/50 dark:border-indigo-600/50 shadow-md bg-black w-full">
+                        <div class="relative w-full aspect-[9/16]">
+                          <video
+                            class="absolute inset-0 h-full w-full object-cover"
+                            controls
+                            autoplay
+                            muted
+                            playsinline
+                            loop
+                            preload="auto"
+                            title="Unidad 6 — Análisis de estructuras estáticamente determinadas"
+                          >
+                            <source src="videos/video6.mp4" type="video/mp4" />
+                            Tu navegador no soporta la reproducción de video.
+                          </video>
+                        </div>
+                        <p class="text-xs text-gray-500 dark:text-gray-400 px-3 py-2 bg-gray-50 dark:bg-slate-900/80 leading-snug text-center md:text-left">
+                          Video Unidad 6 —
+                          <a href="videos/video6.mp4" target="_blank" rel="noopener noreferrer" class="underline font-medium text-primary-600 dark:text-primary-400">ábrelo aquí</a>
+                        </p>
+                      </div>
+                    </aside>
+                  </div>
                 </div>
 
-                <!-- Índice interno -->
-                <div class="p-4 rounded-xl bg-primary-50 dark:bg-primary-900/20 border border-primary-200/50 dark:border-primary-700/50">
-                  <h2 class="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-3">Contenido de la unidad</h2>
-                  <ul class="space-y-1 text-sm">
-                    <li>
-                      <a href="#6-1" class="text-primary-600 dark:text-primary-400 hover:underline">6.1 Vigas</a>
-                    </li>
-                    <li class="pl-4">
-                      <a href="#6-2" class="text-primary-600 dark:text-primary-400 hover:underline">6.2 Armaduras (p263)</a>
-                    </li>
-                    <li class="pl-8">
-                      <a href="#6-2-1" class="text-primary-600 dark:text-primary-400 hover:underline">6.2.1 Método de nudos</a>
-                    </li>
-                    <li class="pl-8">
-                      <a href="#6-2-2" class="text-primary-600 dark:text-primary-400 hover:underline">6.2.2 Método de secciones</a>
-                    </li>
-                    <li class="pl-4">
-                      <a href="#6-3" class="text-primary-600 dark:text-primary-400 hover:underline">6.3 Mecanismos</a>
-                    </li>
-                    <li class="pl-4">
-                      <a href="#6-4" class="text-primary-600 dark:text-primary-400 hover:underline">6.4 Cables</a>
-                    </li>
-                  </ul>
-                </div>
-
+                <!-- Secciones de contenido -->
                 <div class="space-y-10 mt-10">
               <section id="6-1" class="scroll-mt-24">
                 <h2 class="text-xl font-bold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
@@ -702,29 +725,6 @@
                 </a>
               </div>
                 </div>
-              </div>
-
-              <div class="w-full max-w-[13.5rem] sm:max-w-[15.5rem] md:max-w-[17rem] shrink-0 justify-self-center lg:justify-self-end sticky top-24 order-1 lg:order-2">
-                <div class="rounded-xl overflow-hidden border border-indigo-200/50 dark:border-indigo-700/50 shadow-lg bg-black/5 dark:bg-black/20">
-                  <div class="relative mx-auto w-full aspect-[9/16] max-h-[min(62vh,24rem)] sm:max-h-[min(68vh,28rem)] overflow-hidden bg-black">
-                    <video
-                      class="absolute inset-0 h-full w-full object-contain"
-                      controls
-                      playsinline
-                      preload="metadata"
-                      title="Unidad 6 — Análisis de estructuras estáticamente determinadas (9:16)"
-                    >
-                      <source src="videos/video6.mp4" type="video/mp4" />
-                      Tu navegador no soporta la reproducción de video.
-                    </video>
-                  </div>
-                  <p class="text-xs text-gray-500 dark:text-gray-400 px-2.5 py-1.5 bg-gray-50 dark:bg-gray-800/50 leading-snug">
-                    Video Unidad 6 (9:16) — Si no carga,
-                    <a href="videos/video6.mp4" target="_blank" rel="noopener noreferrer" class="underline font-medium text-primary-600 dark:text-primary-400">ábrelo aquí</a>.
-                  </p>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <title>Agradecimiento | Estática para Ingenieros</title>
+    <meta name="description" content="Agradecimientos y reconocimientos del curso de Estática para Ingenieros." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              primary: {
+                50: '#eef2ff', 100: '#e0e7ff', 200: '#c7d2fe', 300: '#a5b4fc',
+                400: '#818cf8', 500: '#6366f1', 600: '#4f46e5', 700: '#4338ca',
+                800: '#3730a3', 900: '#312e81', 950: '#1e1b4b',
+              },
+            },
+            fontFamily: { sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'] },
+          },
+        },
+      }
+    </script>
+    <script>
+      (function() {
+        const theme = localStorage.getItem('theme') ||
+          (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        if (theme === 'dark') document.documentElement.classList.add('dark');
+      })();
+    </script>
+    <style>
+      html { scroll-behavior: smooth; }
+      body { font-family: 'Inter', system-ui, -apple-system, sans-serif; -webkit-font-smoothing: antialiased; }
+    </style>
+  </head>
+
+  <body class="min-h-screen flex flex-col antialiased text-gray-900 dark:text-gray-100 transition-colors duration-300" style="background-image: url('images/mecanica.png'); background-size: cover; background-position: center; background-attachment: fixed; background-repeat: no-repeat;">
+
+    <header class="sticky top-0 z-50 w-full border-b border-indigo-200/30 dark:border-indigo-800/30 bg-white/40 dark:bg-slate-900/40 backdrop-blur-md transition-colors duration-300">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex h-16 items-center justify-between">
+          <a href="Pagina de inicio.html" class="flex items-center gap-3 group" aria-label="Ir al inicio">
+            <img src="images/tecnologico.png" alt="Tecnológico" class="h-12 w-auto object-contain">
+            <div class="flex flex-col">
+              <span class="text-lg font-bold text-gray-900 dark:text-white leading-tight">Estática</span>
+              <span class="text-xs text-gray-500 dark:text-gray-400 leading-tight" data-i18n="brand.subtitle">para Ingenieros</span>
+            </div>
+          </a>
+          <nav class="hidden md:flex items-center gap-1" aria-label="Navegación principal">
+            <a href="Pagina de inicio.html" class="px-4 py-2 rounded-lg text-sm font-medium text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-all duration-200"><span data-i18n="nav.home">Inicio</span></a>
+            <a href="Pagina de inicio.html#el-curso" class="px-4 py-2 rounded-lg text-sm font-medium text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-all duration-200"><span data-i18n="nav.course">El Curso</span></a>
+            <a href="Libros.html" class="px-4 py-2 rounded-lg text-sm font-medium text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-all duration-200"><span data-i18n="nav.booksShort">Libros</span></a>
+            <a href="Contacto.html" class="px-4 py-2 rounded-lg text-sm font-medium text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-all duration-200"><span data-i18n="nav.contact">Contacto</span></a>
+          </nav>
+          <button id="theme-toggle" type="button" class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-all duration-300" aria-label="Cambiar tema">
+            <svg class="w-5 h-5 text-amber-400 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+            <svg class="w-5 h-5 text-gray-700 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="flex-1 py-12">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto">
+          <div class="bg-white/80 dark:bg-slate-900/80 backdrop-blur-md rounded-2xl shadow-2xl border border-indigo-200/50 dark:border-indigo-800/50 p-6 md:p-8">
+            <nav class="text-sm text-gray-500 dark:text-gray-400 mb-6" aria-label="Navegación">
+              <a href="Pagina de inicio.html" class="hover:text-primary-600 dark:hover:text-primary-400">Inicio</a>
+              <span class="mx-2">/</span>
+              <a href="Pagina de inicio.html#el-curso" class="hover:text-primary-600 dark:hover:text-primary-400">El Curso</a>
+              <span class="mx-2">/</span>
+              <span class="text-gray-700 dark:text-gray-300 font-medium">Agradecimiento</span>
+            </nav>
+
+            <div class="rounded-2xl border border-gray-200/80 dark:border-slate-700/80 bg-white dark:bg-slate-800/90 shadow-lg overflow-hidden mb-10">
+              <div class="grid grid-cols-1 md:grid-cols-[minmax(0,1fr)_auto] md:items-start gap-6 md:gap-8 p-5 md:p-6">
+                <div class="min-w-0 text-center md:text-left">
+                  <h1 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-5 text-center">Agradecimiento</h1>
+                  <div class="p-5 rounded-xl bg-primary-50/80 dark:bg-primary-900/25 border border-primary-200/40 dark:border-primary-700/40 text-left">
+                    <h2 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">Colaboradores del curso</h2>
+                    <div class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed text-justify space-y-4">
+                      <p>
+                        Agradecemos profundamente al curso de Estática impartido en los Centros Tecnológicos Nacional de México, ya que durante este periodo tuvimos la oportunidad de adquirir conocimientos fundamentales y desarrollar habilidades importantes para nuestra formación académica y profesional. A lo largo de cada una de las unidades estudiadas, pudimos comprender de manera más clara los principios y conceptos que rigen el análisis de fuerzas, estructuras y equilibrio, los cuales son esenciales dentro del área de la ingeniería.
+                      </p>
+                      <p>
+                        Cada tema abordado nos permitió fortalecer nuestro razonamiento lógico y nuestra capacidad para resolver problemas de manera analítica y eficiente. Además, las actividades, ejercicios y prácticas realizadas durante el curso contribuyeron significativamente a mejorar nuestra comprensión de los contenidos, permitiéndonos aplicar la teoría en situaciones reales y desarrollar una visión más amplia sobre la importancia de la Estática en el ámbito profesional.
+                      </p>
+                      <p>
+                        Asimismo, reconocemos el esfuerzo y dedicación de los docentes, quienes compartieron sus conocimientos y experiencia de manera clara y comprometida, motivándonos constantemente a mejorar y a enfrentar nuevos retos académicos. Gracias a su orientación, logramos adquirir herramientas que serán de gran utilidad en nuestra formación y en nuestro futuro desempeño laboral.
+                      </p>
+                      <p>
+                        Finalmente, este curso no solo nos dejó aprendizajes técnicos, sino también una experiencia enriquecedora que fortaleció valores como la responsabilidad, el trabajo en equipo y la perseverancia. Sin duda, los conocimientos obtenidos durante este periodo serán una base importante para continuar nuestro desarrollo dentro de la ingeniería y afrontar con mayor preparación los desafíos profesionales que se presenten en el futuro.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <aside class="w-[11rem] sm:w-[12rem] md:w-[13rem] lg:w-[14rem] max-w-[42%] md:max-w-none justify-self-center md:justify-self-end self-start shrink-0">
+                  <div class="rounded-xl overflow-hidden border border-indigo-200/50 dark:border-indigo-600/50 shadow-md bg-black w-full">
+                    <div class="relative w-full aspect-[9/16]">
+                      <video
+                        class="absolute inset-0 h-full w-full object-cover"
+                        controls
+                        autoplay
+                        muted
+                        playsinline
+                        loop
+                        preload="auto"
+                        title="Agradecimiento"
+                      >
+                        <source src="videos/a1.mp4" type="video/mp4" />
+                        Tu navegador no soporta la reproducción de video.
+                      </video>
+                    </div>
+                    <p class="text-xs text-gray-500 dark:text-gray-400 px-3 py-2 bg-gray-50 dark:bg-slate-900/80 leading-snug text-center md:text-left">
+                      Video —
+                      <a href="videos/a1.mp4" target="_blank" rel="noopener noreferrer" class="underline font-medium text-primary-600 dark:text-primary-400">ábrelo aquí</a>
+                    </p>
+                  </div>
+                </aside>
+              </div>
+            </div>
+
+            <div class="border-t border-gray-200 dark:border-gray-700 pt-8 mt-10">
+              <a href="Pagina de inicio.html#el-curso" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 font-medium hover:bg-primary-200 dark:hover:bg-primary-800/50 transition-colors">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+                Volver al curso
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="bg-slate-50/50 dark:bg-slate-900/50 border-t border-indigo-200/30 dark:border-indigo-800/30 backdrop-blur-sm py-6">
+      <div class="container mx-auto px-4 text-center">
+        <p class="text-sm text-gray-500 dark:text-gray-400">
+          © <span id="current-year">2026</span> Estática para Ingenieros. Todos los derechos reservados.
+        </p>
+      </div>
+    </footer>
+
+    <script src="js/i18n-data.js"></script>
+    <script src="js/lang-switch.js"></script>
+    <script>
+      document.getElementById('current-year').textContent = new Date().getFullYear();
+      document.getElementById('theme-toggle').addEventListener('click', function() {
+        const isDark = document.documentElement.classList.contains('dark');
+        document.documentElement.classList.toggle('dark');
+        localStorage.setItem('theme', isDark ? 'light' : 'dark');
+      });
+    </script>
+  </body>
+</html>
