@@ -906,9 +906,239 @@
                   <span class="w-8 h-8 rounded-lg bg-primary-500 text-white flex items-center justify-center text-sm">1.3</span>
                   Diagrama de cuerpo libre
                 </h2>
-                <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
-                  El diagrama de cuerpo libre (DCL) es un esquema en el que se representa el cuerpo aislado y todas las fuerzas que actúan sobre él. Es una herramienta fundamental para plantear correctamente las ecuaciones de equilibrio y resolver problemas de estática.
+
+                <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2">1. Introducción</h4>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-3 text-justify">
+                  El diagrama de cuerpo libre (DCL) es la herramienta más importante en el análisis de la estática y, en general, de toda la mecánica. Consiste en una representación gráfica simplificada de un cuerpo, elemento o partícula, en la que se muestran todas las fuerzas y momentos externos que actúan sobre él, habiéndolo aislado previamente de su entorno (apoyos, conexiones, otros cuerpos).
                 </p>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-3 text-justify">
+                  <strong class="text-gray-800 dark:text-gray-200">Idea central:</strong> "aislar para analizar". Antes de plantear cualquier ecuación de equilibrio, es indispensable separar mentalmente el cuerpo de estudio de todo lo que lo rodea y reemplazar esas interacciones por las fuerzas (y momentos) que representan.
+                </p>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-5 text-justify">
+                  <strong class="text-gray-800 dark:text-gray-200">Objetivo de aprendizaje:</strong> al finalizar el tema, el estudiante será capaz de aislar correctamente un cuerpo o partícula, identificar todas las fuerzas que actúan sobre él —incluyendo las reacciones en los apoyos según su tipo— y representarlas correctamente en un diagrama, como paso previo indispensable para resolver cualquier problema de equilibrio.
+                </p>
+
+                <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2">2. ¿Por qué es indispensable el DCL?</h4>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-2 text-justify">
+                  Un error muy frecuente en estudiantes principiantes es intentar plantear las ecuaciones de equilibrio (ΣF<sub>x</sub> = 0, ΣF<sub>y</sub> = 0, ΣM = 0) directamente sobre el problema, sin haber aislado el cuerpo. Esto genera:
+                </p>
+                <ul class="list-disc list-inside space-y-1.5 text-gray-600 dark:text-gray-400 leading-relaxed mb-3 text-sm">
+                  <li>Omisión de fuerzas (especialmente reacciones en apoyos)</li>
+                  <li>Inclusión de fuerzas que no corresponden al cuerpo aislado</li>
+                  <li>Errores de signo por no definir claramente sentidos supuestos</li>
+                  <li>Confusión entre fuerzas internas y externas</li>
+                </ul>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-5 text-justify">
+                  El DCL obliga a hacer explícito todo lo que actúa sobre el cuerpo, y es la base sobre la cual se construyen las ecuaciones de equilibrio. Por esta razón, en la práctica de ingeniería se considera un paso obligatorio y no opcional.
+                </p>
+
+                <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2">3. Procedimiento para construir un diagrama de cuerpo libre</h4>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-3 text-justify">
+                  <strong class="text-gray-800 dark:text-gray-200">Paso 1.</strong> Seleccionar y aislar el cuerpo (o partícula) de interés. Se dibuja únicamente el contorno del cuerpo o un punto (si se trata de un sistema de fuerzas concurrentes), eliminando mentalmente todo lo que lo rodea: apoyos, cables, superficies de contacto, otros cuerpos.
+                </p>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-2 text-justify">
+                  <strong class="text-gray-800 dark:text-gray-200">Paso 2.</strong> Identificar y dibujar todas las fuerzas externas aplicadas. Esto incluye:
+                </p>
+                <ul class="list-disc list-inside space-y-1.5 text-gray-600 dark:text-gray-400 leading-relaxed mb-3 text-sm">
+                  <li>El peso del cuerpo (siempre vertical, hacia abajo, aplicado en el centro de gravedad)</li>
+                  <li>Fuerzas aplicadas directamente (cargas, empujes, tirones)</li>
+                  <li>Fuerzas de contacto con otros cuerpos (normales, fricción)</li>
+                </ul>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-3 text-justify">
+                  <strong class="text-gray-800 dark:text-gray-200">Paso 3.</strong> Sustituir cada apoyo o conexión por las reacciones que le corresponden. Cada tipo de apoyo restringe ciertos movimientos y, por lo tanto, genera reacciones específicas (ver sección 4).
+                </p>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-3 text-justify">
+                  <strong class="text-gray-800 dark:text-gray-200">Paso 4.</strong> Definir un sistema de referencia (ejes <em>x</em>, <em>y</em>, y <em>z</em> si aplica). Es recomendable alinear los ejes con la geometría del problema cuando sea conveniente (por ejemplo, a lo largo de un plano inclinado).
+                </p>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-3 text-justify">
+                  <strong class="text-gray-800 dark:text-gray-200">Paso 5.</strong> Asignar un sentido supuesto a cada fuerza desconocida. Si al resolver el sistema se obtiene un valor negativo, simplemente significa que el sentido real es opuesto al supuesto; no representa un error.
+                </p>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-5 text-justify">
+                  <strong class="text-gray-800 dark:text-gray-200">Paso 6.</strong> Etiquetar todas las fuerzas con su magnitud (si es conocida) o con una variable (si es desconocida), y sus ángulos correspondientes.
+                </p>
+
+                <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2">4. Tipos de apoyos y sus reacciones</h4>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-3 text-justify">
+                  La correcta identificación de las reacciones en los apoyos es, junto con la identificación del peso, el aspecto más importante del DCL. Cada apoyo restringe cierto tipo de movimiento y genera una reacción asociada a esa restricción.
+                </p>
+                <div class="overflow-x-auto mb-4">
+                  <table class="w-full text-sm text-left border-collapse">
+                    <thead>
+                      <tr class="border-b border-gray-200 dark:border-gray-600">
+                        <th class="py-2 pr-3 font-semibold text-gray-800 dark:text-gray-200">Tipo de apoyo</th>
+                        <th class="py-2 pr-3 font-semibold text-gray-800 dark:text-gray-200">Restringe</th>
+                        <th class="py-2 pr-3 font-semibold text-gray-800 dark:text-gray-200">Reacciones generadas</th>
+                        <th class="py-2 font-semibold text-gray-800 dark:text-gray-200">N.º de incógnitas</th>
+                      </tr>
+                    </thead>
+                    <tbody class="text-gray-600 dark:text-gray-400">
+                      <tr class="border-b border-gray-100 dark:border-gray-700/60 align-top">
+                        <td class="py-2 pr-3">Cable o cuerda</td>
+                        <td class="py-2 pr-3">Movimiento a lo largo del cable (solo tensión)</td>
+                        <td class="py-2 pr-3">Una fuerza a lo largo del cable, siempre de tracción (nunca empuja)</td>
+                        <td class="py-2">1</td>
+                      </tr>
+                      <tr class="border-b border-gray-100 dark:border-gray-700/60 align-top">
+                        <td class="py-2 pr-3">Apoyo simple / rodillo</td>
+                        <td class="py-2 pr-3">Movimiento perpendicular a la superficie de apoyo</td>
+                        <td class="py-2 pr-3">Una fuerza normal a la superficie</td>
+                        <td class="py-2">1</td>
+                      </tr>
+                      <tr class="border-b border-gray-100 dark:border-gray-700/60 align-top">
+                        <td class="py-2 pr-3">Superficie de contacto sin fricción</td>
+                        <td class="py-2 pr-3">Movimiento perpendicular a la superficie</td>
+                        <td class="py-2 pr-3">Fuerza normal</td>
+                        <td class="py-2">1</td>
+                      </tr>
+                      <tr class="border-b border-gray-100 dark:border-gray-700/60 align-top">
+                        <td class="py-2 pr-3">Superficie con fricción</td>
+                        <td class="py-2 pr-3">Movimiento perpendicular y tangencial (hasta cierto límite)</td>
+                        <td class="py-2 pr-3">Fuerza normal + fuerza de fricción</td>
+                        <td class="py-2">2</td>
+                      </tr>
+                      <tr class="border-b border-gray-100 dark:border-gray-700/60 align-top">
+                        <td class="py-2 pr-3">Pasador o articulación (pin)</td>
+                        <td class="py-2 pr-3">Movimiento en cualquier dirección del plano</td>
+                        <td class="py-2 pr-3">Dos componentes de reacción (R<sub>x</sub>, R<sub>y</sub>)</td>
+                        <td class="py-2">2</td>
+                      </tr>
+                      <tr class="align-top">
+                        <td class="py-2 pr-3">Empotramiento (fijo)</td>
+                        <td class="py-2 pr-3">Todo movimiento y toda rotación</td>
+                        <td class="py-2 pr-3">Dos componentes de reacción y un momento reactivo</td>
+                        <td class="py-2">3</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-5 text-justify">
+                  <strong class="text-gray-800 dark:text-gray-200">Nota pedagógica clave:</strong> un cable nunca puede empujar, solo tirar (tensión). Si al resolver un problema se obtiene que la tensión de un cable es negativa, esto indica un planteamiento incorrecto del problema (físicamente inconsistente), a diferencia de otras reacciones donde un signo negativo solo indica que el sentido supuesto era el contrario.
+                </p>
+
+                <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2">5. Clasificación de las fuerzas en un DCL</h4>
+                <h5 class="text-sm font-semibold text-gray-800 dark:text-gray-200 mb-2">5.1 Según su origen</h5>
+                <ul class="list-disc list-inside space-y-1.5 text-gray-600 dark:text-gray-400 leading-relaxed mb-4 text-sm">
+                  <li><strong class="text-gray-800 dark:text-gray-200">Peso (W):</strong> fuerza a distancia, debida a la gravedad, siempre vertical hacia abajo, aplicada en el centro de gravedad del cuerpo.</li>
+                  <li><strong class="text-gray-800 dark:text-gray-200">Fuerzas de contacto:</strong> normales, de fricción, tensiones en cables, fuerzas aplicadas directamente.</li>
+                  <li><strong class="text-gray-800 dark:text-gray-200">Reacciones en apoyos:</strong> dependen del tipo de apoyo, como se detalló en la sección 4.</li>
+                </ul>
+                <h5 class="text-sm font-semibold text-gray-800 dark:text-gray-200 mb-2">5.2 Fuerzas internas vs. externas</h5>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-2 text-justify">Es fundamental distinguir entre:</p>
+                <ul class="list-disc list-inside space-y-1.5 text-gray-600 dark:text-gray-400 leading-relaxed mb-5 text-sm">
+                  <li><strong class="text-gray-800 dark:text-gray-200">Fuerzas externas:</strong> las que actúan sobre el cuerpo desde el exterior (las únicas que se dibujan en el DCL).</li>
+                  <li><strong class="text-gray-800 dark:text-gray-200">Fuerzas internas:</strong> las que un cuerpo ejerce sobre sí mismo internamente (por ejemplo, entre dos partes de una misma estructura); no se incluyen en el DCL de un cuerpo cuando se analiza como un todo, pero sí se hacen visibles si se decide "cortar" el cuerpo para estudiar una sección interna (método de secciones).</li>
+                </ul>
+
+                <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2">6. Ejemplo resuelto: partícula (nodo)</h4>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-3 text-justify">
+                  Una esfera de peso W = 50&nbsp;N descansa sobre un plano inclinado sin fricción de 30°, sostenida además por un cable horizontal, como se muestra en la figura (sugerencia: dibujar en la pizarra la esfera sobre el plano, con el cable horizontal amarrado a un muro).
+                </p>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-2 font-medium">Construcción del DCL (paso a paso frente a los estudiantes):</p>
+                <ul class="list-disc list-inside space-y-1.5 text-gray-600 dark:text-gray-400 leading-relaxed mb-3 text-sm">
+                  <li>Se aísla la esfera del plano y del cable.</li>
+                  <li>Se dibuja el peso W, vertical hacia abajo, aplicado en el centro de la esfera.</li>
+                  <li>Se dibuja la normal N, perpendicular a la superficie del plano inclinado (no vertical, ya que el plano está inclinado).</li>
+                  <li>Se dibuja la tensión T del cable, horizontal, en el sentido que impide que la esfera resbale.</li>
+                </ul>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-2 text-justify">
+                  <strong class="text-gray-800 dark:text-gray-200">Resultado:</strong> tres fuerzas concurrentes en el centro de la esfera: W (hacia abajo), N (perpendicular al plano) y T (horizontal).
+                </p>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-1 text-justify">
+                  A partir de este DCL —y solo a partir de él— se pueden plantear correctamente las ecuaciones:
+                </p>
+                <div class="mb-5 pl-4 space-y-1 text-sm text-gray-700 dark:text-gray-300 font-mono">
+                  <p>ΣF<sub>x</sub> = 0</p>
+                  <p>ΣF<sub>y</sub> = 0</p>
+                </div>
+
+                <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2">7. Ejemplo resuelto: cuerpo rígido (viga)</h4>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-3 text-justify">
+                  Una viga horizontal de longitud L está apoyada en un pasador en el extremo A y en un rodillo en el extremo B. Sobre la viga actúa una carga puntual P en su punto medio.
+                </p>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-2 font-medium">Construcción del DCL:</p>
+                <ul class="list-disc list-inside space-y-1.5 text-gray-600 dark:text-gray-400 leading-relaxed mb-3 text-sm">
+                  <li>Se aísla la viga completa, eliminando los apoyos.</li>
+                  <li>En el punto A (pasador), se dibujan dos componentes de reacción: A<sub>x</sub> y A<sub>y</sub>.</li>
+                  <li>En el punto B (rodillo), se dibuja una sola reacción perpendicular a la superficie de apoyo: B<sub>y</sub>.</li>
+                  <li>Se dibuja la carga aplicada P, hacia abajo, en el punto medio de la viga.</li>
+                  <li>Si se considera el peso propio de la viga, se agrega W en su centro de gravedad (normalmente en el centro geométrico si la viga es uniforme).</li>
+                </ul>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-2 text-justify">
+                  <strong class="text-gray-800 dark:text-gray-200">Resultado:</strong> un DCL con cuatro fuerzas (A<sub>x</sub>, A<sub>y</sub>, B<sub>y</sub>, P, y opcionalmente W), listo para aplicar las tres ecuaciones de equilibrio de un cuerpo rígido:
+                </p>
+                <div class="mb-3 pl-4 space-y-1 text-sm text-gray-700 dark:text-gray-300 font-mono">
+                  <p>ΣF<sub>x</sub> = 0</p>
+                  <p>ΣF<sub>y</sub> = 0</p>
+                  <p>ΣM = 0</p>
+                </div>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-5 text-justify">
+                  <strong class="text-gray-800 dark:text-gray-200">Observación importante:</strong> a diferencia del sistema de partícula (sección 6), aquí sí es indispensable la ecuación de momentos, ya que las fuerzas no son concurrentes.
+                </p>
+
+                <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2">8. Errores comunes a reforzar en clase</h4>
+                <ul class="list-disc list-inside space-y-1.5 text-gray-600 dark:text-gray-400 leading-relaxed mb-5 text-sm">
+                  <li>Omitir el peso del cuerpo, especialmente cuando no se menciona explícitamente en el enunciado pero es relevante.</li>
+                  <li>Dibujar mal la dirección de la normal, olvidando que siempre es perpendicular a la superficie de contacto, no necesariamente vertical.</li>
+                  <li>Incluir fuerzas internas en el DCL de un cuerpo completo (solo deben incluirse fuerzas externas).</li>
+                  <li>Confundir el tipo de apoyo y, por lo tanto, el número y tipo de reacciones (por ejemplo, tratar un pasador como un rodillo).</li>
+                  <li>No definir un sentido supuesto consistente para las incógnitas, lo que genera confusión al interpretar signos negativos en la solución.</li>
+                  <li>Mezclar el diagrama de cuerpo libre con el dibujo del problema original, en lugar de aislar completamente el cuerpo.</li>
+                </ul>
+
+                <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2">9. Actividad sugerida para el aula</h4>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-2 text-justify">
+                  <strong class="text-gray-800 dark:text-gray-200">Ejercicio propuesto:</strong> Una escalera se apoya con su extremo inferior sobre un piso rugoso (con fricción) y su extremo superior contra una pared lisa (sin fricción). Un trabajador se encuentra parado sobre la escalera a cierta altura. Se pide:
+                </p>
+                <ul class="list-disc list-inside space-y-1.5 text-gray-600 dark:text-gray-400 leading-relaxed mb-3 text-sm">
+                  <li>a) Aislar la escalera y dibujar su diagrama de cuerpo libre completo.</li>
+                  <li>b) Identificar correctamente el tipo y número de reacciones en cada apoyo.</li>
+                  <li>c) Indicar qué fuerzas adicionales deben incluirse debido al peso del trabajador.</li>
+                </ul>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-5 text-justify">
+                  (Actividad ideal para trabajo en parejas, seguida de una puesta en común donde distintos grupos comparen sus diagramas en el pizarrón).
+                </p>
+
+                <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2">10. Resumen de conceptos clave</h4>
+                <div class="overflow-x-auto mb-2">
+                  <table class="w-full text-sm text-left border-collapse">
+                    <thead>
+                      <tr class="border-b border-gray-200 dark:border-gray-600">
+                        <th class="py-2 pr-3 font-semibold text-gray-800 dark:text-gray-200">Concepto</th>
+                        <th class="py-2 font-semibold text-gray-800 dark:text-gray-200">Descripción</th>
+                      </tr>
+                    </thead>
+                    <tbody class="text-gray-600 dark:text-gray-400">
+                      <tr class="border-b border-gray-100 dark:border-gray-700/60 align-top">
+                        <td class="py-2 pr-3">Diagrama de cuerpo libre (DCL)</td>
+                        <td class="py-2">Representación de un cuerpo aislado con todas las fuerzas externas que actúan sobre él</td>
+                      </tr>
+                      <tr class="border-b border-gray-100 dark:border-gray-700/60 align-top">
+                        <td class="py-2 pr-3">Paso previo obligatorio</td>
+                        <td class="py-2">Debe realizarse antes de plantear cualquier ecuación de equilibrio</td>
+                      </tr>
+                      <tr class="border-b border-gray-100 dark:border-gray-700/60 align-top">
+                        <td class="py-2 pr-3">Fuerzas a incluir</td>
+                        <td class="py-2">Peso, fuerzas aplicadas, reacciones en apoyos</td>
+                      </tr>
+                      <tr class="border-b border-gray-100 dark:border-gray-700/60 align-top">
+                        <td class="py-2 pr-3">Fuerzas a excluir</td>
+                        <td class="py-2">Fuerzas internas del propio cuerpo</td>
+                      </tr>
+                      <tr class="border-b border-gray-100 dark:border-gray-700/60 align-top">
+                        <td class="py-2 pr-3">Partícula (fuerzas concurrentes)</td>
+                        <td class="py-2">Solo requiere ΣF<sub>x</sub> = 0, ΣF<sub>y</sub> = 0</td>
+                      </tr>
+                      <tr class="border-b border-gray-100 dark:border-gray-700/60 align-top">
+                        <td class="py-2 pr-3">Cuerpo rígido (fuerzas no concurrentes)</td>
+                        <td class="py-2">Requiere además ΣM = 0</td>
+                      </tr>
+                      <tr class="align-top">
+                        <td class="py-2 pr-3">Regla del cable</td>
+                        <td class="py-2">Solo tracción, nunca compresión</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
               </section>
 
                 <div class="border-t border-gray-200 dark:border-gray-700 pt-8 mt-10 flex flex-col sm:flex-row gap-4 justify-between items-center">
