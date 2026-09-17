@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+﻿image.png<!DOCTYPE html>
 <html lang="es" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
@@ -76,7 +76,6 @@
           </nav>
 
           <div class="flex items-center gap-2">
-            <a href="Resultado del Curso.html" class="hidden sm:inline-flex items-center px-3 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-primary-600 hover:bg-primary-700 text-white transition-all duration-200 whitespace-nowrap focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-slate-900" style="box-shadow: 0 0 18px rgba(255, 255, 255, 0.5), 0 0 36px rgba(255, 255, 255, 0.28), 0 4px 14px rgba(79, 70, 229, 0.35);"><span data-i18n="nav.courseResult">Resultado del Curso</span></a>
             <div class="flex items-center gap-1.5" role="group" data-i18n-aria-label="aria.langGroup" aria-label="Seleccionar idioma">
               <button type="button" data-lang="es" class="lang-switch p-0.5 rounded hover:scale-105 transition-transform focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 ring-2 ring-primary-500 ring-offset-1 ring-offset-white dark:ring-offset-slate-900" data-i18n-aria-label="lang.esLabel" data-i18n-title="lang.esLabel" aria-label="Español" title="Español" aria-pressed="true">
                 <span class="inline-flex w-8 h-5 flex-shrink-0 rounded-sm overflow-hidden shadow-sm ring-1 ring-black/10 dark:ring-white/20" aria-hidden="true"><svg class="w-full h-full block" viewBox="0 0 30 20" xmlns="http://www.w3.org/2000/svg"><rect width="10" height="20" fill="#006847"/><rect x="10" width="10" height="20" fill="#fff"/><rect x="20" width="10" height="20" fill="#CE1126"/><circle cx="15" cy="10" r="2.5" fill="#8B4513"/><circle cx="15" cy="9.8" r="1.6" fill="#C4A035"/></svg></span>
@@ -111,7 +110,6 @@
           <a href="Pagina de inicio.html#el-curso" class="block px-4 py-3 rounded-lg text-base font-medium bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300"><span data-i18n="nav.course">El Curso</span></a>
           <a href="Libros.html" class="block px-4 py-3 rounded-lg text-base font-medium text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"><span data-i18n="nav.books">Libros de Apoyo</span></a>
           <a href="Contacto.html" class="block px-4 py-3 rounded-lg text-base font-medium text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"><span data-i18n="nav.contact">Contacto</span></a>
-          <a href="Resultado del Curso.html" class="block px-4 py-3 rounded-lg text-base font-semibold text-center bg-primary-600 hover:bg-primary-700 text-white transition-all duration-200"><span data-i18n="nav.courseResult">Resultado del Curso</span></a>
         </nav>
       </div>
     </header>
@@ -182,12 +180,243 @@
                   <span class="w-8 h-8 rounded-lg bg-primary-500 text-white flex items-center justify-center text-sm">2.1</span>
                   Condiciones para el equilibrio de partículas
                 </h2>
-                <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
-                  Una partícula está en equilibrio cuando la resultante de todas las fuerzas que actúan sobre ella es nula. Esto implica que la partícula permanece en reposo o se mueve con velocidad constante (equilibrio estático o cinético). Las condiciones necesarias y suficientes se expresan en función de las componentes de las fuerzas en un sistema de referencia.
+
+                <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2">1. Introducción</h4>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-3 text-justify">
+                  Toda partícula sometida a la acción de varias fuerzas puede encontrarse en dos estados posibles: en movimiento acelerado o en equilibrio. El estudio de la estática se centra precisamente en este segundo caso, estableciendo las condiciones matemáticas precisas que deben cumplirse para que una partícula permanezca en reposo o se mueva con velocidad constante.
                 </p>
-                <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
-                  Para problemas en el plano (2D), la resultante debe ser cero en dos direcciones independientes; en el espacio (3D), en tres direcciones. Esto conduce directamente a las ecuaciones de equilibrio que se verán en la siguiente sección.
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-5 text-justify">
+                  <strong class="text-gray-800 dark:text-gray-200">Objetivo de aprendizaje:</strong> al finalizar el tema, el estudiante será capaz de enunciar y justificar físicamente las condiciones de equilibrio de una partícula, distinguir entre equilibrio estable e inestable, y aplicar correctamente dichas condiciones en la resolución de problemas en 2D y 3D.
                 </p>
+
+                <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2">2. Fundamento físico: la Primera Ley de Newton</h4>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-3 text-justify">
+                  La condición de equilibrio de una partícula no es un postulado independiente, sino una consecuencia directa de la primera ley de Newton (ley de la inercia):
+                </p>
+                <p class="text-gray-700 dark:text-gray-300 leading-relaxed text-sm mb-3 text-justify italic border-l-4 border-primary-400 pl-4">
+                  «Una partícula permanece en reposo, o se mueve en línea recta con velocidad constante, si la fuerza resultante que actúa sobre ella es nula.»
+                </p>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-2 text-justify">
+                  Matemáticamente, esta ley se expresa mediante la segunda ley de Newton en su forma general:
+                </p>
+                <div class="mb-3 pl-4 text-sm text-gray-700 dark:text-gray-300 font-mono">
+                  <p>ΣF⃗ = m a⃗</p>
+                </div>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-2 text-justify">
+                  Si la partícula está en equilibrio, por definición su aceleración es nula (a⃗ = 0), lo que conduce directamente a la condición necesaria y suficiente de equilibrio:
+                </p>
+                <div class="mb-5 pl-4 text-sm text-gray-700 dark:text-gray-300 font-mono">
+                  <p>ΣF⃗ = 0</p>
+                </div>
+
+                <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2">3. Condición general de equilibrio (forma vectorial)</h4>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-3 text-justify">
+                  La condición ΣF⃗ = 0 es una ecuación vectorial, lo que significa que no basta con que la suma algebraica (escalar) de las magnitudes de las fuerzas sea cero; es necesario que se anule la suma considerando dirección y sentido.
+                </p>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-5 text-justify">
+                  Esta única ecuación vectorial equivale a un conjunto de ecuaciones escalares, cuyo número depende de la dimensión del problema (2D o 3D).
+                </p>
+
+                <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2">4. Condiciones escalares de equilibrio</h4>
+                <h4 class="text-sm font-semibold text-gray-800 dark:text-gray-200 mb-2">4.1 Equilibrio en dos dimensiones (2D)</h4>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-2 text-justify">
+                  Cuando el sistema de fuerzas actúa en un plano, la condición vectorial se descompone en dos condiciones escalares independientes, una por cada eje coordenado:
+                </p>
+                <div class="mb-3 pl-4 space-y-1 text-sm text-gray-700 dark:text-gray-300 font-mono">
+                  <p>ΣF<sub>x</sub> = 0</p>
+                  <p>ΣF<sub>y</sub> = 0</p>
+                </div>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-2 text-justify">
+                  <strong class="text-gray-800 dark:text-gray-200">Interpretación física:</strong> la suma de todas las componentes horizontales debe anularse, y de manera independiente, la suma de todas las componentes verticales también debe anularse. Ambas condiciones deben cumplirse simultáneamente.
+                </p>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-4 text-justify">
+                  <strong class="text-gray-800 dark:text-gray-200">Consecuencia práctica:</strong> con dos ecuaciones disponibles, es posible determinar como máximo dos incógnitas en un problema plano (por ejemplo, dos tensiones, o una tensión y un ángulo).
+                </p>
+
+                <h4 class="text-sm font-semibold text-gray-800 dark:text-gray-200 mb-2">4.2 Equilibrio en tres dimensiones (3D)</h4>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-2 text-justify">
+                  Cuando las fuerzas se distribuyen en el espacio, se añade una tercera condición correspondiente al eje <em>z</em>:
+                </p>
+                <div class="mb-3 pl-4 space-y-1 text-sm text-gray-700 dark:text-gray-300 font-mono">
+                  <p>ΣF<sub>x</sub> = 0</p>
+                  <p>ΣF<sub>y</sub> = 0</p>
+                  <p>ΣF<sub>z</sub> = 0</p>
+                </div>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-5 text-justify">
+                  <strong class="text-gray-800 dark:text-gray-200">Consecuencia práctica:</strong> en el espacio, las tres ecuaciones permiten resolver hasta tres incógnitas.
+                </p>
+
+                <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2">5. ¿Por qué no se requiere la ecuación de momentos?</h4>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-3 text-justify">
+                  Este es un punto conceptual que conviene enfatizar con claridad frente al grupo: en el equilibrio de cuerpos rígidos, además de ΣF<sub>x</sub> = 0 y ΣF<sub>y</sub> = 0, se exige también ΣM = 0 (equilibrio de momentos o rotacional).
+                </p>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-2 text-justify">
+                  Sin embargo, en el caso de una partícula, todas las fuerzas que actúan sobre ella son, por definición, concurrentes (se cruzan en el mismo punto: el punto donde se ubica la partícula). El momento de una fuerza respecto a su propio punto de aplicación es siempre cero, ya que la distancia perpendicular (brazo de palanca) es nula:
+                </p>
+                <div class="mb-3 pl-4 text-sm text-gray-700 dark:text-gray-300 font-mono">
+                  <p>M = F · d = F · 0 = 0</p>
+                </div>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-5 text-justify">
+                  Por lo tanto, la ecuación de momentos se satisface automáticamente y no aporta información adicional. Las condiciones de equilibrio de una partícula se reducen exclusivamente a la suma de fuerzas.
+                </p>
+
+                <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2">6. Condición necesaria vs. condición suficiente</h4>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-2 text-justify">
+                  Es importante que el estudiante comprenda que ΣF⃗ = 0 es, al mismo tiempo:
+                </p>
+                <ul class="list-disc list-inside space-y-1.5 text-gray-600 dark:text-gray-400 leading-relaxed mb-3 text-sm">
+                  <li><strong class="text-gray-800 dark:text-gray-200">Condición necesaria:</strong> si la partícula está en equilibrio, entonces necesariamente la resultante debe ser cero (no puede haber equilibrio con resultante distinta de cero).</li>
+                  <li><strong class="text-gray-800 dark:text-gray-200">Condición suficiente:</strong> si se demuestra que la resultante de todas las fuerzas es cero, entonces se garantiza que la partícula está en equilibrio (no se requiere ninguna condición adicional, a diferencia de los cuerpos rígidos).</li>
+                </ul>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-5 text-justify">
+                  Esta doble condición (necesaria y suficiente) es exclusiva del análisis de partículas, y es lo que simplifica notablemente su estudio respecto al de cuerpos extensos.
+                </p>
+
+                <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2">7. Casos particulares de equilibrio</h4>
+                <h4 class="text-sm font-semibold text-gray-800 dark:text-gray-200 mb-2">7.1 Equilibrio bajo la acción de dos fuerzas</h4>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-2 text-justify">
+                  Si una partícula está en equilibrio bajo la acción de únicamente dos fuerzas, estas deben cumplir tres condiciones simultáneas:
+                </p>
+                <ul class="list-disc list-inside space-y-1.5 text-gray-600 dark:text-gray-400 leading-relaxed mb-2 text-sm">
+                  <li>Tener la misma magnitud</li>
+                  <li>Tener la misma línea de acción</li>
+                  <li>Tener sentidos opuestos</li>
+                </ul>
+                <div class="mb-4 pl-4 text-sm text-gray-700 dark:text-gray-300 font-mono">
+                  <p>F⃗<sub>1</sub> = −F⃗<sub>2</sub></p>
+                </div>
+
+                <h4 class="text-sm font-semibold text-gray-800 dark:text-gray-200 mb-2">7.2 Equilibrio bajo la acción de tres fuerzas</h4>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-3 text-justify">
+                  Si una partícula está en equilibrio bajo la acción de tres fuerzas coplanares, estas deben ser concurrentes (o bien, en un caso particular, paralelas), y su representación gráfica mediante el polígono de fuerzas debe formar un triángulo cerrado.
+                </p>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-3 text-justify">
+                  Este caso particular da origen a la llamada Ley del Triángulo o, en su versión ampliada a más fuerzas, la Ley del Polígono de Fuerzas:
+                </p>
+                <p class="text-gray-700 dark:text-gray-300 leading-relaxed text-sm mb-4 text-justify italic border-l-4 border-primary-400 pl-4">
+                  Una partícula sometida a varias fuerzas concurrentes está en equilibrio si, y solo si, al dibujar dichas fuerzas consecutivamente a escala (cabeza con cola), el polígono resultante se cierra.
+                </p>
+
+                <h4 class="text-sm font-semibold text-gray-800 dark:text-gray-200 mb-2">7.3 Equilibrio bajo fuerzas paralelas</h4>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-5 text-justify">
+                  Cuando todas las fuerzas actúan en direcciones paralelas (por ejemplo, un cuerpo colgado verticalmente de varios cables paralelos), la condición de equilibrio se reduce a una sola ecuación escalar en la dirección de dichas fuerzas.
+                </p>
+
+                <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2">8. Procedimiento para verificar y aplicar las condiciones de equilibrio</h4>
+                <ul class="list-none space-y-2 text-gray-600 dark:text-gray-400 leading-relaxed mb-5 text-sm">
+                  <li><strong class="text-gray-800 dark:text-gray-200">Paso 1.</strong> Aislar la partícula mediante el diagrama de cuerpo libre (DCL), identificando todas las fuerzas actuantes.</li>
+                  <li><strong class="text-gray-800 dark:text-gray-200">Paso 2.</strong> Establecer un sistema de referencia adecuado (<em>x</em>, <em>y</em>, y <em>z</em> si corresponde).</li>
+                  <li><strong class="text-gray-800 dark:text-gray-200">Paso 3.</strong> Descomponer cada fuerza en sus componentes rectangulares.</li>
+                  <li><strong class="text-gray-800 dark:text-gray-200">Paso 4.</strong> Aplicar las condiciones escalares correspondientes: ΣF<sub>x</sub> = 0, ΣF<sub>y</sub> = 0 (y ΣF<sub>z</sub> = 0 si es 3D).</li>
+                  <li><strong class="text-gray-800 dark:text-gray-200">Paso 5.</strong> Resolver el sistema de ecuaciones resultante para las incógnitas planteadas.</li>
+                  <li><strong class="text-gray-800 dark:text-gray-200">Paso 6.</strong> Verificar la coherencia física del resultado (por ejemplo, que ninguna tensión de cable resulte negativa).</li>
+                </ul>
+
+                <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2">9. Ejemplo resuelto: verificación de las condiciones de equilibrio</h4>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-3 text-justify">
+                  Sobre una argolla actúan tres fuerzas: F<sub>1</sub> = 100&nbsp;N a 0°, F<sub>2</sub> = 100&nbsp;N a 120° y F<sub>3</sub> = 100&nbsp;N a 240°. Verificar si el sistema está en equilibrio.
+                </p>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-2 text-justify">
+                  <strong class="text-gray-800 dark:text-gray-200">Componentes de cada fuerza:</strong>
+                </p>
+                <div class="overflow-x-auto mb-4">
+                  <table class="w-full text-sm text-left border-collapse">
+                    <thead>
+                      <tr class="border-b border-gray-200 dark:border-gray-600">
+                        <th class="py-2 pr-3 font-semibold text-gray-800 dark:text-gray-200">Fuerza</th>
+                        <th class="py-2 pr-3 font-semibold text-gray-800 dark:text-gray-200">F<sub>x</sub></th>
+                        <th class="py-2 font-semibold text-gray-800 dark:text-gray-200">F<sub>y</sub></th>
+                      </tr>
+                    </thead>
+                    <tbody class="text-gray-600 dark:text-gray-400">
+                      <tr class="border-b border-gray-100 dark:border-gray-700/60">
+                        <td class="py-2 pr-3">F<sub>1</sub> (0°)</td>
+                        <td class="py-2 pr-3">100.0</td>
+                        <td class="py-2">0.0</td>
+                      </tr>
+                      <tr class="border-b border-gray-100 dark:border-gray-700/60">
+                        <td class="py-2 pr-3">F<sub>2</sub> (120°)</td>
+                        <td class="py-2 pr-3">−50.0</td>
+                        <td class="py-2">86.6</td>
+                      </tr>
+                      <tr>
+                        <td class="py-2 pr-3">F<sub>3</sub> (240°)</td>
+                        <td class="py-2 pr-3">−50.0</td>
+                        <td class="py-2">−86.6</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-2 text-justify">
+                  <strong class="text-gray-800 dark:text-gray-200">Verificación de las condiciones:</strong>
+                </p>
+                <div class="mb-3 pl-4 space-y-1 text-sm text-gray-700 dark:text-gray-300 font-mono">
+                  <p>ΣF<sub>x</sub> = 100.0 − 50.0 − 50.0 = 0 ✓</p>
+                  <p>ΣF<sub>y</sub> = 0.0 + 86.6 − 86.6 = 0 ✓</p>
+                </div>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-5 text-justify">
+                  <strong class="text-gray-800 dark:text-gray-200">Conclusión:</strong> ambas condiciones escalares se cumplen simultáneamente, por lo tanto, la partícula sí está en equilibrio. Este resultado es consistente con la simetría del problema: tres fuerzas de igual magnitud separadas 120° entre sí siempre están en equilibrio.
+                </p>
+
+                <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2">10. Errores comunes a reforzar en clase</h4>
+                <ul class="list-disc list-inside space-y-1.5 text-gray-600 dark:text-gray-400 leading-relaxed mb-5 text-sm">
+                  <li>Verificar solo una de las dos condiciones (ΣF<sub>x</sub> = 0 o ΣF<sub>y</sub> = 0) y concluir erróneamente que hay equilibrio; ambas deben cumplirse.</li>
+                  <li>Confundir «suma de magnitudes igual a cero» con la verdadera condición vectorial (las fuerzas pueden tener igual magnitud total y no estar en equilibrio si sus direcciones no se compensan).</li>
+                  <li>Aplicar innecesariamente la ecuación de momentos en problemas de partículas.</li>
+                  <li>No verificar la coherencia física del resultado (tensiones negativas en cables, por ejemplo).</li>
+                  <li>Olvidar que el equilibrio es una condición simultánea, no una serie de condiciones independientes que puedan evaluarse por separado sin relacionarlas.</li>
+                </ul>
+
+                <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2">11. Actividad sugerida para el aula</h4>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-2 text-justify">
+                  <strong class="text-gray-800 dark:text-gray-200">Ejercicio propuesto:</strong> Determine si una partícula sometida a las siguientes fuerzas se encuentra en equilibrio: F<sub>1</sub> = 150&nbsp;N a 0°, F<sub>2</sub> = 200&nbsp;N a 90°, F<sub>3</sub> = 250&nbsp;N a 217°. En caso de no estar en equilibrio, determine la magnitud y dirección de la fuerza adicional necesaria para lograrlo.
+                </p>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-5 text-justify">
+                  (Se recomienda que los estudiantes construyan también el polígono de fuerzas correspondiente y verifiquen gráficamente si este se cierra, contrastando con el resultado analítico.)
+                </p>
+
+                <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2">12. Resumen de conceptos clave</h4>
+                <div class="overflow-x-auto mb-5">
+                  <table class="w-full text-sm text-left border-collapse">
+                    <thead>
+                      <tr class="border-b border-gray-200 dark:border-gray-600">
+                        <th class="py-2 pr-3 font-semibold text-gray-800 dark:text-gray-200">Concepto</th>
+                        <th class="py-2 font-semibold text-gray-800 dark:text-gray-200">Descripción</th>
+                      </tr>
+                    </thead>
+                    <tbody class="text-gray-600 dark:text-gray-400">
+                      <tr class="border-b border-gray-100 dark:border-gray-700/60 align-top">
+                        <td class="py-2 pr-3">Condición general de equilibrio</td>
+                        <td class="py-2">ΣF⃗ = 0 (ecuación vectorial)</td>
+                      </tr>
+                      <tr class="border-b border-gray-100 dark:border-gray-700/60 align-top">
+                        <td class="py-2 pr-3">Condiciones escalares en 2D</td>
+                        <td class="py-2">ΣF<sub>x</sub> = 0, ΣF<sub>y</sub> = 0</td>
+                      </tr>
+                      <tr class="border-b border-gray-100 dark:border-gray-700/60 align-top">
+                        <td class="py-2 pr-3">Condiciones escalares en 3D</td>
+                        <td class="py-2">ΣF<sub>x</sub> = 0, ΣF<sub>y</sub> = 0, ΣF<sub>z</sub> = 0</td>
+                      </tr>
+                      <tr class="border-b border-gray-100 dark:border-gray-700/60 align-top">
+                        <td class="py-2 pr-3">Ecuación de momentos</td>
+                        <td class="py-2">No requerida (fuerzas concurrentes en un punto)</td>
+                      </tr>
+                      <tr class="border-b border-gray-100 dark:border-gray-700/60 align-top">
+                        <td class="py-2 pr-3">Naturaleza de la condición</td>
+                        <td class="py-2">Necesaria y suficiente</td>
+                      </tr>
+                      <tr class="border-b border-gray-100 dark:border-gray-700/60 align-top">
+                        <td class="py-2 pr-3">Dos fuerzas en equilibrio</td>
+                        <td class="py-2">Igual magnitud, misma línea de acción, sentido opuesto</td>
+                      </tr>
+                      <tr class="align-top">
+                        <td class="py-2 pr-3">Tres fuerzas en equilibrio</td>
+                        <td class="py-2">Concurrentes, polígono de fuerzas cerrado (triángulo)</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
                 <div class="flex justify-center mt-6">
                   <img src="images/2.1.png" alt="2.1 Condiciones para el equilibrio de partículas" class="max-w-full rounded-xl border border-indigo-200/50 dark:border-indigo-700/50 shadow-md object-cover">
                 </div>
@@ -204,12 +433,257 @@
                   <span class="w-8 h-8 rounded-lg bg-primary-500 text-white flex items-center justify-center text-sm">2.2</span>
                   Ecuaciones de equilibrio
                 </h2>
-                <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
-                  Las ecuaciones de equilibrio se obtienen al imponer que la suma de las componentes de las fuerzas en cada eje sea cero. En dos dimensiones: ΣF<sub>x</sub> = 0 y ΣF<sub>y</sub> = 0. En tres dimensiones se añade ΣF<sub>z</sub> = 0.
+
+                <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2">1. Introducción</h4>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-3 text-justify">
+                  Las ecuaciones de equilibrio son las herramientas matemáticas fundamentales de la estática: permiten determinar fuerzas y momentos desconocidos en un sistema (partícula o cuerpo rígido) que se encuentra en reposo o en movimiento con velocidad constante. Su correcto planteamiento es el resultado directo de un buen diagrama de cuerpo libre y constituye el paso decisivo para resolver cualquier problema de estática.
                 </p>
-                <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
-                  Estas ecuaciones permiten determinar fuerzas desconocidas (reacciones, tensiones, etc.) cuando el número de incógnitas coincide con el número de ecuaciones independientes. Son la base para la resolución de problemas de estática de la partícula.
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-5 text-justify">
+                  <strong class="text-gray-800 dark:text-gray-200">Objetivo de aprendizaje:</strong> al finalizar el tema, el estudiante será capaz de plantear correctamente las ecuaciones de equilibrio para partículas y cuerpos rígidos, tanto en 2D como en 3D, y de aplicarlas con el número adecuado de incógnitas y el criterio de signos correcto.
                 </p>
+
+                <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2">2. Fundamento: la condición general de equilibrio</h4>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-2 text-justify">
+                  Un sistema mecánico está en equilibrio cuando se cumplen simultáneamente dos condiciones vectoriales:
+                </p>
+                <div class="mb-3 pl-4 space-y-1 text-sm text-gray-700 dark:text-gray-300 font-mono">
+                  <p>ΣF⃗ = 0 (equilibrio de traslación)</p>
+                  <p>ΣM⃗ = 0 (equilibrio de rotación)</p>
+                </div>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-3 text-justify">
+                  La primera garantiza que el cuerpo no experimenta aceleración lineal; la segunda, que no experimenta aceleración angular. Ambas ecuaciones se derivan de las leyes de Newton aplicadas a un sistema de partículas.
+                </p>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-5 text-justify">
+                  <strong class="text-gray-800 dark:text-gray-200">Distinción clave:</strong> en el caso de una partícula, todas las fuerzas son concurrentes y la ecuación de momentos se satisface automáticamente (ΣM⃗ = 0 no aporta información nueva). En un cuerpo rígido, las fuerzas generalmente no son concurrentes, por lo que ambas ecuaciones son independientes y necesarias.
+                </p>
+
+                <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2">3. Ecuaciones de equilibrio para una partícula</h4>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-2 text-justify">
+                  Al ser todas las fuerzas concurrentes, basta con la condición de fuerzas:
+                </p>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-1 font-medium">En 2D:</p>
+                <div class="mb-3 pl-4 space-y-1 text-sm text-gray-700 dark:text-gray-300 font-mono">
+                  <p>ΣF<sub>x</sub> = 0</p>
+                  <p>ΣF<sub>y</sub> = 0</p>
+                </div>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-1 font-medium">En 3D:</p>
+                <div class="mb-3 pl-4 space-y-1 text-sm text-gray-700 dark:text-gray-300 font-mono">
+                  <p>ΣF<sub>x</sub> = 0</p>
+                  <p>ΣF<sub>y</sub> = 0</p>
+                  <p>ΣF<sub>z</sub> = 0</p>
+                </div>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-5 text-justify">
+                  Estas ecuaciones permiten resolver, respectivamente, hasta dos o tres incógnitas.
+                </p>
+
+                <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2">4. Ecuaciones de equilibrio para un cuerpo rígido</h4>
+                <h4 class="text-sm font-semibold text-gray-800 dark:text-gray-200 mb-2">4.1 Caso general en dos dimensiones (2D)</h4>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-3 text-justify">
+                  Un cuerpo rígido en el plano dispone de tres ecuaciones escalares independientes, que pueden expresarse de tres formas equivalentes:
+                </p>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-1 font-medium">Forma estándar:</p>
+                <div class="mb-2 pl-4 space-y-1 text-sm text-gray-700 dark:text-gray-300 font-mono">
+                  <p>ΣF<sub>x</sub> = 0</p>
+                  <p>ΣF<sub>y</sub> = 0</p>
+                  <p>ΣM<sub>O</sub> = 0</p>
+                </div>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-3 text-justify">
+                  donde M<sub>O</sub> es el momento respecto a cualquier punto O elegido convenientemente (no necesariamente el centro de gravedad).
+                </p>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-1 font-medium">Forma alternativa 1 (dos sumatorias de momentos):</p>
+                <div class="mb-2 pl-4 space-y-1 text-sm text-gray-700 dark:text-gray-300 font-mono">
+                  <p>ΣF<sub>x</sub> = 0</p>
+                  <p>ΣM<sub>A</sub> = 0</p>
+                  <p>ΣM<sub>B</sub> = 0</p>
+                </div>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-3 text-justify">
+                  Válida siempre que la línea que une los puntos A y B no sea perpendicular al eje <em>x</em>.
+                </p>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-1 font-medium">Forma alternativa 2 (tres sumatorias de momentos):</p>
+                <div class="mb-2 pl-4 space-y-1 text-sm text-gray-700 dark:text-gray-300 font-mono">
+                  <p>ΣM<sub>A</sub> = 0</p>
+                  <p>ΣM<sub>B</sub> = 0</p>
+                  <p>ΣM<sub>C</sub> = 0</p>
+                </div>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-3 text-justify">
+                  Válida siempre que los puntos A, B y C no sean colineales.
+                </p>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-4 text-justify">
+                  <strong class="text-gray-800 dark:text-gray-200">Ventaja pedagógica de las formas alternativas:</strong> al tomar momentos respecto a un punto por donde pasan varias fuerzas desconocidas, dichas fuerzas se eliminan de la ecuación (su brazo de palanca es cero), lo que permite despejar directamente una sola incógnita a la vez, evitando resolver sistemas de ecuaciones simultáneas.
+                </p>
+
+                <h4 class="text-sm font-semibold text-gray-800 dark:text-gray-200 mb-2">4.2 Caso general en tres dimensiones (3D)</h4>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-2 text-justify">
+                  En el espacio, un cuerpo rígido dispone de seis ecuaciones escalares independientes:
+                </p>
+                <div class="mb-3 pl-4 space-y-1 text-sm text-gray-700 dark:text-gray-300 font-mono">
+                  <p>ΣF<sub>x</sub> = 0 &nbsp;&nbsp; ΣF<sub>y</sub> = 0 &nbsp;&nbsp; ΣF<sub>z</sub> = 0</p>
+                  <p>ΣM<sub>x</sub> = 0 &nbsp;&nbsp; ΣM<sub>y</sub> = 0 &nbsp;&nbsp; ΣM<sub>z</sub> = 0</p>
+                </div>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-5 text-justify">
+                  Estas seis ecuaciones permiten resolver, como máximo, seis incógnitas (fuerzas y/o momentos reactivos).
+                </p>
+
+                <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2">5. Cálculo del momento en las ecuaciones de equilibrio</h4>
+                <h4 class="text-sm font-semibold text-gray-800 dark:text-gray-200 mb-2">5.1 Definición escalar (2D)</h4>
+                <div class="mb-2 pl-4 text-sm text-gray-700 dark:text-gray-300 font-mono">
+                  <p>M<sub>O</sub> = F · d</p>
+                </div>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-4 text-justify">
+                  donde <em>d</em> es la distancia perpendicular (brazo de palanca) desde el punto de referencia O hasta la línea de acción de la fuerza. Por convención, se suele considerar positivo el sentido antihorario y negativo el sentido horario (aunque el criterio puede invertirse siempre que se aplique de forma consistente).
+                </p>
+                <h4 class="text-sm font-semibold text-gray-800 dark:text-gray-200 mb-2">5.2 Definición vectorial (producto cruz, útil en 3D)</h4>
+                <div class="mb-2 pl-4 text-sm text-gray-700 dark:text-gray-300 font-mono">
+                  <p>M⃗<sub>O</sub> = r⃗ × F⃗</p>
+                </div>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-5 text-justify">
+                  donde r⃗ es el vector posición desde el punto de referencia O hasta cualquier punto sobre la línea de acción de la fuerza F⃗. Esta formulación es especialmente útil cuando la geometría del problema no permite identificar fácilmente el brazo de palanca de forma directa.
+                </p>
+
+                <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2">6. Procedimiento recomendado para plantear las ecuaciones</h4>
+                <ul class="list-none space-y-2 text-gray-600 dark:text-gray-400 leading-relaxed mb-5 text-sm">
+                  <li><strong class="text-gray-800 dark:text-gray-200">Paso 1.</strong> Construir el diagrama de cuerpo libre (DCL) completo, identificando todas las fuerzas y momentos externos.</li>
+                  <li><strong class="text-gray-800 dark:text-gray-200">Paso 2.</strong> Establecer un sistema de ejes de referencia y un criterio de signos consistente (por ejemplo, sentido antihorario positivo para momentos).</li>
+                  <li><strong class="text-gray-800 dark:text-gray-200">Paso 3.</strong> Elegir estratégicamente el punto respecto al cual se tomarán momentos, preferiblemente uno donde concurran el mayor número de fuerzas desconocidas, para eliminarlas de esa ecuación.</li>
+                  <li><strong class="text-gray-800 dark:text-gray-200">Paso 4.</strong> Plantear las ecuaciones de equilibrio necesarias según el tipo de problema (partícula o cuerpo rígido; 2D o 3D).</li>
+                  <li><strong class="text-gray-800 dark:text-gray-200">Paso 5.</strong> Resolver el sistema de ecuaciones, comenzando preferiblemente por la ecuación que involucre una sola incógnita.</li>
+                  <li><strong class="text-gray-800 dark:text-gray-200">Paso 6.</strong> Verificar los resultados sustituyéndolos en las ecuaciones no utilizadas para resolver (por ejemplo, comprobar ΣM<sub>B</sub> = 0 si se usó ΣM<sub>A</sub> = 0 para despejar).</li>
+                </ul>
+
+                <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2">7. Ejemplo resuelto: viga simplemente apoyada</h4>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-3 text-justify">
+                  Una viga horizontal AB de 6&nbsp;m de longitud está apoyada en un pasador en A y en un rodillo en B. Sobre ella actúa una carga puntual de P = 600&nbsp;N a 2&nbsp;m de A, y una carga de Q = 400&nbsp;N a 4&nbsp;m de A (ambas verticales, hacia abajo).
+                </p>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-3 text-justify">
+                  <strong class="text-gray-800 dark:text-gray-200">DCL:</strong> reacciones A<sub>x</sub>, A<sub>y</sub> en el pasador; reacción B<sub>y</sub> en el rodillo (perpendicular a la viga).
+                </p>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-2 text-justify">
+                  <strong class="text-gray-800 dark:text-gray-200">Paso 1</strong> — Tomar momentos respecto a A (elimina A<sub>x</sub> y A<sub>y</sub> de esta ecuación):
+                </p>
+                <div class="mb-3 pl-4 space-y-1 text-sm text-gray-700 dark:text-gray-300 font-mono">
+                  <p>ΣM<sub>A</sub> = 0: B<sub>y</sub>(6) − P(2) − Q(4) = 0</p>
+                  <p>6 B<sub>y</sub> = 600(2) + 400(4) = 1200 + 1600 = 2800</p>
+                  <p>B<sub>y</sub> = 466.7 N</p>
+                </div>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-2 text-justify">
+                  <strong class="text-gray-800 dark:text-gray-200">Paso 2</strong> — Aplicar ΣF<sub>y</sub> = 0:
+                </p>
+                <div class="mb-3 pl-4 space-y-1 text-sm text-gray-700 dark:text-gray-300 font-mono">
+                  <p>A<sub>y</sub> + B<sub>y</sub> − P − Q = 0</p>
+                  <p>A<sub>y</sub> = 600 + 400 − 466.7 = 533.3 N</p>
+                </div>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-2 text-justify">
+                  <strong class="text-gray-800 dark:text-gray-200">Paso 3</strong> — Aplicar ΣF<sub>x</sub> = 0:
+                </p>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-2 text-justify">
+                  Como no hay fuerzas horizontales aplicadas:
+                </p>
+                <div class="mb-3 pl-4 text-sm text-gray-700 dark:text-gray-300 font-mono">
+                  <p>A<sub>x</sub> = 0</p>
+                </div>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-2 text-justify">
+                  <strong class="text-gray-800 dark:text-gray-200">Comprobación</strong> (tomando momentos respecto a B):
+                </p>
+                <div class="mb-5 pl-4 space-y-1 text-sm text-gray-700 dark:text-gray-300 font-mono">
+                  <p>ΣM<sub>B</sub> = −A<sub>y</sub>(6) + P(4) + Q(2) = −533.3(6) + 600(4) + 400(2)</p>
+                  <p>= −3200 + 2400 + 800 = 0 ✓</p>
+                </div>
+
+                <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2">8. Ejemplo resuelto: equilibrio espacial de un cuerpo rígido (3D)</h4>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-3 text-justify">
+                  Una placa horizontal está sostenida por tres cables verticales en sus esquinas y soporta una carga vertical conocida en un punto específico. Para determinar la tensión en cada cable se requieren las seis ecuaciones de equilibrio en 3D; sin embargo, dado que las tres reacciones son verticales (paralelas al eje <em>z</em>) y no existen cargas horizontales, las ecuaciones ΣF<sub>x</sub> = 0 y ΣF<sub>y</sub> = 0 se satisfacen automáticamente, quedando:
+                </p>
+                <div class="mb-3 pl-4 space-y-1 text-sm text-gray-700 dark:text-gray-300 font-mono">
+                  <p>ΣF<sub>z</sub> = 0</p>
+                  <p>ΣM<sub>x</sub> = 0</p>
+                  <p>ΣM<sub>y</sub> = 0</p>
+                </div>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-3 text-justify">
+                  Estas tres ecuaciones son suficientes para determinar las tres tensiones desconocidas, siempre que el sistema sea estáticamente determinado.
+                </p>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-5 text-justify">
+                  <strong class="text-gray-800 dark:text-gray-200">Observación didáctica:</strong> este ejemplo es útil para mostrar que no todas las seis ecuaciones espaciales son siempre necesarias; algunas pueden resultar triviales según la geometría y orientación de las fuerzas del problema, pero deben plantearse igualmente para verificar que efectivamente se cumplen.
+                </p>
+
+                <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2">9. Determinación estática</h4>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-2 text-justify">
+                  Es importante introducir, junto con las ecuaciones de equilibrio, el concepto de determinación estática:
+                </p>
+                <ul class="list-disc list-inside space-y-1.5 text-gray-600 dark:text-gray-400 leading-relaxed mb-5 text-sm">
+                  <li><strong class="text-gray-800 dark:text-gray-200">Estáticamente determinado:</strong> el número de incógnitas (reacciones) es igual al número de ecuaciones de equilibrio disponibles. El problema puede resolverse completamente con estática.</li>
+                  <li><strong class="text-gray-800 dark:text-gray-200">Estáticamente indeterminado (hiperestático):</strong> el número de incógnitas excede al número de ecuaciones disponibles. Se requieren ecuaciones adicionales (de compatibilidad de deformaciones), propias de la mecánica de materiales, para resolver el problema completo.</li>
+                  <li><strong class="text-gray-800 dark:text-gray-200">Inestable:</strong> el número de reacciones es insuficiente para garantizar el equilibrio, o su disposición geométrica no impide el movimiento (por ejemplo, reacciones concurrentes o paralelas en un cuerpo rígido plano).</li>
+                </ul>
+
+                <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2">10. Errores comunes a reforzar en clase</h4>
+                <ul class="list-disc list-inside space-y-1.5 text-gray-600 dark:text-gray-400 leading-relaxed mb-5 text-sm">
+                  <li>Olvidar que ΣM = 0 es indispensable en cuerpos rígidos, a diferencia del análisis de partículas.</li>
+                  <li>Elegir un punto de momentos poco estratégico, generando sistemas de ecuaciones simultáneas innecesariamente complejos.</li>
+                  <li>Inconsistencia en el criterio de signos de los momentos (mezclar sentido horario y antihorario sin cuidado).</li>
+                  <li>Usar ecuaciones redundantes en las formas alternativas (por ejemplo, dos ecuaciones de momento respecto a puntos que están alineados perpendicularmente al eje usado en ΣF = 0, lo cual las hace dependientes).</li>
+                  <li>No verificar el resultado con una ecuación adicional no utilizada en la solución.</li>
+                  <li>Confundir un sistema estáticamente indeterminado con uno mal planteado: en el primer caso, el problema es correcto pero requiere herramientas adicionales a la estática pura.</li>
+                </ul>
+
+                <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2">11. Actividad sugerida para el aula</h4>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-2 text-justify">
+                  <strong class="text-gray-800 dark:text-gray-200">Ejercicio propuesto:</strong> Una escalera uniforme de peso W y longitud L se apoya con su extremo inferior sobre un piso rugoso y su extremo superior contra una pared lisa, formando un ángulo θ con el piso. Se pide:
+                </p>
+                <ul class="list-disc list-inside space-y-1.5 text-gray-600 dark:text-gray-400 leading-relaxed mb-3 text-sm">
+                  <li>a) Construir el diagrama de cuerpo libre completo.</li>
+                  <li>b) Plantear las tres ecuaciones de equilibrio en 2D, eligiendo estratégicamente el punto de momentos.</li>
+                  <li>c) Determinar la fuerza de fricción mínima requerida en el piso para evitar que la escalera resbale.</li>
+                </ul>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-5 text-justify">
+                  (Se recomienda resolver este problema tomando momentos respecto al punto de apoyo inferior, para eliminar de esa ecuación tanto la normal como la fricción del piso.)
+                </p>
+
+                <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2">12. Resumen de conceptos clave</h4>
+                <div class="overflow-x-auto mb-5">
+                  <table class="w-full text-sm text-left border-collapse">
+                    <thead>
+                      <tr class="border-b border-gray-200 dark:border-gray-600">
+                        <th class="py-2 pr-3 font-semibold text-gray-800 dark:text-gray-200">Concepto</th>
+                        <th class="py-2 pr-3 font-semibold text-gray-800 dark:text-gray-200">Partícula</th>
+                        <th class="py-2 pr-3 font-semibold text-gray-800 dark:text-gray-200">Cuerpo rígido (2D)</th>
+                        <th class="py-2 font-semibold text-gray-800 dark:text-gray-200">Cuerpo rígido (3D)</th>
+                      </tr>
+                    </thead>
+                    <tbody class="text-gray-600 dark:text-gray-400">
+                      <tr class="border-b border-gray-100 dark:border-gray-700/60 align-top">
+                        <td class="py-2 pr-3">Ecuaciones de fuerza</td>
+                        <td class="py-2 pr-3">ΣF<sub>x</sub> = 0, ΣF<sub>y</sub> = 0</td>
+                        <td class="py-2 pr-3">ΣF<sub>x</sub> = 0, ΣF<sub>y</sub> = 0</td>
+                        <td class="py-2">ΣF<sub>x</sub> = 0, ΣF<sub>y</sub> = 0, ΣF<sub>z</sub> = 0</td>
+                      </tr>
+                      <tr class="border-b border-gray-100 dark:border-gray-700/60 align-top">
+                        <td class="py-2 pr-3">Ecuaciones de momento</td>
+                        <td class="py-2 pr-3">No requerida</td>
+                        <td class="py-2 pr-3">ΣM<sub>O</sub> = 0</td>
+                        <td class="py-2">ΣM<sub>x</sub> = 0, ΣM<sub>y</sub> = 0, ΣM<sub>z</sub> = 0</td>
+                      </tr>
+                      <tr class="border-b border-gray-100 dark:border-gray-700/60 align-top">
+                        <td class="py-2 pr-3">Total de ecuaciones independientes</td>
+                        <td class="py-2 pr-3">2 (o 3 en 3D)</td>
+                        <td class="py-2 pr-3">3</td>
+                        <td class="py-2">6</td>
+                      </tr>
+                      <tr class="border-b border-gray-100 dark:border-gray-700/60 align-top">
+                        <td class="py-2 pr-3">Máx. incógnitas resolubles</td>
+                        <td class="py-2 pr-3">2 (o 3)</td>
+                        <td class="py-2 pr-3">3</td>
+                        <td class="py-2">6</td>
+                      </tr>
+                      <tr class="align-top">
+                        <td class="py-2 pr-3">Formas alternativas</td>
+                        <td class="py-2 pr-3">—</td>
+                        <td class="py-2 pr-3">Sí (2 o 3 sumatorias de momentos)</td>
+                        <td class="py-2">—</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
                 <div class="flex justify-end mt-4">
                   <a href="pdf/2.1b.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-primary-500 hover:bg-primary-600 text-white font-medium text-sm transition-all duration-200" style="box-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 40px rgba(99, 102, 241, 0.25);">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
@@ -229,6 +703,322 @@
                 <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
                   El cálculo puede hacerse por métodos gráficos (polígono de fuerzas) o analíticos (descomposición en componentes y suma de componentes). Conocer la resultante es esencial para aplicar las condiciones de equilibrio: la partícula está en equilibrio si y solo si la resultante es nula.
                 </p>
+
+                <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2">1. Introducción</h4>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-3 text-justify">
+                  Cuando un cuerpo está sometido a varias fuerzas simultáneamente, resulta útil —y en muchos casos indispensable— reemplazar todo el sistema por un sistema equivalente más simple, que produzca exactamente el mismo efecto mecánico externo. A esta simplificación se le llama resultante del sistema de fuerzas.
+                </p>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-3 text-justify">
+                  A diferencia del tema de sistemas de fuerzas concurrentes (donde la resultante es siempre una única fuerza), en el caso general —fuerzas no concurrentes, paralelas o distribuidas— la reducción del sistema puede requerir, además de una fuerza resultante, un momento resultante (par de fuerzas).
+                </p>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-5 text-justify">
+                  <strong class="text-gray-800 dark:text-gray-200">Objetivo de aprendizaje:</strong> al finalizar el tema, el estudiante será capaz de determinar la resultante de distintos tipos de sistemas de fuerzas (concurrentes, paralelas y generales), reducir un sistema de fuerzas y momentos a una fuerza resultante única con su línea de acción, y aplicar estos conceptos a fuerzas distribuidas.
+                </p>
+
+                <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2">2. Concepto de sistema equivalente</h4>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-2 text-justify">
+                  Dos sistemas de fuerzas son equivalentes si producen el mismo efecto externo sobre un cuerpo rígido, es decir, si generan:
+                </p>
+                <ul class="list-disc list-inside space-y-1.5 text-gray-600 dark:text-gray-400 leading-relaxed mb-3 text-sm">
+                  <li>La misma fuerza resultante R⃗</li>
+                  <li>El mismo momento resultante M⃗<sub>R</sub> respecto a cualquier punto</li>
+                </ul>
+                <div class="mb-3 pl-4 space-y-1 text-sm text-gray-700 dark:text-gray-300 font-mono">
+                  <p>R⃗ = Σ F⃗<sub>i</sub></p>
+                  <p>M⃗<sub>R,O</sub> = Σ M⃗<sub>O,i</sub> = Σ (r⃗<sub>i</sub> × F⃗<sub>i</sub>)</p>
+                </div>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-5 text-justify">
+                  Esta idea de equivalencia es la base conceptual de todo el tema: en lugar de trabajar con un sistema complejo de múltiples fuerzas y momentos, se busca su versión más simple posible.
+                </p>
+
+                <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2">3. Resultante de un sistema de fuerzas concurrentes (repaso)</h4>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-2 text-justify">
+                  Cuando todas las fuerzas actúan sobre un mismo punto, su resultante es simplemente la suma vectorial de todas ellas, y no genera momento respecto a dicho punto:
+                </p>
+                <div class="mb-3 pl-4 space-y-1 text-sm text-gray-700 dark:text-gray-300 font-mono">
+                  <p>R⃗ = Σ F⃗<sub>i</sub></p>
+                  <p>M<sub>punto de concurrencia</sub> = 0</p>
+                </div>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-2 text-justify">
+                  En componentes rectangulares:
+                </p>
+                <div class="mb-3 pl-4 space-y-1 text-sm text-gray-700 dark:text-gray-300 font-mono">
+                  <p>R<sub>x</sub> = Σ F<sub>x</sub></p>
+                  <p>R<sub>y</sub> = Σ F<sub>y</sub></p>
+                  <p>(R<sub>z</sub> = Σ F<sub>z</sub> en 3D)</p>
+                </div>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-5 text-justify">
+                  Este caso ya fue tratado en detalle en el tema de sistemas de fuerzas concurrentes; se incluye aquí como punto de partida conceptual.
+                </p>
+
+                <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2">4. Resultante de un sistema de fuerzas paralelas</h4>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-2 text-justify">
+                  Cuando las fuerzas de un sistema son paralelas entre sí (por ejemplo, cargas verticales distribuidas sobre una viga), la resultante conserva la misma dirección que las fuerzas originales, y su magnitud es la suma algebraica de todas ellas:
+                </p>
+                <div class="mb-3 pl-4 text-sm text-gray-700 dark:text-gray-300 font-mono">
+                  <p>R = Σ F<sub>i</sub></p>
+                </div>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-3 text-justify">
+                  Sin embargo, a diferencia del caso concurrente, es necesario determinar también la posición de la línea de acción de la resultante, de modo que produzca el mismo momento que el sistema original respecto a cualquier punto de referencia.
+                </p>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-2 text-justify">
+                  <strong class="text-gray-800 dark:text-gray-200">Principio de momentos (Teorema de Varignon):</strong>
+                </p>
+                <div class="mb-2 pl-4 text-sm text-gray-700 dark:text-gray-300 font-mono">
+                  <p>R · d̄ = Σ F<sub>i</sub> · d<sub>i</sub></p>
+                </div>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-2 text-justify">
+                  donde d̄ es la distancia desde el punto de referencia hasta la línea de acción de la resultante, y d<sub>i</sub> es la distancia desde ese mismo punto hasta cada fuerza individual. Despejando:
+                </p>
+                <div class="mb-3 pl-4 text-sm text-gray-700 dark:text-gray-300 font-mono">
+                  <p>d̄ = (Σ F<sub>i</sub> · d<sub>i</sub>) / (Σ F<sub>i</sub>) = (Σ F<sub>i</sub> · d<sub>i</sub>) / R</p>
+                </div>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-5 text-justify">
+                  Esta expresión es matemáticamente idéntica al cálculo del centro de gravedad o centroide de un conjunto de fuerzas paralelas, concepto que se retomará con mayor profundidad en el tema de centroides.
+                </p>
+
+                <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2">5. Resultante de un sistema general de fuerzas no concurrentes (coplanar)</h4>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-3 text-justify">
+                  Este es el caso más general en dos dimensiones: las fuerzas no son concurrentes ni necesariamente paralelas. El procedimiento de reducción consta de dos partes:
+                </p>
+                <h4 class="text-sm font-semibold text-gray-800 dark:text-gray-200 mb-2">5.1 Fuerza resultante</h4>
+                <div class="mb-3 pl-4 space-y-1 text-sm text-gray-700 dark:text-gray-300 font-mono">
+                  <p>R<sub>x</sub> = Σ F<sub>x</sub></p>
+                  <p>R<sub>y</sub> = Σ F<sub>y</sub></p>
+                  <p>R = √(R<sub>x</sub>² + R<sub>y</sub>²)</p>
+                  <p>θ<sub>R</sub> = tan⁻¹(R<sub>y</sub> / R<sub>x</sub>)</p>
+                </div>
+                <h4 class="text-sm font-semibold text-gray-800 dark:text-gray-200 mb-2">5.2 Momento resultante respecto a un punto de referencia O</h4>
+                <div class="mb-2 pl-4 text-sm text-gray-700 dark:text-gray-300 font-mono">
+                  <p>M<sub>R,O</sub> = Σ M<sub>O,i</sub></p>
+                </div>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-4 text-justify">
+                  donde cada M<sub>O,i</sub> = F<sub>i</sub> · d<sub>i</sub>, con d<sub>i</sub> la distancia perpendicular desde O hasta la línea de acción de cada fuerza (considerando el criterio de signos adoptado, típicamente antihorario positivo).
+                </p>
+                <h4 class="text-sm font-semibold text-gray-800 dark:text-gray-200 mb-2">5.3 Ubicación de la línea de acción de la resultante</h4>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-2 text-justify">
+                  Una vez determinados R⃗ y M<sub>R,O</sub>, es posible ubicar la línea de acción de una fuerza única equivalente R⃗ que, actuando a cierta distancia <em>d</em> del punto O, produzca el mismo momento:
+                </p>
+                <div class="mb-3 pl-4 text-sm text-gray-700 dark:text-gray-300 font-mono">
+                  <p>M<sub>R,O</sub> = R · d &nbsp; ⇒ &nbsp; d = M<sub>R,O</sub> / R</p>
+                </div>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-3 text-justify">
+                  Este procedimiento se conoce como reducción de un sistema de fuerzas a una fuerza resultante única.
+                </p>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-5 text-justify">
+                  <strong class="text-gray-800 dark:text-gray-200">Caso especial:</strong> si el sistema se reduce a R = 0 pero M<sub>R,O</sub> ≠ 0, el sistema no puede reducirse a una fuerza única; en su lugar, se reduce a un par de fuerzas puro (momento sin fuerza neta), el cual tiene el mismo valor respecto a cualquier punto del plano.
+                </p>
+
+                <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2">6. Par de fuerzas (momento puro)</h4>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-2 text-justify">
+                  Un par de fuerzas consiste en dos fuerzas de igual magnitud, sentidos opuestos y líneas de acción paralelas (no colineales). Su efecto neto es un momento puro, independiente del punto respecto al cual se calcule:
+                </p>
+                <div class="mb-3 pl-4 text-sm text-gray-700 dark:text-gray-300 font-mono">
+                  <p>M = F · d</p>
+                </div>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-2 text-justify">
+                  donde <em>d</em> es la distancia perpendicular entre las líneas de acción de ambas fuerzas.
+                </p>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-2 text-justify">
+                  <strong class="text-gray-800 dark:text-gray-200">Propiedades importantes de un par de fuerzas:</strong>
+                </p>
+                <ul class="list-disc list-inside space-y-1.5 text-gray-600 dark:text-gray-400 leading-relaxed mb-5 text-sm">
+                  <li>La fuerza resultante de un par siempre es cero (R⃗ = 0).</li>
+                  <li>El momento de un par es el mismo respecto a cualquier punto del cuerpo (a diferencia del momento de una fuerza individual, que sí depende del punto de referencia).</li>
+                  <li>Dos pares son equivalentes si producen el mismo momento, sin importar la magnitud de las fuerzas ni la distancia entre ellas, siempre que el producto F · d sea igual.</li>
+                </ul>
+
+                <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2">7. Reducción general: fuerza resultante más par (sistema fuerza-par)</h4>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-2 text-justify">
+                  En el caso más general, un sistema de fuerzas (y posiblemente momentos aplicados directamente) puede reducirse a:
+                </p>
+                <ul class="list-disc list-inside space-y-1.5 text-gray-600 dark:text-gray-400 leading-relaxed mb-3 text-sm">
+                  <li>Una fuerza resultante R⃗, actuando en un punto arbitrariamente elegido (por ejemplo, el origen del sistema o el centro de gravedad), más</li>
+                  <li>Un momento de par resultante M<sub>R,O</sub>, que representa el efecto rotacional que la fuerza R⃗, actuando únicamente en ese punto, no podría reproducir por sí sola.</li>
+                </ul>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-5 text-justify">
+                  Este sistema fuerza-par equivalente es ampliamente utilizado en ingeniería, por ejemplo, para representar el efecto de cargas complejas sobre una sección transversal de una viga o columna, trasladando todas las fuerzas a un único punto de análisis (como el centroide de la sección).
+                </p>
+
+                <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2">8. Resultante de fuerzas distribuidas</h4>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-3 text-justify">
+                  En muchos problemas de ingeniería, las cargas no se aplican en puntos discretos, sino de forma continua a lo largo de una longitud (por ejemplo, el peso propio de una viga, la presión del viento sobre una pared, o la presión hidrostática sobre una compuerta).
+                </p>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-2 text-justify">
+                  Para una carga distribuida w(x) (fuerza por unidad de longitud) a lo largo de una viga:
+                </p>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-1 text-justify">
+                  <strong class="text-gray-800 dark:text-gray-200">Magnitud de la resultante:</strong> es igual al área bajo la curva de la función de carga:
+                </p>
+                <div class="mb-3 pl-4 text-sm text-gray-700 dark:text-gray-300 font-mono">
+                  <p>R = ∫ w(x) dx</p>
+                </div>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-1 text-justify">
+                  <strong class="text-gray-800 dark:text-gray-200">Ubicación de la resultante:</strong> coincide con el centroide del área bajo la curva de carga:
+                </p>
+                <div class="mb-4 pl-4 text-sm text-gray-700 dark:text-gray-300 font-mono">
+                  <p>x̄ = (∫ x w(x) dx) / (∫ w(x) dx)</p>
+                </div>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-2 text-justify">
+                  <strong class="text-gray-800 dark:text-gray-200">Casos particulares frecuentes:</strong>
+                </p>
+                <div class="overflow-x-auto mb-4">
+                  <table class="w-full text-sm text-left border-collapse">
+                    <thead>
+                      <tr class="border-b border-gray-200 dark:border-gray-600">
+                        <th class="py-2 pr-3 font-semibold text-gray-800 dark:text-gray-200">Tipo de carga</th>
+                        <th class="py-2 pr-3 font-semibold text-gray-800 dark:text-gray-200">Magnitud de R</th>
+                        <th class="py-2 font-semibold text-gray-800 dark:text-gray-200">Ubicación de R</th>
+                      </tr>
+                    </thead>
+                    <tbody class="text-gray-600 dark:text-gray-400">
+                      <tr class="border-b border-gray-100 dark:border-gray-700/60 align-top">
+                        <td class="py-2 pr-3">Rectangular (uniforme), intensidad w<sub>0</sub>, longitud L</td>
+                        <td class="py-2 pr-3">R = w<sub>0</sub> · L</td>
+                        <td class="py-2">En el centro de la longitud (L/2)</td>
+                      </tr>
+                      <tr class="border-b border-gray-100 dark:border-gray-700/60 align-top">
+                        <td class="py-2 pr-3">Triangular, intensidad máxima w<sub>0</sub>, longitud L</td>
+                        <td class="py-2 pr-3">R = (1/2) w<sub>0</sub> L</td>
+                        <td class="py-2">A (1/3)L desde el extremo de mayor intensidad (o (2/3)L desde el extremo de intensidad cero)</td>
+                      </tr>
+                      <tr class="align-top">
+                        <td class="py-2 pr-3">Trapezoidal</td>
+                        <td class="py-2 pr-3">Se descompone en un rectángulo y un triángulo, sumando ambas resultantes</td>
+                        <td class="py-2">Se calcula el centroide combinado de las dos áreas</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-5 text-justify">
+                  <strong class="text-gray-800 dark:text-gray-200">Estrategia didáctica recomendada:</strong> para cargas trapezoidales, es más sencillo y menos propenso a errores descomponer la figura en un rectángulo y un triángulo (o en dos triángulos), calcular la resultante de cada parte por separado, y luego combinar ambas resultantes como un sistema de fuerzas paralelas (ver sección 4), en lugar de integrar directamente.
+                </p>
+
+                <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2">9. Ejemplo resuelto: resultante de un sistema de fuerzas no concurrentes</h4>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-3 text-justify">
+                  Sobre una placa rectangular actúan dos fuerzas: F<sub>1</sub> = 400&nbsp;N hacia abajo, aplicada a 2&nbsp;m a la derecha del punto O, y F<sub>2</sub> = 250&nbsp;N hacia abajo, aplicada a 5&nbsp;m a la derecha de O (ambas verticales, paralelas entre sí).
+                </p>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-2 text-justify">
+                  <strong class="text-gray-800 dark:text-gray-200">Paso 1</strong> — Magnitud de la resultante:
+                </p>
+                <div class="mb-3 pl-4 text-sm text-gray-700 dark:text-gray-300 font-mono">
+                  <p>R = F<sub>1</sub> + F<sub>2</sub> = 400 + 250 = 650 N (hacia abajo)</p>
+                </div>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-2 text-justify">
+                  <strong class="text-gray-800 dark:text-gray-200">Paso 2</strong> — Momento respecto a O (antihorario positivo):
+                </p>
+                <div class="mb-3 pl-4 space-y-1 text-sm text-gray-700 dark:text-gray-300 font-mono">
+                  <p>M<sub>R,O</sub> = −F<sub>1</sub>(2) − F<sub>2</sub>(5) = −400(2) − 250(5) = −800 − 1250 = −2050 N·m</p>
+                </div>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-2 text-justify">
+                  <strong class="text-gray-800 dark:text-gray-200">Paso 3</strong> — Ubicación de la resultante:
+                </p>
+                <div class="mb-3 pl-4 text-sm text-gray-700 dark:text-gray-300 font-mono">
+                  <p>d̄ = |M<sub>R,O</sub>| / R = 2050 / 650 = 3.15 m</p>
+                </div>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-5 text-justify">
+                  <strong class="text-gray-800 dark:text-gray-200">Conclusión:</strong> el sistema es equivalente a una única fuerza de 650&nbsp;N hacia abajo, actuando a 3.15&nbsp;m a la derecha de O.
+                </p>
+
+                <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2">10. Ejemplo resuelto: carga distribuida trapezoidal</h4>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-3 text-justify">
+                  Una viga de 8&nbsp;m soporta una carga distribuida que varía linealmente desde w<sub>1</sub> = 200&nbsp;N/m en el extremo izquierdo hasta w<sub>2</sub> = 500&nbsp;N/m en el extremo derecho.
+                </p>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-3 text-justify">
+                  <strong class="text-gray-800 dark:text-gray-200">Descomposición:</strong> un rectángulo de intensidad 200&nbsp;N/m a lo largo de toda la viga, más un triángulo de intensidad máxima (500 − 200) = 300&nbsp;N/m.
+                </p>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-1 text-justify">
+                  <strong class="text-gray-800 dark:text-gray-200">Resultante del rectángulo:</strong>
+                </p>
+                <div class="mb-3 pl-4 text-sm text-gray-700 dark:text-gray-300 font-mono">
+                  <p>R<sub>1</sub> = 200 × 8 = 1600 N, ubicada en x<sub>1</sub> = 4 m</p>
+                </div>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-1 text-justify">
+                  <strong class="text-gray-800 dark:text-gray-200">Resultante del triángulo:</strong>
+                </p>
+                <div class="mb-3 pl-4 text-sm text-gray-700 dark:text-gray-300 font-mono">
+                  <p>R<sub>2</sub> = (1/2)(300)(8) = 1200 N, ubicada en x<sub>2</sub> = (2/3)(8) = 5.33 m</p>
+                </div>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-1 text-justify">
+                  (desde el extremo izquierdo, ya que el triángulo crece hacia la derecha)
+                </p>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-1 text-justify">
+                  <strong class="text-gray-800 dark:text-gray-200">Resultante total:</strong>
+                </p>
+                <div class="mb-3 pl-4 text-sm text-gray-700 dark:text-gray-300 font-mono">
+                  <p>R = R<sub>1</sub> + R<sub>2</sub> = 1600 + 1200 = 2800 N</p>
+                </div>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-1 text-justify">
+                  <strong class="text-gray-800 dark:text-gray-200">Ubicación</strong> (tomando momentos respecto al extremo izquierdo):
+                </p>
+                <div class="mb-5 pl-4 space-y-1 text-sm text-gray-700 dark:text-gray-300 font-mono">
+                  <p>x̄ = [R<sub>1</sub>(4) + R<sub>2</sub>(5.33)] / R = [1600(4) + 1200(5.33)] / 2800</p>
+                  <p>= (6400 + 6396) / 2800 = 4.57 m</p>
+                </div>
+
+                <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2">11. Errores comunes a reforzar en clase</h4>
+                <ul class="list-disc list-inside space-y-1.5 text-gray-600 dark:text-gray-400 leading-relaxed mb-5 text-sm">
+                  <li>Confundir la resultante de un sistema paralelo/general con la simple suma de magnitudes, olvidando calcular también la posición de su línea de acción.</li>
+                  <li>No verificar si el sistema puede reducirse realmente a una fuerza única: si R = 0 pero M<sub>R,O</sub> ≠ 0, el resultado es un par puro, no una fuerza.</li>
+                  <li>Errores de signo en el cálculo de momentos al mezclar sentidos horario y antihorario sin un criterio consistente.</li>
+                  <li>Integrar innecesariamente cargas distribuidas con geometría simple, en lugar de usar las fórmulas directas de áreas y centroides conocidas (rectángulo, triángulo).</li>
+                  <li>Olvidar que el momento de un par es independiente del punto de referencia, a diferencia del momento de una fuerza individual.</li>
+                </ul>
+
+                <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2">12. Actividad sugerida para el aula</h4>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-2 text-justify">
+                  <strong class="text-gray-800 dark:text-gray-200">Ejercicio propuesto:</strong> Una viga de 10&nbsp;m está sometida a tres cargas puntuales verticales: 300&nbsp;N a 2&nbsp;m, 500&nbsp;N a 6&nbsp;m y 200&nbsp;N a 9&nbsp;m del extremo izquierdo. Determine la magnitud y la posición de la fuerza resultante equivalente.
+                </p>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-5 text-justify">
+                  (Se recomienda que, tras resolver analíticamente, los estudiantes verifiquen el resultado tomando momentos respecto a un segundo punto distinto, comprobando que la posición de la resultante no depende del punto de referencia elegido.)
+                </p>
+
+                <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2">13. Resumen de conceptos clave</h4>
+                <div class="overflow-x-auto mb-5">
+                  <table class="w-full text-sm text-left border-collapse">
+                    <thead>
+                      <tr class="border-b border-gray-200 dark:border-gray-600">
+                        <th class="py-2 pr-3 font-semibold text-gray-800 dark:text-gray-200">Tipo de sistema</th>
+                        <th class="py-2 pr-3 font-semibold text-gray-800 dark:text-gray-200">Fuerza resultante</th>
+                        <th class="py-2 pr-3 font-semibold text-gray-800 dark:text-gray-200">Momento resultante</th>
+                        <th class="py-2 font-semibold text-gray-800 dark:text-gray-200">Reducción final</th>
+                      </tr>
+                    </thead>
+                    <tbody class="text-gray-600 dark:text-gray-400">
+                      <tr class="border-b border-gray-100 dark:border-gray-700/60 align-top">
+                        <td class="py-2 pr-3">Concurrente</td>
+                        <td class="py-2 pr-3">Σ F⃗</td>
+                        <td class="py-2 pr-3">Siempre cero en el punto de concurrencia</td>
+                        <td class="py-2">Una fuerza</td>
+                      </tr>
+                      <tr class="border-b border-gray-100 dark:border-gray-700/60 align-top">
+                        <td class="py-2 pr-3">Paralelo</td>
+                        <td class="py-2 pr-3">Σ F<sub>i</sub> (misma dirección)</td>
+                        <td class="py-2 pr-3">Determina la posición de R</td>
+                        <td class="py-2">Una fuerza, en posición d̄ = Σ F<sub>i</sub> d<sub>i</sub> / R</td>
+                      </tr>
+                      <tr class="border-b border-gray-100 dark:border-gray-700/60 align-top">
+                        <td class="py-2 pr-3">General (no concurrente)</td>
+                        <td class="py-2 pr-3">Σ F⃗</td>
+                        <td class="py-2 pr-3">Σ M<sub>O,i</sub></td>
+                        <td class="py-2">Una fuerza (si R ≠ 0) o un par puro (si R = 0)</td>
+                      </tr>
+                      <tr class="border-b border-gray-100 dark:border-gray-700/60 align-top">
+                        <td class="py-2 pr-3">Par de fuerzas</td>
+                        <td class="py-2 pr-3">Cero</td>
+                        <td class="py-2 pr-3">M = F · d (constante en cualquier punto)</td>
+                        <td class="py-2">Par puro</td>
+                      </tr>
+                      <tr class="align-top">
+                        <td class="py-2 pr-3">Distribuido</td>
+                        <td class="py-2 pr-3">Área bajo la curva de carga</td>
+                        <td class="py-2 pr-3">—</td>
+                        <td class="py-2">Una fuerza en el centroide del área de carga</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
                 <div class="rounded-xl overflow-hidden border border-indigo-200/50 dark:border-indigo-700/50 shadow-lg bg-black/5 dark:bg-black/20 max-w-2xl mx-auto mt-6">
                   <video
                     class="w-full"
