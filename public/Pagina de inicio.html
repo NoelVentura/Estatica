@@ -253,7 +253,6 @@
 
           <!-- Acciones (Idioma + Theme Toggle + Menú móvil) -->
           <div class="flex items-center gap-2">
-            <a href="Resultado del Curso.html" class="hidden sm:inline-flex items-center px-3 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-primary-600 hover:bg-primary-700 text-white transition-all duration-200 whitespace-nowrap focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-slate-900" style="box-shadow: 0 0 18px rgba(255, 255, 255, 0.5), 0 0 36px rgba(255, 255, 255, 0.28), 0 4px 14px rgba(79, 70, 229, 0.35);"><span data-i18n="nav.courseResult">Resultado del Curso</span></a>
             <div class="flex items-center gap-1.5" role="group" data-i18n-aria-label="aria.langGroup" aria-label="Seleccionar idioma">
               <button type="button" data-lang="es" class="lang-switch p-0.5 rounded hover:scale-105 transition-transform focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 ring-2 ring-primary-500 ring-offset-1 ring-offset-white dark:ring-offset-slate-900" data-i18n-aria-label="lang.esLabel" data-i18n-title="lang.esLabel" aria-label="Español" title="Español" aria-pressed="true">
                 <span class="inline-flex w-8 h-5 flex-shrink-0 rounded-sm overflow-hidden shadow-sm ring-1 ring-black/10 dark:ring-white/20" aria-hidden="true"><svg class="w-full h-full block" viewBox="0 0 30 20" xmlns="http://www.w3.org/2000/svg"><rect width="10" height="20" fill="#006847"/><rect x="10" width="10" height="20" fill="#fff"/><rect x="20" width="10" height="20" fill="#CE1126"/><circle cx="15" cy="10" r="2.5" fill="#8B4513"/><circle cx="15" cy="9.8" r="1.6" fill="#C4A035"/></svg></span>
@@ -294,7 +293,6 @@
           <a href="#el-curso" class="block px-4 py-3 rounded-lg text-base font-medium text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-all duration-200"><span data-i18n="nav.course">El Curso</span></a>
           <a href="Libros.html" class="block px-4 py-3 rounded-lg text-base font-medium text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-all duration-200"><span data-i18n="nav.books">Libros de Apoyo</span></a>
           <a href="Contacto.html" class="block px-4 py-3 rounded-lg text-base font-medium text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-all duration-200"><span data-i18n="nav.contact">Contacto</span></a>
-          <a href="Resultado del Curso.html" class="block px-4 py-3 rounded-lg text-base font-semibold text-center bg-primary-600 hover:bg-primary-700 text-white transition-all duration-200"><span data-i18n="nav.courseResult">Resultado del Curso</span></a>
         </nav>
       </div>
     </header>
@@ -460,6 +458,61 @@
             </div>
             
           </div>
+
+          <!-- Audio Coloratura: icono play + texto -->
+          <div class="mt-14 flex items-center justify-center gap-3">
+            <button
+              id="coloratura-play"
+              type="button"
+              class="inline-flex items-center justify-center w-10 h-10 rounded-full border-2 border-current text-gray-800 dark:text-white hover:opacity-80 transition-opacity focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500"
+              aria-label="Reproducir Coloratura"
+              aria-pressed="false"
+            >
+              <!-- Play -->
+              <svg class="coloratura-icon-play w-4 h-4 ml-0.5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M8 5v14l11-7L8 5z"/>
+              </svg>
+              <!-- Pause (oculto por defecto) -->
+              <svg class="coloratura-icon-pause w-4 h-4 hidden" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M6 5h4v14H6V5zm8 0h4v14h-4V5z"/>
+              </svg>
+            </button>
+            <span class="text-sm sm:text-base font-semibold tracking-wide uppercase text-gray-800 dark:text-white">COLORATURA</span>
+            <audio id="coloratura-audio" preload="metadata" class="hidden">
+              <source src="audio/Coloratura.mp3" type="audio/mpeg" />
+            </audio>
+          </div>
+          <script>
+            (function () {
+              var btn = document.getElementById('coloratura-play');
+              var audio = document.getElementById('coloratura-audio');
+              if (!btn || !audio) return;
+              var playIcon = btn.querySelector('.coloratura-icon-play');
+              var pauseIcon = btn.querySelector('.coloratura-icon-pause');
+              function setPlaying(playing) {
+                btn.setAttribute('aria-pressed', playing ? 'true' : 'false');
+                btn.setAttribute('aria-label', playing ? 'Pausar Coloratura' : 'Reproducir Coloratura');
+                if (playIcon) playIcon.classList.toggle('hidden', playing);
+                if (pauseIcon) pauseIcon.classList.toggle('hidden', !playing);
+              }
+              btn.addEventListener('click', function () {
+                if (audio.paused) {
+                  var p = audio.play();
+                  if (p && typeof p.then === 'function') {
+                    p.then(function () { setPlaying(true); }).catch(function () { setPlaying(false); });
+                  } else {
+                    setPlaying(true);
+                  }
+                } else {
+                  audio.pause();
+                  setPlaying(false);
+                }
+              });
+              audio.addEventListener('ended', function () { setPlaying(false); });
+              audio.addEventListener('pause', function () { if (!audio.ended) setPlaying(false); });
+              audio.addEventListener('play', function () { setPlaying(true); });
+            })();
+          </script>
         </div>
       </section>
 
@@ -1105,5 +1158,9 @@
         }
       });
     </script>
+
+    <!-- Botpress Webchat -->
+    <script src="https://cdn.botpress.cloud/webchat/v3.7/inject.js"></script>
+    <script src="https://files.bpcontent.cloud/2026/08/24/20/20260824205425-Y7W6UAYE.js" defer></script>
   </body>
 </html>
