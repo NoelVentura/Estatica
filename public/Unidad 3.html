@@ -76,7 +76,6 @@
           </nav>
 
           <div class="flex items-center gap-2">
-            <a href="Resultado del Curso.html" class="hidden sm:inline-flex items-center px-3 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-primary-600 hover:bg-primary-700 text-white transition-all duration-200 whitespace-nowrap focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-slate-900" style="box-shadow: 0 0 18px rgba(255, 255, 255, 0.5), 0 0 36px rgba(255, 255, 255, 0.28), 0 4px 14px rgba(79, 70, 229, 0.35);"><span data-i18n="nav.courseResult">Resultado del Curso</span></a>
             <div class="flex items-center gap-1.5" role="group" data-i18n-aria-label="aria.langGroup" aria-label="Seleccionar idioma">
               <button type="button" data-lang="es" class="lang-switch p-0.5 rounded hover:scale-105 transition-transform focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 ring-2 ring-primary-500 ring-offset-1 ring-offset-white dark:ring-offset-slate-900" data-i18n-aria-label="lang.esLabel" data-i18n-title="lang.esLabel" aria-label="Español" title="Español" aria-pressed="true">
                 <span class="inline-flex w-8 h-5 flex-shrink-0 rounded-sm overflow-hidden shadow-sm ring-1 ring-black/10 dark:ring-white/20" aria-hidden="true"><svg class="w-full h-full block" viewBox="0 0 30 20" xmlns="http://www.w3.org/2000/svg"><rect width="10" height="20" fill="#006847"/><rect x="10" width="10" height="20" fill="#fff"/><rect x="20" width="10" height="20" fill="#CE1126"/><circle cx="15" cy="10" r="2.5" fill="#8B4513"/><circle cx="15" cy="9.8" r="1.6" fill="#C4A035"/></svg></span>
@@ -111,7 +110,6 @@
           <a href="Pagina de inicio.html#el-curso" class="block px-4 py-3 rounded-lg text-base font-medium bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300"><span data-i18n="nav.course">El Curso</span></a>
           <a href="Libros.html" class="block px-4 py-3 rounded-lg text-base font-medium text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"><span data-i18n="nav.books">Libros de Apoyo</span></a>
           <a href="Contacto.html" class="block px-4 py-3 rounded-lg text-base font-medium text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"><span data-i18n="nav.contact">Contacto</span></a>
-          <a href="Resultado del Curso.html" class="block px-4 py-3 rounded-lg text-base font-semibold text-center bg-primary-600 hover:bg-primary-700 text-white transition-all duration-200"><span data-i18n="nav.courseResult">Resultado del Curso</span></a>
         </nav>
       </div>
     </header>
@@ -207,6 +205,258 @@
                     <img src="images/P3.1c.jpg" alt="Figura 3.1 - P3.1c" class="max-w-[200px] w-full rounded-xl border border-indigo-200/50 dark:border-indigo-700/50 shadow-md object-cover">
                   </div>
                 </div>
+
+                <div class="mt-8 space-y-4">
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm text-justify">
+                    Un cuerpo rígido es un modelo idealizado en el que se asume que las distancias entre cualquier par de puntos del cuerpo permanecen constantes, es decir, no se deforma bajo la acción de las fuerzas aplicadas. A diferencia de la partícula —donde todas las fuerzas son concurrentes—, en un cuerpo rígido las fuerzas actúan en distintos puntos, por lo que además de trasladarse, el cuerpo puede rotar. Esto exige condiciones de equilibrio más completas que las estudiadas para partículas.
+                  </p>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-2 text-justify">
+                    <strong class="text-gray-800 dark:text-gray-200">Objetivo de aprendizaje:</strong> al finalizar el tema, el estudiante será capaz de enunciar las condiciones necesarias y suficientes para el equilibrio de un cuerpo rígido, distinguir los elementos de dos y tres fuerzas, y evaluar la determinación e inestabilidad estática de un sistema de apoyos.
+                  </p>
+
+                  <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2">2. Del equilibrio de la partícula al equilibrio del cuerpo rígido</h4>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm text-justify">
+                    En el equilibrio de una partícula, bastaba con garantizar que no existiera aceleración lineal:
+                  </p>
+                  <p class="text-gray-700 dark:text-gray-300 leading-relaxed text-sm font-medium border-l-4 border-primary-400 pl-4">ΣF⃗ = 0</p>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm text-justify">
+                    En un cuerpo rígido, dado que las fuerzas no son concurrentes, es posible que ΣF⃗ = 0 se cumpla y, sin embargo, el cuerpo rote bajo el efecto de un par de fuerzas. Por ello, se requiere una segunda condición independiente, asociada a la ausencia de aceleración angular:
+                  </p>
+                  <p class="text-gray-700 dark:text-gray-300 leading-relaxed text-sm font-medium border-l-4 border-primary-400 pl-4">ΣM⃗ = 0</p>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm text-justify">
+                    Las dos condiciones deben cumplirse simultáneamente para garantizar el equilibrio completo (traslacional y rotacional) de un cuerpo rígido.
+                  </p>
+
+                  <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2">3. Condiciones necesarias y suficientes de equilibrio</h4>
+                  <h4 class="text-sm font-semibold text-gray-800 dark:text-gray-200 mb-2">3.1 Formulación vectorial general</h4>
+                  <p class="text-gray-700 dark:text-gray-300 leading-relaxed text-sm font-medium border-l-4 border-primary-400 pl-4 mb-2">
+                    ΣF⃗ = 0<br>
+                    ΣM⃗<sub>O</sub> = 0
+                  </p>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm text-justify">
+                    La segunda ecuación debe cumplirse respecto a cualquier punto O que se elija; si se cumple respecto a un punto, se cumple automáticamente respecto a cualquier otro, siempre que también se cumpla ΣF⃗ = 0.
+                  </p>
+
+                  <h4 class="text-sm font-semibold text-gray-800 dark:text-gray-200 mb-2">3.2 Condiciones escalares en dos dimensiones (2D)</h4>
+                  <p class="text-gray-700 dark:text-gray-300 leading-relaxed text-sm font-medium border-l-4 border-primary-400 pl-4 mb-2">
+                    ΣF<sub>x</sub> = 0<br>
+                    ΣF<sub>y</sub> = 0<br>
+                    ΣM<sub>O</sub> = 0
+                  </p>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm text-justify">
+                    Estas tres ecuaciones escalares independientes constituyen las condiciones de equilibrio de un cuerpo rígido sometido a un sistema de fuerzas coplanares.
+                  </p>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-2">
+                    Formas equivalentes (útiles según la geometría del problema):
+                  </p>
+                  <ul class="list-disc list-inside space-y-1.5 text-sm text-gray-600 dark:text-gray-400 mb-2">
+                    <li><strong class="text-gray-800 dark:text-gray-200">Dos fuerzas y un momento:</strong> ΣF<sub>x</sub> = 0, ΣF<sub>y</sub> = 0, ΣM<sub>A</sub> = 0</li>
+                    <li><strong class="text-gray-800 dark:text-gray-200">Una fuerza y dos momentos:</strong> ΣF<sub>x</sub> = 0, ΣM<sub>A</sub> = 0, ΣM<sub>B</sub> = 0 (válida si la línea AB no es perpendicular al eje x)</li>
+                    <li><strong class="text-gray-800 dark:text-gray-200">Tres momentos:</strong> ΣM<sub>A</sub> = 0, ΣM<sub>B</sub> = 0, ΣM<sub>C</sub> = 0 (válida si A, B y C no son colineales)</li>
+                  </ul>
+
+                  <h4 class="text-sm font-semibold text-gray-800 dark:text-gray-200 mb-2">3.3 Condiciones escalares en tres dimensiones (3D)</h4>
+                  <p class="text-gray-700 dark:text-gray-300 leading-relaxed text-sm font-medium border-l-4 border-primary-400 pl-4 mb-2">
+                    ΣF<sub>x</sub> = 0 &nbsp;&nbsp; ΣF<sub>y</sub> = 0 &nbsp;&nbsp; ΣF<sub>z</sub> = 0<br>
+                    ΣM<sub>x</sub> = 0 &nbsp;&nbsp; ΣM<sub>y</sub> = 0 &nbsp;&nbsp; ΣM<sub>z</sub> = 0
+                  </p>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm text-justify">
+                    Seis condiciones escalares independientes, correspondientes a las tres posibles traslaciones y las tres posibles rotaciones del cuerpo en el espacio.
+                  </p>
+
+                  <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2">4. Grados de libertad y su relación con las condiciones de equilibrio</h4>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-2 text-justify">
+                    Cada ecuación de equilibrio disponible corresponde a la restricción de un posible movimiento rígido del cuerpo:
+                  </p>
+                  <div class="overflow-x-auto mb-3">
+                    <table class="w-full text-sm text-left border-collapse">
+                      <thead>
+                        <tr class="border-b border-gray-200 dark:border-gray-600">
+                          <th class="py-2 pr-3 font-semibold text-gray-800 dark:text-gray-200">Movimiento posible</th>
+                          <th class="py-2 font-semibold text-gray-800 dark:text-gray-200">Ecuación que lo restringe (2D)</th>
+                        </tr>
+                      </thead>
+                      <tbody class="text-gray-600 dark:text-gray-400">
+                        <tr class="border-b border-gray-100 dark:border-gray-700/60">
+                          <td class="py-2 pr-3">Traslación horizontal</td>
+                          <td class="py-2">ΣF<sub>x</sub> = 0</td>
+                        </tr>
+                        <tr class="border-b border-gray-100 dark:border-gray-700/60">
+                          <td class="py-2 pr-3">Traslación vertical</td>
+                          <td class="py-2">ΣF<sub>y</sub> = 0</td>
+                        </tr>
+                        <tr>
+                          <td class="py-2 pr-3">Rotación en el plano</td>
+                          <td class="py-2">ΣM<sub>O</sub> = 0</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm text-justify">
+                    Un cuerpo rígido libre en el plano tiene tres grados de libertad (dos traslaciones y una rotación); en el espacio tiene seis (tres traslaciones y tres rotaciones). Las condiciones de equilibrio son, precisamente, tantas como grados de libertad existen, ya que cada una anula la posibilidad de movimiento en esa dirección o sentido de rotación.
+                  </p>
+
+                  <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2">5. Elementos sometidos a dos fuerzas (miembros de dos fuerzas)</h4>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm text-justify">
+                    Un caso particular de gran importancia práctica es el de un cuerpo rígido sobre el cual actúan fuerzas aplicadas únicamente en dos puntos (sin cargas intermedias ni momentos aplicados). Para que dicho elemento esté en equilibrio, ambas fuerzas deben cumplir:
+                  </p>
+                  <ul class="list-disc list-inside space-y-1.5 text-sm text-gray-600 dark:text-gray-400">
+                    <li>Tener la misma magnitud</li>
+                    <li>Actuar sobre la misma línea de acción (la recta que une los dos puntos de aplicación)</li>
+                    <li>Tener sentidos opuestos</li>
+                  </ul>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm text-justify">
+                    <strong class="text-gray-800 dark:text-gray-200">Consecuencia práctica fundamental:</strong> en un elemento de dos fuerzas, la línea de acción de dichas fuerzas queda determinada por la geometría del elemento (la línea que une sus dos puntos de conexión), sin importar la forma real de la pieza. Este principio es la base del análisis de armaduras, donde cada barra se trata como un elemento de dos fuerzas (a tensión o a compresión).
+                  </p>
+
+                  <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2">6. Elementos sometidos a tres fuerzas (miembros de tres fuerzas)</h4>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm text-justify">
+                    Cuando un cuerpo rígido está sometido a exactamente tres fuerzas (y ningún momento aplicado directamente), el equilibrio exige que dichas fuerzas sean:
+                  </p>
+                  <ul class="list-disc list-inside space-y-1.5 text-sm text-gray-600 dark:text-gray-400">
+                    <li>Concurrentes (sus líneas de acción se cruzan en un mismo punto), o bien</li>
+                    <li>Paralelas entre sí (caso límite, equivalente a que el punto de concurrencia se ubique en el infinito)</li>
+                  </ul>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm text-justify">
+                    Este principio —conocido como el teorema de las tres fuerzas— es una herramienta gráfica muy poderosa: permite determinar la dirección de una fuerza desconocida trazando la intersección de las otras dos líneas de acción conocidas, sin necesidad de plantear ecuaciones algebraicas.
+                  </p>
+
+                  <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2">7. Determinación, indeterminación e inestabilidad estática</h4>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm text-justify">
+                    El número de reacciones desconocidas que aportan los apoyos de un cuerpo rígido debe compararse con el número de ecuaciones de equilibrio disponibles para clasificar el problema:
+                  </p>
+
+                  <h4 class="text-sm font-semibold text-gray-800 dark:text-gray-200 mb-2">7.1 Cuerpo estáticamente determinado (isostático)</h4>
+                  <p class="text-gray-700 dark:text-gray-300 leading-relaxed text-sm font-medium border-l-4 border-primary-400 pl-4 mb-2">r = n</p>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm text-justify">
+                    donde r es el número de reacciones desconocidas y n es el número de ecuaciones de equilibrio independientes (n = 3 en 2D, n = 6 en 3D). El problema puede resolverse completamente utilizando únicamente las ecuaciones de la estática.
+                  </p>
+
+                  <h4 class="text-sm font-semibold text-gray-800 dark:text-gray-200 mb-2">7.2 Cuerpo estáticamente indeterminado (hiperestático)</h4>
+                  <p class="text-gray-700 dark:text-gray-300 leading-relaxed text-sm font-medium border-l-4 border-primary-400 pl-4 mb-2">r &gt; n</p>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm text-justify">
+                    Existen más reacciones que ecuaciones disponibles. Las ecuaciones de equilibrio son insuficientes; se requieren ecuaciones adicionales de compatibilidad de deformaciones, propias de la mecánica de materiales o del análisis estructural avanzado. El número de reacciones en exceso se conoce como grado de indeterminación.
+                  </p>
+
+                  <h4 class="text-sm font-semibold text-gray-800 dark:text-gray-200 mb-2">7.3 Cuerpo estáticamente inestable</h4>
+                  <p class="text-gray-700 dark:text-gray-300 leading-relaxed text-sm font-medium border-l-4 border-primary-400 pl-4 mb-2">r &lt; n</p>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm text-justify">
+                    Existen menos reacciones que ecuaciones necesarias; el cuerpo tiene movimiento posible y no puede estar en equilibrio bajo cargas generales.
+                  </p>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-2 text-justify">
+                    <strong class="text-gray-800 dark:text-gray-200">Inestabilidad geométrica</strong> (caso especial e importante): incluso cuando r = n, el cuerpo puede ser inestable si las reacciones están dispuestas de forma inadecuada, por ejemplo:
+                  </p>
+                  <ul class="list-disc list-inside space-y-1.5 text-sm text-gray-600 dark:text-gray-400">
+                    <li>Todas las reacciones son paralelas entre sí (no pueden equilibrar una fuerza aplicada perpendicular a ellas).</li>
+                    <li>Todas las reacciones son concurrentes en un mismo punto (no pueden equilibrar un momento respecto a ese punto).</li>
+                  </ul>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm text-justify">
+                    <strong class="text-gray-800 dark:text-gray-200">Nota pedagógica:</strong> es fundamental transmitir que contar el número de incógnitas es solo el primer paso; la disposición geométrica de los apoyos es igualmente determinante para garantizar un equilibrio estable.
+                  </p>
+
+                  <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2">8. Ejemplo resuelto: verificación de determinación estática</h4>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm text-justify">
+                    Una viga plana está sostenida por un pasador en un extremo y un rodillo en el otro extremo.
+                  </p>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-1"><strong class="text-gray-800 dark:text-gray-200">Conteo de incógnitas:</strong></p>
+                  <ul class="list-disc list-inside space-y-1.5 text-sm text-gray-600 dark:text-gray-400">
+                    <li>Pasador: 2 reacciones (A<sub>x</sub>, A<sub>y</sub>)</li>
+                    <li>Rodillo: 1 reacción (B<sub>y</sub>)</li>
+                    <li>Total: r = 3</li>
+                  </ul>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm text-justify">
+                    Ecuaciones disponibles en 2D: n = 3
+                  </p>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm text-justify">
+                    <strong class="text-gray-800 dark:text-gray-200">Conclusión:</strong> r = n = 3, por lo tanto, la viga es estáticamente determinada, y sus reacciones pueden calcularse completamente mediante las tres ecuaciones de equilibrio.
+                  </p>
+
+                  <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2">9. Ejemplo resuelto: elemento de dos fuerzas en una estructura</h4>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm text-justify">
+                    En una armadura simple, una barra conecta dos nodos A y B mediante pasadores en ambos extremos, sin cargas aplicadas a lo largo de su longitud.
+                  </p>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm text-justify">
+                    Aplicación del principio de la sección 5: al tratarse de un elemento sometido únicamente a dos fuerzas (una en cada nodo), dichas fuerzas deben actuar necesariamente a lo largo de la línea AB, con igual magnitud y sentidos opuestos. Esto significa que la barra trabaja exclusivamente a tensión (tirando de ambos nodos hacia el centro) o a compresión (empujando ambos nodos hacia afuera), sin posibilidad de flexión, lo cual simplifica enormemente el análisis de armaduras completas.
+                  </p>
+
+                  <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2">10. Errores comunes a reforzar en clase</h4>
+                  <ul class="list-disc list-inside space-y-1.5 text-sm text-gray-600 dark:text-gray-400">
+                    <li>Aplicar solo dos de las tres ecuaciones de equilibrio en 2D, olvidando la ecuación de momentos.</li>
+                    <li>No verificar la determinación estática antes de intentar resolver el problema únicamente con estática (en un caso hiperestático, el sistema quedará indeterminado).</li>
+                    <li>Confundir un elemento de dos fuerzas con uno de múltiples fuerzas: solo aplica el principio de la sección 5 cuando las fuerzas actúan exclusivamente en dos puntos.</li>
+                    <li>Ignorar la inestabilidad geométrica cuando r = n, asumiendo automáticamente que el sistema está bien soportado por el solo hecho de que el conteo numérico coincide.</li>
+                    <li>Usar formas alternativas de las ecuaciones de equilibrio sin verificar sus condiciones de validez (por ejemplo, tomar dos momentos respecto a puntos alineados perpendicularmente al eje usado en la ecuación de fuerza, lo que genera ecuaciones dependientes).</li>
+                  </ul>
+
+                  <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2">11. Actividad sugerida para el aula</h4>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm text-justify">
+                    <strong class="text-gray-800 dark:text-gray-200">Ejercicio propuesto:</strong> Analice las siguientes configuraciones de apoyo para una viga plana y clasifique cada una como estáticamente determinada, indeterminada o inestable, justificando la respuesta:
+                  </p>
+                  <ol class="list-[lower-alpha] list-inside space-y-1.5 text-sm text-gray-600 dark:text-gray-400">
+                    <li>Un empotramiento en un extremo (sin apoyo en el otro extremo).</li>
+                    <li>Dos rodillos (uno en cada extremo).</li>
+                    <li>Un pasador en un extremo y un rodillo en el otro.</li>
+                    <li>Un pasador en un extremo y un empotramiento en el otro.</li>
+                  </ol>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm text-justify">
+                    (Actividad ideal para discusión grupal, enfatizando tanto el conteo de reacciones como el análisis de la disposición geométrica de cada caso.)
+                  </p>
+
+                  <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2">12. Resumen de conceptos clave</h4>
+                  <div class="overflow-x-auto">
+                    <table class="w-full text-sm text-left border-collapse">
+                      <thead>
+                        <tr class="border-b border-gray-200 dark:border-gray-600">
+                          <th class="py-2 pr-3 font-semibold text-gray-800 dark:text-gray-200">Concepto</th>
+                          <th class="py-2 font-semibold text-gray-800 dark:text-gray-200">Descripción</th>
+                        </tr>
+                      </thead>
+                      <tbody class="text-gray-600 dark:text-gray-400">
+                        <tr class="border-b border-gray-100 dark:border-gray-700/60 align-top">
+                          <td class="py-2 pr-3">Condición general de equilibrio</td>
+                          <td class="py-2">ΣF⃗ = 0 y ΣM⃗ = 0 (ambas, simultáneamente)</td>
+                        </tr>
+                        <tr class="border-b border-gray-100 dark:border-gray-700/60 align-top">
+                          <td class="py-2 pr-3">Ecuaciones en 2D</td>
+                          <td class="py-2">ΣF<sub>x</sub> = 0, ΣF<sub>y</sub> = 0, ΣM<sub>O</sub> = 0</td>
+                        </tr>
+                        <tr class="border-b border-gray-100 dark:border-gray-700/60 align-top">
+                          <td class="py-2 pr-3">Ecuaciones en 3D</td>
+                          <td class="py-2">3 de fuerza + 3 de momento (6 en total)</td>
+                        </tr>
+                        <tr class="border-b border-gray-100 dark:border-gray-700/60 align-top">
+                          <td class="py-2 pr-3">Elemento de dos fuerzas</td>
+                          <td class="py-2">Fuerzas iguales, misma línea de acción, sentidos opuestos</td>
+                        </tr>
+                        <tr class="border-b border-gray-100 dark:border-gray-700/60 align-top">
+                          <td class="py-2 pr-3">Elemento de tres fuerzas</td>
+                          <td class="py-2">Fuerzas concurrentes o paralelas</td>
+                        </tr>
+                        <tr class="border-b border-gray-100 dark:border-gray-700/60 align-top">
+                          <td class="py-2 pr-3">Isostático</td>
+                          <td class="py-2">r = n</td>
+                        </tr>
+                        <tr class="border-b border-gray-100 dark:border-gray-700/60 align-top">
+                          <td class="py-2 pr-3">Hiperestático</td>
+                          <td class="py-2">r &gt; n</td>
+                        </tr>
+                        <tr class="align-top">
+                          <td class="py-2 pr-3">Inestable</td>
+                          <td class="py-2">r &lt; n, o disposición geométrica inadecuada aunque r = n</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                  <div class="mt-6 rounded-xl overflow-hidden border border-indigo-200/50 dark:border-indigo-700/50 shadow-lg bg-black/5 dark:bg-black/20 max-w-[16rem] mx-auto">
+                    <video class="w-full" controls playsinline preload="metadata" title="Los principios que mantienen a los puentes en pie">
+                      <source src="videos/Los_Principios_Que_Mantienen_a_los_Puentes_en_Pie-1.mp4" type="video/mp4">
+                      Tu navegador no soporta la reproducción de video.
+                    </video>
+                    <p class="text-xs text-gray-500 dark:text-gray-400 px-3 py-2 bg-gray-50 dark:bg-gray-800/50">Los principios que mantienen a los puentes en pie</p>
+                  </div>
+                </div>
+
                 <div class="mt-6 flex justify-center">
                   <img src="images/P3.1d.jpg" alt="Figura 3.1 - P3.1d" class="max-w-full rounded-xl border border-indigo-200/50 dark:border-indigo-700/50 shadow-md object-cover">
                 </div>
@@ -258,6 +508,168 @@
                 <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
                   Las <strong>fuerzas externas</strong> son las que ejercen otros cuerpos o el medio sobre el cuerpo en estudio (peso, reacciones, tensiones). Las <strong>fuerzas internas</strong> son las que mantienen unidas las partículas del cuerpo; en un cuerpo rígido ideal no provocan cambio en el movimiento. Para el equilibrio solo se consideran las fuerzas externas en el diagrama de cuerpo libre.
                 </p>
+
+                <div class="mt-2 mb-6 space-y-4">
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm text-justify">
+                    Toda fuerza que actúa sobre un sistema mecánico puede clasificarse, según su origen y su relación con el cuerpo analizado, en fuerza externa o fuerza interna. Esta distinción es uno de los conceptos más importantes de la mecánica, ya que determina qué fuerzas deben incluirse en un diagrama de cuerpo libre y sienta las bases para el análisis de estructuras, armaduras y elementos sometidos a carga (vigas, columnas, ejes).
+                  </p>
+
+                  <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2">2. Fuerza externa</h4>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm text-justify">
+                    Es aquella que proviene de un agente fuera del sistema analizado y actúa sobre él. Son responsables del comportamiento global del cuerpo: su movimiento, equilibrio o deformación como un todo.
+                  </p>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-1"><strong class="text-gray-800 dark:text-gray-200">Ejemplos:</strong></p>
+                  <ul class="list-disc list-inside space-y-1.5 text-sm text-gray-600 dark:text-gray-400">
+                    <li>El peso de un cuerpo</li>
+                    <li>Las reacciones en los apoyos (pasador, rodillo, empotramiento)</li>
+                    <li>Cargas aplicadas directamente (una persona sobre una viga, el viento, la presión de un fluido)</li>
+                    <li>La tensión de un cable que conecta el sistema con algo externo a él</li>
+                  </ul>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm text-justify">
+                    <strong class="text-gray-800 dark:text-gray-200">Característica clave:</strong> son las únicas que se incluyen al plantear las ecuaciones de equilibrio del cuerpo completo:
+                  </p>
+                  <p class="text-gray-700 dark:text-gray-300 leading-relaxed text-sm font-medium border-l-4 border-primary-400 pl-4">
+                    ΣF⃗<sub>ext</sub> = 0<br>
+                    ΣM⃗<sub>ext</sub> = 0
+                  </p>
+
+                  <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2">3. Fuerza interna</h4>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm text-justify">
+                    Es aquella que se genera entre las partes de un mismo sistema, como resultado de la interacción mutua al transmitir las cargas externas a través del material o de las conexiones del cuerpo.
+                  </p>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-1"><strong class="text-gray-800 dark:text-gray-200">Ejemplos:</strong></p>
+                  <ul class="list-disc list-inside space-y-1.5 text-sm text-gray-600 dark:text-gray-400">
+                    <li>La fuerza que se transmite entre partículas adyacentes dentro de un sólido</li>
+                    <li>La fuerza axial (tensión o compresión) dentro de una barra de armadura</li>
+                    <li>Las fuerzas de corte y momentos flectores dentro de una viga</li>
+                    <li>La fuerza que un miembro estructural ejerce sobre otro en una conexión</li>
+                  </ul>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm text-justify">
+                    <strong class="text-gray-800 dark:text-gray-200">Propiedad fundamental (3ª Ley de Newton):</strong> siempre aparecen en pares acción-reacción de igual magnitud, misma línea de acción y sentidos opuestos. Por eso, al analizar el sistema completo como un solo cuerpo rígido, las fuerzas internas se cancelan y no aparecen en sus ecuaciones de equilibrio.
+                  </p>
+
+                  <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2">4. La clasificación depende del sistema elegido</h4>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm text-justify">
+                    Este es el punto conceptual más importante del tema: una misma fuerza puede ser interna o externa según cómo se defina el sistema analizado.
+                  </p>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-1"><strong class="text-gray-800 dark:text-gray-200">Ejemplo: en una armadura completa:</strong></p>
+                  <ul class="list-disc list-inside space-y-1.5 text-sm text-gray-600 dark:text-gray-400">
+                    <li>Si se analiza la armadura completa, las fuerzas entre barras en cada nodo son internas y no aparecen en su DCL; solo se incluyen reacciones y cargas externas.</li>
+                    <li>Si se aísla una sola barra, las fuerzas que las barras vecinas ejercían sobre ella pasan a ser externas para ese nuevo subsistema.</li>
+                  </ul>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm text-justify">
+                    <strong class="text-gray-800 dark:text-gray-200">Idea central:</strong> «interna» y «externa» no son propiedades absolutas de una fuerza, sino relativas a la frontera del sistema que se decide aislar. Cada corte imaginario convierte fuerzas internas en externas para el subsistema resultante.
+                  </p>
+
+                  <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2">5. Método de secciones</h4>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm text-justify">
+                    Procedimiento para «revelar» fuerzas internas:
+                  </p>
+                  <ol class="list-decimal list-inside space-y-1.5 text-sm text-gray-600 dark:text-gray-400">
+                    <li>Calcular primero las reacciones externas del cuerpo completo.</li>
+                    <li>Realizar un corte imaginario en el punto de interés, dividiendo el cuerpo en dos partes.</li>
+                    <li>Aislar una de las dos partes y dibujar su DCL, incluyendo las fuerzas externas conocidas y las fuerzas internas en el corte (ahora tratadas como externas de ese subsistema).</li>
+                    <li>Aplicar las ecuaciones de equilibrio para determinar las fuerzas internas desconocidas.</li>
+                    <li>(Verificación) Repetir con la otra mitad; los resultados deben coincidir en magnitud y ser opuestos en sentido.</li>
+                  </ol>
+
+                  <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2">6. Tipos de fuerzas internas en un elemento estructural</h4>
+                  <div class="overflow-x-auto">
+                    <table class="w-full text-sm text-left border-collapse">
+                      <thead>
+                        <tr class="border-b border-gray-200 dark:border-gray-600">
+                          <th class="py-2 pr-3 font-semibold text-gray-800 dark:text-gray-200">Componente</th>
+                          <th class="py-2 pr-3 font-semibold text-gray-800 dark:text-gray-200">Dirección</th>
+                          <th class="py-2 font-semibold text-gray-800 dark:text-gray-200">Efecto físico</th>
+                        </tr>
+                      </thead>
+                      <tbody class="text-gray-600 dark:text-gray-400">
+                        <tr class="border-b border-gray-100 dark:border-gray-700/60 align-top">
+                          <td class="py-2 pr-3">Fuerza normal/axial (N)</td>
+                          <td class="py-2 pr-3">Perpendicular a la sección</td>
+                          <td class="py-2">Tracción o compresión</td>
+                        </tr>
+                        <tr class="border-b border-gray-100 dark:border-gray-700/60 align-top">
+                          <td class="py-2 pr-3">Fuerza cortante (V)</td>
+                          <td class="py-2 pr-3">Paralela al plano de la sección</td>
+                          <td class="py-2">Desliza una parte respecto a la otra</td>
+                        </tr>
+                        <tr class="align-top">
+                          <td class="py-2 pr-3">Momento flector (M)</td>
+                          <td class="py-2 pr-3">Momento en la sección</td>
+                          <td class="py-2">Flexiona el elemento</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm text-justify">
+                    En un elemento de dos fuerzas, la fuerza interna se reduce solo a la componente axial N (tensión o compresión pura).
+                  </p>
+
+                  <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2">7. Ejemplo: barra de armadura (método de secciones)</h4>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm text-justify">
+                    Con las reacciones ya calculadas, se corta la armadura atravesando la barra de interés (ej. CD), se aísla el lado con menos incógnitas, y se representa F<sub>CD</sub> como fuerza axial (asumida a tensión). Al resolver con las ecuaciones de equilibrio: si F<sub>CD</sub> &gt; 0 está a tensión; si es negativo, está a compresión.
+                  </p>
+
+                  <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2">8. Ejemplo: viga con carga puntual</h4>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm text-justify">
+                    Viga simplemente apoyada, longitud L, carga P en el centro. Reacciones: A<sub>y</sub> = B<sub>y</sub> = P/2.
+                  </p>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm text-justify">
+                    Corte a distancia x &lt; L/2, aislando el segmento izquierdo:
+                  </p>
+                  <p class="text-gray-700 dark:text-gray-300 leading-relaxed text-sm font-medium border-l-4 border-primary-400 pl-4">
+                    ΣF<sub>y</sub> = 0: &nbsp; V = P/2<br>
+                    ΣM = 0: &nbsp; M = (P/2) x
+                  </p>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm text-justify">
+                    Es decir: cortante constante e igual a P/2, y momento flector que crece linealmente con x hasta el centro de la viga.
+                  </p>
+
+                  <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2">9. Errores comunes</h4>
+                  <ul class="list-disc list-inside space-y-1.5 text-sm text-gray-600 dark:text-gray-400">
+                    <li>Incluir fuerzas internas en el DCL del sistema completo (deben cancelarse).</li>
+                    <li>Olvidar incluirlas al aislar una parte mediante un corte.</li>
+                    <li>No calcular primero las reacciones externas.</li>
+                    <li>Confundir el signo del resultado (negativo = compresión, no error).</li>
+                    <li>Olvidar verificar con acción-reacción en la sección opuesta.</li>
+                  </ul>
+
+                  <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2">10. Resumen</h4>
+                  <div class="overflow-x-auto">
+                    <table class="w-full text-sm text-left border-collapse">
+                      <thead>
+                        <tr class="border-b border-gray-200 dark:border-gray-600">
+                          <th class="py-2 pr-3 font-semibold text-gray-800 dark:text-gray-200">Concepto</th>
+                          <th class="py-2 font-semibold text-gray-800 dark:text-gray-200">Descripción</th>
+                        </tr>
+                      </thead>
+                      <tbody class="text-gray-600 dark:text-gray-400">
+                        <tr class="border-b border-gray-100 dark:border-gray-700/60 align-top">
+                          <td class="py-2 pr-3">Fuerza externa</td>
+                          <td class="py-2">De fuera del sistema; aparece en el equilibrio del cuerpo completo</td>
+                        </tr>
+                        <tr class="border-b border-gray-100 dark:border-gray-700/60 align-top">
+                          <td class="py-2 pr-3">Fuerza interna</td>
+                          <td class="py-2">Entre partes del sistema; se cancela al analizar el todo</td>
+                        </tr>
+                        <tr class="border-b border-gray-100 dark:border-gray-700/60 align-top">
+                          <td class="py-2 pr-3">Naturaleza relativa</td>
+                          <td class="py-2">Depende de la frontera del sistema elegido</td>
+                        </tr>
+                        <tr class="border-b border-gray-100 dark:border-gray-700/60 align-top">
+                          <td class="py-2 pr-3">Método de secciones</td>
+                          <td class="py-2">Corte imaginario que revela fuerzas internas</td>
+                        </tr>
+                        <tr class="align-top">
+                          <td class="py-2 pr-3">Componentes internas</td>
+                          <td class="py-2">Normal (N), cortante (V), momento flector (M)</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
                 <div class="rounded-xl overflow-hidden border border-indigo-200/50 dark:border-indigo-700/50 shadow-lg bg-black/5 dark:bg-black/20 max-w-2xl my-6 mx-auto">
                   <video class="w-full" controls playsinline preload="metadata" title="3.1.1 Fuerzas internas y externas">
                     <source src="videos/3.1.1.mp4" type="video/mp4">
@@ -270,6 +682,129 @@
                 <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
                   El principio de transmisibilidad establece que el efecto de una fuerza sobre un cuerpo rígido no cambia si la fuerza se desplaza a lo largo de su línea de acción. Esto permite simplificar el diagrama de cuerpo libre y la aplicación de las condiciones de equilibrio sin alterar el resultado.
                 </p>
+
+                <div class="mt-2 mb-6 space-y-4">
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm text-justify">
+                    El principio de transmisibilidad es uno de los postulados fundamentales de la mecánica del cuerpo rígido. Establece las condiciones bajo las cuales una fuerza puede desplazarse a lo largo de su línea de acción sin alterar el efecto mecánico externo que produce sobre el cuerpo. Este principio simplifica notablemente el análisis de sistemas de fuerzas, ya que permite tratar una fuerza como un vector deslizante, en lugar de un vector fijo atado a un único punto de aplicación.
+                  </p>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm text-justify">
+                    <strong class="text-gray-800 dark:text-gray-200">Objetivo de aprendizaje:</strong> al finalizar el tema, el estudiante será capaz de enunciar el principio de transmisibilidad, justificar su validez para cuerpos rígidos, identificar sus limitaciones, y aplicarlo correctamente en la simplificación de diagramas de cuerpo libre y en el cálculo de resultantes.
+                  </p>
+
+                  <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2">2. Enunciado del principio</h4>
+                  <p class="text-gray-700 dark:text-gray-300 leading-relaxed text-sm italic border-l-4 border-primary-400 pl-4">
+                    «El estado de equilibrio (o de movimiento) de un cuerpo rígido no se altera si una fuerza que actúa sobre un punto dado del cuerpo se reemplaza por otra fuerza de la misma magnitud, dirección y sentido, pero que actúa en un punto diferente, siempre que ambas fuerzas tengan la misma línea de acción.»
+                  </p>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm text-justify">
+                    En otras palabras, lo único que determina el efecto externo de una fuerza sobre un cuerpo rígido son tres características: magnitud, dirección y sentido, junto con su línea de acción; el punto específico de aplicación sobre esa misma línea resulta irrelevante para el análisis del cuerpo como un todo.
+                  </p>
+
+                  <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2">3. Concepto de vector deslizante</h4>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm text-justify">
+                    Como consecuencia directa del principio, una fuerza aplicada sobre un cuerpo rígido se representa matemáticamente como un vector deslizante (en contraste con un vector fijo):
+                  </p>
+                  <ul class="list-disc list-inside space-y-1.5 text-sm text-gray-600 dark:text-gray-400">
+                    <li><strong class="text-gray-800 dark:text-gray-200">Vector fijo:</strong> su punto de aplicación es una característica esencial e inseparable del vector (por ejemplo, un vector de posición).</li>
+                    <li><strong class="text-gray-800 dark:text-gray-200">Vector deslizante:</strong> puede trasladarse libremente a lo largo de su línea de acción sin cambiar su efecto (el caso de una fuerza actuando sobre un cuerpo rígido).</li>
+                  </ul>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm text-justify">
+                    Esta propiedad es la que permite, por ejemplo, sumar gráficamente fuerzas mediante el polígono de fuerzas sin preocuparse por el punto exacto donde cada una está aplicada, siempre que se respete su línea de acción.
+                  </p>
+
+                  <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2">4. Justificación física del principio</h4>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm text-justify">
+                    El principio de transmisibilidad puede demostrarse a partir del concepto de que dos fuerzas iguales, opuestas y colineales, aplicadas sobre el mismo cuerpo, se cancelan mutuamente sin producir ningún efecto (ni traslación ni rotación).
+                  </p>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-1"><strong class="text-gray-800 dark:text-gray-200">Demostración conceptual:</strong></p>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm text-justify">
+                    Supóngase una fuerza F⃗ aplicada en el punto A de un cuerpo rígido, y se desea trasladarla a un punto B sobre la misma línea de acción.
+                  </p>
+                  <ol class="list-decimal list-inside space-y-1.5 text-sm text-gray-600 dark:text-gray-400">
+                    <li>En el punto B, se agregan dos fuerzas adicionales, iguales y opuestas entre sí, ambas de magnitud igual a F y colineales con la fuerza original: una en el mismo sentido que F⃗ y otra en sentido contrario. Como se cancelan entre sí, no alteran el estado del cuerpo.</li>
+                    <li>Ahora se observa que la fuerza original en A y la fuerza de sentido opuesto en B forman un par de fuerzas colineales, cuyo momento neto es cero (ya que actúan sobre la misma línea, con brazo de palanca nulo entre ellas) y cuya fuerza resultante también es cero. Este par puede eliminarse sin alterar el equilibrio del cuerpo.</li>
+                    <li>Lo que queda es únicamente la fuerza F⃗ aplicada ahora en el punto B, con la misma magnitud, dirección y sentido que la original.</li>
+                  </ol>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm text-justify">
+                    Este razonamiento confirma que trasladar una fuerza a lo largo de su línea de acción no modifica ni la fuerza resultante ni el momento resultante del sistema respecto a ningún punto.
+                  </p>
+
+                  <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2">5. Condición esencial: validez exclusiva para cuerpos rígidos</h4>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm text-justify">
+                    Es fundamental enfatizar en clase que el principio de transmisibilidad es válido únicamente cuando se analiza el efecto externo de la fuerza sobre el cuerpo rígido como un todo (su movimiento o equilibrio global). No es válido cuando el análisis involucra:
+                  </p>
+                  <ul class="list-disc list-inside space-y-1.5 text-sm text-gray-600 dark:text-gray-400">
+                    <li><strong class="text-gray-800 dark:text-gray-200">Los efectos internos del cuerpo (esfuerzos, deformaciones):</strong> el punto exacto de aplicación de una fuerza sí afecta la distribución de fuerzas internas, aunque no afecte el equilibrio global. Por ejemplo, tirar de una barra desde un extremo o empujarla desde el otro sobre la misma línea de acción produce el mismo efecto externo (equilibrio), pero genera estados internos diferentes (tensión pura frente a posible pandeo por compresión).</li>
+                    <li><strong class="text-gray-800 dark:text-gray-200">Cuerpos deformables:</strong> el principio se formula específicamente para el modelo de cuerpo rígido; en materiales deformables, el punto de aplicación sí influye en la respuesta física real del cuerpo.</li>
+                  </ul>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm text-justify">
+                    <strong class="text-gray-800 dark:text-gray-200">Ejemplo clásico para ilustrar esta limitación:</strong> empujar un vehículo desde atrás o tirar de él con una cuerda desde adelante, aplicando la misma fuerza sobre la misma línea de acción horizontal, produce el mismo efecto de movimiento (mismo equilibrio o aceleración del vehículo como cuerpo rígido). Sin embargo, los esfuerzos internos generados en la carrocería —compresión en un caso, tensión en el otro— son completamente distintos.
+                  </p>
+
+                  <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2">6. Aplicaciones del principio en el análisis estático</h4>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm text-justify">
+                    El principio de transmisibilidad se utiliza constantemente, muchas veces de forma implícita, en el análisis de sistemas de fuerzas:
+                  </p>
+                  <ul class="list-disc list-inside space-y-1.5 text-sm text-gray-600 dark:text-gray-400">
+                    <li><strong class="text-gray-800 dark:text-gray-200">Simplificación de diagramas de cuerpo libre:</strong> permite representar una fuerza en el punto más conveniente de su línea de acción, sin necesidad de mantenerla en su punto físico exacto de aplicación.</li>
+                    <li><strong class="text-gray-800 dark:text-gray-200">Cálculo de resultantes:</strong> al sumar fuerzas mediante el polígono de fuerzas o por componentes rectangulares, se asume que cada fuerza puede desplazarse libremente a lo largo de su línea de acción.</li>
+                    <li><strong class="text-gray-800 dark:text-gray-200">Elementos de dos fuerzas:</strong> el principio refuerza por qué, en un elemento sometido a dos fuerzas, estas deben actuar sobre la línea que une sus dos puntos de aplicación; cualquier fuerza sobre esa línea es equivalente, sin importar el punto exacto dentro del elemento.</li>
+                    <li><strong class="text-gray-800 dark:text-gray-200">Análisis gráfico de tres fuerzas (teorema de las tres fuerzas):</strong> al trasladar las fuerzas a lo largo de sus líneas de acción hasta un punto común, se simplifica la determinación de direcciones desconocidas.</li>
+                  </ul>
+
+                  <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2">7. Ejemplo ilustrativo</h4>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm text-justify">
+                    Una fuerza horizontal de F = 500 N se aplica sobre un bloque rígido en un punto A, ubicado en la parte superior del bloque. Se desea analizar el efecto de esta fuerza sobre el movimiento del bloque completo.
+                  </p>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm text-justify">
+                    <strong class="text-gray-800 dark:text-gray-200">Aplicación del principio:</strong> para efectos del cálculo de la resultante y de las ecuaciones de equilibrio o movimiento del bloque como cuerpo rígido, es indiferente si la fuerza de 500 N se aplica en la parte superior, en el centro, o en la parte inferior del bloque, siempre que se mantenga sobre la misma línea de acción horizontal. En los tres casos, la fuerza resultante y el momento resultante respecto a cualquier punto externo serán idénticos.
+                  </p>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm text-justify">
+                    <strong class="text-gray-800 dark:text-gray-200">Distinción importante:</strong> si el análisis buscara determinar si el bloque tiende a volcar (rotar) en lugar de deslizar, el punto de aplicación real —en relación con la altura del bloque y la posición de su base de apoyo— sí sería relevante, ya que en ese caso se estaría analizando el equilibrio del bloque considerando también las reacciones del suelo, cuya distribución depende de dónde efectivamente actúan las fuerzas.
+                  </p>
+
+                  <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2">8. Errores comunes a reforzar en clase</h4>
+                  <ul class="list-disc list-inside space-y-1.5 text-sm text-gray-600 dark:text-gray-400">
+                    <li>Aplicar el principio para trasladar una fuerza fuera de su línea de acción: el principio solo permite deslizar la fuerza sobre su línea de acción, no trasladarla paralelamente a otra línea distinta (eso alteraría el momento y requeriría agregar un par compensador).</li>
+                    <li>Usar el principio para analizar esfuerzos internos, olvidando que solo es válido para el efecto externo global sobre un cuerpo rígido.</li>
+                    <li>Confundir «vector deslizante» con «vector libre»: un vector deslizante solo puede moverse a lo largo de su propia línea de acción, no a cualquier punto del espacio manteniendo su dirección (eso sería un vector libre, concepto distinto).</li>
+                    <li>Olvidar que, si se traslada una fuerza fuera de su línea de acción original, debe añadirse un par de fuerzas (momento compensador) igual al momento que dicha fuerza generaba respecto al nuevo punto, para que el sistema siga siendo equivalente.</li>
+                  </ul>
+
+                  <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2">9. Resumen de conceptos clave</h4>
+                  <div class="overflow-x-auto">
+                    <table class="w-full text-sm text-left border-collapse">
+                      <thead>
+                        <tr class="border-b border-gray-200 dark:border-gray-600">
+                          <th class="py-2 pr-3 font-semibold text-gray-800 dark:text-gray-200">Concepto</th>
+                          <th class="py-2 font-semibold text-gray-800 dark:text-gray-200">Descripción</th>
+                        </tr>
+                      </thead>
+                      <tbody class="text-gray-600 dark:text-gray-400">
+                        <tr class="border-b border-gray-100 dark:border-gray-700/60 align-top">
+                          <td class="py-2 pr-3">Principio de transmisibilidad</td>
+                          <td class="py-2">Una fuerza puede deslizarse a lo largo de su línea de acción sin alterar su efecto externo sobre un cuerpo rígido</td>
+                        </tr>
+                        <tr class="border-b border-gray-100 dark:border-gray-700/60 align-top">
+                          <td class="py-2 pr-3">Vector deslizante</td>
+                          <td class="py-2">Representación de una fuerza cuyo punto de aplicación específico, dentro de su línea de acción, es irrelevante</td>
+                        </tr>
+                        <tr class="border-b border-gray-100 dark:border-gray-700/60 align-top">
+                          <td class="py-2 pr-3">Condición de validez</td>
+                          <td class="py-2">Exclusivamente para el análisis del efecto externo (equilibrio o movimiento) de un cuerpo rígido</td>
+                        </tr>
+                        <tr class="border-b border-gray-100 dark:border-gray-700/60 align-top">
+                          <td class="py-2 pr-3">Limitación clave</td>
+                          <td class="py-2">No aplica al análisis de esfuerzos o deformaciones internas</td>
+                        </tr>
+                        <tr class="align-top">
+                          <td class="py-2 pr-3">Aplicación práctica</td>
+                          <td class="py-2">Simplificación de DCL, cálculo de resultantes, elementos de dos y tres fuerzas</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
                 <div class="mt-4 flex justify-center">
                   <img src="images/P3.1.2.png" alt="Figura 3.1.2 - Principio de transmisibilidad" class="max-w-full rounded-xl border border-indigo-200/50 dark:border-indigo-700/50 shadow-md object-cover">
                 </div>
