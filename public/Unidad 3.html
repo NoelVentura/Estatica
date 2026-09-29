@@ -975,10 +975,9 @@
                     De donde <var>T<sub>AC</sub></var> = 157.0 N y <var>T<sub>AB</sub></var> = 135.9 N. A partir de <var>T<sub>AB</sub></var> = <var>k s<sub>AB</sub></var>, se determina la deformación del resorte y, con la geometría del problema, la longitud requerida del cable. Este ejemplo muestra cómo la relación <var>F</var> = <var>ks</var> se integra como ecuación auxiliar cuando el sistema lo requiere.
                   </p>
 
-                  <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2">Ejercicios</h4>
-                  <ol class="list-decimal list-inside space-y-1.5 text-sm text-gray-600 dark:text-gray-400">
-                    <li>La viga tiene un peso de 700 lb. Determine el cable ABC más corto que puede usarse para levantarla, si la fuerza máxima que puede soportar el cable es de 1500 lb.</li>
-                  </ol>
+                  <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                    <strong class="text-gray-800 dark:text-gray-200">Ejercicio No 1.</strong> La viga tiene un peso de 700 lb. Determine el cable ABC más corto que puede usarse para levantarla, si la fuerza máxima que puede soportar el cable es de 1500 lb.
+                  </p>
                   <div class="mt-4 flex justify-center">
                     <img src="images/3.2.1.jpg" alt="Figura 3.2.1 - Viga de 10 pies suspendida por el cable ABC" class="max-w-[280px] w-full rounded-xl border border-indigo-200/50 dark:border-indigo-700/50 shadow-md object-cover">
                   </div>
@@ -987,6 +986,12 @@
                   </p>
                   <div class="mt-4 flex justify-center">
                     <img src="images/3.2.2.jpg" alt="Figura 3.2.2 - Cilindros A y C de 40 kg unidos por barras y un cable a 30 grados" class="max-w-[280px] w-full rounded-xl border border-indigo-200/50 dark:border-indigo-700/50 shadow-md object-cover">
+                  </div>
+                  <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed mt-4">
+                    <strong class="text-gray-800 dark:text-gray-200">Ejercicio No 3.</strong> Si el bloque de 5 kg se suspende de la polea B y la flecha de la cuerda es <var>d</var> = 0.15 m, determine la fuerza en la cuerda ABC. No tome en cuenta el tamaño de la polea.
+                  </p>
+                  <div class="mt-4 flex justify-center">
+                    <img src="images/eje 3.2.3.jpg" alt="Figura eje 3.2.3 - Bloque de 5 kg suspendido de la polea B y cuerda ABC" class="max-w-[280px] w-full rounded-xl border border-indigo-200/50 dark:border-indigo-700/50 shadow-md object-cover">
                   </div>
                 </div>
 
@@ -1011,6 +1016,221 @@
                 <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
                   Según el tipo de sistema de fuerzas (concurrentes, paralelas, general coplanares, etc.), algunas ecuaciones pueden satisfacerse automáticamente o reducir el número de incógnitas que se pueden determinar. Es importante identificar el sistema para plantear solo las ecuaciones necesarias.
                 </p>
+
+                <div class="mt-2 mb-6 space-y-4">
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm text-justify">
+                    A lo largo del curso hemos analizado distintos tipos de sistemas de fuerzas: partículas sometidas a fuerzas concurrentes, cuerpos rígidos con fuerzas no concurrentes, sistemas paralelos y sistemas espaciales. Cada uno de estos casos exige un conjunto específico de ecuaciones de equilibrio, determinado por el número de formas independientes en que el sistema podría moverse si no estuviera en equilibrio.
+                  </p>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm text-justify">
+                    <strong class="text-gray-800 dark:text-gray-200">Objetivo de aprendizaje:</strong> al finalizar el tema, el estudiante será capaz de identificar el tipo de sistema de fuerzas presente en un problema, seleccionar el conjunto correcto de ecuaciones de equilibrio que le corresponde, y justificar por qué ese conjunto —ni más ni menos— es el necesario y suficiente para resolverlo.
+                  </p>
+
+                  <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2">2. El principio unificador: ΣF⃗ = 0 y ΣM⃗ = 0</h4>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm text-justify">
+                    Todo problema de equilibrio, sin importar su complejidad geométrica, parte de las mismas dos condiciones vectoriales generales:
+                  </p>
+                  <p class="text-gray-700 dark:text-gray-300 leading-relaxed text-sm font-medium border-l-4 border-primary-400 pl-4">
+                    Σ<var>F⃗</var> = 0 &nbsp;&nbsp; Σ<var>M⃗</var> = 0
+                  </p>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-1 text-justify">
+                    Lo que distingue a un sistema de otro no es el principio físico (que es siempre el mismo), sino:
+                  </p>
+                  <ul class="list-disc list-inside space-y-1.5 text-sm text-gray-600 dark:text-gray-400">
+                    <li>Cuántas de esas ecuaciones vectoriales son necesarias (a veces basta con Σ<var>F</var> = 0; otras veces se requiere también Σ<var>M</var> = 0).</li>
+                    <li>En cuántas ecuaciones escalares se descompone cada una (según el problema sea plano o espacial).</li>
+                  </ul>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm text-justify">
+                    Este tema organiza, de manera comparativa, los distintos casos que ya hemos estudiado por separado.
+                  </p>
+
+                  <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2">3. Caso 1: Partícula con sistema de fuerzas concurrentes (coplanar)</h4>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-1"><strong class="text-gray-800 dark:text-gray-200">Contexto:</strong> todas las fuerzas concurren en un punto (nudo, anillo, gancho) y están contenidas en un plano.</p>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm text-justify">
+                    <strong class="text-gray-800 dark:text-gray-200">Razón física:</strong> al concurrir todas en un punto, ninguna fuerza genera momento respecto a ese punto (brazo de palanca nulo). La ecuación de momentos se satisface automáticamente y no aporta información nueva.
+                  </p>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-1"><strong class="text-gray-800 dark:text-gray-200">Ecuaciones de equilibrio:</strong></p>
+                  <p class="text-gray-700 dark:text-gray-300 leading-relaxed text-sm font-medium border-l-4 border-primary-400 pl-4">
+                    Σ<var>F<sub>x</sub></var> = 0 &nbsp;&nbsp; Σ<var>F<sub>y</sub></var> = 0
+                  </p>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm text-justify">
+                    <strong class="text-gray-800 dark:text-gray-200">Incógnitas resolubles:</strong> máximo 2.
+                  </p>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm text-justify">
+                    <strong class="text-gray-800 dark:text-gray-200">Ejemplo típico:</strong> los problemas F3-1 a F3-6 que hemos resuelto (cajas suspendidas de cables, bloques sobre planos inclinados, sistemas con poleas y resortes) son todos de este tipo. En el problema F3-5 (cilindros A y C conectados mediante poleas), aplicamos exactamente Σ<var>F<sub>x</sub></var> = 0 y Σ<var>F<sub>y</sub></var> = 0 en el nudo <var>E</var>.
+                  </p>
+
+                  <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2">4. Caso 2: Partícula con sistema de fuerzas concurrentes (espacial)</h4>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-1"><strong class="text-gray-800 dark:text-gray-200">Contexto:</strong> igual que el caso anterior, pero las fuerzas se distribuyen en el espacio tridimensional.</p>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm text-justify">
+                    <strong class="text-gray-800 dark:text-gray-200">Razón física:</strong> la misma que en el caso 1 —todas las fuerzas concurren en un punto—, pero ahora existe una tercera dirección independiente.
+                  </p>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-1"><strong class="text-gray-800 dark:text-gray-200">Ecuaciones de equilibrio:</strong></p>
+                  <p class="text-gray-700 dark:text-gray-300 leading-relaxed text-sm font-medium border-l-4 border-primary-400 pl-4">
+                    Σ<var>F<sub>x</sub></var> = 0 &nbsp;&nbsp; Σ<var>F<sub>y</sub></var> = 0 &nbsp;&nbsp; Σ<var>F<sub>z</sub></var> = 0
+                  </p>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm text-justify">
+                    <strong class="text-gray-800 dark:text-gray-200">Incógnitas resolubles:</strong> máximo 3.<br>
+                    <strong class="text-gray-800 dark:text-gray-200">Ejemplo típico:</strong> los problemas F3-7 a F3-11 (tensión en cables AB, AC, AD que sostienen una caja en el espacio) pertenecen a esta categoría.
+                  </p>
+
+                  <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2">5. Caso 3: Cuerpo rígido con fuerzas coplanares no concurrentes</h4>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-1"><strong class="text-gray-800 dark:text-gray-200">Contexto:</strong> las fuerzas actúan sobre un cuerpo con dimensiones relevantes (una viga, una placa, una estructura), y sus líneas de acción no se cruzan en un único punto.</p>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm text-justify">
+                    <strong class="text-gray-800 dark:text-gray-200">Razón física:</strong> al no ser concurrentes, las fuerzas sí pueden generar momento neto sobre el cuerpo. Por lo tanto, además del equilibrio de traslación, se requiere el equilibrio de rotación.
+                  </p>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-1"><strong class="text-gray-800 dark:text-gray-200">Ecuaciones de equilibrio:</strong></p>
+                  <p class="text-gray-700 dark:text-gray-300 leading-relaxed text-sm font-medium border-l-4 border-primary-400 pl-4">
+                    Σ<var>F<sub>x</sub></var> = 0 &nbsp;&nbsp; Σ<var>F<sub>y</sub></var> = 0 &nbsp;&nbsp; Σ<var>M<sub>O</sub></var> = 0
+                  </p>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm text-justify">
+                    <strong class="text-gray-800 dark:text-gray-200">Incógnitas resolubles:</strong> máximo 3.
+                  </p>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-1"><strong class="text-gray-800 dark:text-gray-200">Formas alternativas</strong> (útiles según la disposición geométrica de los apoyos):</p>
+                  <ul class="list-disc list-inside space-y-1.5 text-sm text-gray-600 dark:text-gray-400">
+                    <li>Σ<var>F<sub>x</sub></var> = 0, Σ<var>M<sub>A</sub></var> = 0, Σ<var>M<sub>B</sub></var> = 0 (si la línea AB no es perpendicular al eje <var>x</var>)</li>
+                    <li>Σ<var>M<sub>A</sub></var> = 0, Σ<var>M<sub>B</sub></var> = 0, Σ<var>M<sub>C</sub></var> = 0 (si A, B y C no son colineales)</li>
+                  </ul>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm text-justify">
+                    <strong class="text-gray-800 dark:text-gray-200">Ejemplo típico:</strong> una viga apoyada en un pasador y un rodillo, sometida a cargas puntuales a lo largo de su longitud.
+                  </p>
+
+                  <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2">6. Caso 4: Cuerpo rígido con fuerzas espaciales (3D)</h4>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-1"><strong class="text-gray-800 dark:text-gray-200">Contexto:</strong> un cuerpo rígido sometido a fuerzas y posiblemente momentos, distribuidos en el espacio.</p>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm text-justify">
+                    <strong class="text-gray-800 dark:text-gray-200">Razón física:</strong> existen tres posibles traslaciones (<var>x</var>, <var>y</var>, <var>z</var>) y tres posibles rotaciones (respecto a cada eje), cada una debe estar restringida de forma independiente.
+                  </p>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-1"><strong class="text-gray-800 dark:text-gray-200">Ecuaciones de equilibrio:</strong></p>
+                  <p class="text-gray-700 dark:text-gray-300 leading-relaxed text-sm font-medium border-l-4 border-primary-400 pl-4">
+                    Σ<var>F<sub>x</sub></var> = 0 &nbsp;&nbsp; Σ<var>F<sub>y</sub></var> = 0 &nbsp;&nbsp; Σ<var>F<sub>z</sub></var> = 0<br>
+                    Σ<var>M<sub>x</sub></var> = 0 &nbsp;&nbsp; Σ<var>M<sub>y</sub></var> = 0 &nbsp;&nbsp; Σ<var>M<sub>z</sub></var> = 0
+                  </p>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm text-justify">
+                    <strong class="text-gray-800 dark:text-gray-200">Incógnitas resolubles:</strong> máximo 6.<br>
+                    <strong class="text-gray-800 dark:text-gray-200">Ejemplo típico:</strong> una placa horizontal sostenida por tres cables verticales en sus esquinas, con reacciones y momentos en las tres direcciones.
+                  </p>
+
+                  <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2">7. Caso 5: Sistema de fuerzas paralelas</h4>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-1"><strong class="text-gray-800 dark:text-gray-200">Contexto:</strong> todas las fuerzas tienen la misma dirección (por ejemplo, cargas verticales sobre una viga).</p>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm text-justify">
+                    <strong class="text-gray-800 dark:text-gray-200">Razón física:</strong> al ser paralelas, la componente perpendicular a su dirección común es automáticamente nula; solo existe una dirección de traslación relevante, más la posibilidad de rotación.
+                  </p>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-1"><strong class="text-gray-800 dark:text-gray-200">Ecuaciones de equilibrio (en el plano):</strong></p>
+                  <p class="text-gray-700 dark:text-gray-300 leading-relaxed text-sm font-medium border-l-4 border-primary-400 pl-4">
+                    Σ<var>F<sub>y</sub></var> = 0 &nbsp;&nbsp; Σ<var>M<sub>O</sub></var> = 0
+                  </p>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm text-justify">
+                    (la ecuación Σ<var>F<sub>x</sub></var> = 0 se vuelve trivial, ya que no hay componentes horizontales)<br>
+                    <strong class="text-gray-800 dark:text-gray-200">Incógnitas resolubles:</strong> máximo 2.
+                  </p>
+
+                  <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2">8. Cuadro comparativo general</h4>
+                  <div class="overflow-x-auto">
+                    <table class="w-full text-sm text-left border-collapse">
+                      <thead>
+                        <tr class="border-b border-gray-200 dark:border-gray-600">
+                          <th class="py-2 pr-3 font-semibold text-gray-800 dark:text-gray-200">Sistema de fuerzas</th>
+                          <th class="py-2 pr-3 font-semibold text-gray-800 dark:text-gray-200">Ecuaciones de fuerza</th>
+                          <th class="py-2 pr-3 font-semibold text-gray-800 dark:text-gray-200">Ecuaciones de momento</th>
+                          <th class="py-2 pr-3 font-semibold text-gray-800 dark:text-gray-200">Total</th>
+                          <th class="py-2 font-semibold text-gray-800 dark:text-gray-200">Máx. incógnitas</th>
+                        </tr>
+                      </thead>
+                      <tbody class="text-gray-600 dark:text-gray-400">
+                        <tr class="border-b border-gray-100 dark:border-gray-700/60 align-top">
+                          <td class="py-2 pr-3">Partícula, concurrente, 2D</td>
+                          <td class="py-2 pr-3">Σ<var>F<sub>x</sub></var> = 0, Σ<var>F<sub>y</sub></var> = 0</td>
+                          <td class="py-2 pr-3">No requerida</td>
+                          <td class="py-2 pr-3">2</td>
+                          <td class="py-2">2</td>
+                        </tr>
+                        <tr class="border-b border-gray-100 dark:border-gray-700/60 align-top">
+                          <td class="py-2 pr-3">Partícula, concurrente, 3D</td>
+                          <td class="py-2 pr-3">Σ<var>F<sub>x</sub></var> = 0, Σ<var>F<sub>y</sub></var> = 0, Σ<var>F<sub>z</sub></var> = 0</td>
+                          <td class="py-2 pr-3">No requerida</td>
+                          <td class="py-2 pr-3">3</td>
+                          <td class="py-2">3</td>
+                        </tr>
+                        <tr class="border-b border-gray-100 dark:border-gray-700/60 align-top">
+                          <td class="py-2 pr-3">Cuerpo rígido, coplanar</td>
+                          <td class="py-2 pr-3">Σ<var>F<sub>x</sub></var> = 0, Σ<var>F<sub>y</sub></var> = 0</td>
+                          <td class="py-2 pr-3">Σ<var>M<sub>O</sub></var> = 0</td>
+                          <td class="py-2 pr-3">3</td>
+                          <td class="py-2">3</td>
+                        </tr>
+                        <tr class="border-b border-gray-100 dark:border-gray-700/60 align-top">
+                          <td class="py-2 pr-3">Cuerpo rígido, espacial</td>
+                          <td class="py-2 pr-3">Σ<var>F<sub>x</sub></var> = 0, Σ<var>F<sub>y</sub></var> = 0, Σ<var>F<sub>z</sub></var> = 0</td>
+                          <td class="py-2 pr-3">Σ<var>M<sub>x</sub></var> = 0, Σ<var>M<sub>y</sub></var> = 0, Σ<var>M<sub>z</sub></var> = 0</td>
+                          <td class="py-2 pr-3">6</td>
+                          <td class="py-2">6</td>
+                        </tr>
+                        <tr class="align-top">
+                          <td class="py-2 pr-3">Fuerzas paralelas (plano)</td>
+                          <td class="py-2 pr-3">Σ<var>F<sub>y</sub></var> = 0</td>
+                          <td class="py-2 pr-3">Σ<var>M<sub>O</sub></var> = 0</td>
+                          <td class="py-2 pr-3">2</td>
+                          <td class="py-2">2</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm text-justify">
+                    <strong class="text-gray-800 dark:text-gray-200">Idea central para retener:</strong> el número de ecuaciones disponibles siempre coincide con el número de grados de libertad del sistema —es decir, con el número de formas independientes en que el cuerpo podría moverse si no estuviera en equilibrio—.
+                  </p>
+
+                  <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2">9. Criterio práctico para identificar qué ecuaciones usar</h4>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm text-justify">
+                    Antes de plantear cualquier ecuación, conviene que el estudiante se haga tres preguntas, en este orden:
+                  </p>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-1"><strong class="text-gray-800 dark:text-gray-200">Pregunta 1: ¿Es una partícula o un cuerpo rígido?</strong></p>
+                  <ul class="list-disc list-inside space-y-1.5 text-sm text-gray-600 dark:text-gray-400 mb-2">
+                    <li>Si todas las fuerzas concurren en un punto → partícula → no se necesita Σ<var>M</var> = 0.</li>
+                    <li>Si las fuerzas actúan en distintos puntos de un cuerpo con dimensiones → cuerpo rígido → sí se necesita Σ<var>M</var> = 0.</li>
+                  </ul>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-1"><strong class="text-gray-800 dark:text-gray-200">Pregunta 2: ¿El problema es plano o espacial?</strong></p>
+                  <ul class="list-disc list-inside space-y-1.5 text-sm text-gray-600 dark:text-gray-400 mb-2">
+                    <li>Plano (2D) → como máximo 3 ecuaciones escalares (2 de fuerza + 1 de momento, o 2 de fuerza únicamente si es partícula).</li>
+                    <li>Espacial (3D) → como máximo 6 ecuaciones escalares (3 de fuerza + 3 de momento, o 3 de fuerza únicamente si es partícula).</li>
+                  </ul>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-1"><strong class="text-gray-800 dark:text-gray-200">Pregunta 3: ¿Cuántas incógnitas tiene el diagrama de cuerpo libre?</strong></p>
+                  <ul class="list-disc list-inside space-y-1.5 text-sm text-gray-600 dark:text-gray-400">
+                    <li>Si el número de incógnitas coincide con el número de ecuaciones disponibles → el problema es estáticamente determinado y puede resolverse completamente con estática.</li>
+                    <li>Si las incógnitas exceden a las ecuaciones → el sistema es hiperestático y la estática por sí sola es insuficiente.</li>
+                  </ul>
+
+                  <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2">10. Ejemplo comparativo (mismo problema, dos enfoques)</h4>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm text-justify">
+                    Consideremos nuevamente el problema F3-2 (viga de 700 lb sostenida por un cable ABC):
+                  </p>
+                  <ul class="list-disc list-inside space-y-1.5 text-sm text-gray-600 dark:text-gray-400">
+                    <li>Si analizamos el nudo B (donde concurren los dos tramos del cable y el peso transmitido por el gancho), estamos ante una partícula con fuerzas concurrentes: solo se necesitan Σ<var>F<sub>x</sub></var> = 0 y Σ<var>F<sub>y</sub></var> = 0. Así lo resolvimos.</li>
+                    <li>Si en cambio quisiéramos analizar la viga completa como cuerpo rígido (por ejemplo, para verificar que no vuelca), tendríamos que considerar las reacciones distribuidas a lo largo de su longitud, lo cual sí requeriría Σ<var>M</var> = 0 además de las ecuaciones de fuerza.</li>
+                  </ul>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm text-justify">
+                    Este ejemplo ilustra un punto pedagógico esencial: el mismo problema físico puede analizarse con distintos conjuntos de ecuaciones, dependiendo de qué elemento se decida aislar como sistema de estudio.
+                  </p>
+
+                  <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2">11. Errores comunes a reforzar en clase</h4>
+                  <ul class="list-disc list-inside space-y-1.5 text-sm text-gray-600 dark:text-gray-400">
+                    <li>Aplicar Σ<var>M</var> = 0 innecesariamente en un problema de partícula, cuando las fuerzas son concurrentes.</li>
+                    <li>Olvidar Σ<var>M</var> = 0 al analizar un cuerpo rígido con fuerzas no concurrentes, resolviendo con menos ecuaciones de las necesarias.</li>
+                    <li>Confundir el número de incógnitas disponibles con el número de ecuaciones necesarias, sin verificar primero si el sistema es determinado.</li>
+                    <li>No reconocer cuándo un sistema de fuerzas paralelas simplifica el problema, aplicando innecesariamente las tres ecuaciones completas del caso general.</li>
+                    <li>Mezclar el análisis de una partícula con el de un cuerpo rígido dentro del mismo diagrama de cuerpo libre, sin definir claramente qué elemento se está aislando.</li>
+                  </ul>
+
+                  <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2">12. Actividad sugerida para el aula</h4>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm text-justify">
+                    <strong class="text-gray-800 dark:text-gray-200">Ejercicio de clasificación:</strong> para cada uno de los siguientes casos, el estudiante debe identificar el tipo de sistema de fuerzas y escribir el conjunto completo de ecuaciones de equilibrio que le corresponde, sin resolver numéricamente:
+                  </p>
+                  <ol class="list-[lower-alpha] list-inside space-y-1.5 text-sm text-gray-600 dark:text-gray-400">
+                    <li>Un anillo sostenido por tres cables en el espacio.</li>
+                    <li>Una viga apoyada en un pasador y un rodillo, con dos cargas puntuales.</li>
+                    <li>Un candelabro sostenido por tres cables verticales anclados en un techo horizontal.</li>
+                    <li>Una placa rectangular sometida a tres fuerzas paralelas verticales en distintos puntos.</li>
+                  </ol>
+                </div>
+
                 <div class="rounded-xl overflow-hidden border border-indigo-200/50 dark:border-indigo-700/50 shadow-lg bg-black/5 dark:bg-black/20 max-w-2xl my-6 mx-auto">
                   <video class="w-full" controls playsinline preload="metadata" title="3.1 Ecuaciones de equilibrio para diferentes sistemas de fuerzas">
                     <source src="videos/3.1.mp4" type="video/mp4">
@@ -1022,17 +1242,405 @@
                 <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
                   El momento de una fuerza respecto a un punto O es una magnitud vectorial que mide la tendencia de la fuerza a producir rotación alrededor de O. Su módulo es M = F·d, donde d es la distancia perpendicular desde O hasta la línea de acción de la fuerza. La dirección del momento es perpendicular al plano que contiene a O y a la fuerza (regla de la mano derecha).
                 </p>
+
+                <div class="mt-2 mb-6 space-y-4">
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm text-justify">
+                    Hasta este punto del curso, el análisis de equilibrio se ha centrado en partículas, donde bastaba con estudiar el efecto de traslación de las fuerzas. Sin embargo, cuando una fuerza actúa sobre un cuerpo rígido, además de tender a moverlo (trasladarlo), puede tender a hacerlo girar. Esta tendencia a la rotación es lo que se conoce como el momento de una fuerza, concepto que constituye la base de todo el análisis de cuerpos rígidos que estudiaremos en adelante.
+                  </p>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm text-justify">
+                    <strong class="text-gray-800 dark:text-gray-200">Objetivo de aprendizaje:</strong> al finalizar el tema, el estudiante será capaz de definir el momento de una fuerza, calcular su magnitud y determinar su dirección mediante la formulación escalar, aplicar la convención de signos adecuada, y calcular el momento resultante de un sistema de varias fuerzas respecto a un punto.
+                  </p>
+
+                  <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2">2. Definición conceptual</h4>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm text-justify">
+                    El momento de una fuerza respecto a un punto (o eje) es una medida de la tendencia de dicha fuerza a producir rotación del cuerpo alrededor de ese punto (o eje).
+                  </p>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm text-justify">
+                    <strong class="text-gray-800 dark:text-gray-200">Ejemplo cotidiano:</strong> al abrir una puerta, empujarla cerca de las bisagras requiere mucha más fuerza que empujarla en el borde opuesto (la manija), aun cuando el efecto deseado —girar la puerta— sea el mismo. Esto ocurre porque el momento depende no solo de la magnitud de la fuerza, sino también de la distancia a la que se aplica respecto al eje de giro.
+                  </p>
+
+                  <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2">3. Formulación escalar del momento</h4>
+                  <h5 class="text-sm font-semibold text-gray-800 dark:text-gray-200 mb-2">3.1 Magnitud</h5>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm text-justify">
+                    Considérese una fuerza <var>F⃗</var> y un punto <var>O</var>, ambos contenidos en un mismo plano. La magnitud del momento de <var>F</var> respecto a <var>O</var> se define como:
+                  </p>
+                  <p class="text-gray-700 dark:text-gray-300 leading-relaxed text-sm font-medium border-l-4 border-primary-400 pl-4">
+                    <var>M<sub>O</sub></var> = <var>F</var> · <var>d</var> &nbsp; (4-1)
+                  </p>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-1">donde:</p>
+                  <ul class="list-disc list-inside space-y-1.5 text-sm text-gray-600 dark:text-gray-400">
+                    <li><var>F</var> es la magnitud de la fuerza</li>
+                    <li><var>d</var> es el brazo de momento: la distancia perpendicular desde el punto <var>O</var> hasta la línea de acción de la fuerza (no la distancia hasta el punto de aplicación de la fuerza, sino hasta su línea de acción, prolongada si es necesario)</li>
+                  </ul>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm text-justify">
+                    <strong class="text-gray-800 dark:text-gray-200">Unidades:</strong> en el Sistema Internacional, el momento se expresa en N·m; en el sistema inglés, en lb·pie.
+                  </p>
+
+                  <h5 class="text-sm font-semibold text-gray-800 dark:text-gray-200 mb-2">3.2 Dirección: la regla de la mano derecha</h5>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm text-justify">
+                    La dirección del momento queda definida por su eje de momento, perpendicular al plano que contiene a la fuerza, y su sentido se determina mediante la regla de la mano derecha: al curvar los dedos de la mano derecha en el sentido de la tendencia de rotación, el pulgar señala la dirección del vector momento.
+                  </p>
+                  <ul class="list-disc list-inside space-y-1.5 text-sm text-gray-600 dark:text-gray-400">
+                    <li>En problemas tridimensionales, el momento se representa con una flecha recta acompañada de una flecha curva alrededor de ella.</li>
+                    <li>En problemas bidimensionales (plano <var>x</var>-<var>y</var>), basta con representar el momento mediante una flecha curva, ya que su dirección siempre es perpendicular al plano (eje <var>z</var>).</li>
+                  </ul>
+
+                  <h5 class="text-sm font-semibold text-gray-800 dark:text-gray-200 mb-2">3.3 Convención de signos</h5>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-1">Por convención, en problemas planos se establece:</p>
+                  <ul class="list-disc list-inside space-y-1.5 text-sm text-gray-600 dark:text-gray-400">
+                    <li><strong class="text-gray-800 dark:text-gray-200">Momento positivo (+):</strong> sentido antihorario (dirigido hacia afuera de la página, a lo largo del eje <var>z</var> positivo)</li>
+                    <li><strong class="text-gray-800 dark:text-gray-200">Momento negativo (−):</strong> sentido horario (dirigido hacia adentro de la página)</li>
+                  </ul>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm text-justify">
+                    Esta convención permite tratar el momento como una cantidad algebraica (con signo), en lugar de manejarlo como un vector completo, lo cual simplifica notablemente los cálculos en problemas planos.
+                  </p>
+
+                  <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2">4. Momento resultante de un sistema de fuerzas</h4>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm text-justify">
+                    Cuando varias fuerzas actúan sobre un cuerpo, el momento resultante respecto a un punto <var>O</var> es simplemente la suma algebraica de los momentos individuales de cada fuerza respecto a ese mismo punto:
+                  </p>
+                  <p class="text-gray-700 dark:text-gray-300 leading-relaxed text-sm font-medium border-l-4 border-primary-400 pl-4">
+                    Σ<var>M<sub>O</sub></var> = Σ <var>F</var> · <var>d</var>
+                  </p>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm text-justify">
+                    Cada término se suma con signo positivo o negativo, según el sentido de rotación que dicha fuerza tienda a producir (antihorario o horario, respectivamente).
+                  </p>
+
+                  <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2">5. Procedimiento para el análisis</h4>
+                  <ol class="list-decimal list-inside space-y-1.5 text-sm text-gray-600 dark:text-gray-400">
+                    <li><strong class="text-gray-800 dark:text-gray-200">Paso 1.</strong> Identificar la línea de acción de cada fuerza, prolongándola con una línea discontinua si es necesario.</li>
+                    <li><strong class="text-gray-800 dark:text-gray-200">Paso 2.</strong> Determinar el brazo de momento <var>d</var> como la distancia perpendicular desde el punto de referencia hasta esa línea de acción (no confundir con la distancia directa al punto de aplicación de la fuerza).</li>
+                    <li><strong class="text-gray-800 dark:text-gray-200">Paso 3.</strong> Calcular la magnitud del momento de cada fuerza: <var>M</var> = <var>F</var>·<var>d</var>.</li>
+                    <li><strong class="text-gray-800 dark:text-gray-200">Paso 4.</strong> Asignar el signo correspondiente según el sentido de rotación (antihorario positivo, horario negativo, o el criterio inverso, siempre que se aplique de manera consistente).</li>
+                    <li><strong class="text-gray-800 dark:text-gray-200">Paso 5.</strong> Sumar algebraicamente todos los momentos para obtener el momento resultante.</li>
+                  </ol>
+
+                  <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2">6. Ejemplo resuelto 1 (Ejemplo 4.1 del libro, pág. 119)</h4>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm text-justify">
+                    Determinar el momento de distintas fuerzas respecto a un punto <var>O</var>, variando la geometría en cada caso:
+                  </p>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-1"><strong class="text-gray-800 dark:text-gray-200">Caso a:</strong> fuerza de 100 N con brazo de momento directo de 2 m (perpendicular):</p>
+                  <p class="text-gray-700 dark:text-gray-300 leading-relaxed text-sm font-medium border-l-4 border-primary-400 pl-4">
+                    <var>M<sub>O</sub></var> = (100 N)(2 m) = 200 N·m &nbsp; (antihorario)
+                  </p>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-1"><strong class="text-gray-800 dark:text-gray-200">Caso c:</strong> fuerza de 40 lb, donde el brazo de momento debe construirse geométricamente a partir de la distancia dada y un ángulo de 30°:</p>
+                  <p class="text-gray-700 dark:text-gray-300 leading-relaxed text-sm font-medium border-l-4 border-primary-400 pl-4">
+                    <var>M<sub>O</sub></var> = (40 lb)(4 pie + 2 cos 30° pie) = 229 lb·pie
+                  </p>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-1"><strong class="text-gray-800 dark:text-gray-200">Caso e:</strong> fuerza de 7 kN, donde el brazo de momento resulta de la diferencia entre dos distancias:</p>
+                  <p class="text-gray-700 dark:text-gray-300 leading-relaxed text-sm font-medium border-l-4 border-primary-400 pl-4">
+                    <var>M<sub>O</sub></var> = (7 kN)(4 m − 1 m) = 21.0 kN·m
+                  </p>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm text-justify">
+                    <strong class="text-gray-800 dark:text-gray-200">Observación pedagógica clave:</strong> estos casos ilustran que el brazo de momento no siempre es un dato directo del problema; con frecuencia debe construirse mediante relaciones trigonométricas (senos, cosenos) a partir de la geometría dada.
+                  </p>
+
+                  <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2">7. Ejemplo resuelto 2 — Momento resultante de varias fuerzas (Ejemplo 4.2 del libro, pág. 120)</h4>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm text-justify">
+                    Sobre una barra actúan cuatro fuerzas: 50 N, 60 N, 20 N y 40 N, cada una a distintas distancias y ángulos respecto al punto <var>O</var>. Suponiendo momentos positivos en sentido antihorario:
+                  </p>
+                  <p class="text-gray-700 dark:text-gray-300 leading-relaxed text-sm font-medium border-l-4 border-primary-400 pl-4">
+                    Σ<var>M<sub>O</sub></var> = −50(2) + 60(0) + 20(3 sen 30°) − 40(4 + 3 cos 30°)<br>
+                    Σ<var>M<sub>O</sub></var> = −334 N·m = 334 N·m (sentido horario)
+                  </p>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-1"><strong class="text-gray-800 dark:text-gray-200">Puntos destacables de este ejemplo:</strong></p>
+                  <ul class="list-disc list-inside space-y-1.5 text-sm text-gray-600 dark:text-gray-400">
+                    <li>La fuerza de 60 N contribuye con momento cero, ya que su línea de acción pasa exactamente por el punto <var>O</var> (brazo de momento nulo).</li>
+                    <li>Para las fuerzas de 20 N y 40 N, el brazo de momento se obtiene proyectando la distancia dada mediante sen 30° y cos 30°, respectivamente, ya que dichas fuerzas no son perpendiculares a la línea de referencia.</li>
+                    <li>El resultado final negativo (bajo la convención adoptada) indica que el momento resultante actúa en sentido horario.</li>
+                  </ul>
+
+                  <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2">8. Aplicación conceptual: el momento no siempre produce rotación real</h4>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm text-justify">
+                    Es importante destacar —como lo hace el propio libro— que el momento de una fuerza respecto a un punto representa su tendencia a producir rotación, no necesariamente una rotación efectiva. Por ejemplo, una viga fija en dos apoyos puede estar sometida a una fuerza que genera un momento considerable respecto a uno de sus soportes, y sin embargo la viga no gira, porque el otro apoyo lo impide. Si se retirara ese segundo apoyo, entonces sí ocurriría la rotación.
+                  </p>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm text-justify">
+                    <strong class="text-gray-800 dark:text-gray-200">Aplicación práctica (extractor de clavos):</strong> para poder sacar un clavo con una palanca, el momento generado por la fuerza aplicada por la mano (<var>F<sub>H</sub></var>) respecto al punto de apoyo debe ser mayor que el momento resistente generado por la fuerza que sostiene al clavo (<var>F<sub>N</sub></var>) respecto a ese mismo punto.
+                  </p>
+
+                  <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2">9. Errores comunes a reforzar en clase</h4>
+                  <ul class="list-disc list-inside space-y-1.5 text-sm text-gray-600 dark:text-gray-400">
+                    <li>Confundir el brazo de momento con la distancia al punto de aplicación de la fuerza: el brazo de momento es la distancia perpendicular a la línea de acción, no al punto donde la fuerza «toca» el cuerpo.</li>
+                    <li>Olvidar prolongar la línea de acción de una fuerza cuando el punto de referencia no está directamente sobre ella.</li>
+                    <li>Aplicar un criterio de signos inconsistente al sumar varios momentos en un mismo problema.</li>
+                    <li>No identificar cuándo una fuerza tiene momento nulo (cuando su línea de acción pasa exactamente por el punto de referencia).</li>
+                    <li>Omitir la componente trigonométrica del brazo de momento cuando la fuerza no es perpendicular a la distancia dada en el problema.</li>
+                  </ul>
+
+                  <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2">10. Actividad sugerida para el aula</h4>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm text-justify">
+                    <strong class="text-gray-800 dark:text-gray-200">Ejercicio propuesto:</strong> sobre una placa actúan tres fuerzas de distinta magnitud, dirección y punto de aplicación respecto a un punto de referencia <var>O</var>. Se pide:
+                  </p>
+                  <ol class="list-[lower-alpha] list-inside space-y-1.5 text-sm text-gray-600 dark:text-gray-400">
+                    <li>Para cada fuerza, trazar su línea de acción y determinar geométricamente su brazo de momento.</li>
+                    <li>Calcular el momento individual de cada fuerza, indicando su signo según la convención adoptada.</li>
+                    <li>Determinar el momento resultante del sistema respecto a <var>O</var>, e interpretar físicamente el sentido de rotación que este predice.</li>
+                  </ol>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm text-justify">
+                    (Se recomienda incluir al menos una fuerza cuya línea de acción pase por el punto O, para reforzar el concepto de momento nulo.)
+                  </p>
+
+                  <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2">11. Resumen de conceptos clave</h4>
+                  <div class="overflow-x-auto">
+                    <table class="w-full text-sm text-left border-collapse">
+                      <thead>
+                        <tr class="border-b border-gray-200 dark:border-gray-600">
+                          <th class="py-2 pr-3 font-semibold text-gray-800 dark:text-gray-200">Concepto</th>
+                          <th class="py-2 font-semibold text-gray-800 dark:text-gray-200">Descripción</th>
+                        </tr>
+                      </thead>
+                      <tbody class="text-gray-600 dark:text-gray-400">
+                        <tr class="border-b border-gray-100 dark:border-gray-700/60 align-top">
+                          <td class="py-2 pr-3">Momento de una fuerza</td>
+                          <td class="py-2">Medida de la tendencia de una fuerza a producir rotación respecto a un punto</td>
+                        </tr>
+                        <tr class="border-b border-gray-100 dark:border-gray-700/60 align-top">
+                          <td class="py-2 pr-3">Fórmula escalar</td>
+                          <td class="py-2"><var>M<sub>O</sub></var> = <var>F</var>·<var>d</var></td>
+                        </tr>
+                        <tr class="border-b border-gray-100 dark:border-gray-700/60 align-top">
+                          <td class="py-2 pr-3">Brazo de momento (<var>d</var>)</td>
+                          <td class="py-2">Distancia perpendicular desde el punto de referencia hasta la línea de acción de la fuerza</td>
+                        </tr>
+                        <tr class="border-b border-gray-100 dark:border-gray-700/60 align-top">
+                          <td class="py-2 pr-3">Dirección</td>
+                          <td class="py-2">Regla de la mano derecha; en 2D, flecha curva perpendicular al plano</td>
+                        </tr>
+                        <tr class="border-b border-gray-100 dark:border-gray-700/60 align-top">
+                          <td class="py-2 pr-3">Convención de signos (2D)</td>
+                          <td class="py-2">Antihorario positivo, horario negativo (o el criterio inverso, aplicado de forma consistente)</td>
+                        </tr>
+                        <tr class="border-b border-gray-100 dark:border-gray-700/60 align-top">
+                          <td class="py-2 pr-3">Momento resultante</td>
+                          <td class="py-2">Suma algebraica de los momentos individuales: Σ<var>M<sub>O</sub></var> = Σ <var>F</var>·<var>d</var></td>
+                        </tr>
+                        <tr class="align-top">
+                          <td class="py-2 pr-3">Momento nulo</td>
+                          <td class="py-2">Ocurre cuando la línea de acción de la fuerza pasa por el punto de referencia</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
                 <div class="mt-4 flex justify-center">
                   <img src="images/P3.2.2a.jpg" alt="Figura P3.2.2a - Momento de una fuerza" class="max-w-md w-full rounded-xl border border-indigo-200/50 dark:border-indigo-700/50 shadow-md object-cover">
                 </div>
                 <div class="mt-4 flex justify-center">
                   <img src="images/P3.2.2c.jpg" alt="Figura P3.2.2c - Momento de una fuerza" class="max-w-md w-full rounded-xl border border-indigo-200/50 dark:border-indigo-700/50 shadow-md object-cover">
                 </div>
+                <div class="rounded-xl overflow-hidden border border-indigo-200/50 dark:border-indigo-700/50 shadow-lg bg-black/5 dark:bg-black/20 max-w-2xl my-6 mx-auto">
+                  <video class="w-full" controls playsinline preload="metadata" title="Momento de fuerza">
+                    <source src="videos/Momento de Fuerza.mp4" type="video/mp4">
+                    Tu navegador no soporta la reproducción de video.
+                  </video>
+                  <p class="text-xs text-gray-500 dark:text-gray-400 px-3 py-2 bg-gray-50 dark:bg-gray-800/50">Momento de fuerza</p>
+                </div>
 
                 <h3 id="3-2-3" class="text-lg font-semibold text-gray-900 dark:text-white mt-6 mb-2">3.2.3 Momento de una fuerza respecto a un eje</h3>
                 <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
                   El momento de una fuerza respecto a un eje (por ejemplo, el eje z) es la componente del momento (respecto a un punto del eje) en la dirección de ese eje. Solo la componente de la fuerza que tiende a girar el cuerpo alrededor del eje contribuye al momento respecto al eje.
                 </p>
+
+                <div class="mt-2 mb-6 space-y-4">
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm text-justify">
+                    Hasta ahora hemos calculado el momento de una fuerza respecto a un punto, lo cual nos da la tendencia total de dicha fuerza a producir rotación alrededor de ese punto en cualquier dirección. Sin embargo, en muchas situaciones de ingeniería, un cuerpo solo puede girar alrededor de un eje específico —por ejemplo, una puerta que solo gira sobre sus bisagras, una tuerca que solo puede girar sobre el eje de un birlo, o una barra que solo rota sobre el eje que la sostiene—. En estos casos, no interesa el momento total, sino únicamente la componente del momento a lo largo de ese eje particular.
+                  </p>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm text-justify">
+                    <strong class="text-gray-800 dark:text-gray-200">Objetivo de aprendizaje:</strong> al finalizar el tema, el estudiante será capaz de calcular el momento de una fuerza respecto a un eje específico mediante análisis escalar (cuando el brazo de momento es evidente geométricamente) y mediante análisis vectorial con el triple producto escalar (cuando la geometría es tridimensional compleja), e interpretar correctamente el signo del resultado.
+                  </p>
+
+                  <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2">2. Planteamiento del problema</h4>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm text-justify">
+                    <strong class="text-gray-800 dark:text-gray-200">Ejemplo motivador (llave de tuercas, Fig. 4-20a del libro):</strong> al aplicar una fuerza sobre la llave para aflojar una tuerca ubicada en el punto <var>O</var>, dicha fuerza produce una tendencia de rotación respecto a un eje de momento que pasa por <var>O</var> en cualquier dirección. Sin embargo, la tuerca físicamente solo puede girar alrededor del eje <var>y</var> (el eje del birlo). Por lo tanto, del momento total, solo la componente a lo largo del eje <var>y</var> tiene relevancia física; el resto del momento es «absorbido» por las restricciones físicas del birlo y no produce ningún giro real.
+                  </p>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm text-justify">
+                    Esta es la motivación central del tema: aislar la componente del momento que efectivamente puede producir rotación, dado un eje de giro restringido por la geometría del sistema.
+                  </p>
+
+                  <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2">3. Método 1 — Análisis escalar</h4>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm text-justify">
+                    Cuando la geometría del problema permite identificar fácilmente el brazo de momento, se puede calcular directamente la componente del momento respecto al eje de interés:
+                  </p>
+                  <p class="text-gray-700 dark:text-gray-300 leading-relaxed text-sm font-medium border-l-4 border-primary-400 pl-4">
+                    <var>M<sub>a</sub></var> = <var>F d<sub>a</sub></var> &nbsp; (4-10)
+                  </p>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm text-justify">
+                    donde <var>d<sub>a</sub></var> es la distancia perpendicular desde el eje <var>a</var> hasta la línea de acción de la fuerza, medida en el plano perpendicular a dicho eje.
+                  </p>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm text-justify">
+                    <strong class="text-gray-800 dark:text-gray-200">Ejemplo (llave de tuercas):</strong> si el brazo de momento respecto al punto <var>O</var> es <var>d</var>, y la línea de acción de la fuerza forma un ángulo <var>θ</var> con el plano perpendicular al eje <var>y</var>, entonces:
+                  </p>
+                  <p class="text-gray-700 dark:text-gray-300 leading-relaxed text-sm font-medium border-l-4 border-primary-400 pl-4">
+                    <var>d<sub>y</sub></var> = <var>d</var> cos <var>θ</var> &nbsp;&nbsp; ⇒ &nbsp;&nbsp; <var>M<sub>y</sub></var> = <var>F</var>(<var>d</var> cos <var>θ</var>)
+                  </p>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm text-justify">
+                    Este método es práctico solo cuando la geometría tridimensional es simple. En casos más complejos, se recurre al análisis vectorial.
+                  </p>
+
+                  <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2">4. Método 2 — Análisis vectorial (triple producto escalar)</h4>
+                  <h5 class="text-sm font-semibold text-gray-800 dark:text-gray-200 mb-2">4.1 Fundamento</h5>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm text-justify">
+                    Para un eje arbitrario <var>a</var>, definido por un vector unitario <var>u<sub>a</sub></var>, el momento de una fuerza <var>F⃗</var> respecto a dicho eje se calcula mediante el triple producto escalar:
+                  </p>
+                  <p class="text-gray-700 dark:text-gray-300 leading-relaxed text-sm font-medium border-l-4 border-primary-400 pl-4">
+                    <var>M<sub>a</sub></var> = <var>u<sub>a</sub></var> · (<var>r⃗</var> × <var>F⃗</var>) &nbsp; (4-11)
+                  </p>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-1">donde:</p>
+                  <ul class="list-disc list-inside space-y-1.5 text-sm text-gray-600 dark:text-gray-400">
+                    <li><var>u<sub>a</sub></var> es el vector unitario que define la dirección del eje</li>
+                    <li><var>r⃗</var> es un vector de posición trazado desde cualquier punto sobre el eje <var>a</var> hasta cualquier punto sobre la línea de acción de la fuerza</li>
+                    <li><var>F⃗</var> es la fuerza expresada como vector cartesiano</li>
+                  </ul>
+
+                  <h5 class="text-sm font-semibold text-gray-800 dark:text-gray-200 mb-2">4.2 Forma de determinante</h5>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm text-justify">
+                    Esta operación se calcula convenientemente como un determinante:
+                  </p>
+                  <p class="text-gray-700 dark:text-gray-300 leading-relaxed text-sm font-mono border-l-4 border-primary-400 pl-4">
+                    <var>M<sub>a</sub></var> = | <var>u<sub>ax</sub></var> <var>u<sub>ay</sub></var> <var>u<sub>az</sub></var> ; <var>r<sub>x</sub></var> <var>r<sub>y</sub></var> <var>r<sub>z</sub></var> ; <var>F<sub>x</sub></var> <var>F<sub>y</sub></var> <var>F<sub>z</sub></var> |
+                  </p>
+
+                  <h5 class="text-sm font-semibold text-gray-800 dark:text-gray-200 mb-2">4.3 Interpretación del resultado</h5>
+                  <ul class="list-disc list-inside space-y-1.5 text-sm text-gray-600 dark:text-gray-400">
+                    <li>El resultado de esta operación es un escalar (positivo o negativo).</li>
+                    <li>Si <var>M<sub>a</sub></var> resulta positivo, el sentido del momento coincide con la dirección de <var>u<sub>a</sub></var>.</li>
+                    <li>Si <var>M<sub>a</sub></var> resulta negativo, el sentido del momento es opuesto a <var>u<sub>a</sub></var>.</li>
+                    <li>Para expresar el momento como vector cartesiano: <var>M⃗<sub>a</sub></var> = <var>M<sub>a</sub> u<sub>a</sub></var>.</li>
+                  </ul>
+
+                  <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2">5. Puntos importantes a destacar (síntesis del libro)</h4>
+                  <ul class="list-disc list-inside space-y-1.5 text-sm text-gray-600 dark:text-gray-400">
+                    <li>El momento respecto a un eje puede obtenerse siempre que se identifique la distancia perpendicular <var>d<sub>a</sub></var> desde la línea de acción de la fuerza hasta el eje (análisis escalar).</li>
+                    <li>El vector <var>r⃗</var> en el análisis vectorial puede trazarse desde cualquier punto del eje hasta cualquier punto de la línea de acción de la fuerza — la elección de estos puntos es libre y conviene escoger los que simplifiquen más los cálculos.</li>
+                    <li>Una fuerza paralela a un eje, o cuya línea de acción intersecta dicho eje, no produce ningún momento respecto a él (su contribución es cero).</li>
+                    <li>Un signo negativo en <var>M<sub>a</sub></var> no es un error: indica que el sentido real del momento es contrario al supuesto por <var>u<sub>a</sub></var>.</li>
+                  </ul>
+
+                  <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2">6. Ejemplo resuelto 1 — Caso simple: ejes coordenados (Ejemplo 4.7, pág. 141)</h4>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm text-justify">
+                    Sobre una estructura actúan tres fuerzas: <var>F<sub>1</sub></var> = 60 lb, <var>F<sub>2</sub></var> = 50 lb, <var>F<sub>3</sub></var> = 40 lb. Se pide el momento resultante respecto a los ejes <var>x</var>, <var>y</var>, <var>z</var>.
+                  </p>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm text-justify">
+                    <strong class="text-gray-800 dark:text-gray-200">Principio aplicado:</strong> una fuerza paralela a un eje coordenado, o cuya línea de acción pasa por dicho eje, no contribuye a su momento.
+                  </p>
+                  <p class="text-gray-700 dark:text-gray-300 leading-relaxed text-sm font-medium border-l-4 border-primary-400 pl-4">
+                    Σ<var>M<sub>x</sub></var> = (60)(2) + (50)(2) + 0 = 220 lb·pie<br>
+                    Σ<var>M<sub>y</sub></var> = 0 − (50)(3) − (40)(2) = −230 lb·pie<br>
+                    Σ<var>M<sub>z</sub></var> = 0 + 0 − (40)(2) = −80 lb·pie
+                  </p>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm text-justify">
+                    Los signos negativos en <var>M<sub>y</sub></var> y <var>M<sub>z</sub></var> indican que dichos momentos actúan en las direcciones −<var>y</var> y −<var>z</var>, respectivamente.
+                  </p>
+
+                  <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2">7. Ejemplo resuelto 2 — Aplicación del triple producto escalar (Ejemplo 4.8, pág. 142)</h4>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm text-justify">
+                    Determinar el momento <var>M<sub>AB</sub></var> producido por una fuerza <var>F</var> = 300 N (dirigida en −<var>k̂</var>) respecto al eje <var>AB</var> de una barra.
+                  </p>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-1"><strong class="text-gray-800 dark:text-gray-200">Paso 1 — Vector unitario del eje AB:</strong></p>
+                  <p class="text-gray-700 dark:text-gray-300 leading-relaxed text-sm font-medium border-l-4 border-primary-400 pl-4">
+                    <var>u<sub>B</sub></var> = {0.4<var>î</var> + 0.2<var>ĵ</var>} m / √((0.4)² + (0.2)²) = 0.8944<var>î</var> + 0.4472<var>ĵ</var>
+                  </p>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-1"><strong class="text-gray-800 dark:text-gray-200">Paso 2 — Vector de posición</strong> (se elige <var>r<sub>D</sub></var> por conveniencia, aunque también servirían <var>r<sub>C</sub></var>, <var>r<sub>BC</sub></var> o <var>r<sub>BD</sub></var>):</p>
+                  <p class="text-gray-700 dark:text-gray-300 leading-relaxed text-sm font-medium border-l-4 border-primary-400 pl-4">
+                    <var>r⃗<sub>D</sub></var> = {0.6<var>î</var>} m
+                  </p>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-1"><strong class="text-gray-800 dark:text-gray-200">Paso 3 — Fuerza como vector cartesiano:</strong></p>
+                  <p class="text-gray-700 dark:text-gray-300 leading-relaxed text-sm font-medium border-l-4 border-primary-400 pl-4">
+                    <var>F⃗</var> = {−300<var>k̂</var>} N
+                  </p>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-1"><strong class="text-gray-800 dark:text-gray-200">Paso 4 — Aplicar el determinante:</strong></p>
+                  <p class="text-gray-700 dark:text-gray-300 leading-relaxed text-sm font-medium border-l-4 border-primary-400 pl-4">
+                    <var>M<sub>AB</sub></var> = | 0.8944 &nbsp; 0.4472 &nbsp; 0 ; 0.6 &nbsp; 0 &nbsp; 0 ; 0 &nbsp; 0 &nbsp; −300 | = 80.50 N·m
+                  </p>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm text-justify">
+                    El resultado positivo confirma que <var>M<sub>AB</sub></var> actúa en la misma dirección que <var>u<sub>B</sub></var>.
+                  </p>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm mb-1">Expresado como vector cartesiano:</p>
+                  <p class="text-gray-700 dark:text-gray-300 leading-relaxed text-sm font-medium border-l-4 border-primary-400 pl-4">
+                    <var>M⃗<sub>AB</sub></var> = 80.50(0.8944<var>î</var> + 0.4472<var>ĵ</var>) = {72.0<var>î</var> + 36.0<var>ĵ</var>} N·m
+                  </p>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm text-justify">
+                    <strong class="text-gray-800 dark:text-gray-200">Nota importante del libro:</strong> si en lugar de <var>u<sub>B</sub></var> (de A hacia B) se hubiera usado el vector unitario en sentido contrario (−<var>u<sub>B</sub></var>, de B hacia A), el resultado habría sido −80.50 N·m — es decir, el mismo momento físico, expresado en la dirección opuesta. Esto refuerza que la elección del sentido del eje es arbitraria, siempre que se sea consistente.
+                  </p>
+
+                  <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2">8. Ejemplo resuelto 3 — Elección estratégica del vector de posición (Ejemplo 4.9, pág. 143)</h4>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm text-justify">
+                    Determinar el momento de <var>F</var> = 300 N respecto al eje <var>OA</var> de un ensamble de tubos.
+                  </p>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm text-justify">
+                    <strong class="text-gray-800 dark:text-gray-200">Estrategia clave:</strong> aunque existen varios vectores de posición válidos (<var>r<sub>OD</sub></var>, <var>r<sub>OC</sub></var>, <var>r<sub>AD</sub></var>, <var>r<sub>AC</sub></var>), se elige <var>r<sub>OD</sub></var> porque simplifica los cálculos (menos componentes distintas de cero).
+                  </p>
+                  <p class="text-gray-700 dark:text-gray-300 leading-relaxed text-sm font-medium border-l-4 border-primary-400 pl-4">
+                    <var>u<sub>OA</sub></var> = 0.6<var>î</var> + 0.8<var>ĵ</var> &nbsp;&nbsp; <var>r⃗<sub>OD</sub></var> = {0.5<var>î</var> + 0.5<var>k̂</var>} m &nbsp;&nbsp; <var>F⃗</var> = {200<var>î</var> − 200<var>ĵ</var> + 100<var>k̂</var>} N<br>
+                    <var>M<sub>OA</sub></var> = | 0.6 &nbsp; 0.8 &nbsp; 0 ; 0.5 &nbsp; 0 &nbsp; 0.5 ; 200 &nbsp; −200 &nbsp; 100 | = 100 N·m
+                  </p>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm text-justify">
+                    Este ejemplo enseña una habilidad práctica esencial: cuando existen varias opciones válidas para el vector de posición, se debe elegir la que tenga más componentes nulas, ya que esto reduce significativamente el trabajo algebraico en el determinante.
+                  </p>
+
+                  <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2">9. Errores comunes a reforzar en clase</h4>
+                  <ul class="list-disc list-inside space-y-1.5 text-sm text-gray-600 dark:text-gray-400">
+                    <li>Confundir el momento respecto a un punto con el momento respecto a un eje: el primero es un vector completo; el segundo es su proyección escalar sobre una dirección específica.</li>
+                    <li>Elegir arbitrariamente el vector <var>r⃗</var> sin aprovechar que puede trazarse desde cualquier punto del eje hasta cualquier punto de la línea de acción — perdiendo la oportunidad de simplificar el cálculo.</li>
+                    <li>No reconocer cuándo una fuerza no contribuye al momento respecto a un eje (cuando es paralela a él o su línea de acción lo interseca).</li>
+                    <li>Interpretar un resultado negativo como error, en lugar de reconocerlo como una inversión de sentido respecto al vector unitario elegido.</li>
+                    <li>Errores de signo o de expansión en el cálculo del determinante 3×3, especialmente al distribuir los cofactores.</li>
+                  </ul>
+
+                  <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2">10. Actividad sugerida para el aula</h4>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm text-justify">
+                    <strong class="text-gray-800 dark:text-gray-200">Ejercicio propuesto:</strong> una placa triangular está unida a un eje fijo <var>OA</var> mediante una bisagra, y sobre ella actúa una fuerza <var>F</var> con componentes conocidas en un punto específico de la placa. Se pide:
+                  </p>
+                  <ol class="list-[lower-alpha] list-inside space-y-1.5 text-sm text-gray-600 dark:text-gray-400">
+                    <li>Determinar el vector unitario <var>u<sub>OA</sub></var> que define la dirección del eje.</li>
+                    <li>Elegir estratégicamente un vector de posición <var>r⃗</var> desde el eje hasta la línea de acción de <var>F</var>, justificando la elección.</li>
+                    <li>Calcular <var>M<sub>OA</sub></var> mediante el triple producto escalar y expresar el resultado como vector cartesiano.</li>
+                    <li>Interpretar físicamente si la fuerza tiende a abrir o cerrar la placa respecto a la bisagra.</li>
+                  </ol>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm text-justify">
+                    (Actividad ideal para conectar este tema con aplicaciones reales de bisagras, tuercas y ejes de rotación restringida.)
+                  </p>
+
+                  <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-2">11. Resumen de conceptos clave</h4>
+                  <div class="overflow-x-auto">
+                    <table class="w-full text-sm text-left border-collapse">
+                      <thead>
+                        <tr class="border-b border-gray-200 dark:border-gray-600">
+                          <th class="py-2 pr-3 font-semibold text-gray-800 dark:text-gray-200">Concepto</th>
+                          <th class="py-2 font-semibold text-gray-800 dark:text-gray-200">Descripción</th>
+                        </tr>
+                      </thead>
+                      <tbody class="text-gray-600 dark:text-gray-400">
+                        <tr class="border-b border-gray-100 dark:border-gray-700/60 align-top">
+                          <td class="py-2 pr-3">Momento respecto a un eje</td>
+                          <td class="py-2">Componente del momento total a lo largo de una dirección específica de rotación permitida</td>
+                        </tr>
+                        <tr class="border-b border-gray-100 dark:border-gray-700/60 align-top">
+                          <td class="py-2 pr-3">Fórmula escalar</td>
+                          <td class="py-2"><var>M<sub>a</sub></var> = <var>F d<sub>a</sub></var></td>
+                        </tr>
+                        <tr class="border-b border-gray-100 dark:border-gray-700/60 align-top">
+                          <td class="py-2 pr-3">Fórmula vectorial (triple producto escalar)</td>
+                          <td class="py-2"><var>M<sub>a</sub></var> = <var>u<sub>a</sub></var>·(<var>r⃗</var> × <var>F⃗</var>)</td>
+                        </tr>
+                        <tr class="border-b border-gray-100 dark:border-gray-700/60 align-top">
+                          <td class="py-2 pr-3">Elección de <var>r⃗</var></td>
+                          <td class="py-2">Libre entre eje y línea de acción; conviene elegir la de menor complejidad algebraica</td>
+                        </tr>
+                        <tr class="border-b border-gray-100 dark:border-gray-700/60 align-top">
+                          <td class="py-2 pr-3">Fuerza sin contribución al eje</td>
+                          <td class="py-2">Paralela al eje, o cuya línea de acción lo interseca</td>
+                        </tr>
+                        <tr class="align-top">
+                          <td class="py-2 pr-3">Signo del resultado</td>
+                          <td class="py-2">Positivo: a favor de <var>u<sub>a</sub></var>; negativo: en contra de <var>u<sub>a</sub></var></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
                 <div class="mt-6 p-6 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700">
                   <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-3">Propuesta técnica: marco conceptual y metodológico para el análisis de sistemas de fuerzas en estática</h4>
                   <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
@@ -1073,13 +1681,6 @@
                     El dominio de estos principios permite transformar descripciones físicas complejas en modelos simbólicos precisos, asegurando estabilidad, seguridad y solidez técnica en el diseño de elementos mecánicos y estructuras.
                   </p>
                 </div>
-                <div class="mt-6">
-                  <h4 class="text-base font-semibold text-gray-900 dark:text-white mb-3">Ejercicio No 1 (p141)</h4>
-                  <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed mb-3">
-                    Determine el momento resultante de las tres fuerzas que se muestran en la figura 4-22 con respecto al eje x, al eje y y al eje z.
-                  </p>
-                </div>
-
                 <h3 id="3-2-4" class="text-lg font-semibold text-gray-900 dark:text-white mt-6 mb-2">3.2.4 Sistemas equivalentes (p148)</h3>
                 <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
                   Dos sistemas de fuerzas son equivalentes si tienen la misma resultante y el mismo momento resultante respecto a un punto. Esto permite reemplazar un sistema complejo por uno más simple (por ejemplo, una fuerza única y un par) para facilitar el análisis del equilibrio.
